@@ -150,6 +150,7 @@ if (pages.length === 0) {
   // adds that day without removing older days already seen.
   const byYear = new Map(); // year -> Map(dateKey -> {count, files[]})
   const historyKey = "writing-heatmap-history-v2:Crypto";
+  const historyBootstrapKey = "writing-heatmap-bootstrap-v1:Crypto";
   const historyFilePath = "writing-heatmap-history.json";
   let historySaveError = null;
   const loadHistoryByPath = async () => {
@@ -172,13 +173,45 @@ if (pages.length === 0) {
       historySaveError = String(err?.message || err || "Unknown save error");
     }
   };
-  const historyByPath = (await loadHistoryByPath()) || (() => {
+  const loadLocalHistory = () => {
     try {
       return JSON.parse(localStorage.getItem(historyKey) || "{}");
     } catch {
       return {};
     }
-  })();
+  };
+  const saveLocalHistory = (history) => {
+    try {
+      localStorage.setItem(historyKey, JSON.stringify(history));
+    } catch {}
+  };
+  const mergeHistory = (base, incoming) => {
+    const out = { ...(base || {}) };
+    for (const [path, dates] of Object.entries(incoming || {})) {
+      const merged = new Set(Array.isArray(out[path]) ? out[path] : []);
+      for (const d of Array.isArray(dates) ? dates : []) merged.add(d);
+      out[path] = [...merged].sort();
+    }
+    return out;
+  };
+
+  // Primary runtime source: localStorage.
+  // One-time per app session: bootstrap/repair localStorage from JSON backup.
+  let historyByPath = loadLocalHistory();
+  let shouldBootstrap = true;
+  try {
+    shouldBootstrap = sessionStorage.getItem(historyBootstrapKey) !== "1";
+  } catch {}
+  if (shouldBootstrap) {
+    const jsonHistory = await loadHistoryByPath();
+    if (jsonHistory && typeof jsonHistory === "object") {
+      historyByPath = mergeHistory(historyByPath, jsonHistory);
+      saveLocalHistory(historyByPath);
+    }
+    try {
+      sessionStorage.setItem(historyBootstrapKey, "1");
+    } catch {}
+  }
 
   const toDateKey = (value) => {
     if (!value) return null;
@@ -221,10 +254,7 @@ if (pages.length === 0) {
   try {
     await saveHistoryByPath(historyByPath);
   } catch {}
-  // Keep a local copy as fallback for environments where file writes are blocked.
-  try {
-    localStorage.setItem(historyKey, JSON.stringify(historyByPath));
-  } catch {}
+  saveLocalHistory(historyByPath);
   if (historySaveError) {
     dv.paragraph(`History save error: ${historySaveError}`);
   }
