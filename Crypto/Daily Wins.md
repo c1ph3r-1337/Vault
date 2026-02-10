@@ -288,6 +288,8 @@ if (pages.length === 0) {
 }
 ```
 
+
+
 ```dataviewjs
 (() => {
   const targetFolderName = "Daily Wins";
