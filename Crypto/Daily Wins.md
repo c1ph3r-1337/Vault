@@ -97,7 +97,7 @@ style.textContent = `
     }
     .writing-year-row-with-streak .writing-year-title {
       margin-top: 6px;
-      margin-left: -96px;
+      margin-left: -144px;
     }
     .writing-streak-chip {
       display: inline-grid;
@@ -393,7 +393,6 @@ if (pages.length === 0) {
       };
 
       const yearRow = dv.el("div", "", { cls: "writing-year-row" });
-      yearRow.createEl("h4", { text: `${year}`, cls: "writing-year-title" });
       if (year === years[0]) {
         yearRow.classList.add("writing-year-row-with-streak");
         const streakEl = yearRow.createEl("div", { cls: "writing-streak-summary" });
