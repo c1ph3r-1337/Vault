@@ -77,9 +77,9 @@ style.textContent = `
       top: 8px;
       z-index: 70;
       width: fit-content;
-      margin: 0 auto 8px;
+      margin: 0 auto 14px;
       padding: 8px 12px;
-      border-radius: 10px;
+      border-radius: 16px;
       border: 1px solid var(--background-modifier-border);
       background: rgba(22, 24, 29, 0.96);
       color: #e8edf2;
@@ -98,7 +98,7 @@ style.textContent = `
     .writing-streak-summary {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
       margin: 0;
       align-items: center;
       justify-content: flex-end;
@@ -155,7 +155,7 @@ style.textContent = `
       justify-content: center;
       justify-items: center;
       column-gap: 6px;
-      padding: 7px 12px;
+      padding: 8px 14px;
       line-height: 1.1;
       text-align: center;
       border-radius: 999px;
@@ -419,7 +419,7 @@ if (pages.length === 0) {
       shouldShowSaveNotice = sessionStorage.getItem(historyNoticeKey) !== "1";
     } catch {}
     if (shouldShowSaveNotice) {
-      showInlineToast(`History backup updated: ${historyFilePath}`, 10000);
+      showInlineToast(`History backup updated: ${historyFilePath}`, 5000);
       try {
         sessionStorage.setItem(historyNoticeKey, "1");
       } catch {}
