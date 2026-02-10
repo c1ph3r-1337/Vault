@@ -156,6 +156,7 @@ if (pages.length === 0) {
   const historyBootstrapKey = "writing-heatmap-bootstrap-v1:Crypto";
   const historyFilePath = "writing-heatmap-history.json";
   let historySaveError = null;
+  let historySaveOk = false;
   const loadHistoryByPath = async () => {
     try {
       const exists = await app.vault.adapter.exists(historyFilePath);
@@ -168,12 +169,28 @@ if (pages.length === 0) {
     }
   };
   const saveHistoryByPath = async (history) => {
+    historySaveOk = false;
     try {
       const payload = JSON.stringify(history, null, 2);
-      await app.vault.adapter.write(historyFilePath, payload);
+      const existing = app.vault.getAbstractFileByPath(historyFilePath);
+      if (existing) {
+        await app.vault.modify(existing, payload);
+      } else {
+        await app.vault.create(historyFilePath, payload);
+      }
       historySaveError = null;
+      historySaveOk = true;
     } catch (err) {
-      historySaveError = String(err?.message || err || "Unknown save error");
+      try {
+        const payload = JSON.stringify(history, null, 2);
+        await app.vault.adapter.write(historyFilePath, payload);
+        historySaveError = null;
+        historySaveOk = true;
+      } catch (err2) {
+        historySaveError = String(
+          err2?.message || err2 || err?.message || err || "Unknown save error"
+        );
+      }
     }
   };
   const loadLocalHistory = () => {
@@ -260,6 +277,8 @@ if (pages.length === 0) {
   saveLocalHistory(historyByPath);
   if (historySaveError) {
     dv.paragraph(`History save error: ${historySaveError}`);
+  } else if (historySaveOk) {
+    dv.paragraph(`History backup updated: ${historyFilePath}`);
   }
 
   if (byYear.size === 0) {
