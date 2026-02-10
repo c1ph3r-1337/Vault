@@ -1,4 +1,14 @@
-# Complete Roadmap: Building a Cryptocurrency from Scratch in Rust
+
+```handdrawn-ink
+{
+	"versionAtEmbed": "0.3.4",
+	"filepath": "Ink/Drawing/2026.2.10 - 13.36pm (2).drawing",
+	"width": 500,
+	"aspectRatio": 1
+}
+```
+
+# <font color="#7E56DF">Complete Roadmap: Building a Cryptocurrency from Scratch in Rust</font>
 
 This document is a **structured, end‑to‑end roadmap** to help you deeply understand and build a cryptocurrency and blockchain system **from first principles**, using **Rust**.
 
