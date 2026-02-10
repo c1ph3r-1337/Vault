@@ -235,6 +235,13 @@ Most cryptocurrencies fail due to bad economics, not bad code.
     
 - Slashing and penalties
     
+### Key questions:
+
+- Why would someone run a node?
+    
+- Why would miners/validators behave honestly?
+    
+- How do you prevent rich-get-richer?
 
 **Rule:**  
 A system that rewards honest behavior and punishes cheating survives.
