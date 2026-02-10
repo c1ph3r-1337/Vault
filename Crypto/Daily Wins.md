@@ -70,10 +70,11 @@ if (!document.getElementById(tooltipStyleId)) {
       color: var(--text-normal);
     }
     .writing-streak-summary {
-      display: flex;
+      display: inline-flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin: 2px 0 6px;
+      margin: 0 0 8px;
+      align-items: center;
     }
     .writing-streak-chip {
       display: inline-flex;
@@ -90,6 +91,15 @@ if (!document.getElementById(tooltipStyleId)) {
       color: var(--text-normal);
       font-weight: 700;
       font-size: 12px;
+    }
+    .writing-streak-chip::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      margin-right: 6px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23ff7a00' d='M42 6c2 9-3 13-7 18-4 5-6 9-2 14 3 3 8 2 11-2 4-5 5-10 4-16 10 8 16 19 16 30 0 17-14 31-32 31S0 67 0 50c0-12 7-23 18-31-2 8 1 14 6 18 4 4 10 5 14 0 4-5 4-11 4-31z'/%3E%3Cpath fill='%23ffd54a' d='M32 33c1 6-2 8-4 11-3 3-4 5-2 8s5 3 8 1c3-3 4-6 4-10 5 5 8 10 8 16 0 9-7 16-16 16s-16-7-16-16c0-6 3-12 9-16-1 4 0 7 2 9 3 2 6 2 8-1 2-2 2-6 2-18z'/%3E%3C/svg%3E");
     }
     :where(.heatmap-calendar-box, .day, [data-date]) {
       transition: transform 0.16s ease, filter 0.16s ease;
@@ -357,11 +367,11 @@ if (pages.length === 0) {
         const streakEl = dv.el("div", "", { cls: "writing-streak-summary" });
         streakEl.createEl("span", {
           cls: "writing-streak-chip",
-          text: `Current Streak: ${currentStreak} day${currentStreak === 1 ? "" : "s"}`,
+          text: `Current: ${currentStreak} day${currentStreak === 1 ? "" : "s"}`,
         });
         streakEl.createEl("span", {
           cls: "writing-streak-chip",
-          text: `Max Streak: ${maxStreak} day${maxStreak === 1 ? "" : "s"}`,
+          text: `Best: ${maxStreak} day${maxStreak === 1 ? "" : "s"}`,
         });
       }
       const yearContainer = this.container.createDiv();
