@@ -6,6 +6,13 @@
 const isDailyWinsFolder = (folder) =>
   folder === "Daily Wins" || folder.endsWith("/Daily Wins");
 const IST_ZONE = "Asia/Kolkata";
+const escapeHtml = (s) =>
+  String(s)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
 
 // Custom tooltip: rounded corners, no white border.
 const tooltipStyleId = "writing-heatmap-tooltip-style";
@@ -35,6 +42,20 @@ if (!document.getElementById(tooltipStyleId)) {
       opacity: 1;
       transform: translateY(0);
     }
+    .writing-heatmap-tooltip-title {
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .writing-heatmap-tooltip-link {
+      display: block;
+      color: #9fd3ff;
+      text-decoration: none;
+      border-radius: 6px;
+      padding: 2px 4px;
+    }
+    .writing-heatmap-tooltip-link:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
   `;
   document.head.appendChild(style);
 }
@@ -46,6 +67,16 @@ if (!tooltipEl) {
   tooltipEl.id = tooltipId;
   tooltipEl.className = "writing-heatmap-tooltip";
   document.body.appendChild(tooltipEl);
+}
+if (!tooltipEl.dataset.linkHandlerBound) {
+  tooltipEl.dataset.linkHandlerBound = "1";
+  tooltipEl.addEventListener("click", (event) => {
+    const link = event.target.closest(".writing-heatmap-tooltip-link");
+    if (!link) return;
+    event.preventDefault();
+    const path = link.dataset.path;
+    if (path) app.workspace.openLinkText(path, "", false);
+  });
 }
 
 // 2) Scan all pages, then filter by folder + writing:true.
@@ -85,7 +116,7 @@ if (pages.length === 0) {
     const day = dayMap.get(dateKey);
 
     day.count += 1;
-    day.files.push(page.file.name);
+    day.files.push({ name: page.file.name, path: page.file.path });
   }
 
   if (byYear.size === 0) {
@@ -100,7 +131,7 @@ if (pages.length === 0) {
       const tooltipByDate = new Map(
         [...dayMap.entries()].map(([date, value]) => [
           date,
-          `${date}\n${value.files.map((f) => `- ${f}`).join("\n")}`,
+          `${date}\n${value.files.map((f) => `- ${f.name}`).join("\n")}`,
         ])
       );
 
@@ -124,9 +155,37 @@ if (pages.length === 0) {
       // Add hover tooltip with all files written on each date.
       setTimeout(() => {
         const cells = yearContainer.querySelectorAll("[data-date], .heatmap-calendar-box, .day");
+        let pinnedCell = null;
         const moveTooltip = (event) => {
           tooltipEl.style.left = `${event.clientX + 12}px`;
           tooltipEl.style.top = `${event.clientY + 12}px`;
+        };
+        const hideTooltip = () => {
+          tooltipEl.classList.remove("show");
+          tooltipEl.style.pointerEvents = "none";
+        };
+        const showHoverTooltip = (cell, event) => {
+          tooltipEl.textContent = cell.dataset.writingTooltip || "";
+          tooltipEl.style.pointerEvents = "none";
+          moveTooltip(event);
+          tooltipEl.classList.add("show");
+        };
+        const showPinnedTooltip = (date, event) => {
+          const files = dayMap.get(date)?.files || [];
+          const links = files
+            .map(
+              (f) =>
+                `<a href="#" class="writing-heatmap-tooltip-link" data-path="${escapeHtml(
+                  f.path
+                )}">${escapeHtml(f.name)}</a>`
+            )
+            .join("");
+          tooltipEl.innerHTML = `<div class="writing-heatmap-tooltip-title">${escapeHtml(
+            date
+          )}</div>${links || "<div>No files</div>"}`;
+          tooltipEl.style.pointerEvents = "auto";
+          moveTooltip(event);
+          tooltipEl.classList.add("show");
         };
         for (const cell of cells) {
           const date =
@@ -137,13 +196,27 @@ if (pages.length === 0) {
           cell.removeAttribute("title");
           cell.dataset.writingTooltip = tooltipByDate.get(date);
           cell.addEventListener("mouseenter", (event) => {
-            tooltipEl.textContent = cell.dataset.writingTooltip || "";
-            moveTooltip(event);
-            tooltipEl.classList.add("show");
+            if (pinnedCell) return;
+            showHoverTooltip(cell, event);
           });
-          cell.addEventListener("mousemove", moveTooltip);
+          cell.addEventListener("mousemove", (event) => {
+            if (pinnedCell) return;
+            moveTooltip(event);
+          });
           cell.addEventListener("mouseleave", () => {
-            tooltipEl.classList.remove("show");
+            if (pinnedCell) return;
+            hideTooltip();
+          });
+          cell.addEventListener("dblclick", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            if (pinnedCell === cell) {
+              pinnedCell = null;
+              hideTooltip();
+              return;
+            }
+            pinnedCell = cell;
+            showPinnedTooltip(date, event);
           });
           if (cell.childElementCount === 0) cell.textContent = "";
         }
