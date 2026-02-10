@@ -1,12 +1,4 @@
 
-```handdrawn-ink
-{
-	"versionAtEmbed": "0.3.4",
-	"filepath": "Ink/Drawing/2026.2.10 - 13.36pm (2).drawing",
-	"width": 362,
-	"aspectRatio": 2.4133333333333336
-}
-```
 
 # <font color="#7E56DF">Complete Roadmap: Building a Cryptocurrency from Scratch in Rust</font>
 
@@ -384,5 +376,3 @@ Building a cryptocurrency is easy.
 Building a **secure, decentralized, economically sound** cryptocurrency is one of the hardest problems in computer science.
 
 If you complete this roadmap honestly, you will understand crypto at a level far beyond most developers.
-
-
