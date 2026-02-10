@@ -1,6 +1,41 @@
 <center>🔗 Don’t break the chain! 🔗</center>
 
 ```dataviewjs
+// Show all weekdays on the left and hide the plugin's sparse labels.
+const styleId = "writing-heatmap-weekday-sidebar";
+if (!document.getElementById(styleId)) {
+  const style = document.createElement("style");
+  style.id = styleId;
+  style.textContent = `
+    .writing-heatmap-wrap {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .writing-heatmap-weekdays {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 34px;
+      padding-top: 30px;
+      font-size: 12px;
+      line-height: 12px;
+      opacity: 0.85;
+      user-select: none;
+    }
+    .writing-heatmap-weekdays > div {
+      height: 12px;
+    }
+    .writing-heatmap-wrap .heatmap-calendar-weekdays,
+    .writing-heatmap-wrap .heatmap-calendar-yaxis,
+    .writing-heatmap-wrap [class*="weekday"] {
+      display: none !important;
+    }
+  `;
+  document.head.appendChild(style);
+}
+
 // 1) Folder matcher:
 // supports "Daily Wins", "Crypto/Daily Wins", "Vault/Crypto/Daily Wins", etc.
 const isDailyWinsFolder = (folder) =>
@@ -71,7 +106,13 @@ if (pages.length === 0) {
       };
 
       dv.header(4, `${year}`);
-      renderHeatmapCalendar(this.container, calendarData);
+      const wrap = this.container.createDiv({ cls: "writing-heatmap-wrap" });
+      const weekdayCol = wrap.createDiv({ cls: "writing-heatmap-weekdays" });
+      ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].forEach((d) =>
+        weekdayCol.createDiv({ text: d })
+      );
+      const calCol = wrap.createDiv();
+      renderHeatmapCalendar(calCol, calendarData);
     }
   }
 }
