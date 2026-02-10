@@ -307,8 +307,10 @@ if (pages.length === 0) {
         grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
         gap: 12px;
         margin-top: 8px;
+        align-items: start;
       }
       .dw-card {
+        margin: 0;
         border: 1px solid var(--background-modifier-border);
         border-radius: 12px;
         background: linear-gradient(
@@ -340,7 +342,7 @@ if (pages.length === 0) {
       }
       .dw-list {
         margin: 0;
-        padding: 8px 12px 10px 26px;
+        padding: 8px 12px 10px 22px;
       }
       .dw-list li {
         margin: 3px 0;
@@ -380,7 +382,7 @@ if (pages.length === 0) {
   for (const folderPath of [...byFolder.keys()].sort((a, b) => a.localeCompare(b))) {
     const { folderName, files } = byFolder.get(folderPath);
     const details = host.createEl("details", { cls: "dw-card" });
-    details.createEl("summary", { text: `${folderName} (${files.length})` });
+    details.createEl("summary", { text: folderName });
     const list = details.createEl("ul", { cls: "dw-list" });
     for (const f of files) {
       const li = list.createEl("li");
