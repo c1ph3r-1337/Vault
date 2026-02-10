@@ -18,6 +18,7 @@ cssclasses:
   - "img-grid"
 created: 2026-02-10T17:49:20+00:00
 ---
+
 # Video URL
 
 [Getting Started with Rust | Rust Book](https://www.youtube.com/watch?v=unRhxbFULII&list=PLinedj3B30sAnCkwmMb5Ape5Ibqp0R5bP) — [Piyush Garg](https://www.youtube.com/@piyushgargdev) (36:24)
