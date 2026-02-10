@@ -101,8 +101,8 @@ style.textContent = `
       transform: none;
       margin-left: 0;
       z-index: 60;
-      width: 110px;
-      height: 34px;
+      width: 104px;
+      height: 32px;
       display: grid;
       place-items: center;
       padding: 0;
@@ -117,8 +117,9 @@ style.textContent = `
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
       color: var(--text-normal);
       font-weight: 700;
-      font-size: 24px;
+      font-size: 20px;
       line-height: 1;
+      transform: translateY(2px);
       pointer-events: none;
     }
     .writing-streak-chip {
