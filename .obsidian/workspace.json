@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "b331c30a0d9df257",
+    "id": "c5f27d1ee7705397",
     "type": "split",
     "children": [
       {
-        "id": "6eb0750542c945a8",
+        "id": "004bab9d539f1191",
         "type": "tabs",
         "children": [
           {
-            "id": "7455a7b9d3dc8259",
+            "id": "3e3a1bf243b6862e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Crypto/Roadmap/PHASE 0.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "PHASE 0"
+              "title": "New tab"
             }
           }
         ]
@@ -27,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "1ef23a6861fcd4f9",
+    "id": "3299232a541ffd96",
     "type": "split",
     "children": [
       {
-        "id": "d49f7cb6f980a9d6",
+        "id": "4caf39ed4e46a38a",
         "type": "tabs",
         "children": [
           {
-            "id": "f9e56262f7cf1b10",
+            "id": "9483dbce746bc604",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +44,7 @@
             }
           },
           {
-            "id": "e47d3ecebfa02395",
+            "id": "fee9eead9e50505e",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +61,7 @@
             }
           },
           {
-            "id": "d13c828a92468241",
+            "id": "ee9ac11d2d087e28",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,15 +77,15 @@
     "width": 300
   },
   "right": {
-    "id": "0d8accf8e60043d9",
+    "id": "b2e40daf833402dc",
     "type": "split",
     "children": [
       {
-        "id": "f8cd878b7802c245",
+        "id": "c7f31c0a30eec36d",
         "type": "tabs",
         "children": [
           {
-            "id": "9a8dec5e8d76364e",
+            "id": "753d7dcb93d70226",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -107,7 +103,7 @@
             }
           },
           {
-            "id": "e87d91e61cfaa5d8",
+            "id": "ff7a5c03e4754c57",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -120,7 +116,7 @@
             }
           },
           {
-            "id": "0deef67b9bf08363",
+            "id": "3ab4b781f3482321",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -135,7 +131,7 @@
             }
           },
           {
-            "id": "56202609eace3265",
+            "id": "afb8a09648fbb0b4",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -149,7 +145,7 @@
             }
           },
           {
-            "id": "ff7aa063f58315e5",
+            "id": "056666d137f6efa3",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -180,9 +176,6 @@
       "bases:Create new base": false
     }
   },
-  "active": "f9e56262f7cf1b10",
-  "lastOpenFiles": [
-    "Crazy Stuff/Welcome.md",
-    "Crazy Stuff/Crazy Stuff.md"
-  ]
+  "active": "3e3a1bf243b6862e",
+  "lastOpenFiles": []
 }
