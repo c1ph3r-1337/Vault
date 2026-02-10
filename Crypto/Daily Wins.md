@@ -80,7 +80,7 @@ if (pages.length === 0) {
       const yearContainer = this.container.createDiv();
       renderHeatmapCalendar(yearContainer, calendarData);
 
-      // Single hover tooltip source: native title attribute.
+      // Add hover tooltip with all files written on each date.
       setTimeout(() => {
         const cells = yearContainer.querySelectorAll("[data-date], .heatmap-calendar-box, .day");
         for (const cell of cells) {
@@ -90,6 +90,7 @@ if (pages.length === 0) {
             cell.getAttribute("date");
           if (!date || !tooltipByDate.has(date)) continue;
           cell.setAttribute("title", tooltipByDate.get(date));
+          cell.setAttribute("aria-label", tooltipByDate.get(date));
           if (cell.childElementCount === 0) cell.textContent = "";
         }
       }, 0);
