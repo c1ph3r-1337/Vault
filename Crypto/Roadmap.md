@@ -37,7 +37,7 @@ If you understand this, everything else fits into place.
 
 ---
 
-> ## PHASE 0 — Absolute Foundations (Mandatory)
+> ## [[PHASE 0]] — Absolute Foundations (Mandatory)
 
 ### 0.1 Computer Science Fundamentals
 
@@ -63,7 +63,7 @@ Blockchains are **distributed state machines**. Weak CS fundamentals lead to ins
 
 ---
 
-> ## PHASE 1 — Cryptography Foundations (The Heart of Crypto)
+> ## [[PHASE 1]] — Cryptography Foundations (The Heart of Crypto)
 
 Cryptography is what makes cryptocurrencies possible.
 
