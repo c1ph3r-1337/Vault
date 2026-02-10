@@ -6,8 +6,7 @@ The goal is not to create a token clone, but to understand **how decentralized m
 
 ---
 
- 
- > ## Core Mental Model (Read First)
+>## Core Mental Model (Read First)
 
 A cryptocurrency is **not just code that tracks balances**.
 
@@ -28,7 +27,7 @@ If you understand this, everything else fits into place.
 
 ---
 
-## PHASE 0 — Absolute Foundations (Mandatory)
+> ## PHASE 0 — Absolute Foundations (Mandatory)
 
 ### 0.1 Computer Science Fundamentals
 
