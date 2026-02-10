@@ -1,4 +1,5 @@
 ---
+writing: true
 title: Getting Started with Rust | Rust Book
 tags:
   - Youtube/ref
