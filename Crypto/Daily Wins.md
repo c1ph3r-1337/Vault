@@ -71,6 +71,25 @@ if (!document.getElementById(tooltipStyleId)) {
       background: var(--background-modifier-active-hover);
       color: var(--text-normal);
     }
+    :where(.heatmap-calendar-box, .day, [data-date]) {
+      transition: transform 0.16s ease, filter 0.16s ease;
+      transform-origin: center;
+      will-change: transform;
+    }
+    :where(.heatmap-calendar-box, .day, [data-date]):hover {
+      transform: translateY(-1px) scale(1.14);
+      filter: saturate(1.08) brightness(1.03);
+      z-index: 2;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      :where(.heatmap-calendar-box, .day, [data-date]) {
+        transition: none;
+      }
+      :where(.heatmap-calendar-box, .day, [data-date]):hover {
+        transform: none;
+        filter: none;
+      }
+    }
   `;
   document.head.appendChild(style);
 }
