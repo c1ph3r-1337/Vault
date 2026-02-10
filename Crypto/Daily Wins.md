@@ -25,9 +25,13 @@ if (pages.length === 0) {
   const byYear = new Map(); // year -> Map(dateKey -> {count, links})
 
   for (const page of pages) {
-    const rawDate = page.created ?? page.file.mtime;
-    const dateObj = dv.date(rawDate);
-    if (!dateObj) continue; // skip invalid/missing dates safely
+    // Prefer frontmatter "created"; otherwise use file modified time.
+    // Normalize to local time to avoid UTC day-boundary surprises.
+    let dateObj = page.created ? dv.date(page.created) : page.file.mtime;
+    if (dateObj && typeof dateObj.toLocal === "function") {
+      dateObj = dateObj.toLocal();
+    }
+    if (!dateObj || typeof dateObj.toFormat !== "function") continue;
 
     const dateKey = dateObj.toFormat("yyyy-MM-dd");
     const year = Number(dateObj.toFormat("yyyy"));
