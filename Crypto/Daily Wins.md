@@ -305,4 +305,28 @@ if (!pdfs.length) {
     pdfs.map((f) => dv.fileLink(f.path, false, f.basename))
   );
 }
+
+  const targetFolder = "Whitepapers";
+
+  const files = app.vault.getFiles();
+  const folderMatches = files.filter((f) => {
+    const parentPath = f.parent?.path || "";
+    return parentPath === targetFolder || parentPath.startsWith(`${targetFolder}/`);
+  });
+  const pdfs = folderMatches.filter((f) => f.extension.toLowerCase() === "pdf");
+
+  dv.paragraph(`Total vault files: ${files.length}`);
+  dv.paragraph(`Files inside "${targetFolder}": ${folderMatches.length}`);
+  dv.paragraph(`PDFs inside "${targetFolder}": ${pdfs.length}`);
+
+  dv.table(
+    ["Name", "Extension", "Parent Path", "Full Path"],
+    folderMatches.slice(0, 50).map((f) => [
+      f.basename,
+      f.extension,
+      f.parent?.path || "(none)",
+      f.path,
+    ])
+  );
 ```
+
