@@ -133,38 +133,71 @@ if (!tooltipEl.dataset.globalResetBound) {
   });
 }
 
-// 2) Scan all pages in this area so file activity anywhere in Crypto updates the heatmap.
-const pages = dv.pages();
+// 2) Scan only Crypto files and keep per-file day history so past edited days remain visible.
+const CRYPTO_ROOT = "Crypto";
+const isInCrypto = (filePath) => {
+  const p = String(filePath || "");
+  return p.startsWith(`${CRYPTO_ROOT}/`) || p.includes(`/${CRYPTO_ROOT}/`);
+};
+const pages = dv.pages().where((p) => isInCrypto(p.file?.path));
 
 // DataviewJS runs in an eval context, so avoid top-level "return".
 if (pages.length === 0) {
   dv.paragraph("No notes found to plot on the heatmap.");
 } else {
   // 3) Group notes by year/day.
-  // Date priority: frontmatter "created" first, then file.mtime fallback.
+  // Persist a simple per-file day history so editing a file on a new day
+  // adds that day without removing older days already seen.
   const byYear = new Map(); // year -> Map(dateKey -> {count, files[]})
+  const historyKey = "writing-heatmap-history-v2:Crypto";
+  let historyByPath = {};
+  try {
+    historyByPath = JSON.parse(localStorage.getItem(historyKey) || "{}");
+  } catch {
+    historyByPath = {};
+  }
+
+  const toDateKey = (value) => {
+    if (!value) return null;
+    let dt = value;
+    if (typeof dt.setZone === "function") dt = dt.setZone(IST_ZONE);
+    if (!dt || typeof dt.toFormat !== "function") return null;
+    return dt.toFormat("yyyy-MM-dd");
+  };
 
   for (const page of pages) {
-    // Prefer frontmatter "created"; otherwise use file modified time.
-    // Normalize to IST so day cells follow India time.
-    let dateObj = page.created ? dv.date(page.created) : page.file.mtime;
-    if (dateObj && typeof dateObj.setZone === "function") {
-      dateObj = dateObj.setZone(IST_ZONE);
+    const path = page.file?.path;
+    if (!path) continue;
+
+    const createdKey = toDateKey(page.created ? dv.date(page.created) : page.file?.ctime);
+    const modifiedKey = toDateKey(page.file?.mtime);
+
+    const dateSet = new Set(Array.isArray(historyByPath[path]) ? historyByPath[path] : []);
+    if (createdKey) dateSet.add(createdKey);
+    if (modifiedKey) dateSet.add(modifiedKey);
+    historyByPath[path] = [...dateSet].sort();
+
+    for (const dateKey of dateSet) {
+      const year = Number(dateKey.slice(0, 4));
+      if (!Number.isFinite(year)) continue;
+
+      if (!byYear.has(year)) byYear.set(year, new Map());
+      const dayMap = byYear.get(year);
+
+      if (!dayMap.has(dateKey)) {
+        dayMap.set(dateKey, { count: 0, files: [], filePaths: new Set() });
+      }
+      const day = dayMap.get(dateKey);
+      if (day.filePaths.has(path)) continue;
+
+      day.filePaths.add(path);
+      day.count += 1;
+      day.files.push({ name: page.file.name, path });
     }
-    if (!dateObj || typeof dateObj.toFormat !== "function") continue;
-
-    const dateKey = dateObj.toFormat("yyyy-MM-dd");
-    const year = Number(dateObj.toFormat("yyyy"));
-
-    if (!byYear.has(year)) byYear.set(year, new Map());
-    const dayMap = byYear.get(year);
-
-    if (!dayMap.has(dateKey)) dayMap.set(dateKey, { count: 0, files: [] });
-    const day = dayMap.get(dateKey);
-
-    day.count += 1;
-    day.files.push({ name: page.file.name, path: page.file.path });
   }
+  try {
+    localStorage.setItem(historyKey, JSON.stringify(historyByPath));
+  } catch {}
 
   if (byYear.size === 0) {
     dv.paragraph("No valid dates found to plot on the heatmap.");
