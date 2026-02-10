@@ -290,25 +290,42 @@ if (pages.length === 0) {
 
 ```dataviewjs
 (() => {
-  const targetFolderName = "Whitepapers";
-  const isInWhitepapersFolder = (filePath) =>
+  const targetFolderName = "Daily Wins";
+  const isInDailyWinsFolder = (filePath) =>
     filePath.startsWith(`${targetFolderName}/`) ||
     filePath.includes(`/${targetFolderName}/`);
 
-  const pdfs = app.vault
-    .getFiles()
-    .filter(
-      (f) =>
-        f.extension.toLowerCase() === "pdf" &&
-        isInWhitepapersFolder(f.path)
-    )
+  const notes = app.vault
+    .getMarkdownFiles()
+    .filter((f) => isInDailyWinsFolder(f.path))
     .sort((a, b) => a.path.localeCompare(b.path));
 
-  if (!pdfs.length) {
-    dv.paragraph(`No PDF files found in any "${targetFolderName}" folder.`);
+  if (!notes.length) {
+    dv.paragraph(`No .md files found in any "${targetFolderName}" folder.`);
     return;
   }
 
-  dv.list(pdfs.map((f) => dv.fileLink(f.path, false, f.basename)));
+  const byFolder = new Map();
+  for (const note of notes) {
+    const folderPath = note.parent?.path || "(root)";
+    if (!byFolder.has(folderPath)) byFolder.set(folderPath, []);
+    byFolder.get(folderPath).push(note);
+  }
+
+  const host = dv.el("div", "");
+  for (const folderPath of [...byFolder.keys()].sort((a, b) => a.localeCompare(b))) {
+    const files = byFolder.get(folderPath);
+    const details = host.createEl("details");
+    details.createEl("summary", { text: `${folderPath} (${files.length})` });
+    const list = details.createEl("ul");
+    for (const f of files) {
+      const li = list.createEl("li");
+      const a = li.createEl("a", { text: f.basename, href: "#" });
+      a.addEventListener("click", (event) => {
+        event.preventDefault();
+        app.workspace.openLinkText(f.path, "", false);
+      });
+    }
+  }
 })();
 ```
