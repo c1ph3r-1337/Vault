@@ -14,10 +14,13 @@ const escapeHtml = (s) =>
 
 // Custom tooltip: rounded corners, no white border.
 const tooltipStyleId = "writing-heatmap-tooltip-style";
-if (!document.getElementById(tooltipStyleId)) {
-  const style = document.createElement("style");
+let style = document.getElementById(tooltipStyleId);
+if (!style) {
+  style = document.createElement("style");
   style.id = tooltipStyleId;
-  style.textContent = `
+  document.head.appendChild(style);
+}
+style.textContent = `
     .writing-heatmap-tooltip {
       position: fixed;
       z-index: 9999;
@@ -144,8 +147,6 @@ if (!document.getElementById(tooltipStyleId)) {
       }
     }
   `;
-  document.head.appendChild(style);
-}
 
 const tooltipId = "writing-heatmap-tooltip";
 let tooltipEl = document.getElementById(tooltipId);
