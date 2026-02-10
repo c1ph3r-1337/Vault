@@ -73,12 +73,20 @@ if (!document.getElementById(tooltipStyleId)) {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin: 0 0 8px;
+      margin: 0;
       align-items: center;
       justify-content: flex-end;
-      width: 100%;
-      padding-right: 12px;
-      box-sizing: border-box;
+      padding-right: 2px;
+    }
+    .writing-year-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 0 0 8px;
+    }
+    .writing-year-title {
+      margin: 0;
     }
     .writing-streak-chip {
       display: inline-grid;
@@ -375,9 +383,10 @@ if (pages.length === 0) {
         entries,
       };
 
-      dv.header(4, `${year}`);
+      const yearRow = dv.el("div", "", { cls: "writing-year-row" });
+      yearRow.createEl("h4", { text: `${year}`, cls: "writing-year-title" });
       if (year === years[0]) {
-        const streakEl = dv.el("div", "", { cls: "writing-streak-summary" });
+        const streakEl = yearRow.createEl("div", { cls: "writing-streak-summary" });
         streakEl.createEl("span", {
           cls: "writing-streak-chip",
           text: `Current: ${currentStreak} day${currentStreak === 1 ? "" : "s"}`,
