@@ -246,6 +246,7 @@ if (pages.length === 0) {
   const byYear = new Map(); // year -> Map(dateKey -> {count, files[]})
   const historyKey = "writing-heatmap-history-v2:Crypto";
   const historyBootstrapKey = "writing-heatmap-bootstrap-v1:Crypto";
+  const historyNoticeKey = "writing-heatmap-save-notice-v1:Daily-Wins";
   const historyFilePath = "Vault/Crypto/.writing-heatmap-history.json";
   let historySaveError = null;
   let historySaveOk = false;
@@ -370,7 +371,16 @@ if (pages.length === 0) {
   if (historySaveError) {
     dv.paragraph(`History save error: ${historySaveError}`);
   } else if (historySaveOk) {
-    dv.paragraph(`History backup updated: ${historyFilePath}`);
+    let shouldShowSaveNotice = true;
+    try {
+      shouldShowSaveNotice = sessionStorage.getItem(historyNoticeKey) !== "1";
+    } catch {}
+    if (shouldShowSaveNotice) {
+      dv.paragraph(`History backup updated: ${historyFilePath}`);
+      try {
+        sessionStorage.setItem(historyNoticeKey, "1");
+      } catch {}
+    }
   }
 
   if (byYear.size === 0) {
