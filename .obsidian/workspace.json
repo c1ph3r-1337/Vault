@@ -11,10 +11,14 @@
             "id": "7455a7b9d3dc8259",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Crypto/Roadmap/PHASE 0.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "PHASE 0"
             }
           }
         ]
@@ -176,6 +180,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "7455a7b9d3dc8259",
-  "lastOpenFiles": []
+  "active": "f9e56262f7cf1b10",
+  "lastOpenFiles": [
+    "Crazy Stuff/Welcome.md",
+    "Crazy Stuff/Crazy Stuff.md"
+  ]
 }
