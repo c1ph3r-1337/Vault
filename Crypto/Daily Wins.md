@@ -119,8 +119,11 @@ style.textContent = `
       font-weight: 700;
       font-size: 20px;
       line-height: 1;
-      transform: translateY(2px);
       pointer-events: none;
+    }
+    .writing-year-overlay-text {
+      display: block;
+      transform: translateY(2px);
     }
     .writing-streak-chip {
       display: inline-grid;
@@ -431,7 +434,8 @@ if (pages.length === 0) {
       const heatmapWrap = this.container.createDiv({ cls: "writing-heatmap-wrap" });
       const yearContainer = heatmapWrap.createDiv();
       renderHeatmapCalendar(yearContainer, calendarData);
-      heatmapWrap.createEl("div", { cls: "writing-year-overlay", text: `${year}` });
+      const yearOverlay = heatmapWrap.createEl("div", { cls: "writing-year-overlay" });
+      yearOverlay.createEl("span", { cls: "writing-year-overlay-text", text: `${year}` });
 
       // Add hover tooltip with all files written on each date.
       setTimeout(() => {
