@@ -97,6 +97,7 @@ style.textContent = `
     }
     .writing-year-row-with-streak .writing-year-title {
       margin-top: 6px;
+      margin-left: -96px;
     }
     .writing-streak-chip {
       display: inline-grid;
