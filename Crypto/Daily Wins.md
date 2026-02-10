@@ -290,51 +290,25 @@ if (pages.length === 0) {
 
 ```dataviewjs
 (() => {
-  const targetFolder = "Whitepapers";
-  const isInFolder = (path) =>
-    path === targetFolder || path.startsWith(`${targetFolder}/`);
+  const targetFolderName = "Whitepapers";
+  const isInWhitepapersFolder = (filePath) =>
+    filePath.startsWith(`${targetFolderName}/`) ||
+    filePath.includes(`/${targetFolderName}/`);
 
   const pdfs = app.vault
     .getFiles()
-    .filter((f) => f.extension.toLowerCase() === "pdf" && isInFolder(f.parent?.path || ""))
+    .filter(
+      (f) =>
+        f.extension.toLowerCase() === "pdf" &&
+        isInWhitepapersFolder(f.path)
+    )
     .sort((a, b) => a.path.localeCompare(b.path));
 
   if (!pdfs.length) {
-    dv.paragraph(`No PDF files found in "${targetFolder}".`);
+    dv.paragraph(`No PDF files found in any "${targetFolderName}" folder.`);
     return;
   }
 
   dv.list(pdfs.map((f) => dv.fileLink(f.path, false, f.basename)));
-})();
-```
-
-```dataviewjs
-(() => {
-  const debugTargetFolder = "Whitepapers";
-  const allFiles = app.vault.getFiles();
-  const folderMatches = allFiles.filter((f) => {
-    const parentPath = f.parent?.path || "";
-    return (
-      parentPath === debugTargetFolder ||
-      parentPath.startsWith(`${debugTargetFolder}/`)
-    );
-  });
-  const pdfMatches = folderMatches.filter(
-    (f) => f.extension.toLowerCase() === "pdf"
-  );
-
-  dv.paragraph(`Total vault files: ${allFiles.length}`);
-  dv.paragraph(`Files inside "${debugTargetFolder}": ${folderMatches.length}`);
-  dv.paragraph(`PDFs inside "${debugTargetFolder}": ${pdfMatches.length}`);
-
-  dv.table(
-    ["Name", "Extension", "Parent Path", "Full Path"],
-    folderMatches.slice(0, 50).map((f) => [
-      f.basename,
-      f.extension,
-      f.parent?.path || "(none)",
-      f.path,
-    ])
-  );
 })();
 ```
