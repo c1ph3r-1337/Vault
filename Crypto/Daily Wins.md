@@ -289,35 +289,43 @@ if (pages.length === 0) {
 ```
 
 ```dataviewjs
-const targetFolder = "Whitepapers";
-const isInFolder = (path) =>
-  path === targetFolder || path.startsWith(`${targetFolder}/`);
-
-const pdfs = app.vault
-  .getFiles()
-  .filter((f) => f.extension.toLowerCase() === "pdf" && isInFolder(f.parent?.path || ""))
-  .sort((a, b) => a.path.localeCompare(b.path));
-
-if (!pdfs.length) {
-  dv.paragraph(`No PDF files found in "${targetFolder}".`);
-} else {
-  dv.list(
-    pdfs.map((f) => dv.fileLink(f.path, false, f.basename))
-  );
-}
-
+(() => {
   const targetFolder = "Whitepapers";
+  const isInFolder = (path) =>
+    path === targetFolder || path.startsWith(`${targetFolder}/`);
 
-  const files = app.vault.getFiles();
-  const folderMatches = files.filter((f) => {
+  const pdfs = app.vault
+    .getFiles()
+    .filter((f) => f.extension.toLowerCase() === "pdf" && isInFolder(f.parent?.path || ""))
+    .sort((a, b) => a.path.localeCompare(b.path));
+
+  if (!pdfs.length) {
+    dv.paragraph(`No PDF files found in "${targetFolder}".`);
+    return;
+  }
+
+  dv.list(pdfs.map((f) => dv.fileLink(f.path, false, f.basename)));
+})();
+```
+
+```dataviewjs
+(() => {
+  const debugTargetFolder = "Whitepapers";
+  const allFiles = app.vault.getFiles();
+  const folderMatches = allFiles.filter((f) => {
     const parentPath = f.parent?.path || "";
-    return parentPath === targetFolder || parentPath.startsWith(`${targetFolder}/`);
+    return (
+      parentPath === debugTargetFolder ||
+      parentPath.startsWith(`${debugTargetFolder}/`)
+    );
   });
-  const pdfs = folderMatches.filter((f) => f.extension.toLowerCase() === "pdf");
+  const pdfMatches = folderMatches.filter(
+    (f) => f.extension.toLowerCase() === "pdf"
+  );
 
-  dv.paragraph(`Total vault files: ${files.length}`);
-  dv.paragraph(`Files inside "${targetFolder}": ${folderMatches.length}`);
-  dv.paragraph(`PDFs inside "${targetFolder}": ${pdfs.length}`);
+  dv.paragraph(`Total vault files: ${allFiles.length}`);
+  dv.paragraph(`Files inside "${debugTargetFolder}": ${folderMatches.length}`);
+  dv.paragraph(`PDFs inside "${debugTargetFolder}": ${pdfMatches.length}`);
 
   dv.table(
     ["Name", "Extension", "Parent Path", "Full Path"],
@@ -328,5 +336,5 @@ if (!pdfs.length) {
       f.path,
     ])
   );
+})();
 ```
-
