@@ -72,6 +72,29 @@ style.textContent = `
       background: var(--background-modifier-active-hover);
       color: var(--text-normal);
     }
+    .writing-inline-toast {
+      position: sticky;
+      top: 8px;
+      z-index: 70;
+      width: fit-content;
+      margin: 0 auto 8px;
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--background-modifier-border);
+      background: rgba(22, 24, 29, 0.96);
+      color: #e8edf2;
+      font-size: 12px;
+      line-height: 1.3;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      opacity: 0;
+      transform: translateY(-6px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      pointer-events: none;
+    }
+    .writing-inline-toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
     .writing-streak-summary {
       display: flex;
       flex-wrap: wrap;
@@ -224,6 +247,26 @@ if (!tooltipEl.dataset.globalResetBound) {
     if (document.hidden) resetTooltipState();
   });
 }
+const showInlineToast = (message, durationMs = 10000) => {
+  const host = this.container || dv.container;
+  if (!host) return;
+  let toast = host.querySelector(".writing-inline-toast");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.className = "writing-inline-toast";
+    host.prepend(toast);
+  }
+  toast.textContent = String(message || "");
+  toast.classList.add("show");
+  clearTimeout(toast._hideTimer);
+  clearTimeout(toast._removeTimer);
+  toast._hideTimer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, Math.max(0, durationMs - 250));
+  toast._removeTimer = setTimeout(() => {
+    if (toast && toast.parentElement) toast.remove();
+  }, durationMs);
+};
 
 // 2) Scan only Crypto files and keep per-file day history so past edited days remain visible.
 const CRYPTO_ROOT = "Crypto";
@@ -376,7 +419,7 @@ if (pages.length === 0) {
       shouldShowSaveNotice = sessionStorage.getItem(historyNoticeKey) !== "1";
     } catch {}
     if (shouldShowSaveNotice) {
-      dv.paragraph(`History backup updated: ${historyFilePath}`);
+      showInlineToast(`History backup updated: ${historyFilePath}`, 10000);
       try {
         sessionStorage.setItem(historyNoticeKey, "1");
       } catch {}
