@@ -243,6 +243,17 @@ Most cryptocurrencies fail due to bad economics, not bad code.
     
 - How do you prevent rich-get-richer?
 
+Study:
+
+- Bitcoin halving
+    
+- Ethereum gas model
+    
+- Slashing penalties
+    
+
+> Crypto without good economics = distributed scam
+
 **Rule:**  
 A system that rewards honest behavior and punishes cheating survives.
 
