@@ -67,7 +67,7 @@ if (pages.length === 0) {
         .map(([date, value]) => ({
           date, // required by Heatmap Calendar
           intensity: value.count, // higher value = stronger color
-          content: "", // keep cells clean; no long text rendered inside blocks
+          // omit plugin content tooltip; we add our own native hover tooltip below
         }))
         .sort((a, b) => a.date.localeCompare(b.date));
 
