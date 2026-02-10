@@ -151,11 +151,12 @@ if (pages.length === 0) {
   const byYear = new Map(); // year -> Map(dateKey -> {count, files[]})
   const historyKey = "writing-heatmap-history-v2:Crypto";
   const historyFilePath = "writing-heatmap-history.json";
+  let historySaveError = null;
   const loadHistoryByPath = async () => {
     try {
-      const historyFile = app.vault.getAbstractFileByPath(historyFilePath);
-      if (!historyFile) return null;
-      const raw = await app.vault.read(historyFile);
+      const exists = await app.vault.adapter.exists(historyFilePath);
+      if (!exists) return null;
+      const raw = await app.vault.adapter.read(historyFilePath);
       const parsed = JSON.parse(raw || "{}");
       return parsed && typeof parsed === "object" ? parsed : {};
     } catch {
@@ -163,13 +164,13 @@ if (pages.length === 0) {
     }
   };
   const saveHistoryByPath = async (history) => {
-    const payload = JSON.stringify(history, null, 2);
-    const existing = app.vault.getAbstractFileByPath(historyFilePath);
-    if (existing) {
-      await app.vault.modify(existing, payload);
-      return;
+    try {
+      const payload = JSON.stringify(history, null, 2);
+      await app.vault.adapter.write(historyFilePath, payload);
+      historySaveError = null;
+    } catch (err) {
+      historySaveError = String(err?.message || err || "Unknown save error");
     }
-    await app.vault.create(historyFilePath, payload);
   };
   const historyByPath = (await loadHistoryByPath()) || (() => {
     try {
@@ -224,6 +225,9 @@ if (pages.length === 0) {
   try {
     localStorage.setItem(historyKey, JSON.stringify(historyByPath));
   } catch {}
+  if (historySaveError) {
+    dv.paragraph(`History save error: ${historySaveError}`);
+  }
 
   if (byYear.size === 0) {
     dv.paragraph("No valid dates found to plot on the heatmap.");
