@@ -53,7 +53,7 @@ Blockchains are **distributed state machines**. Weak CS fundamentals lead to ins
 
 ---
 
-## PHASE 1 — Cryptography Foundations (The Heart of Crypto)
+> ## PHASE 1 — Cryptography Foundations (The Heart of Crypto)
 
 Cryptography is what makes cryptocurrencies possible.
 
@@ -95,7 +95,7 @@ Cryptography is what makes cryptocurrencies possible.
 
 ---
 
-## PHASE 2 — Blockchain Fundamentals
+> ## PHASE 2 — Blockchain Fundamentals
 
 ### 2.1 What a Block Is
 
@@ -129,7 +129,7 @@ Blockchains are append‑only, cryptographically linked logs.
 
 ---
 
-## PHASE 3 — Networking & Decentralization
+> ## PHASE 3 — Networking & Decentralization
 
 A blockchain is fundamentally a **peer‑to‑peer network**.
 
@@ -163,7 +163,7 @@ Decentralization emerges from protocol rules, not trust.
 
 ---
 
-## PHASE 4 — Consensus Mechanisms
+> ## PHASE 4 — Consensus Mechanisms
 
 Consensus defines **who writes the next block**.
 
@@ -197,7 +197,7 @@ Why does the system remain secure even if some participants are malicious?
 
 ---
 
-## PHASE 5 — Crypto Economics (Tokenomics)
+> ## PHASE 5 — Crypto Economics (Tokenomics)
 
 Most cryptocurrencies fail due to bad economics, not bad code.
 
@@ -231,7 +231,7 @@ A system that rewards honest behavior and punishes cheating survives.
 
 ---
 
-## PHASE 6 — Rust Programming for Blockchains
+> ## PHASE 6 — Rust Programming for Blockchains
 
 Rust is ideal for blockchain development.
 
@@ -266,7 +266,7 @@ Rust is ideal for blockchain development.
 
 ---
 
-## PHASE 7 — Build a Mini Blockchain in Rust
+> ## PHASE 7 — Build a Mini Blockchain in Rust
 
 This is the most important phase.
 
@@ -294,7 +294,7 @@ You should have a working toy blockchain you fully understand.
 
 ---
 
-## PHASE 8 — Study Real‑World Blockchains
+> ## PHASE 8 — Study Real‑World Blockchains
 
 Read **architecture and whitepapers**, not marketing.
 
@@ -305,13 +305,13 @@ Study:
 - Ethereum: Smart contracts and gas model
     
 - Solana: Performance and trade‑offs
-    
+PHASE    
 - Polkadot: Governance and interoperability
     
 
 ---
 
-## PHASE 9 — Advanced Topics (Optional but Powerful)
+> ## PHASE 9 — Advanced Topics (Optional but Powerful)
 
 - Smart contract virtual machines
     
@@ -328,7 +328,7 @@ Study:
 
 ---
 
-## Recommended Execution Order
+> ## Recommended Execution Order
 
 1. Cryptography basics
     
@@ -349,7 +349,7 @@ Study:
 
 ---
 
-## Final Truth
+> ## Final Truth
 
 Building a cryptocurrency is easy.
 
