@@ -87,7 +87,8 @@ if (!document.getElementById(tooltipStyleId)) {
     }
     .writing-year-title {
       margin: 0;
-      padding-left: 6px;
+      padding-left: 0;
+      margin-left: -72px;
     }
     .writing-streak-chip {
       display: inline-grid;
