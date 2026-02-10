@@ -288,9 +288,21 @@ if (pages.length === 0) {
 }
 ```
 
-```dataview
-LIST
-FROM "Whitepapers"
-WHERE file.extension = "pdf"
+```dataviewjs
+const targetFolder = "Whitepapers";
+const isInFolder = (path) =>
+  path === targetFolder || path.startsWith(`${targetFolder}/`);
 
+const pdfs = app.vault
+  .getFiles()
+  .filter((f) => f.extension.toLowerCase() === "pdf" && isInFolder(f.parent?.path || ""))
+  .sort((a, b) => a.path.localeCompare(b.path));
+
+if (!pdfs.length) {
+  dv.paragraph(`No PDF files found in "${targetFolder}".`);
+} else {
+  dv.list(
+    pdfs.map((f) => dv.fileLink(f.path, false, f.basename))
+  );
+}
 ```
