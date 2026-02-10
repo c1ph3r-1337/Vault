@@ -2,6 +2,26 @@
 // Title shown above the heatmap(s).
 dv.paragraph("**🔗 Writing – Don’t break the chain! 🔗🔗🔗🔗**");
 
+// Keep heatmap cells square (some themes stretch them).
+const styleId = "writing-heatmap-square-cells";
+if (!document.getElementById(styleId)) {
+  const style = document.createElement("style");
+  style.id = styleId;
+  style.textContent = `
+    .heatmap-calendar-box,
+    .heatmap-calendar .day,
+    .heatmap-calendar .day.has-data,
+    div[class*="heatmap"] div[class*="day"] {
+      width: 12px !important;
+      min-width: 12px !important;
+      height: 12px !important;
+      min-height: 12px !important;
+      aspect-ratio: 1 / 1 !important;
+    }
+  `;
+  document.head.appendChild(style);
+}
+
 // 1) Folder matcher:
 // supports "Daily Wins", "Crypto/Daily Wins", "Vault/Crypto/Daily Wins", etc.
 const isDailyWinsFolder = (folder) =>
