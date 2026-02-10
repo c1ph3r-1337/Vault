@@ -101,20 +101,25 @@ style.textContent = `
       transform: none;
       margin-left: 0;
       z-index: 60;
-      min-width: 86px;
-      height: 38px;
+      min-width: 110px;
+      height: 34px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0 10px;
+      padding: 0 12px;
       text-align: center;
-      border-radius: 14px;
+      border-radius: 999px;
       border: 1px solid var(--background-modifier-border);
-      background: color-mix(in srgb, var(--background-primary) 82%, var(--interactive-accent) 18%);
+      background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--background-primary) 86%, var(--interactive-accent) 14%),
+        var(--background-secondary)
+      );
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
       color: var(--text-normal);
       font-weight: 700;
-      font-size: 16px;
-      line-height: 1.1;
+      font-size: 28px;
+      line-height: 1;
       pointer-events: none;
     }
     .writing-streak-chip {
