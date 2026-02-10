@@ -90,7 +90,6 @@ if (pages.length === 0) {
             cell.getAttribute("date");
           if (!date || !tooltipByDate.has(date)) continue;
           cell.setAttribute("title", tooltipByDate.get(date));
-          cell.setAttribute("aria-label", tooltipByDate.get(date));
           if (cell.childElementCount === 0) cell.textContent = "";
         }
       }, 0);
