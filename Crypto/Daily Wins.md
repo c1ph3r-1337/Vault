@@ -93,6 +93,18 @@ if (!tooltipEl.dataset.linkHandlerBound) {
     if (path) app.workspace.openLinkText(path, "", false);
   });
 }
+if (!tooltipEl.dataset.globalResetBound) {
+  tooltipEl.dataset.globalResetBound = "1";
+  const resetTooltipState = () => {
+    tooltipEl._writingPinnedCell = null;
+    tooltipEl.classList.remove("show");
+    tooltipEl.style.pointerEvents = "none";
+  };
+  window.addEventListener("blur", resetTooltipState);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) resetTooltipState();
+  });
+}
 
 // 2) Scan all pages, then filter by folder + writing:true.
 // "writing" is treated as boolean-like to handle YAML/parser differences.
