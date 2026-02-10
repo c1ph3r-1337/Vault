@@ -96,7 +96,7 @@ style.textContent = `
     }
     .writing-year-overlay {
       position: absolute;
-      top: -6px;
+      top: -18px;
       left: 0;
       transform: none;
       margin-left: 0;
