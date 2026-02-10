@@ -3,24 +3,19 @@
 dv.span("**🔗 Writing – Don’t break the chain! 🔗🔗🔗🔗**")
 
 const calendarData = {
-    // Auto-detects year
-    colors: {
-        transparent: ["transparent"],
-    },
     entries: []
 }
 
-for (let page of dv.pages('"Crypto/Daily Wins"').where(p => p.writing === true)) {
+for (let page of dv.pages('"Crypto/Daily Wins"')
+        .where(p => p.writing === true && p.created)) {
+
     calendarData.entries.push({
-        date: page.file.name,              // YYYY-MM-DD.md
-        content: await dv.span(
-            `[🔗](${page.file.path})`
-        )
+        date: dv.date(page.created).toFormat("yyyy-MM-dd"),
+        content: await dv.span(`[🔗](${page.file.path})`)
     })
 }
 
 renderHeatmapCalendar(this.container, calendarData)
-
 
 
 ```
