@@ -154,7 +154,7 @@ if (pages.length === 0) {
   const byYear = new Map(); // year -> Map(dateKey -> {count, files[]})
   const historyKey = "writing-heatmap-history-v2:Crypto";
   const historyBootstrapKey = "writing-heatmap-bootstrap-v1:Crypto";
-  const historyFilePath = "writing-heatmap-history.json";
+  const historyFilePath = `${dv.current().file.folder}/writing-heatmap-history.json`;
   let historySaveError = null;
   let historySaveOk = false;
   const loadHistoryByPath = async () => {
