@@ -679,8 +679,12 @@ if (pages.length === 0) {
   const host = dv.el("div", "", { cls: "dw-cards" });
   for (const folderPath of [...byFolder.keys()].sort((a, b) => a.localeCompare(b))) {
     const { folderName, files } = byFolder.get(folderPath);
+    const displayFolderName =
+      String(folderName || "")
+        .replace(/^\s*\d+\s*[\.\-_:)]\s*/u, "")
+        .trim() || folderName;
     const details = host.createEl("details", { cls: "dw-card" });
-    details.createEl("summary", { text: folderName });
+    details.createEl("summary", { text: displayFolderName });
     const list = details.createEl("ul", { cls: "dw-list" });
     for (const f of files) {
       const li = list.createEl("li");
