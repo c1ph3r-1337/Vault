@@ -2,15 +2,16 @@
 // Title shown above the heatmap(s).
 dv.paragraph("**🔗 Writing – Don’t break the chain! 🔗🔗🔗🔗**");
 
-// 1) Define accepted folder paths.
-// Your vault may expose folders as "Daily Wins" (common) or "Crypto/Daily Wins".
-const CANDIDATE_FOLDERS = new Set(["Daily Wins", "Crypto/Daily Wins"]);
+// 1) Folder matcher:
+// supports "Daily Wins", "Crypto/Daily Wins", "Vault/Crypto/Daily Wins", etc.
+const isDailyWinsFolder = (folder) =>
+  folder === "Daily Wins" || folder.endsWith("/Daily Wins");
 
-// 2) Scan all pages, then filter by exact folder + writing:true.
+// 2) Scan all pages, then filter by folder + writing:true.
 // "writing" is treated as boolean-like to handle YAML/parser differences.
 const allPages = dv.pages();
 const pages = allPages.where((p) => {
-  const folderOk = CANDIDATE_FOLDERS.has(p.file.folder);
+  const folderOk = isDailyWinsFolder(p.file.folder);
   const writingVal = p.writing;
   const writingOk = writingVal === true || writingVal === "true" || writingVal === 1;
   return folderOk && writingOk;
@@ -18,7 +19,7 @@ const pages = allPages.where((p) => {
 
 // DataviewJS runs in an eval context, so avoid top-level "return".
 if (pages.length === 0) {
-  dv.paragraph('No notes found in "Daily Wins" (or "Crypto/Daily Wins") with writing: true.');
+  dv.paragraph('No notes found in a "/Daily Wins" folder with writing: true.');
 } else {
   // 3) Group notes by year/day.
   // Date priority: frontmatter "created" first, then file.mtime fallback.
