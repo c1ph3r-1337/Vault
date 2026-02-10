@@ -1,4 +1,4 @@
-<center>*🔗 Writing – Don’t break the chain! 🔗🔗</center>
+<center>🔗 Don’t break the chain! 🔗</center>
 
 ```dataviewjs
 // 1) Folder matcher:
@@ -65,7 +65,7 @@ if (pages.length === 0) {
         entries,
       };
 
-      dv.header(4, `Writing Activity ${year}`);
+      dv.header(4, `${year}`);
       renderHeatmapCalendar(this.container, calendarData);
     }
   }
