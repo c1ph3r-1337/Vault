@@ -5,6 +5,7 @@
 // supports "Daily Wins", "Crypto/Daily Wins", "Vault/Crypto/Daily Wins", etc.
 const isDailyWinsFolder = (folder) =>
   folder === "Daily Wins" || folder.endsWith("/Daily Wins");
+const IST_ZONE = "Asia/Kolkata";
 
 // 2) Scan all pages, then filter by folder + writing:true.
 // "writing" is treated as boolean-like to handle YAML/parser differences.
@@ -26,10 +27,10 @@ if (pages.length === 0) {
 
   for (const page of pages) {
     // Prefer frontmatter "created"; otherwise use file modified time.
-    // Normalize to local time to avoid UTC day-boundary surprises.
+    // Normalize to IST so day cells follow India time.
     let dateObj = page.created ? dv.date(page.created) : page.file.mtime;
-    if (dateObj && typeof dateObj.toLocal === "function") {
-      dateObj = dateObj.toLocal();
+    if (dateObj && typeof dateObj.setZone === "function") {
+      dateObj = dateObj.setZone(IST_ZONE);
     }
     if (!dateObj || typeof dateObj.toFormat !== "function") continue;
 
