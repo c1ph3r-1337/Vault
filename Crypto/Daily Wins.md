@@ -1,28 +1,26 @@
 ```dataviewjs 
 
-
-dv.span("**🔗 Writing **- Dont break the chain! 🔗🔗🔗🔗")
+dv.span("**🔗 Writing – Don’t break the chain! 🔗🔗🔗🔗**")
 
 const calendarData = {
-    year: 2026, // optional, remove this line to autoswitch year
+    // Auto-detects year
     colors: {
-        //white: ["#fff","#fff","#fff","#fff","#fff"],
         transparent: ["transparent"],
     },
     entries: []
 }
 
-for(let page of dv.pages('""').where(p=>p.writing)){
-	 
+for (let page of dv.pages('"Crypto/Daily Wins"').where(p => p.writing === true)) {
     calendarData.entries.push({
-        date: page.file.name,
-        content: await dv.span(`[🔗](${page.file.name})`), //for hover preview
-    }) 
+        date: page.file.name,              // YYYY-MM-DD.md
+        content: await dv.span(
+            `[🔗](${page.file.path})`
+        )
+    })
 }
 
-//console.log(calendarData)
-	
 renderHeatmapCalendar(this.container, calendarData)
+
 
 
 ```
