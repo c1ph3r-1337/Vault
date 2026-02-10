@@ -36,7 +36,7 @@ style.textContent = `
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
       pointer-events: none;
       opacity: 0;
-      transform: translateY(2px);
+      transform: translateY(5px);
       transition: opacity 0.12s ease, transform 0.12s ease;
     }
     .writing-heatmap-tooltip.show {
