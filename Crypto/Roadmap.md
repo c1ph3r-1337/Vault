@@ -139,7 +139,7 @@ Blockchains are append‑only, cryptographically linked logs.
 
 ---
 
-> ##[[ PHASE 3]] — Networking & Decentralization
+> ## [[ PHASE 3]] — Networking & Decentralization
 
 A blockchain is fundamentally a **peer‑to‑peer network**.
 
