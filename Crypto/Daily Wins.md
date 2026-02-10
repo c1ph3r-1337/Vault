@@ -69,6 +69,22 @@ if (!document.getElementById(tooltipStyleId)) {
       background: var(--background-modifier-active-hover);
       color: var(--text-normal);
     }
+    .writing-streak-summary {
+      display: inline-flex;
+      gap: 14px;
+      align-items: center;
+      margin: 4px 0 10px;
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--background-modifier-border);
+      background: var(--background-secondary);
+      font-weight: 700;
+    }
+    .writing-streak-label {
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-right: 4px;
+    }
     :where(.heatmap-calendar-box, .day, [data-date]) {
       transition: transform 0.16s ease, filter 0.16s ease;
       transform-origin: center;
@@ -284,6 +300,34 @@ if (pages.length === 0) {
   if (byYear.size === 0) {
     dv.paragraph("No valid dates found to plot on the heatmap.");
   } else {
+    const allDates = [...new Set(
+      [...byYear.values()].flatMap((dayMap) => [...dayMap.keys()])
+    )].sort((a, b) => a.localeCompare(b));
+    let maxStreak = 0;
+    let currentStreak = 0;
+    let run = 0;
+    let prevDate = null;
+    for (const dateKey of allDates) {
+      const isConsecutive =
+        prevDate &&
+        window.moment(dateKey, "YYYY-MM-DD").diff(
+          window.moment(prevDate, "YYYY-MM-DD"),
+          "days"
+        ) === 1;
+      run = isConsecutive ? run + 1 : 1;
+      if (run > maxStreak) maxStreak = run;
+      prevDate = dateKey;
+    }
+    currentStreak = run;
+
+    const streakEl = dv.el("div", "", { cls: "writing-streak-summary" });
+    streakEl.createEl("span", {
+      text: `Current Streak: ${currentStreak} day${currentStreak === 1 ? "" : "s"}`,
+    });
+    streakEl.createEl("span", {
+      text: `Max Streak: ${maxStreak} day${maxStreak === 1 ? "" : "s"}`,
+    });
+
     // 4) Build Heatmap Calendar data structure and render.
     // We render one heatmap per year so all notes are represented.
     const years = [...byYear.keys()].sort((a, b) => b - a);
