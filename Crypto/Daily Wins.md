@@ -90,14 +90,26 @@ style.textContent = `
       justify-content: space-between;
       gap: 10px;
     }
-    .writing-year-title {
-      margin: 0;
-      padding-left: 0;
-      margin-left: 0;
+    .writing-heatmap-wrap {
+      position: relative;
+      margin: 0 0 10px;
     }
-    .writing-year-row-with-streak .writing-year-title {
-      margin-top: 6px;
-      margin-left: -144px;
+    .writing-year-overlay {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      transform: translateX(-100%);
+      margin-left: -8px;
+      z-index: 40;
+      padding: 4px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--background-modifier-border);
+      background: color-mix(in srgb, var(--background-primary) 82%, var(--interactive-accent) 18%);
+      color: var(--text-normal);
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1;
+      pointer-events: none;
     }
     .writing-streak-chip {
       display: inline-grid;
@@ -405,8 +417,10 @@ if (pages.length === 0) {
           text: `Best: ${maxStreak} day${maxStreak === 1 ? "" : "s"}`,
         });
       }
-      const yearContainer = this.container.createDiv();
+      const heatmapWrap = this.container.createDiv({ cls: "writing-heatmap-wrap" });
+      const yearContainer = heatmapWrap.createDiv();
       renderHeatmapCalendar(yearContainer, calendarData);
+      heatmapWrap.createEl("div", { cls: "writing-year-overlay", text: `${year}` });
 
       // Add hover tooltip with all files written on each date.
       setTimeout(() => {
