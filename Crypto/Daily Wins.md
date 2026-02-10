@@ -107,6 +107,9 @@ if (!tooltipEl.dataset.linkHandlerBound) {
     if (!link) return;
     event.preventDefault();
     const path = link.dataset.path;
+    tooltipEl._writingPinnedCell = null;
+    tooltipEl.classList.remove("show");
+    tooltipEl.style.pointerEvents = "none";
     if (path) app.workspace.openLinkText(path, "", false);
   });
 }
