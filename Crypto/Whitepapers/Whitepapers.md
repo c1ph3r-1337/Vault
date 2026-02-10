@@ -1,2 +1,2 @@
 Bitcoin ![[bitcoin.pdf]]
-![[Ethereum_2014.pdf]]
+Ethereum ![[Ethereum_2014.pdf]]
