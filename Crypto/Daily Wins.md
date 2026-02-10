@@ -100,25 +100,31 @@ if (!tooltipEl) {
   tooltipEl.className = "writing-heatmap-tooltip";
   document.body.appendChild(tooltipEl);
 }
+const closeTooltipNow = () => {
+  tooltipEl._writingPinnedCell = null;
+  tooltipEl.classList.remove("show");
+  tooltipEl.style.pointerEvents = "none";
+};
 if (!tooltipEl.dataset.linkHandlerBound) {
   tooltipEl.dataset.linkHandlerBound = "1";
+  tooltipEl.addEventListener("pointerdown", (event) => {
+    const link = event.target.closest(".writing-heatmap-tooltip-link");
+    if (!link) return;
+    closeTooltipNow();
+  });
   tooltipEl.addEventListener("click", (event) => {
     const link = event.target.closest(".writing-heatmap-tooltip-link");
     if (!link) return;
     event.preventDefault();
     const path = link.dataset.path;
-    tooltipEl._writingPinnedCell = null;
-    tooltipEl.classList.remove("show");
-    tooltipEl.style.pointerEvents = "none";
+    closeTooltipNow();
     if (path) app.workspace.openLinkText(path, "", false);
   });
 }
 if (!tooltipEl.dataset.globalResetBound) {
   tooltipEl.dataset.globalResetBound = "1";
   const resetTooltipState = () => {
-    tooltipEl._writingPinnedCell = null;
-    tooltipEl.classList.remove("show");
-    tooltipEl.style.pointerEvents = "none";
+    closeTooltipNow();
   };
   window.addEventListener("blur", resetTooltipState);
   document.addEventListener("visibilitychange", () => {
