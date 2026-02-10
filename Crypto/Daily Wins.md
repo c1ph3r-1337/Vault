@@ -70,11 +70,15 @@ if (!document.getElementById(tooltipStyleId)) {
       color: var(--text-normal);
     }
     .writing-streak-summary {
-      display: inline-flex;
+      display: flex;
       flex-wrap: wrap;
       gap: 8px;
       margin: 0 0 8px;
       align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      padding-right: 12px;
+      box-sizing: border-box;
     }
     .writing-streak-chip {
       display: inline-grid;
