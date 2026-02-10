@@ -70,4 +70,12 @@ if (pages.length === 0) {
     }
   }
 }
+
+
+
+  const rows = dv.pages()
+    .where(p => p.file.folder.includes("Daily Wins"))
+    .map(p => [p.file.path, p.file.folder, p.writing, typeof p.writing, p.created, p.file.mtime]);
+
+  dv.table(["path", "folder", "writing", "type", "created", "mtime"], rows);
 ```
