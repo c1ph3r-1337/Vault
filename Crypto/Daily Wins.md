@@ -67,7 +67,7 @@ if (pages.length === 0) {
         .map(([date, value]) => ({
           date, // required by Heatmap Calendar
           intensity: value.count, // higher value = stronger color
-          content: "", // keep cells square; no inline text in cell body
+          content: "",
         }))
         .sort((a, b) => a.date.localeCompare(b.date));
 
