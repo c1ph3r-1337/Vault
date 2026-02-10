@@ -82,7 +82,7 @@ if (!document.getElementById(tooltipStyleId)) {
       align-items: center;
       justify-content: center;
       column-gap: 6px;
-      padding: 6px 12px;
+      padding: 7px 12px;
       line-height: 1.1;
       border-radius: 999px;
       border: 1px solid var(--background-modifier-border);
@@ -98,14 +98,15 @@ if (!document.getElementById(tooltipStyleId)) {
     }
     .writing-streak-chip::before {
       content: "";
-      width: 16px;
-      height: 16px;
+      width: 20px;
+      height: 20px;
       display: block;
       place-self: center;
       margin-right: 0;
       background-repeat: no-repeat;
-      background-size: contain;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%231bd65a' d='M42 6c2 9-3 13-7 18-4 5-6 9-2 14 3 3 8 2 11-2 4-5 5-10 4-16 10 8 16 19 16 30 0 17-14 31-32 31S0 67 0 50c0-12 7-23 18-31-2 8 1 14 6 18 4 4 10 5 14 0 4-5 4-11 4-31z'/%3E%3Cpath fill='%2388ff00' d='M32 33c1 6-2 8-4 11-3 3-4 5-2 8s5 3 8 1c3-3 4-6 4-10 5 5 8 10 8 16 0 9-7 16-16 16s-16-7-16-16c0-6 3-12 9-16-1 4 0 7 2 9 3 2 6 2 8-1 2-2 2-6 2-18z'/%3E%3C/svg%3E");
+      background-size: 100% 100%;
+      background-position: center;
+      background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%231bd65a' d='M30 4c1.6 7.4-2.3 10.6-5.3 14.3-3 3.7-4.5 6.6-1.5 10.2 2.2 2.5 6.2 2 8.7-.9 3.1-3.7 3.8-7.8 3-12.8 7.3 5.7 11.7 13.6 11.7 21.8C46.6 48.4 36 57 24 57S1.4 48.4 1.4 36.6c0-8.7 5-16.7 12.9-22.5-1.5 5.9.9 10.2 4.4 12.9 2.9 2.2 6.9 2.8 9.8-.8 2.8-3.4 2.8-7.9 1.5-22.2z' transform='translate(0 -9)'/%3E%3Cpath fill='%2388ff00' d='M24 21.5c.8 4.4-1.4 6.2-3 8.1-2.1 2.3-3.1 4-1.6 6 1.5 2.1 3.9 2.2 6 .8 2.2-2 3-4.6 3-7.3 3.8 3.2 6.1 7.2 6.1 11.5 0 6.6-4.8 11.4-10.5 11.4s-10.5-4.8-10.5-11.4c0-4.5 2.3-8.6 6.4-11.7-.7 2.7-.1 4.9 1.3 6.4 1.7 1.5 4.2 1.5 5.7-.6 1.4-1.8 1.4-4.2 1.1-12.2z'/%3E%3C/svg%3E\");
     }
     :where(.heatmap-calendar-box, .day, [data-date]) {
       transition: transform 0.16s ease, filter 0.16s ease;
