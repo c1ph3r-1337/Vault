@@ -90,7 +90,7 @@ style.textContent = `
     .writing-year-title {
       margin: 0;
       padding-left: 0;
-      margin-left: -96px;
+      margin-left: 0;
     }
     .writing-streak-chip {
       display: inline-grid;
