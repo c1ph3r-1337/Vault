@@ -52,9 +52,20 @@ if (!document.getElementById(tooltipStyleId)) {
       text-decoration: none;
       border-radius: 6px;
       padding: 2px 4px;
+      transition: background 0.12s ease;
     }
     .writing-heatmap-tooltip-link:hover {
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      text-decoration: none;
+      outline: none;
+    }
+    .writing-heatmap-tooltip-link:focus,
+    .writing-heatmap-tooltip-link:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22) inset;
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
     }
   `;
   document.head.appendChild(style);
@@ -172,6 +183,8 @@ if (pages.length === 0) {
         };
         const showPinnedTooltip = (date, event) => {
           const files = dayMap.get(date)?.files || [];
+          const weekday = window.moment(date, "YYYY-MM-DD").format("ddd");
+          const title = `${weekday}, ${date}`;
           const links = files
             .map(
               (f) =>
@@ -181,7 +194,7 @@ if (pages.length === 0) {
             )
             .join("");
           tooltipEl.innerHTML = `<div class="writing-heatmap-tooltip-title">${escapeHtml(
-            date
+            title
           )}</div>${links || "<div>No files</div>"}`;
           tooltipEl.style.pointerEvents = "auto";
           moveTooltip(event);
