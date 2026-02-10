@@ -20,3 +20,14 @@ for (let page of dv.pages('"Crypto"')) {
 
 renderHeatmapCalendar(this.container, calendarData)
 ```
+
+```dataviewjs
+for (let p of dv.pages('"Crypto"')) {
+  if (p.writing === true) {
+    dv.paragraph(
+      `FOUND → ${p.file.path} | created=${p.created}`
+    )
+  }
+}
+
+```
