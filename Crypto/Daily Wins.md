@@ -150,7 +150,7 @@ if (pages.length === 0) {
   // adds that day without removing older days already seen.
   const byYear = new Map(); // year -> Map(dateKey -> {count, files[]})
   const historyKey = "writing-heatmap-history-v2:Crypto";
-  const historyFilePath = "Crypto/.writing-heatmap-history.json";
+  const historyFilePath = "writing-heatmap-history.json";
   const loadHistoryByPath = async () => {
     try {
       const historyFile = app.vault.getAbstractFileByPath(historyFilePath);
