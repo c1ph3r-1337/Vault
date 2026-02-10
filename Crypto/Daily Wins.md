@@ -96,11 +96,11 @@ style.textContent = `
     }
     .writing-year-overlay {
       position: absolute;
-      top: 10px;
+      top: -6px;
       left: 0;
-      transform: translateX(-100%);
-      margin-left: -8px;
-      z-index: 40;
+      transform: none;
+      margin-left: 0;
+      z-index: 60;
       padding: 4px 10px;
       border-radius: 8px;
       border: 1px solid var(--background-modifier-border);
