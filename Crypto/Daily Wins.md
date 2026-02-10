@@ -137,7 +137,10 @@ if (!tooltipEl.dataset.globalResetBound) {
 const CRYPTO_ROOT = "Crypto";
 const isInCrypto = (filePath) => {
   const p = String(filePath || "");
-  return p.startsWith(`${CRYPTO_ROOT}/`) || p.includes(`/${CRYPTO_ROOT}/`);
+  // In this vault, file paths are root-relative (e.g. "Daily Wins/...")
+  // so everything here is already inside Crypto.
+  if (!p) return false;
+  return true;
 };
 const pages = dv.pages().where((p) => isInCrypto(p.file?.path));
 
