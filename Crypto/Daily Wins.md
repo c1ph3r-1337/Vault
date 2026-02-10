@@ -70,20 +70,26 @@ if (!document.getElementById(tooltipStyleId)) {
       color: var(--text-normal);
     }
     .writing-streak-summary {
-      display: inline-flex;
-      gap: 14px;
-      align-items: center;
-      margin: 4px 0 10px;
-      padding: 8px 12px;
-      border-radius: 10px;
-      border: 1px solid var(--background-modifier-border);
-      background: var(--background-secondary);
-      font-weight: 700;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 2px 0 6px;
     }
-    .writing-streak-label {
-      color: var(--text-muted);
-      font-weight: 600;
-      margin-right: 4px;
+    .writing-streak-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--background-modifier-border);
+      background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--background-primary) 86%, var(--interactive-accent) 14%),
+        var(--background-secondary)
+      );
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+      color: var(--text-normal);
+      font-weight: 700;
+      font-size: 12px;
     }
     :where(.heatmap-calendar-box, .day, [data-date]) {
       transition: transform 0.16s ease, filter 0.16s ease;
@@ -320,14 +326,6 @@ if (pages.length === 0) {
     }
     currentStreak = run;
 
-    const streakEl = dv.el("div", "", { cls: "writing-streak-summary" });
-    streakEl.createEl("span", {
-      text: `Current Streak: ${currentStreak} day${currentStreak === 1 ? "" : "s"}`,
-    });
-    streakEl.createEl("span", {
-      text: `Max Streak: ${maxStreak} day${maxStreak === 1 ? "" : "s"}`,
-    });
-
     // 4) Build Heatmap Calendar data structure and render.
     // We render one heatmap per year so all notes are represented.
     const years = [...byYear.keys()].sort((a, b) => b - a);
@@ -355,6 +353,17 @@ if (pages.length === 0) {
       };
 
       dv.header(4, `${year}`);
+      if (year === years[0]) {
+        const streakEl = dv.el("div", "", { cls: "writing-streak-summary" });
+        streakEl.createEl("span", {
+          cls: "writing-streak-chip",
+          text: `Current Streak: ${currentStreak} day${currentStreak === 1 ? "" : "s"}`,
+        });
+        streakEl.createEl("span", {
+          cls: "writing-streak-chip",
+          text: `Max Streak: ${maxStreak} day${maxStreak === 1 ? "" : "s"}`,
+        });
+      }
       const yearContainer = this.container.createDiv();
       renderHeatmapCalendar(yearContainer, calendarData);
 
