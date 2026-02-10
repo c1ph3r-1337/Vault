@@ -100,24 +100,25 @@ if (!tooltipEl) {
   tooltipEl.className = "writing-heatmap-tooltip";
   document.body.appendChild(tooltipEl);
 }
-const closeTooltipNow = () => {
+const closeTooltipNow = (suppressMs = 0) => {
   tooltipEl._writingPinnedCell = null;
+  tooltipEl._writingSuppressUntil = Math.max(
+    Number(tooltipEl._writingSuppressUntil || 0),
+    Date.now() + suppressMs
+  );
   tooltipEl.classList.remove("show");
   tooltipEl.style.pointerEvents = "none";
+  tooltipEl.innerHTML = "";
 };
 if (!tooltipEl.dataset.linkHandlerBound) {
   tooltipEl.dataset.linkHandlerBound = "1";
-  tooltipEl.addEventListener("pointerdown", (event) => {
-    const link = event.target.closest(".writing-heatmap-tooltip-link");
-    if (!link) return;
-    closeTooltipNow();
-  });
   tooltipEl.addEventListener("click", (event) => {
     const link = event.target.closest(".writing-heatmap-tooltip-link");
     if (!link) return;
     event.preventDefault();
+    event.stopPropagation();
     const path = link.dataset.path;
-    closeTooltipNow();
+    closeTooltipNow(300);
     if (path) app.workspace.openLinkText(path, "", false);
   });
 }
@@ -202,6 +203,7 @@ if (pages.length === 0) {
       setTimeout(() => {
         const cells = yearContainer.querySelectorAll("[data-date], .heatmap-calendar-box, .day");
         const getPinnedCell = () => tooltipEl._writingPinnedCell || null;
+        const tooltipSuppressed = () => Date.now() < Number(tooltipEl._writingSuppressUntil || 0);
         const setPinnedCell = (cell) => {
           tooltipEl._writingPinnedCell = cell || null;
         };
@@ -214,12 +216,14 @@ if (pages.length === 0) {
           tooltipEl.style.pointerEvents = "none";
         };
         const showHoverTooltip = (cell, event) => {
+          if (tooltipSuppressed()) return;
           tooltipEl.textContent = cell.dataset.writingTooltip || "";
           tooltipEl.style.pointerEvents = "none";
           moveTooltip(event);
           tooltipEl.classList.add("show");
         };
         const showPinnedTooltip = (date, event) => {
+          if (tooltipSuppressed()) return;
           const files = dayMap.get(date)?.files || [];
           const weekday = window.moment(date, "YYYY-MM-DD").format("ddd");
           const title = `${weekday}, ${date}`;
