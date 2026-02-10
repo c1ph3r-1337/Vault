@@ -297,6 +297,67 @@ if (pages.length === 0) {
     filePath.startsWith(`${targetFolderName}/`) ||
     filePath.includes(`/${targetFolderName}/`);
 
+  const styleId = "daily-wins-folder-cards-style";
+  if (!document.getElementById(styleId)) {
+    const style = document.createElement("style");
+    style.id = styleId;
+    style.textContent = `
+      .dw-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 12px;
+        margin-top: 8px;
+      }
+      .dw-card {
+        border: 1px solid var(--background-modifier-border);
+        border-radius: 12px;
+        background: linear-gradient(
+          160deg,
+          color-mix(in srgb, var(--background-primary) 90%, var(--background-modifier-hover) 10%),
+          var(--background-secondary)
+        );
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+        overflow: hidden;
+      }
+      .dw-card summary {
+        list-style: none;
+        cursor: pointer;
+        font-weight: 700;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--background-modifier-border);
+        user-select: none;
+      }
+      .dw-card summary::-webkit-details-marker {
+        display: none;
+      }
+      .dw-card summary::after {
+        content: "▾";
+        float: right;
+        opacity: 0.8;
+      }
+      .dw-card:not([open]) summary::after {
+        content: "▸";
+      }
+      .dw-list {
+        margin: 0;
+        padding: 8px 12px 10px 26px;
+      }
+      .dw-list li {
+        margin: 3px 0;
+      }
+      .dw-link {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .dw-link:hover,
+      .dw-link:focus-visible {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
   const notes = app.vault
     .getMarkdownFiles()
     .filter((f) => isInDailyWinsFolder(f.path))
@@ -310,19 +371,20 @@ if (pages.length === 0) {
   const byFolder = new Map();
   for (const note of notes) {
     const folderPath = note.parent?.path || "(root)";
-    if (!byFolder.has(folderPath)) byFolder.set(folderPath, []);
-    byFolder.get(folderPath).push(note);
+    const folderName = note.parent?.name || folderPath;
+    if (!byFolder.has(folderPath)) byFolder.set(folderPath, { folderName, files: [] });
+    byFolder.get(folderPath).files.push(note);
   }
 
-  const host = dv.el("div", "");
+  const host = dv.el("div", "", { cls: "dw-cards" });
   for (const folderPath of [...byFolder.keys()].sort((a, b) => a.localeCompare(b))) {
-    const files = byFolder.get(folderPath);
-    const details = host.createEl("details");
-    details.createEl("summary", { text: `${folderPath} (${files.length})` });
-    const list = details.createEl("ul");
+    const { folderName, files } = byFolder.get(folderPath);
+    const details = host.createEl("details", { cls: "dw-card" });
+    details.createEl("summary", { text: `${folderName} (${files.length})` });
+    const list = details.createEl("ul", { cls: "dw-list" });
     for (const f of files) {
       const li = list.createEl("li");
-      const a = li.createEl("a", { text: f.basename, href: "#" });
+      const a = li.createEl("a", { text: f.basename, href: "#", cls: "dw-link" });
       a.addEventListener("click", (event) => {
         event.preventDefault();
         app.workspace.openLinkText(f.path, "", false);
