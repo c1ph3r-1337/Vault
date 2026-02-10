@@ -1,4 +1,2 @@
- [[bitcoin.pdf]]
- [[Ethereum_2014.pdf]]
-
-![[Whitepapers]]
+Bitcoin ![[bitcoin.pdf]]
+![[Ethereum_2014.pdf]]
