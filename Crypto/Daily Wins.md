@@ -81,16 +81,22 @@ style.textContent = `
       justify-content: flex-end;
       padding-right: 2px;
     }
-    .writing-streak-row {
-      margin: 0 0 8px;
-    }
     .writing-year-row {
       margin: 0 0 8px;
+    }
+    .writing-year-row-with-streak {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
     }
     .writing-year-title {
       margin: 0;
       padding-left: 0;
       margin-left: 0;
+    }
+    .writing-year-row-with-streak .writing-year-title {
+      margin-top: 6px;
     }
     .writing-streak-chip {
       display: inline-grid;
@@ -388,8 +394,8 @@ if (pages.length === 0) {
       const yearRow = dv.el("div", "", { cls: "writing-year-row" });
       yearRow.createEl("h4", { text: `${year}`, cls: "writing-year-title" });
       if (year === years[0]) {
-        const streakRow = dv.el("div", "", { cls: "writing-streak-row" });
-        const streakEl = streakRow.createEl("div", { cls: "writing-streak-summary" });
+        yearRow.classList.add("writing-year-row-with-streak");
+        const streakEl = yearRow.createEl("div", { cls: "writing-streak-summary" });
         streakEl.createEl("span", {
           cls: "writing-streak-chip",
           text: `Current: ${currentStreak} day${currentStreak === 1 ? "" : "s"}`,
