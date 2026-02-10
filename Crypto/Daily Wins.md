@@ -147,6 +147,10 @@ style.textContent = `
       font-weight: 700;
       font-size: 12px;
     }
+    .writing-streak-chip-text {
+      display: block;
+      transform: translateY(2px);
+    }
     .writing-streak-chip::before {
       content: "";
       width: 20px;
@@ -422,12 +426,14 @@ if (pages.length === 0) {
       if (year === years[0]) {
         yearRow.classList.add("writing-year-row-with-streak");
         const streakEl = yearRow.createEl("div", { cls: "writing-streak-summary" });
-        streakEl.createEl("span", {
-          cls: "writing-streak-chip",
+        const currentChip = streakEl.createEl("span", { cls: "writing-streak-chip" });
+        currentChip.createEl("span", {
+          cls: "writing-streak-chip-text",
           text: `Current: ${currentStreak} day${currentStreak === 1 ? "" : "s"}`,
         });
-        streakEl.createEl("span", {
-          cls: "writing-streak-chip",
+        const bestChip = streakEl.createEl("span", { cls: "writing-streak-chip" });
+        bestChip.createEl("span", {
+          cls: "writing-streak-chip-text",
           text: `Best: ${maxStreak} day${maxStreak === 1 ? "" : "s"}`,
         });
       }
