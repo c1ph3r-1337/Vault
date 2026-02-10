@@ -170,7 +170,10 @@ if (pages.length === 0) {
       // Add hover tooltip with all files written on each date.
       setTimeout(() => {
         const cells = yearContainer.querySelectorAll("[data-date], .heatmap-calendar-box, .day");
-        let pinnedCell = null;
+        const getPinnedCell = () => tooltipEl._writingPinnedCell || null;
+        const setPinnedCell = (cell) => {
+          tooltipEl._writingPinnedCell = cell || null;
+        };
         const moveTooltip = (event) => {
           tooltipEl.style.left = `${event.clientX + 12}px`;
           tooltipEl.style.top = `${event.clientY + 12}px`;
@@ -207,7 +210,7 @@ if (pages.length === 0) {
         if (!tooltipEl.dataset.pinnedCloseBound) {
           tooltipEl.dataset.pinnedCloseBound = "1";
           tooltipEl.addEventListener("mouseleave", () => {
-            pinnedCell = null;
+            setPinnedCell(null);
             hideTooltip();
           });
         }
@@ -220,26 +223,26 @@ if (pages.length === 0) {
           cell.removeAttribute("title");
           cell.dataset.writingTooltip = tooltipByDate.get(date);
           cell.addEventListener("mouseenter", (event) => {
-            if (pinnedCell) return;
+            if (getPinnedCell()) return;
             showHoverTooltip(cell, event);
           });
           cell.addEventListener("mousemove", (event) => {
-            if (pinnedCell) return;
+            if (getPinnedCell()) return;
             moveTooltip(event);
           });
           cell.addEventListener("mouseleave", () => {
-            if (pinnedCell) return;
+            if (getPinnedCell()) return;
             hideTooltip();
           });
           cell.addEventListener("dblclick", (event) => {
             event.preventDefault();
             event.stopPropagation();
-            if (pinnedCell === cell) {
-              pinnedCell = null;
+            if (getPinnedCell() === cell) {
+              setPinnedCell(null);
               hideTooltip();
               return;
             }
-            pinnedCell = cell;
+            setPinnedCell(cell);
             showPinnedTooltip(date, event);
           });
           if (cell.childElementCount === 0) cell.textContent = "";
