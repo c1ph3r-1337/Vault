@@ -288,4 +288,4 @@ if (pages.length === 0) {
 }
 ```
 
-[[]]
+[Open Whitepapers](obsidian://open?vault=VaultName&file=Whitepapers)
