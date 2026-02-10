@@ -150,12 +150,34 @@ if (pages.length === 0) {
   // adds that day without removing older days already seen.
   const byYear = new Map(); // year -> Map(dateKey -> {count, files[]})
   const historyKey = "writing-heatmap-history-v2:Crypto";
-  let historyByPath = {};
-  try {
-    historyByPath = JSON.parse(localStorage.getItem(historyKey) || "{}");
-  } catch {
-    historyByPath = {};
-  }
+  const historyFilePath = "Crypto/.writing-heatmap-history.json";
+  const loadHistoryByPath = async () => {
+    try {
+      const historyFile = app.vault.getAbstractFileByPath(historyFilePath);
+      if (!historyFile) return null;
+      const raw = await app.vault.read(historyFile);
+      const parsed = JSON.parse(raw || "{}");
+      return parsed && typeof parsed === "object" ? parsed : {};
+    } catch {
+      return null;
+    }
+  };
+  const saveHistoryByPath = async (history) => {
+    const payload = JSON.stringify(history, null, 2);
+    const existing = app.vault.getAbstractFileByPath(historyFilePath);
+    if (existing) {
+      await app.vault.modify(existing, payload);
+      return;
+    }
+    await app.vault.create(historyFilePath, payload);
+  };
+  const historyByPath = (await loadHistoryByPath()) || (() => {
+    try {
+      return JSON.parse(localStorage.getItem(historyKey) || "{}");
+    } catch {
+      return {};
+    }
+  })();
 
   const toDateKey = (value) => {
     if (!value) return null;
@@ -195,6 +217,10 @@ if (pages.length === 0) {
       day.files.push({ name: page.file.name, path });
     }
   }
+  try {
+    await saveHistoryByPath(historyByPath);
+  } catch {}
+  // Keep a local copy as fallback for environments where file writes are blocked.
   try {
     localStorage.setItem(historyKey, JSON.stringify(historyByPath));
   } catch {}
