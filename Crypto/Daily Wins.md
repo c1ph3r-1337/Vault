@@ -96,12 +96,13 @@ style.textContent = `
     }
     .writing-year-overlay {
       position: absolute;
-      top: -18px;
+      top: -40px;
       left: 0;
       transform: none;
       margin-left: 0;
       z-index: 60;
       padding: 4px 10px;
+      text-align: center;
       border-radius: 8px;
       border: 1px solid var(--background-modifier-border);
       background: color-mix(in srgb, var(--background-primary) 82%, var(--interactive-accent) 18%);
