@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c690ec4bb7454338",
+        "id": "48190266cc7fc6ea",
         "type": "tabs",
         "children": [
           {
-            "id": "18c8118e47bc6c5a",
+            "id": "72d886e814d18378",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Crypto/Daily Wins.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Daily Wins"
             }
           }
         ]
@@ -74,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "b2e40daf833402dc",
@@ -85,6 +88,18 @@
         "id": "c7f31c0a30eec36d",
         "type": "tabs",
         "children": [
+          {
+            "id": "9d8bec7930bf3a42",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "graph",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          },
           {
             "id": "753d7dcb93d70226",
             "type": "leaf",
@@ -158,12 +173,22 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
+          },
+          {
+            "id": "949c6b4a25e7dbf9",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 518.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -173,12 +198,23 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "18c8118e47bc6c5a",
+  "active": "72d886e814d18378",
   "lastOpenFiles": [
-    "Videos.md",
-    "Crypto/Daily Wins.md"
+    "Crazy Stuff/Crazy Stuff.md",
+    "Crazy Stuff/Welcome.md",
+    "Crypto/RESEARCH LIST.md",
+    "Crypto/Roadmap/PHASE 9.md",
+    "Crypto/Daily Wins.md",
+    "Crypto/Roadmap.md",
+    "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
+    "Untitled.md",
+    "Ink/Drawing/2026.2.10 - 22.17pm.drawing",
+    "Ink/Drawing",
+    "Ink",
+    "Ink/Drawing/2026.2.10 - 22.15pm.drawing"
   ]
 }

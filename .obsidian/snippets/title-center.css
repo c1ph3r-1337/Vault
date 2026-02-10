@@ -1,0 +1,11 @@
+/* Center note title (Reading + Live Preview) */
+
+.inline-title {
+    text-align: center;
+    width: 100%;
+}
+
+/* Optional: center editing title as well */
+.metadata-container + .inline-title {
+    text-align: center;
+}

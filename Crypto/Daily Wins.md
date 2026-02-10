@@ -290,7 +290,7 @@ if (pages.length === 0) {
   const historyKey = "writing-heatmap-history-v2:Crypto";
   const historyBootstrapKey = "writing-heatmap-bootstrap-v1:Crypto";
   const historyNoticeKey = "writing-heatmap-save-notice-v1:Daily-Wins";
-  const historyFilePath = "Vault/Crypto/.writing-heatmap-history.json";
+  const historyFilePath = "Crypto/.writing-heatmap-history.json";
   let historySaveError = null;
   let historySaveOk = false;
   const loadHistoryByPath = async () => {
