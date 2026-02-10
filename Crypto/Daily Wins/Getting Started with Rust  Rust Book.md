@@ -1,24 +1,23 @@
 ---
-title: "Getting Started with Rust | Rust Book"
+title: Getting Started with Rust | Rust Book
 tags:
-  - "Youtube/ref"
-url: "https://www.youtube.com/watch?v=unRhxbFULII&list=PLinedj3B30sAnCkwmMb5Ape5Ibqp0R5bP"
-channel: "Piyush Garg"
-channelURL: "https://www.youtube.com/@piyushgargdev"
+  - Youtube/ref
+url: https://www.youtube.com/watch?v=unRhxbFULII&list=PLinedj3B30sAnCkwmMb5Ape5Ibqp0R5bP
+channel: Piyush Garg
+channelURL: https://www.youtube.com/@piyushgargdev
 videoID:
 related:
   - "[[Videos]]"
 published: 2024-08-19
-thumbnailUrl: "https://i.ytimg.com/vi/unRhxbFULII/maxresdefault.jpg"
+thumbnailUrl: https://i.ytimg.com/vi/unRhxbFULII/maxresdefault.jpg
 duration: 2185
-durationFormatted: "36:24"
+durationFormatted: 36:24
 cssclasses:
-  - "table-col-min-width"
-  - "wide"
-  - "img-grid"
+  - table-col-min-width
+  - wide
+  - img-grid
 created: 2026-02-10T17:49:20+00:00
 ---
-
 # Video URL
 
 [Getting Started with Rust | Rust Book](https://www.youtube.com/watch?v=unRhxbFULII&list=PLinedj3B30sAnCkwmMb5Ape5Ibqp0R5bP) — [Piyush Garg](https://www.youtube.com/@piyushgargdev) (36:24)
