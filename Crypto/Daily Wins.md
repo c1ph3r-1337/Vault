@@ -1,10 +1,8 @@
 <center>🔗 Don’t break the chain! 🔗</center>
 
 ```dataviewjs
-// 1) Folder matcher:
-// supports "Daily Wins", "Crypto/Daily Wins", "Vault/Crypto/Daily Wins", etc.
-const isDailyWinsFolder = (folder) =>
-  folder === "Daily Wins" || folder.endsWith("/Daily Wins");
+// 1) Include all notes in this vault section (Crypto folder and subfolders).
+// Dataview already scopes to markdown pages, so this captures files created anywhere here.
 const IST_ZONE = "Asia/Kolkata";
 const escapeHtml = (s) =>
   String(s)
@@ -125,19 +123,12 @@ if (!tooltipEl.dataset.globalResetBound) {
   });
 }
 
-// 2) Scan all pages, then filter by folder + writing:true.
-// "writing" is treated as boolean-like to handle YAML/parser differences.
-const allPages = dv.pages();
-const pages = allPages.where((p) => {
-  const folderOk = isDailyWinsFolder(p.file.folder);
-  const writingVal = p.writing;
-  const writingOk = writingVal === true || writingVal === "true" || writingVal === 1;
-  return folderOk && writingOk;
-});
+// 2) Scan all pages in this area so file activity anywhere in Crypto updates the heatmap.
+const pages = dv.pages();
 
 // DataviewJS runs in an eval context, so avoid top-level "return".
 if (pages.length === 0) {
-  dv.paragraph('No notes found in a "/Daily Wins" folder with writing: true.');
+  dv.paragraph("No notes found to plot on the heatmap.");
 } else {
   // 3) Group notes by year/day.
   // Date priority: frontmatter "created" first, then file.mtime fallback.
