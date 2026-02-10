@@ -303,14 +303,15 @@ if (pages.length === 0) {
     style.id = styleId;
     style.textContent = `
       .dw-cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-        gap: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
         margin-top: 8px;
-        align-items: start;
+        align-items: stretch;
       }
       .dw-card {
         margin: 0;
+        width: 100%;
         border: 1px solid var(--background-modifier-border);
         border-radius: 12px;
         background: linear-gradient(
