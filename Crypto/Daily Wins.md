@@ -1,4 +1,4 @@
-<center>🔗 Don’t break the chain! 🔗</center>
+<center> Don’t break the chain! </center>
 
 ```dataviewjs
 // 1) Include all notes in this vault section (Crypto folder and subfolders).
