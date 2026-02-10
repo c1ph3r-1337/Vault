@@ -2,16 +2,37 @@
 // Title shown above the heatmap(s).
 dv.paragraph("**🔗 Writing – Don’t break the chain! 🔗🔗🔗🔗**");
 
-// 1) Only scan notes inside this folder.
-// If your vault root is already "Crypto", change this to "Daily Wins".
-const TARGET_FOLDER = "Crypto/Daily Wins";
+// 1) Find the right folder path for this vault.
+// Some vaults use "Daily Wins", others "Crypto/Daily Wins".
+const CANDIDATE_FOLDERS = ["Daily Wins", "Crypto/Daily Wins"];
+let TARGET_FOLDER = null;
+let pages = dv.pages('""').where(() => false); // empty by default
 
-// 2) Pull only pages from the target folder and keep only writing notes.
-const pages = dv.pages(`"${TARGET_FOLDER}"`).where((p) => p.writing === true);
+for (const folder of CANDIDATE_FOLDERS) {
+  const matches = dv.pages(`"${folder}"`).where((p) => p.writing === true);
+  if (matches.length > 0) {
+    TARGET_FOLDER = folder;
+    pages = matches;
+    break;
+  }
+}
+
+// If no notes matched writing:true, use the first existing folder for clear messaging.
+if (!TARGET_FOLDER) {
+  for (const folder of CANDIDATE_FOLDERS) {
+    const anyInFolder = dv.pages(`"${folder}"`);
+    if (anyInFolder.length > 0) {
+      TARGET_FOLDER = folder;
+      break;
+    }
+  }
+}
 
 // DataviewJS runs in an eval context, so avoid top-level "return".
 if (pages.length === 0) {
-  dv.paragraph(`No notes found in "${TARGET_FOLDER}" with writing: true.`);
+  dv.paragraph(
+    `No notes found in "${TARGET_FOLDER ?? CANDIDATE_FOLDERS[0]}" with writing: true.`
+  );
 } else {
   // 3) Group notes by year/day.
   // Date priority: frontmatter "created" first, then file.mtime fallback.
