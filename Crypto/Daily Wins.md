@@ -247,7 +247,7 @@ if (!tooltipEl.dataset.globalResetBound) {
     if (document.hidden) resetTooltipState();
   });
 }
-const showInlineToast = (message, durationMs = 10000) => {
+const showInlineToast = (message, durationMs = 5000) => {
   const host = this.container || dv.container;
   if (!host) return;
   let toast = host.querySelector(".writing-inline-toast");
