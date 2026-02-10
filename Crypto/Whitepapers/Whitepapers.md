@@ -1,2 +1,2 @@
-> [[bitcoin.pdf]]
-> [[Ethereum_2014.pdf]]
+> ![[bitcoin.pdf]]
+> ![[Ethereum_2014.pdf]]
