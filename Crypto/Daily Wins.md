@@ -48,7 +48,7 @@ if (!document.getElementById(tooltipStyleId)) {
     }
     .writing-heatmap-tooltip-link {
       display: block;
-      color: #9fd3ff;
+      color: #ffffff;
       text-decoration: none;
       border-radius: 6px;
       padding: 2px 4px;
@@ -187,6 +187,13 @@ if (pages.length === 0) {
           moveTooltip(event);
           tooltipEl.classList.add("show");
         };
+        if (!tooltipEl.dataset.pinnedCloseBound) {
+          tooltipEl.dataset.pinnedCloseBound = "1";
+          tooltipEl.addEventListener("mouseleave", () => {
+            pinnedCell = null;
+            hideTooltip();
+          });
+        }
         for (const cell of cells) {
           const date =
             cell.getAttribute("data-date") ||
