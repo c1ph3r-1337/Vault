@@ -290,6 +290,7 @@ if (pages.length === 0) {
 
 ```dataview
 LIST
-FROM "Daily "
-```
+FROM "Whitepapers"
+WHERE file.extension = "pdf"
 
+```
