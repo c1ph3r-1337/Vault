@@ -1,3 +1,5 @@
+```dataviewjs 
+
 
 dv.span("**🔗 Writing **- Dont break the chain! 🔗🔗🔗🔗")
 
@@ -21,3 +23,6 @@ for(let page of dv.pages('"daily notes"').where(p=>p.writing)){
 //console.log(calendarData)
 	
 renderHeatmapCalendar(this.container, calendarData)
+
+
+```
