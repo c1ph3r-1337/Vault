@@ -63,7 +63,7 @@ Blockchains are **distributed state machines**. Weak CS fundamentals lead to ins
 
 ---
 
-> ## [[PHASE 1]] — Cryptography Foundations (The Heart of Crypto)
+> ##  ![[PHASE 1]] — Cryptography Foundations (The Heart of Crypto)
 
 Cryptography is what makes cryptocurrencies possible.
 
