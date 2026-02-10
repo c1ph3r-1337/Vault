@@ -6,13 +6,14 @@ const calendarData = {
     entries: []
 }
 
-for (let page of dv.pages('"Crypto/Daily Wins"')
-        .where(p => p.writing === true && p.created)) {
+for (let page of dv.pages('"Crypto/Daily Wins"')) {
 
-    calendarData.entries.push({
-        date: dv.date(page.created).toFormat("yyyy-MM-dd"),
-        content: await dv.span(`[🔗](${page.file.path})`)
-    })
+    if (page.writing === true && page.created) {
+        calendarData.entries.push({
+            date: page.created.split("T")[0],   // ← KEY FIX
+            content: await dv.span(`[🔗](${page.file.path})`)
+        })
+    }
 }
 
 renderHeatmapCalendar(this.container, calendarData)
