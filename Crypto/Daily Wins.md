@@ -307,11 +307,11 @@ if (pages.length === 0) {
         flex-direction: column;
         gap: 10px;
         margin-top: 8px;
-        align-items: stretch;
+        align-items: center;
       }
       .dw-card {
         margin: 0;
-        width: 100%;
+        width: min(680px, 92%);
         border: 1px solid var(--background-modifier-border);
         border-radius: 12px;
         background: linear-gradient(
