@@ -81,9 +81,11 @@ if (!document.getElementById(tooltipStyleId)) {
       grid-auto-flow: column;
       align-items: center;
       justify-content: center;
+      justify-items: center;
       column-gap: 6px;
       padding: 7px 12px;
       line-height: 1.1;
+      text-align: center;
       border-radius: 999px;
       border: 1px solid var(--background-modifier-border);
       background: linear-gradient(
