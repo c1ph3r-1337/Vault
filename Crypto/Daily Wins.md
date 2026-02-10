@@ -23,7 +23,7 @@ if (pages.length === 0) {
 } else {
   // 3) Group notes by year/day.
   // Date priority: frontmatter "created" first, then file.mtime fallback.
-  const byYear = new Map(); // year -> Map(dateKey -> {count, links})
+  const byYear = new Map(); // year -> Map(dateKey -> {count, files[]})
 
   for (const page of pages) {
     // Prefer frontmatter "created"; otherwise use file modified time.
@@ -40,11 +40,11 @@ if (pages.length === 0) {
     if (!byYear.has(year)) byYear.set(year, new Map());
     const dayMap = byYear.get(year);
 
-    if (!dayMap.has(dateKey)) dayMap.set(dateKey, { count: 0, links: [] });
+    if (!dayMap.has(dateKey)) dayMap.set(dateKey, { count: 0, files: [] });
     const day = dayMap.get(dateKey);
 
     day.count += 1;
-    day.links.push(`[[${page.file.path}|${page.file.name}]]`);
+    day.files.push(page.file.name);
   }
 
   if (byYear.size === 0) {
@@ -56,6 +56,12 @@ if (pages.length === 0) {
 
     for (const year of years) {
       const dayMap = byYear.get(year);
+      const tooltipByDate = new Map(
+        [...dayMap.entries()].map(([date, value]) => [
+          date,
+          `${date}\n${value.files.map((f) => `- ${f}`).join("\n")}`,
+        ])
+      );
 
       const entries = [...dayMap.entries()]
         .map(([date, value]) => ({
@@ -71,7 +77,23 @@ if (pages.length === 0) {
       };
 
       dv.header(4, `${year}`);
-      renderHeatmapCalendar(this.container, calendarData);
+      const yearContainer = this.container.createDiv();
+      renderHeatmapCalendar(yearContainer, calendarData);
+
+      // Add hover tooltip with all files written on each date.
+      setTimeout(() => {
+        const cells = yearContainer.querySelectorAll("[data-date], .heatmap-calendar-box, .day");
+        for (const cell of cells) {
+          const date =
+            cell.getAttribute("data-date") ||
+            cell.dataset?.date ||
+            cell.getAttribute("date");
+          if (!date || !tooltipByDate.has(date)) continue;
+          cell.setAttribute("title", tooltipByDate.get(date));
+          cell.setAttribute("aria-label", tooltipByDate.get(date));
+          if (cell.childElementCount === 0) cell.textContent = "";
+        }
+      }, 0);
     }
   }
 }
