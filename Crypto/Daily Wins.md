@@ -101,12 +101,11 @@ style.textContent = `
       transform: none;
       margin-left: 0;
       z-index: 60;
-      min-width: 110px;
+      width: 110px;
       height: 34px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 12px;
+      display: grid;
+      place-items: center;
+      padding: 0;
       text-align: center;
       border-radius: 999px;
       border: 1px solid var(--background-modifier-border);
@@ -118,7 +117,7 @@ style.textContent = `
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
       color: var(--text-normal);
       font-weight: 700;
-      font-size: 28px;
+      font-size: 24px;
       line-height: 1;
       pointer-events: none;
     }
