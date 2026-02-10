@@ -48,24 +48,28 @@ if (!document.getElementById(tooltipStyleId)) {
     }
     .writing-heatmap-tooltip-link {
       display: block;
-      color: #ffffff;
+      color: var(--text-normal);
       text-decoration: none;
       border-radius: 6px;
       padding: 2px 4px;
-      transition: background 0.12s ease;
+      transition: background 0.12s ease, box-shadow 0.12s ease;
     }
     .writing-heatmap-tooltip-link:hover {
-      background: rgba(255, 255, 255, 0.14);
-      color: #ffffff;
+      background: var(--background-modifier-hover);
+      color: var(--text-normal);
       text-decoration: none;
       outline: none;
     }
     .writing-heatmap-tooltip-link:focus,
     .writing-heatmap-tooltip-link:focus-visible {
       outline: none;
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22) inset;
-      background: rgba(255, 255, 255, 0.12);
-      color: #ffffff;
+      box-shadow: 0 0 0 1px var(--background-modifier-border-focus) inset;
+      background: var(--background-modifier-hover);
+      color: var(--text-normal);
+    }
+    .writing-heatmap-tooltip-link:active {
+      background: var(--background-modifier-active-hover);
+      color: var(--text-normal);
     }
   `;
   document.head.appendChild(style);
