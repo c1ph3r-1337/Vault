@@ -24,4 +24,5 @@ for (let page of dv.pages('"Crypto"')) {
 
 renderHeatmapCalendar(this.container, calendarData)
 
+
 ```
