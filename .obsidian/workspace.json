@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Roadmap.md",
-                "mode": "preview",
-                "source": true
+                "file": "Crypto/Whitepapers/Whitepapers.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Roadmap"
+              "title": "Whitepapers"
             }
           }
         ]
@@ -202,13 +202,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "72d886e814d18378",
+  "active": "9483dbce746bc604",
   "lastOpenFiles": [
+    "Crypto/Whitepapers/bitcoin.pdf",
+    "Crypto/Roadmap.md",
     "Crypto/RESEARCH LIST.md",
     "Crypto/Daily Wins.md",
     "Crazy Stuff/Welcome.md",
     "Crazy Stuff/Crazy Stuff.md",
-    "Crypto/Roadmap.md",
     "Crypto/Roadmap/PHASE 9.md",
     "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
     "Untitled.md",
