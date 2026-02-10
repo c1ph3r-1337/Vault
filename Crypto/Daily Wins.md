@@ -101,15 +101,20 @@ style.textContent = `
       transform: none;
       margin-left: 0;
       z-index: 60;
-      padding: 4px 10px;
+      min-width: 86px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10px;
       text-align: center;
-      border-radius: 8px;
+      border-radius: 14px;
       border: 1px solid var(--background-modifier-border);
       background: color-mix(in srgb, var(--background-primary) 82%, var(--interactive-accent) 18%);
       color: var(--text-normal);
       font-weight: 700;
-      font-size: 20px;
-      line-height: 1;
+      font-size: 16px;
+      line-height: 1.1;
       pointer-events: none;
     }
     .writing-streak-chip {
