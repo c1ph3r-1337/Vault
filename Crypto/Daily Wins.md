@@ -1,6 +1,6 @@
 ```dataviewjs
 // Title shown above the heatmap(s).
-dv.paragraph("**🔗 Writing – Don’t break the chain! 🔗🔗🔗🔗**");
+dv.paragraph("**🔗 Don’t break the chain! 🔗**");
 
 // 1) Folder matcher:
 // supports "Daily Wins", "Crypto/Daily Wins", "Vault/Crypto/Daily Wins", etc.
