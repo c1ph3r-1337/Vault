@@ -7,6 +7,47 @@ const isDailyWinsFolder = (folder) =>
   folder === "Daily Wins" || folder.endsWith("/Daily Wins");
 const IST_ZONE = "Asia/Kolkata";
 
+// Custom tooltip: rounded corners, no white border.
+const tooltipStyleId = "writing-heatmap-tooltip-style";
+if (!document.getElementById(tooltipStyleId)) {
+  const style = document.createElement("style");
+  style.id = tooltipStyleId;
+  style.textContent = `
+    .writing-heatmap-tooltip {
+      position: fixed;
+      z-index: 9999;
+      max-width: 300px;
+      padding: 8px 10px;
+      border: none;
+      border-radius: 10px;
+      background: rgba(22, 24, 29, 0.96);
+      color: #e8edf2;
+      font-size: 12px;
+      line-height: 1.35;
+      white-space: pre-line;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(2px);
+      transition: opacity 0.12s ease, transform 0.12s ease;
+    }
+    .writing-heatmap-tooltip.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+const tooltipId = "writing-heatmap-tooltip";
+let tooltipEl = document.getElementById(tooltipId);
+if (!tooltipEl) {
+  tooltipEl = document.createElement("div");
+  tooltipEl.id = tooltipId;
+  tooltipEl.className = "writing-heatmap-tooltip";
+  document.body.appendChild(tooltipEl);
+}
+
 // 2) Scan all pages, then filter by folder + writing:true.
 // "writing" is treated as boolean-like to handle YAML/parser differences.
 const allPages = dv.pages();
@@ -83,13 +124,27 @@ if (pages.length === 0) {
       // Add hover tooltip with all files written on each date.
       setTimeout(() => {
         const cells = yearContainer.querySelectorAll("[data-date], .heatmap-calendar-box, .day");
+        const moveTooltip = (event) => {
+          tooltipEl.style.left = `${event.clientX + 12}px`;
+          tooltipEl.style.top = `${event.clientY + 12}px`;
+        };
         for (const cell of cells) {
           const date =
             cell.getAttribute("data-date") ||
             cell.dataset?.date ||
             cell.getAttribute("date");
           if (!date || !tooltipByDate.has(date)) continue;
-          cell.setAttribute("title", tooltipByDate.get(date));
+          cell.removeAttribute("title");
+          cell.dataset.writingTooltip = tooltipByDate.get(date);
+          cell.addEventListener("mouseenter", (event) => {
+            tooltipEl.textContent = cell.dataset.writingTooltip || "";
+            moveTooltip(event);
+            tooltipEl.classList.add("show");
+          });
+          cell.addEventListener("mousemove", moveTooltip);
+          cell.addEventListener("mouseleave", () => {
+            tooltipEl.classList.remove("show");
+          });
           if (cell.childElementCount === 0) cell.textContent = "";
         }
       }, 0);
