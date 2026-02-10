@@ -3,8 +3,8 @@
 {
 	"versionAtEmbed": "0.3.4",
 	"filepath": "Ink/Drawing/2026.2.10 - 13.36pm (2).drawing",
-	"width": 500,
-	"aspectRatio": 1
+	"width": 362,
+	"aspectRatio": 2.4133333333333336
 }
 ```
 
