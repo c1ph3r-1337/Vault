@@ -56,12 +56,18 @@ if (pages.length === 0) {
 
     for (const year of years) {
       const dayMap = byYear.get(year);
+      const tooltipByDate = new Map(
+        [...dayMap.entries()].map(([date, value]) => [
+          date,
+          `${date}\n${value.files.map((f) => `- ${f}`).join("\n")}`,
+        ])
+      );
 
       const entries = [...dayMap.entries()]
         .map(([date, value]) => ({
           date, // required by Heatmap Calendar
           intensity: value.count, // higher value = stronger color
-          content: `${date}<br>${value.files.map((f) => `• ${f}`).join("<br>")}`,
+          content: "", // keep cells square; no inline text in cell body
         }))
         .sort((a, b) => a.date.localeCompare(b.date));
 
@@ -71,7 +77,22 @@ if (pages.length === 0) {
       };
 
       dv.header(4, `${year}`);
-      renderHeatmapCalendar(this.container, calendarData);
+      const yearContainer = this.container.createDiv();
+      renderHeatmapCalendar(yearContainer, calendarData);
+
+      // Single hover tooltip source: native title attribute.
+      setTimeout(() => {
+        const cells = yearContainer.querySelectorAll("[data-date], .heatmap-calendar-box, .day");
+        for (const cell of cells) {
+          const date =
+            cell.getAttribute("data-date") ||
+            cell.dataset?.date ||
+            cell.getAttribute("date");
+          if (!date || !tooltipByDate.has(date)) continue;
+          cell.setAttribute("title", tooltipByDate.get(date));
+          if (cell.childElementCount === 0) cell.textContent = "";
+        }
+      }, 0);
     }
   }
 }
