@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crazy Stuff/Welcome.md",
+                "file": "Crypto/RESEARCH LIST.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Welcome"
+              "title": "RESEARCH LIST"
             }
           }
         ]
@@ -204,13 +204,14 @@
   },
   "active": "72d886e814d18378",
   "lastOpenFiles": [
+    "Crypto/Roadmap.md",
+    "Crypto/Daily Wins/4. MARCH/Untitled.md",
     "Crypto/Daily Wins.md",
+    "Crazy Stuff/Crazy Stuff.md",
+    "Crazy Stuff/Welcome.md",
     "Crypto/Whitepapers/Whitepapers.md",
     "Crypto/Roadmap/PHASE 1.md",
     "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
-    "Crazy Stuff/Crazy Stuff.md",
-    "Crazy Stuff/Welcome.md",
-    "Crypto/Roadmap.md",
     "Crypto/RESEARCH LIST.md",
     "Crypto/Whitepapers/bitcoin.pdf",
     "Crypto/Roadmap/PHASE 9.md",
