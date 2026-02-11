@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
+                "file": "Crypto/Daily Wins.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Getting Started with Rust  Rust Book"
+              "title": "Daily Wins"
             }
           }
         ]
@@ -188,7 +188,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 518.5
+    "width": 655.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -202,17 +202,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "72d886e814d18378",
+  "active": "9d8bec7930bf3a42",
   "lastOpenFiles": [
+    "Crypto/Daily Wins.md",
+    "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
     "Crazy Stuff/Crazy Stuff.md",
     "Crazy Stuff/Welcome.md",
-    "Crypto/Daily Wins.md",
     "Crypto/Roadmap.md",
     "Crypto/RESEARCH LIST.md",
     "Crypto/Whitepapers/Whitepapers.md",
     "Crypto/Whitepapers/bitcoin.pdf",
     "Crypto/Roadmap/PHASE 9.md",
-    "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
     "Untitled.md",
     "Ink/Drawing/2026.2.10 - 22.17pm.drawing",
     "Ink/Drawing",
