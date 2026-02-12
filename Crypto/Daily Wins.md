@@ -193,11 +193,18 @@ style.textContent = `
     }
     :where(.heatmap-calendar-box, .day, [data-date]).writing-cell-empty {
       border-radius: 0 !important;
-      border: 1px solid color-mix(in srgb, #ffffff 14%, transparent);
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.14) 0%,
+          rgba(255, 255, 255, 0.04) 42%,
+          rgba(14, 20, 30, 0.26) 100%
+        ) !important;
+      border: 1px solid color-mix(in srgb, #ffffff 24%, transparent) !important;
       box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.22),
         inset 0 -8px 14px rgba(8, 12, 18, 0.18),
-        0 2px 6px rgba(0, 0, 0, 0.2);
+        0 2px 6px rgba(0, 0, 0, 0.2) !important;
       backdrop-filter: blur(7px) saturate(1.12);
       -webkit-backdrop-filter: blur(7px) saturate(1.12);
     }
@@ -207,11 +214,18 @@ style.textContent = `
       z-index: 2;
     }
     :where(.heatmap-calendar-box, .day, [data-date]).writing-cell-empty:hover {
-      border-color: color-mix(in srgb, #ffffff 28%, transparent);
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.2) 0%,
+          rgba(255, 255, 255, 0.08) 45%,
+          rgba(14, 20, 30, 0.24) 100%
+        ) !important;
+      border-color: color-mix(in srgb, #ffffff 36%, transparent) !important;
       box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.28),
         inset 0 -8px 14px rgba(8, 12, 18, 0.12),
-        0 8px 18px rgba(0, 0, 0, 0.28);
+        0 8px 18px rgba(0, 0, 0, 0.28) !important;
     }
     @media (prefers-reduced-motion: reduce) {
       :where(.heatmap-calendar-box, .day, [data-date]) {
