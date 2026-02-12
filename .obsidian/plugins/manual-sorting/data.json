@@ -1,0 +1,80 @@
+{
+  "customOrder": {
+    "/": {
+      "children": [
+        "Crazy Stuff",
+        "Crypto"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crazy Stuff": {
+      "children": [
+        "Crazy Stuff/Crazy Stuff.md",
+        "Crazy Stuff/Welcome.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto": {
+      "children": [
+        "Crypto/Daily Wins.md",
+        "Crypto/RESEARCH LIST.md",
+        "Crypto/Roadmap.md",
+        "Crypto/Daily Wins",
+        "Crypto/Roadmap",
+        "Crypto/Whitepapers"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Daily Wins": {
+      "children": [
+        "Crypto/Daily Wins/3. FEB",
+        "Crypto/Daily Wins/4. MARCH",
+        "Crypto/Daily Wins/5. APRIL"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Daily Wins/3. FEB": {
+      "children": [
+        "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
+        "Crypto/Daily Wins/3. FEB/But how does bitcoin actually work.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Daily Wins/4. MARCH": {
+      "children": [
+        "Crypto/Daily Wins/4. MARCH/Untitled.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Daily Wins/5. APRIL": {
+      "children": [],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap": {
+      "children": [
+        "Crypto/Roadmap/PHASE 0.md",
+        "Crypto/Roadmap/PHASE 1.md",
+        "Crypto/Roadmap/PHASE 2.md",
+        "Crypto/Roadmap/PHASE 3.md",
+        "Crypto/Roadmap/PHASE 4.md",
+        "Crypto/Roadmap/PHASE 5.md",
+        "Crypto/Roadmap/PHASE 6.md",
+        "Crypto/Roadmap/PHASE 7.md",
+        "Crypto/Roadmap/PHASE 8.md",
+        "Crypto/Roadmap/PHASE 9.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Whitepapers": {
+      "children": [
+        "Crypto/Whitepapers/Whitepapers.md",
+        "Crypto/Whitepapers/bitcoin.pdf",
+        "Crypto/Whitepapers/Ethereum_2014.pdf"
+      ],
+      "sortOrder": "custom"
+    }
+  },
+  "sortOrder": "custom",
+  "debugMode": false,
+  "newItemPlacement": "top"
+}

@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Crypto/Daily Wins.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -40,7 +40,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byModifiedTimeReverse",
+                "sortOrder": "custom",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -199,7 +199,8 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "custom-sort:Toggle custom sorting": false
     }
   },
   "active": "72d886e814d18378",
