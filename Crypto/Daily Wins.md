@@ -939,12 +939,19 @@ if (pages.length === 0) {
     sortButton.textContent = `Sort: ${newestFirst ? "Newest" : "Oldest"}`;
     weekButton.textContent = `This week: ${thisWeekOnly ? "On" : "Off"}`;
     expandButton.textContent = expandAll ? "Collapse all" : "Expand all";
+    const hasActiveFilter = Boolean(query) || thisWeekOnly;
 
     const visibleFolders = folders
       .map((folder) => {
+        const folderMatchesQuery =
+          folder.displayName.toLowerCase().includes(query) ||
+          String(folder.folderName || "").toLowerCase().includes(query);
         const filtered = folder.files.filter((f) => {
           const matchQuery =
-            f.name.toLowerCase().includes(query) || f.path.toLowerCase().includes(query);
+            !query ||
+            folderMatchesQuery ||
+            f.name.toLowerCase().includes(query) ||
+            f.path.toLowerCase().includes(query);
           if (!matchQuery) return false;
           if (!thisWeekOnly) return true;
           return toLocalDate(f.when).getTime() >= startOfWeek;
@@ -975,7 +982,9 @@ if (pages.length === 0) {
       const visibleStreak = streakFromDayKeys(orderedFiles.map((f) => f.dayKey));
 
       const details = cardsHost.createEl("details", { cls: "dw-card" });
-      if (expandAll || folder.folderPath === mostRecentFolderPath) details.open = true;
+      if (expandAll || hasActiveFilter || folder.folderPath === mostRecentFolderPath) {
+        details.open = true;
+      }
 
       const summary = details.createEl("summary");
       const row = summary.createEl("div", { cls: "dw-summary-row" });
