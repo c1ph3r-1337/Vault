@@ -614,10 +614,18 @@ if (pages.length === 0) {
             color-mix(in srgb, var(--background-secondary) 88%, #121a29 12%)
           ) !important;
         overflow-x: hidden !important;
+        scrollbar-width: none;
       }
       .markdown-reading-view:has(.dw-page-anchor) .markdown-preview-view {
         background: transparent !important;
         overflow-x: hidden !important;
+        scrollbar-width: none;
+      }
+      .markdown-reading-view:has(.dw-page-anchor)::-webkit-scrollbar,
+      .markdown-reading-view:has(.dw-page-anchor) .markdown-preview-view::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        display: none;
       }
       .dw-board {
         width: min(860px, 95%);
