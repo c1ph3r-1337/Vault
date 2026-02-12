@@ -623,6 +623,8 @@ if (pages.length === 0) {
         position: relative;
         isolation: isolate;
         padding: 14px;
+        box-sizing: border-box;
+        overflow-x: hidden;
         border-radius: 18px;
         background:
           radial-gradient(120% 140% at 0% 0%, color-mix(in srgb, var(--interactive-accent) 18%, transparent) 0%, transparent 45%),
@@ -663,12 +665,14 @@ if (pages.length === 0) {
       }
       .dw-toolbar {
         display: grid;
-        grid-template-columns: 1fr auto auto auto;
+        grid-template-columns: minmax(0, 1fr) auto auto auto;
         gap: 8px;
         margin-bottom: 12px;
+        align-items: center;
       }
       .dw-search {
         width: 100%;
+        min-width: 0;
         border: 1px solid var(--background-modifier-border);
         border-radius: 10px;
         background: var(--background-primary);
@@ -711,10 +715,12 @@ if (pages.length === 0) {
         display: flex;
         flex-direction: column;
         gap: 12px;
+        min-width: 0;
       }
       .dw-card {
         margin: 0;
         width: 100%;
+        min-width: 0;
         border: 1px solid var(--background-modifier-border);
         border-radius: 14px;
         background: linear-gradient(
@@ -738,12 +744,12 @@ if (pages.length === 0) {
       }
       .dw-summary-row {
         display: grid;
-        grid-template-columns: 1fr auto 16px;
+        grid-template-columns: minmax(0, 1fr) auto auto;
         align-items: center;
         gap: 8px;
       }
       .dw-summary-title {
-        flex: 1;
+        min-width: 0;
       }
       .dw-summary-count {
         font-size: 12px;
@@ -790,7 +796,7 @@ if (pages.length === 0) {
       }
       .dw-list-item {
         display: grid;
-        grid-template-columns: 64px 76px 1fr;
+        grid-template-columns: 64px 76px minmax(0, 1fr);
         align-items: baseline;
         gap: 12px;
         padding-left: 8px;
@@ -818,6 +824,7 @@ if (pages.length === 0) {
       .dw-link {
         color: var(--text-normal);
         text-decoration: none;
+        overflow-wrap: anywhere;
       }
       .dw-link:hover,
       .dw-link:focus-visible {
