@@ -190,7 +190,9 @@ style.textContent = `
       transition: transform 0.16s ease, filter 0.16s ease;
       transform-origin: center;
       will-change: transform;
-      border-radius: 5px;
+    }
+    :where(.heatmap-calendar-box, .day, [data-date]).writing-cell-empty {
+      border-radius: 0 !important;
       border: 1px solid color-mix(in srgb, #ffffff 14%, transparent);
       box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.22),
@@ -201,8 +203,10 @@ style.textContent = `
     }
     :where(.heatmap-calendar-box, .day, [data-date]):hover {
       transform: translateY(-1px) scale(1.14);
-      filter: saturate(1.12) brightness(1.08);
+      filter: saturate(1.08) brightness(1.03);
       z-index: 2;
+    }
+    :where(.heatmap-calendar-box, .day, [data-date]).writing-cell-empty:hover {
       border-color: color-mix(in srgb, #ffffff 28%, transparent);
       box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.28),
@@ -564,7 +568,12 @@ if (pages.length === 0) {
             cell.getAttribute("data-date") ||
             cell.dataset?.date ||
             cell.getAttribute("date");
-          if (!date || !tooltipByDate.has(date)) continue;
+          cell.classList.remove("writing-cell-marked", "writing-cell-empty");
+          if (!date || !tooltipByDate.has(date)) {
+            cell.classList.add("writing-cell-empty");
+            continue;
+          }
+          cell.classList.add("writing-cell-marked");
           cell.removeAttribute("title");
           cell.dataset.writingTooltip = tooltipByDate.get(date);
           cell.addEventListener("mouseenter", (event) => {
