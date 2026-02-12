@@ -733,12 +733,12 @@ if (pages.length === 0) {
         font-variant-numeric: tabular-nums;
       }
       .dw-link {
-        color: #ffffff;
+        color: var(--text-normal);
         text-decoration: none;
       }
       .dw-link:hover,
       .dw-link:focus-visible {
-        color: #ffffff;
+        color: var(--text-normal);
         text-decoration: underline;
       }
       .dw-empty {
@@ -872,7 +872,7 @@ if (pages.length === 0) {
   const render = () => {
     statsRow.innerHTML = "";
     cardsHost.innerHTML = "";
-    sortButton.textContent = newestFirst ? "Newest first" : "Oldest first";
+    sortButton.textContent = `Sort: ${newestFirst ? "Newest" : "Oldest"}`;
     expandButton.textContent = expandAll ? "Collapse all" : "Expand all";
 
     const visibleFolders = folders
@@ -902,6 +902,7 @@ if (pages.length === 0) {
         if (a.when !== b.when) return newestFirst ? b.when - a.when : a.when - b.when;
         return a.name.localeCompare(b.name);
       });
+      const visibleDayCount = new Set(orderedFiles.map((f) => f.dayKey)).size;
 
       const details = cardsHost.createEl("details", { cls: "dw-card" });
       if (expandAll || folder.folderPath === mostRecentFolderPath) details.open = true;
@@ -916,10 +917,13 @@ if (pages.length === 0) {
 
       details.createEl("div", {
         cls: "dw-meta",
-        text: `${folder.dayCount} active days`,
+        text:
+          visibleDayCount === folder.dayCount
+            ? `${visibleDayCount} active days`
+            : `${visibleDayCount}/${folder.dayCount} active days`,
       });
 
-      for (const [dayKey, files] of byDay(orderedFiles)) {
+      for (const [, files] of byDay(orderedFiles)) {
         const dayWhen = files[0]?.when || Date.now();
         details.createEl("div", { cls: "dw-day", text: formatDayHeading(dayWhen) });
         const list = details.createEl("ul", { cls: "dw-list" });
