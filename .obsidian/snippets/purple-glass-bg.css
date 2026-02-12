@@ -1,0 +1,38 @@
+/* Global purple-glass background for Obsidian */
+body.theme-dark {
+  --pg-glass-tint-a: rgba(139, 92, 246, 0.16);
+  --pg-glass-tint-b: rgba(6, 182, 212, 0.12);
+  --pg-glass-base-a: #0f1118;
+  --pg-glass-base-b: #111827;
+}
+
+body.theme-dark .app-container {
+  background:
+    radial-gradient(1200px 640px at 0% -10%, var(--pg-glass-tint-a), transparent 62%),
+    radial-gradient(980px 560px at 100% 110%, var(--pg-glass-tint-b), transparent 60%),
+    linear-gradient(160deg, var(--pg-glass-base-a), var(--pg-glass-base-b)) !important;
+}
+
+body.theme-dark .workspace,
+body.theme-dark .workspace-split,
+body.theme-dark .workspace-tab-container,
+body.theme-dark .workspace-tabs,
+body.theme-dark .workspace-tab-header-container,
+body.theme-dark .workspace-leaf,
+body.theme-dark .workspace-leaf-content,
+body.theme-dark .view-content,
+body.theme-dark .markdown-preview-view,
+body.theme-dark .cm-editor {
+  background: transparent !important;
+}
+
+body.theme-dark .workspace-leaf-content {
+  border: 1px solid rgba(167, 139, 250, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+body.theme-dark .workspace-tab-header,
+body.theme-dark .workspace-tab-header.is-active {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-radius: 10px;
+}
