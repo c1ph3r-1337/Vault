@@ -613,9 +613,11 @@ if (pages.length === 0) {
             color-mix(in srgb, var(--background-primary) 86%, #0c111d 14%),
             color-mix(in srgb, var(--background-secondary) 88%, #121a29 12%)
           ) !important;
+        overflow-x: hidden !important;
       }
       .markdown-reading-view:has(.dw-page-anchor) .markdown-preview-view {
         background: transparent !important;
+        overflow-x: hidden !important;
       }
       .dw-board {
         width: min(860px, 95%);
