@@ -1,38 +1,96 @@
-/* Global purple-glass background for Obsidian */
+/* Purple glass look across the whole Obsidian app (dark mode) */
 body.theme-dark {
-  --pg-glass-tint-a: rgba(139, 92, 246, 0.16);
-  --pg-glass-tint-b: rgba(6, 182, 212, 0.12);
-  --pg-glass-base-a: #0f1118;
-  --pg-glass-base-b: #111827;
+  --pg-tint-1: rgba(139, 92, 246, 0.18);
+  --pg-tint-2: rgba(34, 211, 238, 0.14);
+  --pg-base-1: #0c101a;
+  --pg-base-2: #111827;
+  --pg-surface: rgba(17, 24, 39, 0.42);
+  --pg-surface-2: rgba(30, 41, 59, 0.34);
+  --pg-border: rgba(167, 139, 250, 0.22);
+  --pg-text: #d9ddf7;
 }
 
-body.theme-dark .app-container {
-  background:
-    radial-gradient(1200px 640px at 0% -10%, var(--pg-glass-tint-a), transparent 62%),
-    radial-gradient(980px 560px at 100% 110%, var(--pg-glass-tint-b), transparent 60%),
-    linear-gradient(160deg, var(--pg-glass-base-a), var(--pg-glass-base-b)) !important;
-}
-
+body.theme-dark .app-container,
 body.theme-dark .workspace,
-body.theme-dark .workspace-split,
-body.theme-dark .workspace-tab-container,
-body.theme-dark .workspace-tabs,
+body.theme-dark .workspace-split.mod-root {
+  background:
+    radial-gradient(1200px 700px at -8% -10%, var(--pg-tint-1), transparent 62%),
+    radial-gradient(1000px 600px at 108% 110%, var(--pg-tint-2), transparent 60%),
+    linear-gradient(160deg, var(--pg-base-1), var(--pg-base-2)) !important;
+}
+
+body.theme-dark .workspace-ribbon,
 body.theme-dark .workspace-tab-header-container,
+body.theme-dark .workspace-tab-container,
 body.theme-dark .workspace-leaf,
 body.theme-dark .workspace-leaf-content,
+body.theme-dark .workspace-sidedock-vault-profile,
+body.theme-dark .mod-left-split,
+body.theme-dark .mod-right-split,
 body.theme-dark .view-content,
 body.theme-dark .markdown-preview-view,
-body.theme-dark .cm-editor {
+body.theme-dark .markdown-source-view,
+body.theme-dark .cm-scroller,
+body.theme-dark .cm-editor,
+body.theme-dark .cm-gutters,
+body.theme-dark .status-bar,
+body.theme-dark .nav-files-container,
+body.theme-dark .tree-item,
+body.theme-dark .search-result-container,
+body.theme-dark .graph-view.color-fill,
+body.theme-dark .graph-view.color-line,
+body.theme-dark .graph-controls,
+body.theme-dark .backlink-pane,
+body.theme-dark .workspace-drawer {
   background: transparent !important;
 }
 
-body.theme-dark .workspace-leaf-content {
-  border: 1px solid rgba(167, 139, 250, 0.14);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+body.theme-dark .workspace-leaf-content,
+body.theme-dark .workspace-tab-header-container,
+body.theme-dark .workspace-ribbon,
+body.theme-dark .status-bar,
+body.theme-dark .workspace-sidedock-vault-profile {
+  background: linear-gradient(165deg, var(--pg-surface), var(--pg-surface-2)) !important;
+  border: 1px solid var(--pg-border) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 10px 28px rgba(3, 8, 20, 0.34);
+  backdrop-filter: blur(12px) saturate(1.08);
+  -webkit-backdrop-filter: blur(12px) saturate(1.08);
 }
 
 body.theme-dark .workspace-tab-header,
+body.theme-dark .workspace-tab-header.is-active,
+body.theme-dark .mod-left-split .workspace-tab-header,
+body.theme-dark .mod-right-split .workspace-tab-header {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(167, 139, 250, 0.2) !important;
+  border-radius: 10px !important;
+}
+
 body.theme-dark .workspace-tab-header.is-active {
-  background: rgba(255, 255, 255, 0.03) !important;
-  border-radius: 10px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 4px 14px rgba(15, 23, 42, 0.35);
+}
+
+body.theme-dark .markdown-preview-view,
+body.theme-dark .cm-content,
+body.theme-dark .tree-item-inner,
+body.theme-dark .nav-file-title-content,
+body.theme-dark .nav-folder-title-content,
+body.theme-dark .status-bar,
+body.theme-dark .view-header-title {
+  color: var(--pg-text) !important;
+}
+
+body.theme-dark .workspace-tab-container::before,
+body.theme-dark .workspace-leaf-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 26%);
+}
+
+body.theme-dark .workspace-leaf-content {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
 }
