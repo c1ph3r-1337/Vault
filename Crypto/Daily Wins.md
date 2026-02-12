@@ -1044,9 +1044,6 @@ if (pages.length === 0) {
       return String(a.folderName).localeCompare(String(b.folderName));
     });
 
-  const mostRecentFolderPath =
-    folders.slice().sort((a, b) => b.maxWhen - a.maxWhen)[0]?.folderPath || "";
-
   const board = dv.el("div", "", { cls: "dw-board" });
   const toolbar = board.createEl("div", { cls: "dw-toolbar" });
   const searchInput = toolbar.createEl("input", {
@@ -1064,6 +1061,7 @@ if (pages.length === 0) {
   let newestFirst = false;
   let thisWeekOnly = false;
   let expandAll = false;
+  const openState = new Map();
 
   const addChip = (text) => statsRow.createEl("span", { cls: "dw-chip", text });
   const byDay = (files) => {
@@ -1124,9 +1122,11 @@ if (pages.length === 0) {
       const visibleStreak = streakFromDayKeys(orderedFiles.map((f) => f.dayKey));
 
       const details = cardsHost.createEl("details", { cls: "dw-card" });
-      if (expandAll || hasActiveFilter || folder.folderPath === mostRecentFolderPath) {
-        details.open = true;
-      }
+      const rememberedOpen = openState.get(folder.folderPath) === true;
+      details.open = expandAll || hasActiveFilter || rememberedOpen;
+      details.addEventListener("toggle", () => {
+        openState.set(folder.folderPath, details.open);
+      });
 
       const summary = details.createEl("summary");
       const row = summary.createEl("div", { cls: "dw-summary-row" });
@@ -1187,6 +1187,7 @@ if (pages.length === 0) {
   });
   expandButton.addEventListener("click", () => {
     expandAll = !expandAll;
+    for (const folder of folders) openState.set(folder.folderPath, expandAll);
     render();
   });
 
