@@ -679,8 +679,8 @@ if (pages.length === 0) {
         display: none;
       }
       .dw-summary-row {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr auto 16px;
         align-items: center;
         gap: 8px;
       }
@@ -731,15 +731,19 @@ if (pages.length === 0) {
         margin: 3px 0;
       }
       .dw-list-item {
-        display: flex;
+        display: grid;
+        grid-template-columns: 64px 76px 1fr;
         align-items: baseline;
         gap: 12px;
+        padding-left: 8px;
       }
       .dw-list-item.dw-today {
-        border-left: 2px solid color-mix(in srgb, #17d953 70%, var(--interactive-accent) 30%);
-        padding-left: 8px;
-        margin-left: -10px;
-        border-radius: 3px;
+        background: linear-gradient(
+          90deg,
+          color-mix(in srgb, #17d953 70%, var(--interactive-accent) 30%) 0 2px,
+          transparent 2px
+        );
+        border-radius: 4px;
       }
       .dw-date {
         min-width: 44px;
