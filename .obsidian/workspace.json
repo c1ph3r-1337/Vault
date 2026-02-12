@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Roadmap/Untitled.md",
+                "file": "Crypto/Roadmap/PHASE 9.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "PHASE 9"
             }
           }
         ]
@@ -204,17 +204,18 @@
   },
   "active": "72d886e814d18378",
   "lastOpenFiles": [
-    "Crypto/Roadmap/PHASE 2.md",
-    "Crypto/Roadmap/Untitled.md",
-    "Crypto/Roadmap/PHASE 1.md",
-    "Crypto/Roadmap.md",
-    "Crypto/Roadmap/PHASE 0.md",
-    "Crypto/Roadmap/PHASE 3.md",
-    "Crypto/Roadmap/PHASE 6.md",
-    "Crypto/Roadmap/PHASE 5.md",
     "Crypto/Roadmap/PHASE 8.md",
     "Crypto/Roadmap/PHASE 9.md",
+    "Crypto/Roadmap.md",
     "Crypto/Roadmap/PHASE 7.md",
+    "Crypto/Roadmap/PHASE 6.md",
+    "Crypto/Roadmap/PHASE 5.md",
+    "Crypto/Roadmap/PHASE 4.md",
+    "Crypto/Roadmap/PHASE 2.md",
+    "Crypto/Roadmap/PHASE 1.md",
+    "Crypto/Roadmap/PHASE 0.md",
+    "Crypto/Roadmap/PHASE 3.md",
+    "Crypto/Roadmap/PHASE 9.md",
     "Crypto/Roadmap/PHASE 234.md",
     "Crypto/Daily Wins/3. FEB/But how does bitcoin actually work.md",
     "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
@@ -237,7 +238,6 @@
     "new file",
     "fgdfdgh",
     "Crazy Stuff/Crazy Stuff.md",
-    "Crazy Stuff/Welcome.md",
-    "Crypto/Daily Wins/4. MARCH/Untitled.md"
+    "Crazy Stuff/Welcome.md"
   ]
 }
