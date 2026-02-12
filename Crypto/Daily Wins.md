@@ -599,21 +599,69 @@ if (pages.length === 0) {
     const style = document.createElement("style");
     style.id = styleId;
     style.textContent = `
+      .dw-board {
+        width: min(860px, 95%);
+        margin: 8px auto 0;
+      }
+      .dw-toolbar {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+      .dw-search {
+        width: 100%;
+        border: 1px solid var(--background-modifier-border);
+        border-radius: 10px;
+        background: var(--background-primary);
+        color: var(--text-normal);
+        padding: 8px 10px;
+        font-size: 13px;
+      }
+      .dw-button {
+        border: 1px solid var(--background-modifier-border);
+        border-radius: 10px;
+        background: linear-gradient(
+          170deg,
+          color-mix(in srgb, var(--background-secondary) 90%, var(--interactive-accent) 10%),
+          var(--background-primary)
+        );
+        color: var(--text-normal);
+        padding: 8px 10px;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .dw-button:hover {
+        filter: brightness(1.06);
+      }
+      .dw-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0 0 12px;
+      }
+      .dw-chip {
+        border: 1px solid var(--background-modifier-border);
+        border-radius: 999px;
+        padding: 4px 10px;
+        font-size: 12px;
+        color: var(--text-muted);
+        background: var(--background-secondary);
+      }
       .dw-cards {
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        margin-top: 8px;
-        align-items: center;
+        gap: 12px;
       }
       .dw-card {
         margin: 0;
-        width: min(680px, 92%);
+        width: 100%;
         border: 1px solid var(--background-modifier-border);
-        border-radius: 12px;
+        border-radius: 14px;
         background: linear-gradient(
-          160deg,
-          color-mix(in srgb, var(--background-primary) 90%, var(--background-modifier-hover) 10%),
+          165deg,
+          color-mix(in srgb, var(--background-primary) 88%, var(--interactive-accent) 12%),
           var(--background-secondary)
         );
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
@@ -622,13 +670,23 @@ if (pages.length === 0) {
       .dw-card summary {
         list-style: none;
         cursor: pointer;
-        font-weight: 700;
-        padding: 10px 12px;
+        font-weight: 800;
+        padding: 11px 12px;
         border-bottom: 1px solid var(--background-modifier-border);
         user-select: none;
       }
       .dw-card summary::-webkit-details-marker {
         display: none;
+      }
+      .dw-summary-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 8px;
+      }
+      .dw-summary-count {
+        font-size: 12px;
+        color: var(--text-muted);
       }
       .dw-card summary::after {
         content: "▾";
@@ -638,9 +696,21 @@ if (pages.length === 0) {
       .dw-card:not([open]) summary::after {
         content: "▸";
       }
+      .dw-meta {
+        margin: 8px 12px 0;
+        font-size: 12px;
+        color: var(--text-muted);
+      }
+      .dw-day {
+        margin: 8px 12px 2px;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--text-faint);
+      }
       .dw-list {
         margin: 0;
-        padding: 8px 12px 10px 22px;
+        padding: 3px 12px 8px 22px;
       }
       .dw-list li {
         margin: 3px 0;
@@ -648,10 +718,16 @@ if (pages.length === 0) {
       .dw-list-item {
         display: flex;
         align-items: baseline;
-        gap: 10px;
+        gap: 12px;
       }
       .dw-date {
-        min-width: 64px;
+        min-width: 44px;
+        font-size: 11px;
+        color: var(--text-faint);
+        font-variant-numeric: tabular-nums;
+      }
+      .dw-time {
+        min-width: 54px;
         font-size: 12px;
         color: var(--text-muted);
         font-variant-numeric: tabular-nums;
@@ -664,6 +740,18 @@ if (pages.length === 0) {
       .dw-link:focus-visible {
         color: #ffffff;
         text-decoration: underline;
+      }
+      .dw-empty {
+        border: 1px dashed var(--background-modifier-border);
+        border-radius: 12px;
+        padding: 16px;
+        text-align: center;
+        color: var(--text-muted);
+      }
+      @media (max-width: 700px) {
+        .dw-toolbar {
+          grid-template-columns: 1fr;
+        }
       }
     `;
     document.head.appendChild(style);
@@ -687,38 +775,181 @@ if (pages.length === 0) {
     byFolder.get(folderPath).files.push(note);
   }
 
-  const host = dv.el("div", "", { cls: "dw-cards" });
-  const formatDayLabel = (ms) => {
-    const d = new Date(ms || Date.now());
-    const day = String(d.getDate()).padStart(2, "0");
-    const weekday = d.toLocaleDateString(undefined, { weekday: "short" });
-    return `${day} ${weekday}`;
+  const parseMonthIndex = (name) => {
+    const m = String(name || "").match(/^\s*(\d{1,2})/);
+    return m ? Number(m[1]) : null;
   };
-  for (const folderPath of [...byFolder.keys()].sort((a, b) => a.localeCompare(b))) {
-    const { folderName, files } = byFolder.get(folderPath);
-    const filesByDate = [...files].sort((a, b) => {
-      const aTime = Number(a.stat?.ctime || a.stat?.mtime || 0);
-      const bTime = Number(b.stat?.ctime || b.stat?.mtime || 0);
-      if (aTime !== bTime) return aTime - bTime;
-      return a.basename.localeCompare(b.basename);
+  const formatDayKey = (ms) => {
+    const d = new Date(ms || Date.now());
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(
+      d.getDate()
+    ).padStart(2, "0")}`;
+  };
+  const formatDayHeading = (ms) =>
+    new Date(ms || Date.now()).toLocaleDateString(undefined, {
+      weekday: "long",
+      day: "2-digit",
+      month: "short",
     });
-    const displayFolderName =
-      String(folderName || "")
-        .replace(/^\s*\d+\s*[\.\-_:)]\s*/u, "")
-        .trim() || folderName;
-    const details = host.createEl("details", { cls: "dw-card" });
-    details.createEl("summary", { text: displayFolderName });
-    const list = details.createEl("ul", { cls: "dw-list" });
-    for (const f of filesByDate) {
-      const li = list.createEl("li", { cls: "dw-list-item" });
-      const when = Number(f.stat?.ctime || f.stat?.mtime || Date.now());
-      li.createEl("span", { cls: "dw-date", text: formatDayLabel(when) });
-      const a = li.createEl("a", { text: f.basename, href: "#", cls: "dw-link" });
-      a.addEventListener("click", (event) => {
-        event.preventDefault();
-        app.workspace.openLinkText(f.path, "", false);
+  const formatDayLabel = (ms) =>
+    new Date(ms || Date.now()).toLocaleDateString(undefined, {
+      day: "2-digit",
+      weekday: "short",
+    });
+  const formatTimeLabel = (ms) =>
+    new Date(ms || Date.now()).toLocaleTimeString(undefined, {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    });
+
+  const folders = [...byFolder.entries()]
+    .map(([folderPath, { folderName, files }]) => {
+      const displayName =
+        String(folderName || "")
+          .replace(/^\s*\d+\s*[\.\-_:)]\s*/u, "")
+          .trim() || folderName;
+      const enrichedFiles = files.map((f) => {
+        const when = Number(f.stat?.ctime || f.stat?.mtime || Date.now());
+        return {
+          name: f.basename,
+          path: f.path,
+          when,
+          dayKey: formatDayKey(when),
+        };
       });
+      const uniqueDays = new Set(enrichedFiles.map((f) => f.dayKey));
+      const whenValues = enrichedFiles.map((f) => f.when);
+      return {
+        folderPath,
+        folderName,
+        displayName,
+        monthIndex: parseMonthIndex(folderName),
+        files: enrichedFiles,
+        fileCount: enrichedFiles.length,
+        dayCount: uniqueDays.size,
+        minWhen: Math.min(...whenValues),
+        maxWhen: Math.max(...whenValues),
+      };
+    })
+    .sort((a, b) => {
+      if (a.monthIndex != null && b.monthIndex != null && a.monthIndex !== b.monthIndex) {
+        return a.monthIndex - b.monthIndex;
+      }
+      if (a.minWhen !== b.minWhen) return a.minWhen - b.minWhen;
+      return String(a.folderName).localeCompare(String(b.folderName));
+    });
+
+  const mostRecentFolderPath =
+    folders.slice().sort((a, b) => b.maxWhen - a.maxWhen)[0]?.folderPath || "";
+
+  const board = dv.el("div", "", { cls: "dw-board" });
+  const toolbar = board.createEl("div", { cls: "dw-toolbar" });
+  const searchInput = toolbar.createEl("input", {
+    cls: "dw-search",
+    type: "search",
+    placeholder: "Search note titles...",
+  });
+  const sortButton = toolbar.createEl("button", { cls: "dw-button", text: "Oldest first" });
+  const expandButton = toolbar.createEl("button", { cls: "dw-button", text: "Expand all" });
+  const statsRow = board.createEl("div", { cls: "dw-stats" });
+  const cardsHost = board.createEl("div", { cls: "dw-cards" });
+
+  let query = "";
+  let newestFirst = false;
+  let expandAll = false;
+
+  const addChip = (text) => statsRow.createEl("span", { cls: "dw-chip", text });
+  const byDay = (files) => {
+    const groups = new Map();
+    for (const file of files) {
+      if (!groups.has(file.dayKey)) groups.set(file.dayKey, []);
+      groups.get(file.dayKey).push(file);
     }
-  }
+    return [...groups.entries()];
+  };
+
+  const render = () => {
+    statsRow.innerHTML = "";
+    cardsHost.innerHTML = "";
+    sortButton.textContent = newestFirst ? "Newest first" : "Oldest first";
+    expandButton.textContent = expandAll ? "Collapse all" : "Expand all";
+
+    const visibleFolders = folders
+      .map((folder) => {
+        const filtered = folder.files.filter((f) =>
+          f.name.toLowerCase().includes(query) || f.path.toLowerCase().includes(query)
+        );
+        return { ...folder, visibleFiles: filtered };
+      })
+      .filter((folder) => folder.visibleFiles.length > 0);
+
+    const totalVisibleFiles = visibleFolders.reduce((acc, folder) => acc + folder.visibleFiles.length, 0);
+    const totalVisibleDays = new Set(
+      visibleFolders.flatMap((folder) => folder.visibleFiles.map((f) => `${folder.folderPath}:${f.dayKey}`))
+    ).size;
+    addChip(`${visibleFolders.length} month${visibleFolders.length === 1 ? "" : "s"}`);
+    addChip(`${totalVisibleFiles} file${totalVisibleFiles === 1 ? "" : "s"}`);
+    addChip(`${totalVisibleDays} active day${totalVisibleDays === 1 ? "" : "s"}`);
+
+    if (!visibleFolders.length) {
+      cardsHost.createEl("div", { cls: "dw-empty", text: "No files match your search." });
+      return;
+    }
+
+    for (const folder of visibleFolders) {
+      const orderedFiles = folder.visibleFiles.slice().sort((a, b) => {
+        if (a.when !== b.when) return newestFirst ? b.when - a.when : a.when - b.when;
+        return a.name.localeCompare(b.name);
+      });
+
+      const details = cardsHost.createEl("details", { cls: "dw-card" });
+      if (expandAll || folder.folderPath === mostRecentFolderPath) details.open = true;
+
+      const summary = details.createEl("summary");
+      const row = summary.createEl("div", { cls: "dw-summary-row" });
+      row.createEl("span", { text: folder.displayName });
+      row.createEl("span", {
+        cls: "dw-summary-count",
+        text: `${orderedFiles.length}/${folder.fileCount} files`,
+      });
+
+      details.createEl("div", {
+        cls: "dw-meta",
+        text: `${folder.dayCount} active days`,
+      });
+
+      for (const [dayKey, files] of byDay(orderedFiles)) {
+        const dayWhen = files[0]?.when || Date.now();
+        details.createEl("div", { cls: "dw-day", text: formatDayHeading(dayWhen) });
+        const list = details.createEl("ul", { cls: "dw-list" });
+        for (const file of files) {
+          const li = list.createEl("li", { cls: "dw-list-item" });
+          li.createEl("span", { cls: "dw-date", text: formatDayLabel(file.when) });
+          li.createEl("span", { cls: "dw-time", text: formatTimeLabel(file.when) });
+          const a = li.createEl("a", { text: file.name, href: "#", cls: "dw-link" });
+          a.addEventListener("click", (event) => {
+            event.preventDefault();
+            app.workspace.openLinkText(file.path, "", false);
+          });
+        }
+      }
+    }
+  };
+
+  searchInput.addEventListener("input", () => {
+    query = String(searchInput.value || "").trim().toLowerCase();
+    render();
+  });
+  sortButton.addEventListener("click", () => {
+    newestFirst = !newestFirst;
+    render();
+  });
+  expandButton.addEventListener("click", () => {
+    expandAll = !expandAll;
+    render();
+  });
+
+  render();
 })();
 ```
