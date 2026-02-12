@@ -642,12 +642,13 @@ if (pages.length === 0) {
       }
       .markdown-reading-view:has(.dw-page-anchor) {
         background:
-          radial-gradient(1200px 580px at 0% -10%, color-mix(in srgb, var(--interactive-accent) 16%, transparent), transparent 62%),
-          radial-gradient(900px 500px at 100% 105%, color-mix(in srgb, #22d3ee 12%, transparent), transparent 58%),
+          radial-gradient(700px 420px at 6% 10%, color-mix(in srgb, var(--pg-tint-1, rgba(110, 72, 196, 0.15)) 100%, transparent), transparent 68%),
+          radial-gradient(620px 360px at 92% 88%, color-mix(in srgb, var(--pg-tint-2, rgba(149, 119, 232, 0.10)) 100%, transparent), transparent 70%),
+          radial-gradient(420px 240px at 50% 0%, color-mix(in srgb, var(--pg-tint-3, rgba(95, 51, 182, 0.08)) 100%, transparent), transparent 72%),
           linear-gradient(
             160deg,
-            color-mix(in srgb, var(--background-primary) 86%, #0c111d 14%),
-            color-mix(in srgb, var(--background-secondary) 88%, #121a29 12%)
+            var(--pg-base-1, #11131a),
+            var(--pg-base-2, #161a24)
           ) !important;
         overflow-x: hidden !important;
         scrollbar-width: none;
@@ -681,16 +682,16 @@ if (pages.length === 0) {
         overflow: visible !important;
         border-radius: 18px;
         background:
-          radial-gradient(120% 140% at 0% 0%, color-mix(in srgb, var(--interactive-accent) 18%, transparent) 0%, transparent 45%),
-          radial-gradient(100% 120% at 100% 100%, color-mix(in srgb, #22d3ee 14%, transparent) 0%, transparent 50%),
+          radial-gradient(82% 68% at 8% 8%, var(--pg-tint-1, rgba(110, 72, 196, 0.15)) 0%, transparent 72%),
+          radial-gradient(76% 62% at 92% 92%, var(--pg-tint-2, rgba(149, 119, 232, 0.10)) 0%, transparent 74%),
           linear-gradient(
             145deg,
-            color-mix(in srgb, var(--background-primary) 88%, #0b1220 12%),
-            color-mix(in srgb, var(--background-secondary) 90%, #121a2a 10%)
+            color-mix(in srgb, var(--pg-base-1, #11131a) 90%, var(--background-primary) 10%),
+            color-mix(in srgb, var(--pg-base-2, #161a24) 88%, var(--background-secondary) 12%)
           );
-        border: 1px solid color-mix(in srgb, var(--background-modifier-border) 70%, var(--interactive-accent) 30%);
+        border: 1px solid var(--pg-border, rgba(149, 119, 232, 0.22));
         box-shadow:
-          0 14px 30px rgba(0, 0, 0, 0.28),
+          0 12px 24px rgba(6, 10, 20, 0.24),
           inset 0 1px 0 rgba(255, 255, 255, 0.06);
       }
       .dw-board::before,
@@ -708,14 +709,14 @@ if (pages.length === 0) {
         height: 190px;
         top: -50px;
         left: -40px;
-        background: color-mix(in srgb, var(--interactive-accent) 48%, transparent);
+        background: color-mix(in srgb, var(--pg-tint-1, rgba(110, 72, 196, 0.15)) 80%, transparent);
       }
       .dw-board::after {
         width: 170px;
         height: 170px;
         right: -30px;
         bottom: -45px;
-        background: color-mix(in srgb, #22d3ee 42%, transparent);
+        background: color-mix(in srgb, var(--pg-tint-2, rgba(149, 119, 232, 0.10)) 90%, transparent);
       }
       .dw-toolbar {
         display: grid;
@@ -739,8 +740,8 @@ if (pages.length === 0) {
         border-radius: 10px;
         background: linear-gradient(
           170deg,
-          color-mix(in srgb, var(--background-secondary) 90%, var(--interactive-accent) 10%),
-          var(--background-primary)
+          var(--pg-surface, rgba(24, 27, 40, 0.34)),
+          var(--pg-surface-2, rgba(31, 35, 50, 0.28))
         );
         color: var(--text-normal);
         padding: 8px 10px;
@@ -780,8 +781,8 @@ if (pages.length === 0) {
         border-radius: 14px;
         background: linear-gradient(
           165deg,
-          color-mix(in srgb, var(--background-primary) 88%, var(--interactive-accent) 12%),
-          var(--background-secondary)
+          var(--pg-surface, rgba(24, 27, 40, 0.34)),
+          color-mix(in srgb, var(--pg-surface-2, rgba(31, 35, 50, 0.28)) 88%, var(--background-secondary) 12%)
         );
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
         overflow: hidden;
@@ -836,7 +837,7 @@ if (pages.length === 0) {
         padding: 3px 8px;
         font-size: 11px;
         color: var(--text-muted);
-        background: color-mix(in srgb, var(--background-secondary) 92%, var(--interactive-accent) 8%);
+        background: color-mix(in srgb, var(--pg-surface-2, rgba(31, 35, 50, 0.28)) 94%, transparent);
       }
       .dw-meta-streak {
         color: color-mix(in srgb, var(--text-normal) 84%, #ff9f1a 16%);
