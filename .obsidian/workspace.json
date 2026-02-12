@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins.md",
-                "mode": "preview",
+                "file": "Vault/Crypto/Daily Wins/FEB/But how does bitcoin actually work.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Daily Wins"
+              "title": "But how does bitcoin actually work"
             }
           }
         ]
@@ -205,10 +205,15 @@
   "active": "72d886e814d18378",
   "lastOpenFiles": [
     "Crypto/Daily Wins/3. FEB/Untitled.md",
+    "Vault/Crypto/Daily Wins/FEB/But how does bitcoin actually work.md",
+    "README.md",
     "Crypto/Daily Wins.md",
+    "Vault/Crypto/Daily Wins/FEB",
+    "Vault/Crypto/Daily Wins",
+    "Vault/Crypto",
+    "Vault",
     "Crypto/RESEARCH LIST.md",
     "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
-    "README.md",
     "yoyo2",
     "new file 2",
     "new file",
@@ -221,11 +226,7 @@
     "Crypto/Daily Wins/4. MARCH/Untitled.md",
     "Crypto/Whitepapers/Whitepapers.md",
     "Crypto/Roadmap/PHASE 1.md",
-    "Crypto/Whitepapers/bitcoin.pdf",
     "Crypto/Roadmap/PHASE 9.md",
-    "Untitled.md",
-    "Ink/Drawing/2026.2.10 - 22.17pm.drawing",
-    "Ink/Drawing",
-    "Ink"
+    "Untitled.md"
   ]
 }
