@@ -1,12 +1,13 @@
 /* Purple glass look across the whole Obsidian app (dark mode) */
 body.theme-dark {
-  --pg-tint-1: rgba(110, 72, 196, 0.22);
-  --pg-tint-2: rgba(149, 119, 232, 0.16);
-  --pg-base-1: #141127;
-  --pg-base-2: #1b1531;
-  --pg-surface: rgba(35, 25, 58, 0.40);
-  --pg-surface-2: rgba(49, 34, 78, 0.32);
-  --pg-border: rgba(149, 119, 232, 0.30);
+  --pg-tint-1: rgba(110, 72, 196, 0.15);
+  --pg-tint-2: rgba(149, 119, 232, 0.10);
+  --pg-tint-3: rgba(95, 51, 182, 0.08);
+  --pg-base-1: #11131a;
+  --pg-base-2: #161a24;
+  --pg-surface: rgba(24, 27, 40, 0.34);
+  --pg-surface-2: rgba(31, 35, 50, 0.28);
+  --pg-border: rgba(149, 119, 232, 0.22);
   --pg-text: #d9ddf7;
 }
 
@@ -14,8 +15,9 @@ body.theme-dark .app-container,
 body.theme-dark .workspace,
 body.theme-dark .workspace-split.mod-root {
   background:
-    radial-gradient(1200px 700px at -8% -10%, var(--pg-tint-1), transparent 62%),
-    radial-gradient(1000px 600px at 108% 110%, var(--pg-tint-2), transparent 60%),
+    radial-gradient(700px 420px at 6% 10%, var(--pg-tint-1), transparent 68%),
+    radial-gradient(620px 360px at 92% 88%, var(--pg-tint-2), transparent 70%),
+    radial-gradient(420px 240px at 50% 0%, var(--pg-tint-3), transparent 72%),
     linear-gradient(160deg, var(--pg-base-1), var(--pg-base-2)) !important;
 }
 
@@ -52,22 +54,22 @@ body.theme-dark .status-bar,
 body.theme-dark .workspace-sidedock-vault-profile {
   background: linear-gradient(165deg, var(--pg-surface), var(--pg-surface-2)) !important;
   border: 1px solid var(--pg-border) !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 10px 28px rgba(3, 8, 20, 0.34);
-  backdrop-filter: blur(12px) saturate(1.08);
-  -webkit-backdrop-filter: blur(12px) saturate(1.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 8px 20px rgba(6, 10, 20, 0.26);
+  backdrop-filter: blur(10px) saturate(1.05);
+  -webkit-backdrop-filter: blur(10px) saturate(1.05);
 }
 
 body.theme-dark .workspace-tab-header,
 body.theme-dark .workspace-tab-header.is-active,
 body.theme-dark .mod-left-split .workspace-tab-header,
 body.theme-dark .mod-right-split .workspace-tab-header {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border: 1px solid rgba(167, 139, 250, 0.2) !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(149, 119, 232, 0.18) !important;
   border-radius: 10px !important;
 }
 
 body.theme-dark .workspace-tab-header.is-active {
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 4px 14px rgba(15, 23, 42, 0.35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 4px 12px rgba(10, 18, 34, 0.28);
 }
 
 body.theme-dark .view-header,
@@ -82,7 +84,7 @@ body.theme-dark .view-header-right {
 
 body.theme-dark .view-header {
   border-bottom: 1px solid var(--pg-border) !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 body.theme-dark .view-header-title,
@@ -109,7 +111,7 @@ body.theme-dark .workspace-leaf-content::before {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 26%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 24%);
 }
 
 body.theme-dark .workspace-leaf-content {
@@ -135,17 +137,17 @@ body.theme-dark .workspace-ribbon .clickable-icon {
 
 body.theme-dark .workspace-ribbon .side-dock-ribbon-action:hover,
 body.theme-dark .workspace-ribbon .clickable-icon:hover {
-  background: rgba(255, 255, 255, 0.06) !important;
-  border-color: rgba(167, 139, 250, 0.28) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(149, 119, 232, 0.24) !important;
 }
 
 body.theme-dark .workspace-ribbon .side-dock-ribbon-action.is-active,
 body.theme-dark .workspace-ribbon .clickable-icon.is-active,
 body.theme-dark .workspace-ribbon .workspace-ribbon-collapse-btn {
-  background: linear-gradient(165deg, rgba(139, 92, 246, 0.22), rgba(124, 58, 237, 0.18)) !important;
-  border-color: rgba(167, 139, 250, 0.38) !important;
+  background: linear-gradient(165deg, rgba(95, 51, 182, 0.20), rgba(124, 58, 237, 0.10)) !important;
+  border-color: rgba(149, 119, 232, 0.32) !important;
   color: #e7e9ff !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 4px 12px rgba(10, 18, 34, 0.35) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 4px 10px rgba(10, 18, 34, 0.28) !important;
 }
 
 body.theme-dark .mod-left-split .workspace-leaf-content,
@@ -155,7 +157,7 @@ body.theme-dark .mod-right-split .workspace-leaf-content {
 
 body.theme-dark .mod-left-split .workspace-leaf-content::before,
 body.theme-dark .mod-right-split .workspace-leaf-content::before {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 24%) !important;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 22%) !important;
 }
 
 /* Strong fallback selectors for ribbon active cells */
@@ -180,28 +182,28 @@ body.theme-dark .workspace-ribbon :is(
   .clickable-icon.mod-active,
   [aria-pressed="true"]
 ) {
-  background: linear-gradient(165deg, rgba(139, 92, 246, 0.26), rgba(124, 58, 237, 0.20)) !important;
-  border-color: rgba(167, 139, 250, 0.42) !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 4px 12px rgba(10, 18, 34, 0.4) !important;
+  background: linear-gradient(165deg, rgba(95, 51, 182, 0.22), rgba(124, 58, 237, 0.10)) !important;
+  border-color: rgba(149, 119, 232, 0.34) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.10), 0 4px 10px rgba(10, 18, 34, 0.30) !important;
 }
 
 /* Context menu glass style */
 body.theme-dark .menu,
 body.theme-dark .menu-scroll,
 body.theme-dark .menu-item {
-  background: linear-gradient(165deg, rgba(17, 24, 39, 0.88), rgba(30, 41, 59, 0.78)) !important;
+  background: linear-gradient(165deg, rgba(18, 22, 34, 0.90), rgba(28, 32, 46, 0.82)) !important;
   color: var(--pg-text) !important;
-  border-color: rgba(167, 139, 250, 0.26) !important;
+  border-color: rgba(149, 119, 232, 0.22) !important;
 }
 
 body.theme-dark .menu {
-  border: 1px solid rgba(167, 139, 250, 0.3) !important;
+  border: 1px solid rgba(149, 119, 232, 0.26) !important;
   border-radius: 12px !important;
-  backdrop-filter: blur(10px) saturate(1.08);
-  -webkit-backdrop-filter: blur(10px) saturate(1.08);
+  backdrop-filter: blur(8px) saturate(1.04);
+  -webkit-backdrop-filter: blur(8px) saturate(1.04);
 }
 
 body.theme-dark .menu-item:hover,
 body.theme-dark .menu-item.is-selected {
-  background: linear-gradient(165deg, rgba(139, 92, 246, 0.22), rgba(124, 58, 237, 0.14)) !important;
+  background: linear-gradient(165deg, rgba(95, 51, 182, 0.16), rgba(124, 58, 237, 0.08)) !important;
 }
