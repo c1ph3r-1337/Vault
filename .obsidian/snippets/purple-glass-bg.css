@@ -70,6 +70,29 @@ body.theme-dark .workspace-tab-header.is-active {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 4px 14px rgba(15, 23, 42, 0.35);
 }
 
+body.theme-dark .view-header,
+body.theme-dark .view-header-nav-buttons,
+body.theme-dark .view-header-title-container,
+body.theme-dark .view-actions,
+body.theme-dark .view-header-left,
+body.theme-dark .view-header-right {
+  background: linear-gradient(165deg, var(--pg-surface), var(--pg-surface-2)) !important;
+  border-color: var(--pg-border) !important;
+}
+
+body.theme-dark .view-header {
+  border-bottom: 1px solid var(--pg-border) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+body.theme-dark .view-header-title,
+body.theme-dark .view-header-breadcrumb,
+body.theme-dark .view-header-breadcrumb-separator,
+body.theme-dark .view-action,
+body.theme-dark .view-action svg {
+  color: var(--pg-text) !important;
+}
+
 body.theme-dark .markdown-preview-view,
 body.theme-dark .cm-content,
 body.theme-dark .tree-item-inner,
