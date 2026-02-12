@@ -590,6 +590,7 @@ if (pages.length === 0) {
 ```dataviewjs
 (() => {
   const targetFolderName = "Daily Wins";
+  const IST_ZONE = "Asia/Kolkata";
   const isInDailyWinsFolder = (filePath) =>
     filePath.startsWith(`${targetFolderName}/`) ||
     filePath.includes(`/${targetFolderName}/`);
@@ -804,52 +805,68 @@ if (pages.length === 0) {
     const m = String(name || "").match(/^\s*(\d{1,2})/);
     return m ? Number(m[1]) : null;
   };
-  const toLocalDate = (ms) => {
-    const d = new Date(ms || Date.now());
-    d.setHours(0, 0, 0, 0);
-    return d;
-  };
-  const dateDiffDays = (aMs, bMs) => {
-    const oneDay = 86400000;
-    return Math.round((toLocalDate(aMs).getTime() - toLocalDate(bMs).getTime()) / oneDay);
-  };
-  const formatDayKey = (ms) => {
-    const d = new Date(ms || Date.now());
-    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(
-      d.getDate()
-    ).padStart(2, "0")}`;
-  };
-  const formatDayHeading = (ms) =>
-    new Date(ms || Date.now()).toLocaleDateString(undefined, {
-      weekday: "long",
-      day: "2-digit",
-      month: "short",
-    });
-  const formatDayLabel = (ms) =>
-    new Date(ms || Date.now()).toLocaleDateString(undefined, {
-      day: "2-digit",
+  const zonedParts = (ms, timeZone = IST_ZONE) => {
+    const dtf = new Intl.DateTimeFormat("en-US", {
+      timeZone,
       weekday: "short",
-    });
-  const formatTimeLabel = (ms) =>
-    new Date(ms || Date.now()).toLocaleTimeString(undefined, {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
       hour: "2-digit",
       minute: "2-digit",
       hour12: true,
     });
-  const startOfWeek = (() => {
-    const now = new Date();
-    const day = now.getDay();
-    const mondayDelta = day === 0 ? -6 : 1 - day;
-    const start = new Date(now);
-    start.setDate(now.getDate() + mondayDelta);
-    start.setHours(0, 0, 0, 0);
-    return start.getTime();
+    const out = {};
+    for (const p of dtf.formatToParts(new Date(ms || Date.now()))) {
+      if (p.type !== "literal") out[p.type] = p.value;
+    }
+    return out;
+  };
+  const keyToSerial = (key) => {
+    const [y, m, d] = String(key).split("-").map(Number);
+    return Math.floor(Date.UTC(y, m - 1, d) / 86400000);
+  };
+  const dateDiffDays = (aKey, bKey) => keyToSerial(aKey) - keyToSerial(bKey);
+  const formatDayKey = (ms) => {
+    const p = zonedParts(ms);
+    return `${p.year}-${p.month}-${p.day}`;
+  };
+  const weekdayLongByShort = {
+    Mon: "Monday",
+    Tue: "Tuesday",
+    Wed: "Wednesday",
+    Thu: "Thursday",
+    Fri: "Friday",
+    Sat: "Saturday",
+    Sun: "Sunday",
+  };
+  const formatDayHeading = (ms) => {
+    const p = zonedParts(ms);
+    return `${weekdayLongByShort[p.weekday] || p.weekday}, ${p.month}/${p.day}`;
+  };
+  const formatDayLabel = (ms) => {
+    const p = zonedParts(ms);
+    return `${p.day} ${p.weekday}`;
+  };
+  const formatTimeLabel = (ms) => {
+    const p = zonedParts(ms);
+    return `${p.hour}:${p.minute} ${p.dayPeriod}`;
+  };
+  const startOfWeekKey = (() => {
+    const todayKey = formatDayKey(Date.now());
+    const todayWeekday = zonedParts(Date.now()).weekday;
+    const dayOrder = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 };
+    const daysFromMonday = dayOrder[todayWeekday] ?? 0;
+    const startSerial = keyToSerial(todayKey) - daysFromMonday;
+    const d = new Date(startSerial * 86400000);
+    return `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}-${String(
+      d.getUTCDate()
+    ).padStart(2, "0")}`;
   })();
   const todayKey = formatDayKey(Date.now());
   const streakFromDayKeys = (dayKeys) => {
     const sorted = [...new Set(dayKeys)]
-      .map((k) => new Date(`${k}T00:00:00`).getTime())
-      .sort((a, b) => a - b);
+      .sort((a, b) => keyToSerial(a) - keyToSerial(b));
     if (!sorted.length) return 0;
     let best = 1;
     let run = 1;
@@ -913,7 +930,7 @@ if (pages.length === 0) {
     placeholder: "Search note titles...",
   });
   const sortButton = toolbar.createEl("button", { cls: "dw-button", text: "Oldest first" });
-  const weekButton = toolbar.createEl("button", { cls: "dw-button", text: "This week: Off" });
+  const weekButton = toolbar.createEl("button", { cls: "dw-button", text: "This week (IST): Off" });
   const expandButton = toolbar.createEl("button", { cls: "dw-button", text: "Expand all" });
   const statsRow = board.createEl("div", { cls: "dw-stats" });
   const cardsHost = board.createEl("div", { cls: "dw-cards" });
@@ -937,7 +954,7 @@ if (pages.length === 0) {
     statsRow.innerHTML = "";
     cardsHost.innerHTML = "";
     sortButton.textContent = `Sort: ${newestFirst ? "Newest" : "Oldest"}`;
-    weekButton.textContent = `This week: ${thisWeekOnly ? "On" : "Off"}`;
+    weekButton.textContent = `This week (IST): ${thisWeekOnly ? "On" : "Off"}`;
     expandButton.textContent = expandAll ? "Collapse all" : "Expand all";
     const hasActiveFilter = Boolean(query) || thisWeekOnly;
 
@@ -954,7 +971,7 @@ if (pages.length === 0) {
             f.path.toLowerCase().includes(query);
           if (!matchQuery) return false;
           if (!thisWeekOnly) return true;
-          return toLocalDate(f.when).getTime() >= startOfWeek;
+          return keyToSerial(f.dayKey) >= keyToSerial(startOfWeekKey);
         });
         return { ...folder, visibleFiles: filtered };
       })
