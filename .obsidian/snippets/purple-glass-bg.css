@@ -207,3 +207,18 @@ body.theme-dark .menu-item:hover,
 body.theme-dark .menu-item.is-selected {
   background: linear-gradient(165deg, rgba(95, 51, 182, 0.16), rgba(124, 58, 237, 0.08)) !important;
 }
+
+/* Hyprland: hide Obsidian window controls (min/max/close) */
+body.theme-dark .titlebar-button-container.mod-right,
+body.theme-dark .titlebar-button-container.mod-left,
+body.theme-dark .titlebar-button,
+body.theme-dark .titlebar-button.mod-minimize,
+body.theme-dark .titlebar-button.mod-maximize,
+body.theme-dark .titlebar-button.mod-close {
+  display: none !important;
+}
+
+/* Keep top strip draggable */
+body.theme-dark .titlebar {
+  -webkit-app-region: drag;
+}
