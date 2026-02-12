@@ -605,7 +605,7 @@ if (pages.length === 0) {
       }
       .dw-toolbar {
         display: grid;
-        grid-template-columns: 1fr auto auto;
+        grid-template-columns: 1fr auto auto auto;
         gap: 8px;
         margin-bottom: 12px;
       }
@@ -681,25 +681,40 @@ if (pages.length === 0) {
       .dw-summary-row {
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: center;
         gap: 8px;
+      }
+      .dw-summary-title {
+        flex: 1;
       }
       .dw-summary-count {
         font-size: 12px;
         color: var(--text-muted);
       }
-      .dw-card summary::after {
-        content: "▾";
-        float: right;
+      .dw-chevron {
+        font-size: 13px;
         opacity: 0.8;
+        transition: transform 0.16s ease;
       }
-      .dw-card:not([open]) summary::after {
-        content: "▸";
+      .dw-card:not([open]) .dw-chevron {
+        transform: rotate(-90deg);
       }
       .dw-meta {
         margin: 8px 12px 0;
-        font-size: 12px;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .dw-meta-chip {
+        border: 1px solid var(--background-modifier-border);
+        border-radius: 999px;
+        padding: 3px 8px;
+        font-size: 11px;
         color: var(--text-muted);
+        background: color-mix(in srgb, var(--background-secondary) 92%, var(--interactive-accent) 8%);
+      }
+      .dw-meta-streak {
+        color: color-mix(in srgb, var(--text-normal) 84%, #ff9f1a 16%);
       }
       .dw-day {
         margin: 8px 12px 2px;
@@ -719,6 +734,12 @@ if (pages.length === 0) {
         display: flex;
         align-items: baseline;
         gap: 12px;
+      }
+      .dw-list-item.dw-today {
+        border-left: 2px solid color-mix(in srgb, #17d953 70%, var(--interactive-accent) 30%);
+        padding-left: 8px;
+        margin-left: -10px;
+        border-radius: 3px;
       }
       .dw-date {
         min-width: 44px;
@@ -750,7 +771,7 @@ if (pages.length === 0) {
       }
       @media (max-width: 700px) {
         .dw-toolbar {
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr 1fr;
         }
       }
     `;
@@ -779,6 +800,15 @@ if (pages.length === 0) {
     const m = String(name || "").match(/^\s*(\d{1,2})/);
     return m ? Number(m[1]) : null;
   };
+  const toLocalDate = (ms) => {
+    const d = new Date(ms || Date.now());
+    d.setHours(0, 0, 0, 0);
+    return d;
+  };
+  const dateDiffDays = (aMs, bMs) => {
+    const oneDay = 86400000;
+    return Math.round((toLocalDate(aMs).getTime() - toLocalDate(bMs).getTime()) / oneDay);
+  };
   const formatDayKey = (ms) => {
     const d = new Date(ms || Date.now());
     return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(
@@ -802,6 +832,33 @@ if (pages.length === 0) {
       minute: "2-digit",
       hour12: true,
     });
+  const startOfWeek = (() => {
+    const now = new Date();
+    const day = now.getDay();
+    const mondayDelta = day === 0 ? -6 : 1 - day;
+    const start = new Date(now);
+    start.setDate(now.getDate() + mondayDelta);
+    start.setHours(0, 0, 0, 0);
+    return start.getTime();
+  })();
+  const todayKey = formatDayKey(Date.now());
+  const streakFromDayKeys = (dayKeys) => {
+    const sorted = [...new Set(dayKeys)]
+      .map((k) => new Date(`${k}T00:00:00`).getTime())
+      .sort((a, b) => a - b);
+    if (!sorted.length) return 0;
+    let best = 1;
+    let run = 1;
+    for (let i = 1; i < sorted.length; i++) {
+      if (dateDiffDays(sorted[i], sorted[i - 1]) === 1) {
+        run += 1;
+      } else {
+        best = Math.max(best, run);
+        run = 1;
+      }
+    }
+    return Math.max(best, run);
+  };
 
   const folders = [...byFolder.entries()]
     .map(([folderPath, { folderName, files }]) => {
@@ -828,6 +885,7 @@ if (pages.length === 0) {
         files: enrichedFiles,
         fileCount: enrichedFiles.length,
         dayCount: uniqueDays.size,
+        bestStreak: streakFromDayKeys(enrichedFiles.map((f) => f.dayKey)),
         minWhen: Math.min(...whenValues),
         maxWhen: Math.max(...whenValues),
       };
@@ -851,12 +909,14 @@ if (pages.length === 0) {
     placeholder: "Search note titles...",
   });
   const sortButton = toolbar.createEl("button", { cls: "dw-button", text: "Oldest first" });
+  const weekButton = toolbar.createEl("button", { cls: "dw-button", text: "This week: Off" });
   const expandButton = toolbar.createEl("button", { cls: "dw-button", text: "Expand all" });
   const statsRow = board.createEl("div", { cls: "dw-stats" });
   const cardsHost = board.createEl("div", { cls: "dw-cards" });
 
   let query = "";
   let newestFirst = false;
+  let thisWeekOnly = false;
   let expandAll = false;
 
   const addChip = (text) => statsRow.createEl("span", { cls: "dw-chip", text });
@@ -873,13 +933,18 @@ if (pages.length === 0) {
     statsRow.innerHTML = "";
     cardsHost.innerHTML = "";
     sortButton.textContent = `Sort: ${newestFirst ? "Newest" : "Oldest"}`;
+    weekButton.textContent = `This week: ${thisWeekOnly ? "On" : "Off"}`;
     expandButton.textContent = expandAll ? "Collapse all" : "Expand all";
 
     const visibleFolders = folders
       .map((folder) => {
-        const filtered = folder.files.filter((f) =>
-          f.name.toLowerCase().includes(query) || f.path.toLowerCase().includes(query)
-        );
+        const filtered = folder.files.filter((f) => {
+          const matchQuery =
+            f.name.toLowerCase().includes(query) || f.path.toLowerCase().includes(query);
+          if (!matchQuery) return false;
+          if (!thisWeekOnly) return true;
+          return toLocalDate(f.when).getTime() >= startOfWeek;
+        });
         return { ...folder, visibleFiles: filtered };
       })
       .filter((folder) => folder.visibleFiles.length > 0);
@@ -903,24 +968,34 @@ if (pages.length === 0) {
         return a.name.localeCompare(b.name);
       });
       const visibleDayCount = new Set(orderedFiles.map((f) => f.dayKey)).size;
+      const visibleStreak = streakFromDayKeys(orderedFiles.map((f) => f.dayKey));
 
       const details = cardsHost.createEl("details", { cls: "dw-card" });
       if (expandAll || folder.folderPath === mostRecentFolderPath) details.open = true;
 
       const summary = details.createEl("summary");
       const row = summary.createEl("div", { cls: "dw-summary-row" });
-      row.createEl("span", { text: folder.displayName });
+      row.createEl("span", { cls: "dw-summary-title", text: folder.displayName });
       row.createEl("span", {
         cls: "dw-summary-count",
         text: `${orderedFiles.length}/${folder.fileCount} files`,
       });
+      row.createEl("span", { cls: "dw-chevron", text: "▾" });
 
-      details.createEl("div", {
-        cls: "dw-meta",
+      const meta = details.createEl("div", { cls: "dw-meta" });
+      meta.createEl("span", {
+        cls: "dw-meta-chip",
         text:
           visibleDayCount === folder.dayCount
             ? `${visibleDayCount} active days`
             : `${visibleDayCount}/${folder.dayCount} active days`,
+      });
+      meta.createEl("span", {
+        cls: "dw-meta-chip dw-meta-streak",
+        text:
+          visibleStreak === folder.bestStreak
+            ? `Best streak ${visibleStreak}d`
+            : `Best streak ${visibleStreak}/${folder.bestStreak}d`,
       });
 
       for (const [, files] of byDay(orderedFiles)) {
@@ -928,7 +1003,9 @@ if (pages.length === 0) {
         details.createEl("div", { cls: "dw-day", text: formatDayHeading(dayWhen) });
         const list = details.createEl("ul", { cls: "dw-list" });
         for (const file of files) {
-          const li = list.createEl("li", { cls: "dw-list-item" });
+          const li = list.createEl("li", {
+            cls: `dw-list-item${file.dayKey === todayKey ? " dw-today" : ""}`,
+          });
           li.createEl("span", { cls: "dw-date", text: formatDayLabel(file.when) });
           li.createEl("span", { cls: "dw-time", text: formatTimeLabel(file.when) });
           const a = li.createEl("a", { text: file.name, href: "#", cls: "dw-link" });
@@ -947,6 +1024,10 @@ if (pages.length === 0) {
   });
   sortButton.addEventListener("click", () => {
     newestFirst = !newestFirst;
+    render();
+  });
+  weekButton.addEventListener("click", () => {
+    thisWeekOnly = !thisWeekOnly;
     render();
   });
   expandButton.addEventListener("click", () => {
