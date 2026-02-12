@@ -591,6 +591,7 @@ if (pages.length === 0) {
 (() => {
   const targetFolderName = "Daily Wins";
   const IST_ZONE = "Asia/Kolkata";
+  dv.el("div", "", { cls: "dw-page-anchor" });
   const isInDailyWinsFolder = (filePath) =>
     filePath.startsWith(`${targetFolderName}/`) ||
     filePath.includes(`/${targetFolderName}/`);
@@ -600,6 +601,22 @@ if (pages.length === 0) {
     const style = document.createElement("style");
     style.id = styleId;
     style.textContent = `
+      .dw-page-anchor {
+        display: none;
+      }
+      .markdown-reading-view:has(.dw-page-anchor) {
+        background:
+          radial-gradient(1200px 580px at 0% -10%, color-mix(in srgb, var(--interactive-accent) 16%, transparent), transparent 62%),
+          radial-gradient(900px 500px at 100% 105%, color-mix(in srgb, #22d3ee 12%, transparent), transparent 58%),
+          linear-gradient(
+            160deg,
+            color-mix(in srgb, var(--background-primary) 86%, #0c111d 14%),
+            color-mix(in srgb, var(--background-secondary) 88%, #121a29 12%)
+          ) !important;
+      }
+      .markdown-reading-view:has(.dw-page-anchor) .markdown-preview-view {
+        background: transparent !important;
+      }
       .dw-board {
         width: min(860px, 95%);
         margin: 8px auto 0;
