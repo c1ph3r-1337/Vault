@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Roadmap/PHASE 3.md",
+                "file": "Crypto/Roadmap/PHASE 234.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PHASE 3"
+              "title": "PHASE 234"
             }
           }
         ]
@@ -202,8 +202,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "72d886e814d18378",
+  "active": "9483dbce746bc604",
   "lastOpenFiles": [
+    "Crypto/Roadmap/PHASE 5.md",
+    "Crypto/Roadmap/PHASE 8.md",
+    "Crypto/Roadmap/PHASE 9.md",
+    "Crypto/Roadmap/PHASE 7.md",
+    "Crypto/Roadmap/PHASE 3.md",
+    "Crypto/Roadmap/PHASE 234.md",
+    "Crypto/Roadmap/PHASE 2.md",
     "Crypto/Roadmap/PHASE 0.md",
     "Crypto/Daily Wins/3. FEB/But how does bitcoin actually work.md",
     "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
@@ -230,8 +237,6 @@
     "Crazy Stuff/Welcome.md",
     "Crypto/Daily Wins/4. MARCH/Untitled.md",
     "Crypto/Whitepapers/Whitepapers.md",
-    "Crypto/Roadmap/PHASE 1.md",
-    "Crypto/Roadmap/PHASE 9.md",
     "Untitled.md"
   ]
 }
