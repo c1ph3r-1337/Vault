@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "48190266cc7fc6ea",
+        "id": "a25deb2a41b25277",
         "type": "tabs",
         "children": [
           {
-            "id": "72d886e814d18378",
+            "id": "72f99696dc9d4ec2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -203,14 +203,15 @@
       "custom-sort:Toggle custom sorting": false
     }
   },
-  "active": "72d886e814d18378",
+  "active": "72f99696dc9d4ec2",
   "lastOpenFiles": [
+    "Untitled.canvas",
     "Crypto/Daily Wins.md",
+    "Crypto/Daily Wins/4. MARCH/Untitled.md",
     "Crypto/Roadmap.md",
     "Crypto/Roadmap/PHASE 0.md",
     "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
     "Crypto/Daily Wins/4. MARCH/Untitled 1.md",
-    "Crypto/Daily Wins/4. MARCH/Untitled.md",
     "Crypto/Daily Wins/3. FEB/But how does bitcoin actually work.md",
     "Crypto/Daily Wins/3. FEB/Unconfirmed 608740.crdownload",
     "Crypto/Roadmap/PHASE 9.md",
@@ -239,7 +240,6 @@
     "yoyo2",
     "new file 2",
     "new file",
-    "Crazy Stuff/Crazy Stuff.md",
-    "Crazy Stuff/Welcome.md"
+    "Crazy Stuff/Crazy Stuff.md"
   ]
 }
