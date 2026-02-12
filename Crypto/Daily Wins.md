@@ -190,11 +190,24 @@ style.textContent = `
       transition: transform 0.16s ease, filter 0.16s ease;
       transform-origin: center;
       will-change: transform;
+      border-radius: 5px;
+      border: 1px solid color-mix(in srgb, #ffffff 14%, transparent);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.22),
+        inset 0 -8px 14px rgba(8, 12, 18, 0.18),
+        0 2px 6px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(7px) saturate(1.12);
+      -webkit-backdrop-filter: blur(7px) saturate(1.12);
     }
     :where(.heatmap-calendar-box, .day, [data-date]):hover {
       transform: translateY(-1px) scale(1.14);
-      filter: saturate(1.08) brightness(1.03);
+      filter: saturate(1.12) brightness(1.08);
       z-index: 2;
+      border-color: color-mix(in srgb, #ffffff 28%, transparent);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.28),
+        inset 0 -8px 14px rgba(8, 12, 18, 0.12),
+        0 8px 18px rgba(0, 0, 0, 0.28);
     }
     @media (prefers-reduced-motion: reduce) {
       :where(.heatmap-calendar-box, .day, [data-date]) {
