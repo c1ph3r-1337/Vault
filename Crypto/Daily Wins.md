@@ -930,7 +930,7 @@ if (pages.length === 0) {
     placeholder: "Search note titles...",
   });
   const sortButton = toolbar.createEl("button", { cls: "dw-button", text: "Oldest first" });
-  const weekButton = toolbar.createEl("button", { cls: "dw-button", text: "This week (IST): Off" });
+  const weekButton = toolbar.createEl("button", { cls: "dw-button", text: "This week : Off" });
   const expandButton = toolbar.createEl("button", { cls: "dw-button", text: "Expand all" });
   const statsRow = board.createEl("div", { cls: "dw-stats" });
   const cardsHost = board.createEl("div", { cls: "dw-cards" });
@@ -954,7 +954,7 @@ if (pages.length === 0) {
     statsRow.innerHTML = "";
     cardsHost.innerHTML = "";
     sortButton.textContent = `Sort: ${newestFirst ? "Newest" : "Oldest"}`;
-    weekButton.textContent = `This week (IST): ${thisWeekOnly ? "On" : "Off"}`;
+    weekButton.textContent = `This week : ${thisWeekOnly ? "On" : "Off"}`;
     expandButton.textContent = expandAll ? "Collapse all" : "Expand all";
     const hasActiveFilter = Boolean(query) || thisWeekOnly;
 
