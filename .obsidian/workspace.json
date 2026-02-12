@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/3. FEB/But how does bitcoin actually work.md",
-                "mode": "source",
+                "file": "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "But how does bitcoin actually work"
+              "title": "Getting Started with Rust  Rust Book"
             }
           }
         ]
@@ -204,8 +204,8 @@
   },
   "active": "72d886e814d18378",
   "lastOpenFiles": [
-    "Crypto/Daily Wins/3. FEB/Unconfirmed 608740.crdownload",
     "Crypto/Daily Wins/3. FEB/But how does bitcoin actually work.md",
+    "Crypto/Daily Wins/3. FEB/Unconfirmed 608740.crdownload",
     "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
     "Crypto/Daily Wins.md",
     "Crypto/Roadmap/PHASE 9.md",
@@ -236,7 +236,6 @@
     "yoyo2",
     "new file 2",
     "new file",
-    "fgdfdgh",
     "Crazy Stuff/Crazy Stuff.md",
     "Crazy Stuff/Welcome.md"
   ]
