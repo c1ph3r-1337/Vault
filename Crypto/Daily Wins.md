@@ -645,6 +645,17 @@ if (pages.length === 0) {
       .dw-list li {
         margin: 3px 0;
       }
+      .dw-list-item {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+      }
+      .dw-date {
+        min-width: 64px;
+        font-size: 12px;
+        color: var(--text-muted);
+        font-variant-numeric: tabular-nums;
+      }
       .dw-link {
         color: #ffffff;
         text-decoration: none;
@@ -677,8 +688,20 @@ if (pages.length === 0) {
   }
 
   const host = dv.el("div", "", { cls: "dw-cards" });
+  const formatDayLabel = (ms) => {
+    const d = new Date(ms || Date.now());
+    const day = String(d.getDate()).padStart(2, "0");
+    const weekday = d.toLocaleDateString(undefined, { weekday: "short" });
+    return `${day} ${weekday}`;
+  };
   for (const folderPath of [...byFolder.keys()].sort((a, b) => a.localeCompare(b))) {
     const { folderName, files } = byFolder.get(folderPath);
+    const filesByDate = [...files].sort((a, b) => {
+      const aTime = Number(a.stat?.ctime || a.stat?.mtime || 0);
+      const bTime = Number(b.stat?.ctime || b.stat?.mtime || 0);
+      if (aTime !== bTime) return aTime - bTime;
+      return a.basename.localeCompare(b.basename);
+    });
     const displayFolderName =
       String(folderName || "")
         .replace(/^\s*\d+\s*[\.\-_:)]\s*/u, "")
@@ -686,8 +709,10 @@ if (pages.length === 0) {
     const details = host.createEl("details", { cls: "dw-card" });
     details.createEl("summary", { text: displayFolderName });
     const list = details.createEl("ul", { cls: "dw-list" });
-    for (const f of files) {
-      const li = list.createEl("li");
+    for (const f of filesByDate) {
+      const li = list.createEl("li", { cls: "dw-list-item" });
+      const when = Number(f.stat?.ctime || f.stat?.mtime || Date.now());
+      li.createEl("span", { cls: "dw-date", text: formatDayLabel(when) });
       const a = li.createEl("a", { text: f.basename, href: "#", cls: "dw-link" });
       a.addEventListener("click", (event) => {
         event.preventDefault();
