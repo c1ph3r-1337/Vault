@@ -603,6 +603,46 @@ if (pages.length === 0) {
       .dw-board {
         width: min(860px, 95%);
         margin: 8px auto 0;
+        position: relative;
+        isolation: isolate;
+        padding: 14px;
+        border-radius: 18px;
+        background:
+          radial-gradient(120% 140% at 0% 0%, color-mix(in srgb, var(--interactive-accent) 18%, transparent) 0%, transparent 45%),
+          radial-gradient(100% 120% at 100% 100%, color-mix(in srgb, #22d3ee 14%, transparent) 0%, transparent 50%),
+          linear-gradient(
+            145deg,
+            color-mix(in srgb, var(--background-primary) 88%, #0b1220 12%),
+            color-mix(in srgb, var(--background-secondary) 90%, #121a2a 10%)
+          );
+        border: 1px solid color-mix(in srgb, var(--background-modifier-border) 70%, var(--interactive-accent) 30%);
+        box-shadow:
+          0 14px 30px rgba(0, 0, 0, 0.28),
+          inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      }
+      .dw-board::before,
+      .dw-board::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        border-radius: 999px;
+        filter: blur(26px);
+        opacity: 0.45;
+        pointer-events: none;
+      }
+      .dw-board::before {
+        width: 190px;
+        height: 190px;
+        top: -50px;
+        left: -40px;
+        background: color-mix(in srgb, var(--interactive-accent) 48%, transparent);
+      }
+      .dw-board::after {
+        width: 170px;
+        height: 170px;
+        right: -30px;
+        bottom: -45px;
+        background: color-mix(in srgb, #22d3ee 42%, transparent);
       }
       .dw-toolbar {
         display: grid;
