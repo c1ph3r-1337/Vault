@@ -621,8 +621,16 @@ if (pages.length === 0) {
         overflow-x: hidden !important;
         scrollbar-width: none;
       }
+      .markdown-reading-view:has(.dw-page-anchor) .block-language-dataviewjs:has(.dw-board),
+      .markdown-reading-view:has(.dw-page-anchor) .el-div:has(.dw-board) {
+        overflow: visible !important;
+        max-height: none !important;
+        scrollbar-width: none;
+      }
       .markdown-reading-view:has(.dw-page-anchor)::-webkit-scrollbar,
-      .markdown-reading-view:has(.dw-page-anchor) .markdown-preview-view::-webkit-scrollbar {
+      .markdown-reading-view:has(.dw-page-anchor) .markdown-preview-view::-webkit-scrollbar,
+      .markdown-reading-view:has(.dw-page-anchor) .block-language-dataviewjs:has(.dw-board)::-webkit-scrollbar,
+      .markdown-reading-view:has(.dw-page-anchor) .el-div:has(.dw-board)::-webkit-scrollbar {
         width: 0;
         height: 0;
         display: none;
@@ -634,7 +642,7 @@ if (pages.length === 0) {
         isolation: isolate;
         padding: 14px;
         box-sizing: border-box;
-        overflow-x: hidden;
+        overflow: visible !important;
         border-radius: 18px;
         background:
           radial-gradient(120% 140% at 0% 0%, color-mix(in srgb, var(--interactive-accent) 18%, transparent) 0%, transparent 45%),
@@ -726,6 +734,7 @@ if (pages.length === 0) {
         flex-direction: column;
         gap: 12px;
         min-width: 0;
+        overflow: visible !important;
       }
       .dw-card {
         margin: 0;
@@ -740,6 +749,12 @@ if (pages.length === 0) {
         );
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
         overflow: hidden;
+        scrollbar-width: none;
+      }
+      .dw-card::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        display: none;
       }
       .dw-card summary {
         list-style: none;
