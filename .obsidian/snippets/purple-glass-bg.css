@@ -1,12 +1,12 @@
 /* Purple glass look across the whole Obsidian app (dark mode) */
 body.theme-dark {
-  --pg-tint-1: rgba(95, 51, 182, 0.24);
-  --pg-tint-2: rgba(124, 58, 237, 0.18);
-  --pg-base-1: #0f0a1d;
-  --pg-base-2: #171127;
-  --pg-surface: rgba(24, 17, 39, 0.46);
-  --pg-surface-2: rgba(43, 28, 68, 0.36);
-  --pg-border: rgba(128, 90, 213, 0.34);
+  --pg-tint-1: rgba(122, 78, 214, 0.28);
+  --pg-tint-2: rgba(167, 139, 250, 0.22);
+  --pg-base-1: #17122b;
+  --pg-base-2: #21183a;
+  --pg-surface: rgba(40, 28, 66, 0.42);
+  --pg-surface-2: rgba(57, 38, 90, 0.34);
+  --pg-border: rgba(167, 139, 250, 0.42);
   --pg-text: #d9ddf7;
 }
 
