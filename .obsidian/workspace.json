@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins.md",
+                "file": "Crypto/Daily Wins/3. FEB/But how does bitcoin actually work.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Daily Wins"
+              "title": "But how does bitcoin actually work"
             }
           }
         ]
@@ -188,7 +188,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 518.5
+    "width": 638.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -203,17 +203,17 @@
       "custom-sort:Toggle custom sorting": false
     }
   },
-  "active": "72f99696dc9d4ec2",
+  "active": "9d8bec7930bf3a42",
   "lastOpenFiles": [
+    "Crypto/Daily Wins/3. FEB/But how does bitcoin actually work.md",
+    "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
     "Crypto/Daily Wins.md",
     "Crypto/RESEARCH LIST.md",
     "Crypto/Roadmap.md",
     "Untitled.canvas",
     "Crypto/Daily Wins/4. MARCH/Untitled.md",
     "Crypto/Roadmap/PHASE 0.md",
-    "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
     "Crypto/Daily Wins/4. MARCH/Untitled 1.md",
-    "Crypto/Daily Wins/3. FEB/But how does bitcoin actually work.md",
     "Crypto/Daily Wins/3. FEB/Unconfirmed 608740.crdownload",
     "Crypto/Roadmap/PHASE 9.md",
     "Crypto/Roadmap/PHASE 8.md",
