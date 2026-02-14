@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Show token scopes
+        run: |
+          curl -I -H "Authorization: token ${{ secrets.UPSTREAM_TOKEN }}" https://api.github.com/
+
       - name: Checkout fork main
         uses: actions/checkout@v4
         with:
