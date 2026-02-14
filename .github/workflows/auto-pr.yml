@@ -8,10 +8,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Show token scopes
-        run: |
-          curl -I -H "Authorization: token ${{ secrets.UPSTREAM_TOKEN }}" https://api.github.com/
-
       - name: Checkout fork main
         uses: actions/checkout@v4
         with:
@@ -22,10 +18,13 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-      - name: Add upstream remote
+      - name: Add upstream remote (authenticated)
         run: |
-          git remote add upstream https://github.com/c1ph3r-1337/Vault.git
-          git remote set-url upstream https://x-access-token:${{ secrets.UPSTREAM_TOKEN }}@github.com/c1ph3r-1337/Vault.git
+          git remote add upstream https://c1ph3r-1337:${{ secrets.UPSTREAM_TOKEN }}@github.com/c1ph3r-1337/Vault.git
+
+      - name: Show remotes
+        run: |
+          git remote -v
 
       - name: Test upstream access
         run: |
