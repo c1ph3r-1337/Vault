@@ -25,7 +25,7 @@ jobs:
 
       - name: Add upstream remote
         run: |
-          git remote add upstream https://x-access-token:${{ secrets.UPSTREAM_TOKEN }}@github.com/ORIGINAL_OWNER/ORIGINAL_REPO.git
+          git remote add upstream https://x-access-token:${{ secrets.UPSTREAM_TOKEN }}@github.com/c1ph3r-1337/Vault.git
 
       - name: Force push fork main to upstream main
         run: |
