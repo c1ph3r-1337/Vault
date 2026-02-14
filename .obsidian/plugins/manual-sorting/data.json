@@ -35,9 +35,9 @@
     },
     "Crypto/Daily Wins/3. FEB": {
       "children": [
-        "Crypto/Daily Wins/3. FEB/Rust Setup.md",
+        "Crypto/Daily Wins/3. FEB/But how does bitcoin actually work.md",
         "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
-        "Crypto/Daily Wins/3. FEB/But how does bitcoin actually work.md"
+        "Crypto/Daily Wins/3. FEB/Rust Setup.md"
       ],
       "sortOrder": "custom"
     },
