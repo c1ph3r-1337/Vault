@@ -23,7 +23,7 @@ jobs:
 
       - name: Add upstream remote
         run: |
-          git remote add upstream https://x-access-token:${{ secrets.UPSTREAM_TOKEN }}@github.com/c1ph3r-1337/Vault.git
+          git remote add upstream https://x-access-token:${{ secrets.PR_TOKEN }}@github.com/c1ph3r-1337/Vault.git
 
       - name: Test upstream authentication
         run: |
