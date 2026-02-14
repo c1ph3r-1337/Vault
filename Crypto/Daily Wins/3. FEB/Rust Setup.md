@@ -33,7 +33,6 @@ sudo pacman -S rustup
 ## Step 3: Install Stable Toolchain
 
 ```
-
 rustup default stable
 ```
 
@@ -54,7 +53,9 @@ This installs:
 
 ## Step 4: Verify Installation
 
-`rustup show rustup which rustc rustc --version cargo --version`
+```
+rustup show rustup which rustc rustc --version cargo --version
+```
 
 You should see:
 
@@ -67,7 +68,9 @@ You should see:
 
 ## Step 5: Test Rust
 
-`cargo new test_project cd test_project cargo run`
+```
+cargo new test_project cd test_project cargo run
+```
 
 Expected output:
 
@@ -79,7 +82,9 @@ Expected output:
 
 Useful for experimental features and advanced projects.
 
-`rustup toolchain install nightly`
+```
+rustup toolchain install nightly
+```
 
 Switch to nightly:
 
@@ -95,7 +100,8 @@ Switch back to stable:
 
 ## WASM Target (for smart contracts / web)
 
-`rustup target add wasm32-unknown-unknown`
+```
+rustup target add wasm32-unknown-unknown
 
 ## Static Linux Builds
 
