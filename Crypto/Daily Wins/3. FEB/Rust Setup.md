@@ -11,6 +11,13 @@ This guide explains:
 
 # 1️⃣ Install Rust on Arch Linux
 
+## Step 0: Install dependencies
+
+```
+sudo pacman -Syu base-devel curl
+```
+
+
 ## Step 1: Update System
 
 ```
