@@ -1,18 +1,14 @@
-name: Auto Create PR to Upstream
+name: Sync Fork Main to Upstream Main (Exclude Files)
 
 on:
   workflow_dispatch:
 
-permissions:
-  contents: write
-  pull-requests: write
-
 jobs:
-  create-pr:
+  sync:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout fork repo
+      - name: Checkout fork main
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -22,31 +18,17 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-      - name: Create new branch
+      - name: Remove excluded files
         run: |
-          git checkout -b auto-pr-branch
+          rm -rf .github/workflows
+          rm -f .gitattributes
 
-      - name: Remove unwanted files
+      - name: Add upstream remote
         run: |
-          git rm -r --cached .github/workflows || true
-          git rm --cached .gitattributes || true
-          rm -rf .github/workflows || true
-          rm -f .gitattributes || true
+          git remote add upstream https://x-access-token:${{ secrets.UPSTREAM_TOKEN }}@github.com/ORIGINAL_OWNER/ORIGINAL_REPO.git
 
-      - name: Commit changes
+      - name: Force push fork main to upstream main
         run: |
-          git add .
-          git commit -m "Auto PR Commit" || echo "Nothing to commit"
-
-      - name: Push branch
-        run: |
-          git push origin auto-pr-branch --force
-
-      - name: Create Pull Request to Original Repo
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: main
-          branch: auto-pr-branch
-          title: "Automated PR from fork"
-          body: "This PR was generated automatically using GitHub Actions."
+          git add -A
+          git commit -m "Sync fork main to upstream main (excluded workflow + gitattributes)" || echo "Nothing to commit"
+          git push upstream HEAD:main --force
