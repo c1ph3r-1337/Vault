@@ -102,16 +102,22 @@ Switch back to stable:
 
 ```
 rustup target add wasm32-unknown-unknown
+```
 
 ## Static Linux Builds
 
-`rustup target add x86_64-unknown-linux-musl`
+
+```
+rustup target add x86_64-unknown-linux-musl
+```
 
 ---
 
 # 4️⃣ Install Development Components
 
-`rustup component add clippy rustfmt`
+```
+rustup component add clippy rustfmt
+```
 
 - `clippy` → advanced linter
     
@@ -126,7 +132,8 @@ rustup target add wasm32-unknown-unknown
 
 ## Step 1: Install VS Code (if not installed)
 
-`sudo pacman -S code`
+`sudo pacman -S code
+```
 
 ---
 
