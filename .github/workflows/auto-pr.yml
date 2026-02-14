@@ -1,0 +1,51 @@
+name: Auto Create PR to Upstream
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout fork repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Remove unwanted files from branch
+        run: |
+          git rm -r --cached .github/workflows || true
+          git rm --cached .gitattributes || true
+
+          rm -rf .github/workflows || true
+          rm -f .gitattributes || true
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Create new branch
+        run: |
+          BRANCH="auto-pr-branch"
+          git checkout -b $BRANCH
+
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "Auto PR Commit" || echo "Nothing to commit"
+
+      - name: Push branch
+        run: |
+          git push origin auto-pr-branch --force
+
+      - name: Create Pull Request to Original Repo
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.PR_TOKEN }}
+          base: main
+          branch: auto-pr-branch
+          title: "Automated PR from fork"
+          body: "This PR was generated automatically using GitHub Actions."
+          repo: c1ph3r-1337/Vault
