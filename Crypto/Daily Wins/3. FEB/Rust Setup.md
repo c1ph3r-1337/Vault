@@ -132,7 +132,8 @@ rustup component add clippy rustfmt
 
 ## Step 1: Install VS Code (if not installed)
 
-`sudo pacman -S code
+```
+sudo pacman -S code
 ```
 
 ---
@@ -160,7 +161,8 @@ Open VS Code → Settings → Open `settings.json`
 
 Add:
 
-`{   "rust-analyzer.checkOnSave.command": "clippy",   "rust-analyzer.cargo.allFeatures": true,   "rust-analyzer.procMacro.enable": true,   "editor.formatOnSave": true,   "[rust]": {     "editor.defaultFormatter": "rust-lang.rust-analyzer"   } }`
+```{   "rust-analyzer.checkOnSave.command": "clippy",   "rust-analyzer.cargo.allFeatures": true,   "rust-analyzer.procMacro.enable": true,   "editor.formatOnSave": true,   "[rust]": {     "editor.defaultFormatter": "rust-lang.rust-analyzer"   } }
+```
 
 This enables:
 
@@ -181,11 +183,14 @@ Inside your Rust project:
 
 Create:
 
-`.vscode/launch.json`
+```.vscode/launch.json
+```
+
 
 Add:
 
-`{   "version": "0.2.0",   "configurations": [     {       "type": "lldb",       "request": "launch",       "name": "Debug executable",       "cargo": {         "args": ["build", "--bin=${workspaceFolderBasename}"],         "filter": {           "name": "${workspaceFolderBasename}",           "kind": "bin"         }       },       "args": [],       "cwd": "${workspaceFolder}"     }   ] }`
+```{   "version": "0.2.0",   "configurations": [     {       "type": "lldb",       "request": "launch",       "name": "Debug executable",       "cargo": {         "args": ["build", "--bin=${workspaceFolderBasename}"],         "filter": {           "name": "${workspaceFolderBasename}",           "kind": "bin"         }       },       "args": [],       "cwd": "${workspaceFolder}"     }   ] }
+```
 
 Now press **F5** to debug.
 
@@ -195,7 +200,8 @@ Now press **F5** to debug.
 
 Edit:
 
-`nano ~/.cargo/config.toml`
+``````nano ~/.cargo/config.toml
+```
 
 Add:
 
