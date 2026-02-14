@@ -28,7 +28,7 @@ If you understand this, everything else fits into place.
 
 ---
 
-> [[PHASE 0]] — Absolute Foundations (Mandatory)
+> ## [[PHASE 0]] — Absolute Foundations (Mandatory)
 
 ### 0.1 Computer Science Fundamentals
 
