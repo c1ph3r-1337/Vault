@@ -18,7 +18,7 @@ cssclasses:
   - "img-grid"
 created: 2026-02-12T19:26:41+00:00
 ---
-11# Video URL
+# Video URL
 
 [But how does bitcoin actually work?]() — [3Blue1Brown](https://www.youtube.com/@3blue1brown) (25:15)
 ![But how does bitcoin actually work?]()
