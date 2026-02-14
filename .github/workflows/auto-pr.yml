@@ -1,4 +1,4 @@
-name: Sync Fork Main to Upstream Main (Exclude Files)
+name: Sync Fork Main to Upstream Main (No Force)
 
 on:
   workflow_dispatch:
@@ -18,17 +18,28 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
+      - name: Add upstream remote
+        run: |
+          git remote add upstream https://x-access-token:${{ secrets.UPSTREAM_TOKEN }}@github.com/c1ph3r-1337/Vault.git
+
+      - name: Fetch upstream main
+        run: |
+          git fetch upstream main
+
+      - name: Merge upstream main into fork main
+        run: |
+          git merge upstream/main --no-edit || true
+
       - name: Remove excluded files
         run: |
           rm -rf .github/workflows
           rm -f .gitattributes
 
-      - name: Add upstream remote
-        run: |
-          git remote add upstream https://x-access-token:${{ secrets.UPSTREAM_TOKEN }}@github.com/c1ph3r-1337/Vault
-
-      - name: Force push fork main to upstream main
+      - name: Commit changes
         run: |
           git add -A
-          git commit -m "Sync fork main to upstream main (excluded workflow + gitattributes)" || echo "Nothing to commit"
-          git push upstream HEAD:main --force
+          git commit -m "Sync fork main to upstream main (excluded files)" || echo "No changes"
+
+      - name: Push normally to upstream main
+        run: |
+          git push upstream HEAD:main
