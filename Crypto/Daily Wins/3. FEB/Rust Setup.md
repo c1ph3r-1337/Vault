@@ -13,13 +13,18 @@ This guide explains:
 
 ## Step 1: Update System
 
-`sudo pacman -Syu`
+```
+sudo pacman -Syu
+```
+
 
 ---
 
 ## Step 2: Install rustup (Recommended Method)
 
-`sudo pacman -S rustup`
+```
+sudo pacman -S rustup
+```
 
 > Do NOT install the `rust` package directly. Use `rustup` for proper toolchain management.
 
@@ -27,7 +32,10 @@ This guide explains:
 
 ## Step 3: Install Stable Toolchain
 
-`rustup default stable`
+```
+
+rustup default stable
+```
 
 This installs:
 
