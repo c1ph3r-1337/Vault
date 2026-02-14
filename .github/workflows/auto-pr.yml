@@ -1,21 +1,13 @@
 name: Sync Fork Main to Upstream Main (Exclude Files)
 
-
 on:
   workflow_dispatch:
-
-permissions:
-  contents: write
 
 jobs:
   sync:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Debug token identity
-        run: |
-           curl -s -H "Authorization: token ${{ secrets.UPSTREAM_TOKEN }}" https://api.github.com/user
-
       - name: Checkout fork main
         uses: actions/checkout@v4
         with:
@@ -28,9 +20,10 @@ jobs:
 
       - name: Add upstream remote
         run: |
-          git remote add upstream https://x-access-token:${{ secrets.UPSTREAM_TOKEN }}@github.com/c1ph3r-1337/Vault.git
+          git remote add upstream https://github.com/c1ph3r-1337/Vault.git
+          git remote set-url upstream https://x-access-token:${{ secrets.UPSTREAM_TOKEN }}@github.com/c1ph3r-1337/Vault.git
 
-      - name: Test upstream authentication
+      - name: Test upstream access
         run: |
           git ls-remote upstream
 
@@ -38,20 +31,16 @@ jobs:
         run: |
           git fetch upstream main
 
-      - name: Merge upstream main into fork main
-        run: |
-          git merge upstream/main --no-edit || true
-
       - name: Remove excluded files
         run: |
           rm -rf .github/workflows
           rm -f .gitattributes
 
-      - name: Commit cleaned changes
+      - name: Commit changes
         run: |
           git add -A
-          git commit -m "Sync from fork main (excluding workflow and gitattributes)" || echo "Nothing to commit"
+          git commit -m "Sync update excluding workflow and gitattributes" || echo "Nothing to commit"
 
-      - name: Push to upstream main (no force)
+      - name: Push to upstream main
         run: |
           git push upstream HEAD:main
