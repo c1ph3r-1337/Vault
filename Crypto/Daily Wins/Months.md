@@ -359,7 +359,7 @@ const showHoverTip = (dateLabel, items, ev) => {
 };
 const showPinnedTip = (dateLabel, items, ev) => {
   tooltip.innerHTML = `<div class="months-tooltip-title">${escapeHtml(dateLabel)}</div>${items
-    .map((i) => `<a href="#" class="months-tooltip-link" data-path="${escapeHtml(i.path)}">${escapeHtml(i.name)}</a>`)
+    .map((i) => `<a href="#" class="months-tooltip-link" data-path="${escapeHtml(i.path)}">- ${escapeHtml(i.name)}</a>`)
     .join("")}`;
   tooltip.style.pointerEvents = "auto";
   moveTip(ev);
