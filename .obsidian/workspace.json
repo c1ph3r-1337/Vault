@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins.md",
-                "mode": "preview",
+                "file": "Crypto/Daily Wins/3. FEB/Crypto - Blockchain and Crypto Facts.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Daily Wins"
+              "title": "Crypto - Blockchain and Crypto Facts"
             }
           }
         ]
@@ -203,10 +203,11 @@
       "custom-sort:Toggle custom sorting": false
     }
   },
-  "active": "9483dbce746bc604",
+  "active": "e1950195dd07c2ab",
   "lastOpenFiles": [
-    "Crypto/Daily Wins.md",
     "Crypto/Daily Wins/3. FEB/ChatGPT Web Clipper JSON.md",
+    "Crypto/Daily Wins/3. FEB/Crypto - Blockchain and Crypto Facts.md",
+    "Crypto/Daily Wins.md",
     "Crypto/RESEARCH LIST.md",
     "Crypto/Daily Wins/3. FEB/Rust Setup.md",
     "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
@@ -237,7 +238,6 @@
     "Vault/Crypto/Daily Wins",
     "Vault/Crypto",
     "Vault",
-    "Vault/Crypto/Daily Wins/But how does bitcoin actually work.md",
     "Crypto/Daily Wins/FEB",
     "Vault/Crypto/Daily Wins/FEB",
     "yoyo2",
