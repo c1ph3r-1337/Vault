@@ -183,8 +183,19 @@
               "icon": "lucide-git-fork",
               "title": "Graph view"
             }
+          },
+          {
+            "id": "6ca08fccf81a1846",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
@@ -205,11 +216,12 @@
   },
   "active": "e1950195dd07c2ab",
   "lastOpenFiles": [
+    "Crypto/Daily Wins/3. FEB/ChatGPT - ChatGPT.md",
+    "Crypto/Daily Wins/3. FEB/But how does bitcoin actually work.md",
+    "Crypto/Daily Wins/3. FEB/Unconfirmed 758698.crdownload",
     "Crypto/Daily Wins/3. FEB/Programming a Guessing Game  Rust Book.md",
     "Crypto/Daily Wins/3. FEB/ChatGPT.md",
     "Crypto/Daily Wins/3. FEB/Unconfirmed 674553.crdownload",
-    "Crypto/Daily Wins/3. FEB/But how does bitcoin actually work.md",
-    "Crypto/Daily Wins/3. FEB/ChatGPT - ChatGPT.md",
     "Crypto/Daily Wins/3. FEB/Crypto - Blockchain and Crypto Facts.md",
     "Crypto/Daily Wins/3. FEB/ChatGPT Web Clipper JSON.md",
     "Crypto/Daily Wins.md",
@@ -239,7 +251,6 @@
     "Vault/Crypto",
     "Vault",
     "Crypto/Daily Wins/FEB",
-    "Vault/Crypto/Daily Wins/FEB",
-    "yoyo2"
+    "Vault/Crypto/Daily Wins/FEB"
   ]
 }
