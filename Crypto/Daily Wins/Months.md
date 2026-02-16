@@ -1,29 +1,73 @@
 # Months Calendar Database
 
-> [!tip] Calendar View
-> Month folders are shown in a wall-calendar style like your reference image.
+<center><div style="margin-bottom: 18px; font-weight: 700; letter-spacing: 0.03em;">Don’t break the chain!</div></center>
+
+> [!tip]
+> Month folders are rendered as a wall-calendar database with note links on each day.
 
 <style>
+.months-anchor {
+  display: none;
+}
+
+.markdown-reading-view:has(.months-anchor) {
+  background:
+    radial-gradient(720px 380px at 7% 8%, color-mix(in srgb, #19a25a 20%, transparent), transparent 70%),
+    radial-gradient(640px 340px at 94% 90%, color-mix(in srgb, #8fd6aa 15%, transparent), transparent 72%),
+    linear-gradient(160deg, #151b1f, #1b2228) !important;
+}
+
+.wallcal-board {
+  width: min(980px, 96%);
+  margin: 10px auto;
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid color-mix(in srgb, #7bc798 28%, var(--background-modifier-border));
+  background:
+    radial-gradient(82% 62% at 8% 8%, color-mix(in srgb, #1ca85d 16%, transparent) 0%, transparent 74%),
+    radial-gradient(72% 58% at 94% 94%, color-mix(in srgb, #9ce0b7 12%, transparent) 0%, transparent 76%),
+    linear-gradient(150deg, color-mix(in srgb, #11161a 90%, var(--background-primary) 10%), color-mix(in srgb, #1a2026 90%, var(--background-secondary) 10%));
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.wallcal-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 12px;
+}
+
+.wallcal-chip {
+  border-radius: 999px;
+  border: 1px solid var(--background-modifier-border);
+  background: color-mix(in srgb, #182128 78%, var(--background-secondary) 22%);
+  color: var(--text-normal);
+  font-size: 12px;
+  line-height: 1;
+  padding: 7px 10px;
+  font-weight: 700;
+}
+
 .wallcal-grid {
   display: grid;
-  gap: 18px;
+  gap: 14px;
 }
 
 .wallcal-card {
-  border: 1px solid var(--background-modifier-border);
-  border-radius: 14px;
-  padding: 12px;
-  background: linear-gradient(180deg, var(--background-secondary) 0%, var(--background-primary) 100%);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid color-mix(in srgb, #7bc798 22%, var(--background-modifier-border));
+  border-radius: 15px;
+  padding: 10px;
+  background: linear-gradient(180deg, color-mix(in srgb, #1f2a31 92%, var(--background-secondary) 8%) 0%, color-mix(in srgb, #141a1f 92%, var(--background-primary) 8%) 100%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .wallcal-title {
   text-align: center;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  font-size: 1.3rem;
-  color: var(--text-accent);
-  margin: 6px 0 10px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  font-size: 1.45rem;
+  color: color-mix(in srgb, #2ad36a 82%, var(--text-normal));
+  margin: 4px 0 10px;
 }
 
 .wallcal-table {
@@ -35,67 +79,84 @@
 
 .wallcal-table th,
 .wallcal-table td {
-  background: var(--background-secondary-alt);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: 8px;
+  background: color-mix(in srgb, #212a31 86%, var(--background-secondary-alt));
+  border: 1px solid color-mix(in srgb, #d2f3de 16%, var(--background-modifier-border));
+  border-radius: 7px;
   padding: 4px;
   vertical-align: top;
 }
 
-.wallcal-week-label {
-  width: 80px;
+.wallcal-week-head {
   text-align: center;
+  font-size: 0.82rem;
   font-weight: 700;
+}
+
+.wallcal-week-label {
+  width: 72px;
+  text-align: center;
+  font-weight: 800;
   letter-spacing: 0.02em;
 }
 
-.wallcal-week-head {
-  text-align: center;
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
 .wallcal-day-cell {
-  min-height: 70px;
+  min-height: 74px;
 }
 
 .wallcal-day-number {
   display: block;
-  font-size: 1.6rem;
-  font-weight: 800;
+  font-size: 1.85rem;
+  font-weight: 900;
   line-height: 1;
   margin-bottom: 4px;
-  color: var(--text-normal);
+  color: color-mix(in srgb, #35da75 84%, var(--text-normal));
 }
 
 .wallcal-day-notes {
-  font-size: 0.75rem;
-  line-height: 1.25;
+  font-size: 0.74rem;
+  line-height: 1.24;
   display: grid;
   gap: 2px;
 }
 
-.wallcal-empty {
-  opacity: 0.35;
-  min-height: 70px;
+.wallcal-day-link {
+  color: var(--text-normal);
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 1px 3px;
 }
 
-@media (max-width: 900px) {
-  .wallcal-day-number {
-    font-size: 1.2rem;
+.wallcal-day-link:hover,
+.wallcal-day-link:focus-visible {
+  text-decoration: none;
+  background: var(--background-modifier-hover);
+}
+
+.wallcal-empty {
+  opacity: 0.28;
+  min-height: 74px;
+}
+
+@media (max-width: 880px) {
+  .wallcal-week-label {
+    width: 56px;
+    font-size: 0.83rem;
   }
 
-  .wallcal-week-label {
-    width: 58px;
-    font-size: 0.85rem;
+  .wallcal-day-number {
+    font-size: 1.25rem;
   }
 }
 </style>
 
+<div class="months-anchor"></div>
+
 ```dataview
 TABLE WITHOUT ID
   file.folder AS "Month Folder",
-  length(rows) AS "Files"
+  length(rows) AS "Files",
+  dateformat(min(rows.file.cday), "dd LLL yyyy") AS "First Note",
+  dateformat(max(rows.file.cday), "dd LLL yyyy") AS "Latest Note"
 FROM ""
 WHERE regexmatch("^\\d+\\.\\s", file.folder)
 GROUP BY file.folder
@@ -105,7 +166,9 @@ SORT file.folder ASC
 ```dataviewjs
 const monthNameMap = {
   JAN: 1,
+  JANUARY: 1,
   FEB: 2,
+  FEBRUARY: 2,
   MAR: 3,
   MARCH: 3,
   APR: 4,
@@ -116,55 +179,77 @@ const monthNameMap = {
   JUL: 7,
   JULY: 7,
   AUG: 8,
+  AUGUST: 8,
   SEP: 9,
   SEPT: 9,
   SEPTEMBER: 9,
   OCT: 10,
+  OCTOBER: 10,
   NOV: 11,
-  DEC: 12
+  NOVEMBER: 11,
+  DEC: 12,
+  DECEMBER: 12,
 };
 
+const escapeHtml = (s) => String(s)
+  .replaceAll("&", "&amp;")
+  .replaceAll("<", "&lt;")
+  .replaceAll(">", "&gt;")
+  .replaceAll('"', "&quot;")
+  .replaceAll("'", "&#39;");
+
 function monthFromFolder(folder) {
-  const upper = folder.toUpperCase();
-  for (const [k, v] of Object.entries(monthNameMap)) {
-    if (upper.includes(k)) return v;
+  const upper = String(folder || "").toUpperCase();
+  for (const [name, num] of Object.entries(monthNameMap)) {
+    if (upper.includes(name)) return num;
   }
   return null;
 }
 
 const weekdayRows = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-const pages = dv.pages("")
-  .where(p => /^\d+\.\s/.test(p.file.folder));
+const monthPages = dv.pages("")
+  .where((p) => /^\d+\.\s/.test(p.file.folder));
 
 const grouped = {};
-for (const p of pages) {
-  const key = p.file.folder;
-  if (!grouped[key]) grouped[key] = [];
-  grouped[key].push(p);
+for (const page of monthPages) {
+  const folder = page.file.folder;
+  if (!grouped[folder]) grouped[folder] = [];
+  grouped[folder].push(page);
 }
 
-const root = dv.el("div", "");
-root.className = "wallcal-grid";
+const host = dv.el("div", "", { cls: "wallcal-board" });
+const stats = host.createEl("div", { cls: "wallcal-stats" });
+const folderNames = Object.keys(grouped).sort();
+const totalFiles = Object.values(grouped).reduce((sum, arr) => sum + arr.length, 0);
+stats.createEl("span", { cls: "wallcal-chip", text: `${folderNames.length} month folders` });
+stats.createEl("span", { cls: "wallcal-chip", text: `${totalFiles} files` });
 
-for (const folder of Object.keys(grouped).sort()) {
-  const notes = grouped[folder].sort((a, b) => a.file.cday.ts - b.file.cday.ts);
+const grid = host.createEl("div", { cls: "wallcal-grid" });
+
+for (const folder of folderNames) {
+  const notes = grouped[folder]
+    .slice()
+    .sort((a, b) => a.file.cday.ts - b.file.cday.ts);
+
   const detectedMonth = monthFromFolder(folder);
-
-  const firstWithDate = notes.find(n => n.file.cday);
+  const firstWithDate = notes.find((n) => n.file.cday);
   const year = firstWithDate ? firstWithDate.file.cday.year : dv.date("today").year;
   const month = detectedMonth || (firstWithDate ? firstWithDate.file.cday.month : dv.date("today").month);
 
   const firstDay = dv.luxon.DateTime.fromObject({ year, month, day: 1 });
   const daysInMonth = firstDay.daysInMonth;
-  const startOffset = firstDay.weekday % 7; // Sun=0, Mon=1, ... Sat=6
+  const startOffset = firstDay.weekday % 7;
   const weekCols = Math.ceil((startOffset + daysInMonth) / 7);
 
-  const noteByDay = {};
-  for (const n of notes) {
-    const d = n.file.cday;
+  const notesByDay = {};
+  for (const note of notes) {
+    const d = note.file.cday;
     if (!d || d.year !== year || d.month !== month) continue;
-    if (!noteByDay[d.day]) noteByDay[d.day] = [];
-    noteByDay[d.day].push(n.file.link);
+    if (!notesByDay[d.day]) notesByDay[d.day] = [];
+    notesByDay[d.day].push({
+      name: note.file.name,
+      path: note.file.path,
+    });
   }
 
   const matrix = Array.from({ length: 7 }, () => Array(weekCols).fill(null));
@@ -175,10 +260,9 @@ for (const folder of Object.keys(grouped).sort()) {
     matrix[row][col] = day;
   }
 
-  const monthTitle = firstDay.toFormat("LLLL yyyy").toUpperCase();
-
-  let html = `<div class="wallcal-card">`;
-  html += `<div class="wallcal-title">${monthTitle}</div>`;
+  let html = "";
+  html += `<div class="wallcal-card">`;
+  html += `<div class="wallcal-title">${firstDay.toFormat("LLLL yyyy").toUpperCase()}</div>`;
   html += `<table class="wallcal-table">`;
   html += `<thead><tr><th class="wallcal-week-head">WEEK</th>`;
   for (let i = 1; i <= weekCols; i++) html += `<th class="wallcal-week-head">${i}</th>`;
@@ -195,9 +279,11 @@ for (const folder of Object.keys(grouped).sort()) {
         continue;
       }
 
-      const links = noteByDay[day] || [];
+      const links = notesByDay[day] || [];
       const notesHtml = links.length
-        ? `<div class="wallcal-day-notes">${links.map(l => `<div>${l}</div>`).join("")}</div>`
+        ? `<div class="wallcal-day-notes">${links
+            .map((l) => `<a class="wallcal-day-link" href="#" data-path="${escapeHtml(l.path)}">${escapeHtml(l.name)}</a>`)
+            .join("")}</div>`
         : "";
 
       html += `<td class="wallcal-day-cell"><span class="wallcal-day-number">${day}</span>${notesHtml}</td>`;
@@ -208,8 +294,15 @@ for (const folder of Object.keys(grouped).sort()) {
 
   html += `</tbody></table></div>`;
 
-  const card = dv.el("div", "");
+  const card = grid.createEl("div");
   card.innerHTML = html;
-  root.appendChild(card);
 }
+
+host.addEventListener("click", (event) => {
+  const a = event.target.closest(".wallcal-day-link");
+  if (!a) return;
+  event.preventDefault();
+  const path = a.getAttribute("data-path");
+  if (path) app.workspace.openLinkText(path, "", false);
+});
 ```
