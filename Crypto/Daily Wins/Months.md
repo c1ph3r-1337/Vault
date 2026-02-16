@@ -250,8 +250,7 @@ const months = [...byFolder.entries()].map(([folderPath, list]) => {
 const root = dv.el("div", "", { cls: "months-cal-wrap" });
 if (!months.length) {
   root.createEl("div", { text: "No month folders found. Use names like 3. FEB, 4. MARCH." });
-  return;
-}
+} else {
 
 let currentIndex = 0;
 
@@ -360,4 +359,5 @@ document.addEventListener("scroll", hideTip, true);
 window.addEventListener("blur", hideTip);
 
 renderMonth(0);
+}
 ```
