@@ -69,7 +69,7 @@ if (!document.getElementById(styleId)) {
     }
     .months-title {
       text-align: center;
-      margin: 6px auto 10px;
+      margin: -2px auto 8px;
       font-size: 2rem;
       line-height: 1.1;
       font-weight: 900;
@@ -78,6 +78,7 @@ if (!document.getElementById(styleId)) {
       display: flex;
       align-items: center;
       justify-content: center;
+      transform: translateY(-4px);
     }
     .months-grid {
       width: 100%;
