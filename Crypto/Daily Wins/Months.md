@@ -1,4 +1,5 @@
 # Months Calendar Database
+<center><div style="margin-bottom: 24px;">Don’t break the chain!</div></center>
 
 <center><div style="margin-bottom: 18px; font-weight: 700; letter-spacing: 0.03em;">Don’t break the chain!</div></center>
 
@@ -164,14 +165,23 @@ if (!document.getElementById(styleId)) {
   const style = document.createElement("style");
   style.id = styleId;
   style.textContent = `
+    .markdown-reading-view:has(.months-anchor) {
+      background:
+        radial-gradient(760px 420px at 10% 10%, color-mix(in srgb, var(--interactive-accent) 16%, transparent), transparent 72%),
+        radial-gradient(640px 360px at 90% 88%, color-mix(in srgb, var(--interactive-accent) 10%, transparent), transparent 74%),
+        linear-gradient(160deg, #0f1318, #151b22) !important;
+    }
     .wallcal-board {
       width: min(980px, 96%);
       margin: 10px auto;
       padding: 14px 14px 10px;
       border-radius: 16px;
-      border: 1px solid #c8ced7;
-      background: linear-gradient(180deg, #f4f5f7 0%, #eceff3 100%);
-      box-shadow: 0 10px 20px rgba(24, 32, 44, 0.14);
+      border: 1px solid color-mix(in srgb, var(--interactive-accent) 26%, #2a3340);
+      background:
+        radial-gradient(82% 62% at 8% 8%, color-mix(in srgb, var(--interactive-accent) 16%, transparent) 0%, transparent 74%),
+        radial-gradient(72% 58% at 94% 94%, color-mix(in srgb, var(--interactive-accent) 10%, transparent) 0%, transparent 76%),
+        linear-gradient(150deg, #151b22, #1b232c);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.34);
     }
     .wallcal-stats {
       display: flex;
@@ -181,9 +191,9 @@ if (!document.getElementById(styleId)) {
     }
     .wallcal-chip {
       border-radius: 999px;
-      border: 1px solid #cdd3dc;
-      background: #f7f8fa;
-      color: #2f3540;
+      border: 1px solid #334050;
+      background: #1c2530;
+      color: #d9e1ea;
       font-size: 12px;
       line-height: 1;
       padding: 7px 10px;
@@ -194,18 +204,18 @@ if (!document.getElementById(styleId)) {
       gap: 14px;
     }
     .wallcal-card {
-      border: 1px solid #cfd4dc;
+      border: 1px solid #364455;
       border-radius: 12px;
       padding: 10px;
-      background: #e9ecf1;
-      box-shadow: 0 6px 14px rgba(16, 25, 36, 0.1);
+      background: #1b232d;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
     }
     .wallcal-title {
       text-align: center;
       font-weight: 900;
       letter-spacing: 0.05em;
       font-size: 1.45rem;
-      color: color-mix(in srgb, var(--interactive-accent) 86%, #1d8f54);
+      color: color-mix(in srgb, var(--interactive-accent) 88%, #2bd06c);
       margin: 4px 0 10px;
     }
     .wallcal-table {
@@ -216,8 +226,8 @@ if (!document.getElementById(styleId)) {
     }
     .wallcal-table th,
     .wallcal-table td {
-      background: #f0f2f5;
-      border: 1px solid #d8dde5;
+      background: #222b35;
+      border: 1px solid #354252;
       border-radius: 4px;
       padding: 4px;
       vertical-align: top;
@@ -226,20 +236,20 @@ if (!document.getElementById(styleId)) {
       text-align: center;
       font-size: 0.82rem;
       font-weight: 700;
-      color: #3d4350;
-      background: #dfe3e8 !important;
+      color: #c8d3df;
+      background: #27313d !important;
     }
     .wallcal-week-label {
       width: 72px;
       text-align: center;
       font-weight: 800;
       letter-spacing: 0.02em;
-      color: #2a2f38;
-      background: #e4e8ed !important;
+      color: #d5dde8;
+      background: #293340 !important;
     }
     .wallcal-day-cell {
       min-height: 76px;
-      background: #f7f8fa !important;
+      background: #1f2832 !important;
     }
     .wallcal-day-number {
       display: block;
@@ -247,7 +257,7 @@ if (!document.getElementById(styleId)) {
       font-weight: 900;
       line-height: 1;
       margin-bottom: 4px;
-      color: #222733;
+      color: #d9e1ea;
     }
     .wallcal-day-number.is-accent {
       color: color-mix(in srgb, var(--interactive-accent) 88%, #179f58);
@@ -259,7 +269,7 @@ if (!document.getElementById(styleId)) {
       gap: 2px;
     }
     .wallcal-day-link {
-      color: #2e3541;
+      color: #d8e0ea;
       text-decoration: none;
       border-radius: 5px;
       padding: 1px 3px;
@@ -267,11 +277,11 @@ if (!document.getElementById(styleId)) {
     .wallcal-day-link:hover,
     .wallcal-day-link:focus-visible {
       text-decoration: none;
-      background: #e3e8ef;
+      background: #2d3947;
     }
     .wallcal-empty {
       opacity: 1;
-      background: #e3e7ed !important;
+      background: #2a3440 !important;
       min-height: 74px;
     }
     @media (max-width: 880px) {
