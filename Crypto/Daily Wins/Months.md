@@ -103,32 +103,27 @@ if (!document.getElementById(styleId)) {
     }
     .months-row-label {
       width: 92px;
+      height: 82px;
       font-size: 2rem;
       font-weight: 900;
       letter-spacing: 0.01em;
       color: #d9e2ed;
       background: #2a3441 !important;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      line-height: 82px;
     }
     .months-day-cell {
       height: 82px;
       width: 82px;
       background: #252f3b !important;
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
     .months-day {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      display: block;
       font-size: 3.1rem;
       line-height: 1;
       font-weight: 900;
       margin: 0;
+      line-height: 82px;
       color: #d7dee8;
     }
     .months-day-worked .months-day,
@@ -174,7 +169,9 @@ if (!document.getElementById(styleId)) {
     @media (max-width: 860px) {
       .months-row-label {
         width: 58px;
+        height: 58px;
         font-size: 1.5rem;
+        line-height: 58px;
       }
       .months-day-cell {
         height: 58px;
@@ -182,7 +179,7 @@ if (!document.getElementById(styleId)) {
       }
       .months-day {
         font-size: 2rem;
-        margin-top: 7px;
+        line-height: 58px;
       }
     }
   `;
