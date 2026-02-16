@@ -2,7 +2,7 @@
 
 <center><div style="margin-bottom: 18px; font-weight: 700; letter-spacing: 0.03em;">Don’t break the chain!</div></center>
 
-> [!tip]
+> [!Tip]
 > Month folders are rendered as a wall-calendar database with note links on each day.
 
 <style>
