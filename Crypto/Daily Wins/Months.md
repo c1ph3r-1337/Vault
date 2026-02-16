@@ -10,6 +10,11 @@ if (!document.getElementById(styleId)) {
   const style = document.createElement("style");
   style.id = styleId;
   style.textContent = `
+    .markdown-reading-view:has(.months-anchor) h1 {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .months-cal-wrap {
       width: min(860px, 96%);
       margin: 8px auto;
@@ -36,28 +41,43 @@ if (!document.getElementById(styleId)) {
     .months-btn,
     .months-select {
       border: 1px solid #455364;
-      background: #212a37;
+      background: linear-gradient(180deg, #2a3544, #202a36);
       color: #dbe3ed;
       border-radius: 10px;
       font-size: 12px;
       font-weight: 700;
       padding: 7px 10px;
+      height: 34px;
+      box-sizing: border-box;
     }
     .months-btn {
       cursor: pointer;
-      min-width: 34px;
+      min-width: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
     .months-btn:hover {
       filter: brightness(1.08);
+      border-color: color-mix(in srgb, var(--interactive-accent) 45%, #455364);
+    }
+    .months-btn:focus-visible,
+    .months-select:focus-visible {
+      outline: none;
+      border-color: color-mix(in srgb, var(--interactive-accent) 55%, #455364);
+      box-shadow: 0 0 0 2px color-mix(in srgb, var(--interactive-accent) 24%, transparent);
     }
     .months-title {
       text-align: center;
-      margin: 6px 0 10px;
+      margin: 6px auto 10px;
       font-size: 2rem;
-      line-height: 1;
+      line-height: 1.1;
       font-weight: 900;
       letter-spacing: 0.04em;
       color: color-mix(in srgb, var(--interactive-accent) 88%, #2ad46d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .months-grid {
       width: 100%;
@@ -72,6 +92,7 @@ if (!document.getElementById(styleId)) {
       background: #232c38;
       text-align: center;
       padding: 0;
+      vertical-align: middle;
     }
     .months-grid thead th {
       height: 28px;
@@ -87,19 +108,27 @@ if (!document.getElementById(styleId)) {
       letter-spacing: 0.01em;
       color: #d9e2ed;
       background: #2a3441 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .months-day-cell {
       height: 82px;
       width: 82px;
       background: #252f3b !important;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .months-day {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       font-size: 3.1rem;
       line-height: 1;
       font-weight: 900;
-      margin-top: 10px;
+      margin: 0;
       color: #d7dee8;
     }
     .months-day-worked .months-day,
