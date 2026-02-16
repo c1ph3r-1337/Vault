@@ -230,6 +230,7 @@ const monthNameMap = {
   NOV: 11, NOVEMBER: 11,
   DEC: 12, DECEMBER: 12,
 };
+const IST_ZONE = "Asia/Kolkata";
 
 const monthFromName = (folderName) => {
   const u = String(folderName || "").toUpperCase();
@@ -258,7 +259,7 @@ const months = [...byFolder.entries()].map(([folderPath, list]) => {
   const first = list
     .map((f) => Number(f.stat?.ctime || Date.now()))
     .sort((a, b) => a - b)[0] || Date.now();
-  const firstDt = dv.luxon.DateTime.fromMillis(first);
+  const firstDt = dv.luxon.DateTime.fromMillis(first, { zone: IST_ZONE });
   const month = detectedMonth || firstDt.month;
   const year = firstDt.year;
 
@@ -268,7 +269,7 @@ const months = [...byFolder.entries()].map(([folderPath, list]) => {
       .map((x) => Number(x || 0))
       .filter((x) => x > 0);
     for (const ts of stamps) {
-      const d = dv.luxon.DateTime.fromMillis(ts);
+      const d = dv.luxon.DateTime.fromMillis(ts, { zone: IST_ZONE });
       if (d.year !== year || d.month !== month) continue;
       if (!workedByDay.has(d.day)) workedByDay.set(d.day, []);
       workedByDay.get(d.day).push(f.basename);
@@ -315,7 +316,7 @@ function renderMonth(idx) {
   currentIndex = Math.max(0, Math.min(idx, months.length - 1));
 
   const m = months[currentIndex];
-  const first = dv.luxon.DateTime.fromObject({ year: m.year, month: m.month, day: 1 });
+  const first = dv.luxon.DateTime.fromObject({ year: m.year, month: m.month, day: 1 }, { zone: IST_ZONE });
   const monthName = first.toFormat("LLLL yyyy").toUpperCase();
   titleEl.textContent = monthName;
 
