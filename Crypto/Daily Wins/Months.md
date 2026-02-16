@@ -15,6 +15,15 @@ if (!document.getElementById(styleId)) {
       margin-left: auto;
       margin-right: auto;
     }
+    .markdown-reading-view:has(.months-anchor) .markdown-preview-view {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .markdown-reading-view:has(.months-anchor) .markdown-preview-view::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
     .months-cal-wrap {
       width: min(860px, 96%);
       margin: 8px auto;
@@ -32,8 +41,8 @@ if (!document.getElementById(styleId)) {
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 42px;
-      margin: -8px 0 6px;
+      min-height: 56px;
+      margin: 0 0 6px;
     }
     .months-title-nav {
       position: absolute;
@@ -83,9 +92,9 @@ if (!document.getElementById(styleId)) {
     }
     .months-title {
       text-align: center;
-      margin: 0 auto;
+      margin: 0;
       font-size: 2rem;
-      line-height: 1.1;
+      line-height: 1;
       font-weight: 900;
       letter-spacing: 0.04em;
       color: color-mix(in srgb, var(--interactive-accent) 88%, #2ad46d);
@@ -202,7 +211,8 @@ if (!document.getElementById(styleId)) {
     }
     @media (max-width: 860px) {
       .months-header {
-        margin-top: -4px;
+        min-height: 48px;
+        margin-top: 0;
       }
       .months-title {
         font-size: 1.6rem;
