@@ -170,7 +170,7 @@ if (!document.getElementById(styleId)) {
     }
     .months-tooltip-link {
       display: block;
-      color: #e6edf5;
+      color: #ffffff;
       text-decoration: none;
       border-radius: 6px;
       padding: 2px 4px;
@@ -181,6 +181,7 @@ if (!document.getElementById(styleId)) {
       background: #2c3744;
       text-decoration: none;
       outline: none;
+      color: #ffffff;
     }
     .months-tooltip.show {
       opacity: 1;
