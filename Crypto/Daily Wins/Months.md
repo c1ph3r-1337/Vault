@@ -1,462 +1,363 @@
 # Months Calendar Database
 
-<center><div style="margin-bottom: 18px; font-weight: 700; letter-spacing: 0.03em;">Don’t break the chain!</div></center>
-
-> [!Tip]
-> Month folders are rendered as a wall-calendar database with note links on each day.
-
-<style>
-.months-anchor {
-  display: none;
-}
-
-.markdown-reading-view:has(.months-anchor) {
-  background:
-    radial-gradient(760px 420px at 10% 10%, color-mix(in srgb, var(--interactive-accent) 8%, #ffffff), transparent 72%),
-    radial-gradient(640px 360px at 90% 88%, color-mix(in srgb, var(--interactive-accent) 6%, #ffffff), transparent 74%),
-    linear-gradient(160deg, #e8eaee, #dfe3e8) !important;
-}
-
-.wallcal-board {
-  width: min(980px, 96%);
-  margin: 10px auto;
-  padding: 14px 14px 10px;
-  border-radius: 16px;
-  border: 1px solid #c8ced7;
-  background: linear-gradient(180deg, #f4f5f7 0%, #eceff3 100%);
-  box-shadow: 0 10px 20px rgba(24, 32, 44, 0.14);
-}
-
-.wallcal-stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 0 0 12px;
-}
-
-.wallcal-chip {
-  border-radius: 999px;
-  border: 1px solid #cdd3dc;
-  background: #f7f8fa;
-  color: #2f3540;
-  font-size: 12px;
-  line-height: 1;
-  padding: 7px 10px;
-  font-weight: 700;
-}
-
-.wallcal-grid {
-  display: grid;
-  gap: 14px;
-}
-
-.wallcal-card {
-  border: 1px solid #cfd4dc;
-  border-radius: 12px;
-  padding: 10px;
-  background: #e9ecf1;
-  box-shadow: 0 6px 14px rgba(16, 25, 36, 0.1);
-}
-
-.wallcal-title {
-  text-align: center;
-  font-weight: 900;
-  letter-spacing: 0.05em;
-  font-size: 1.45rem;
-  color: color-mix(in srgb, var(--interactive-accent) 86%, #1d8f54);
-  margin: 4px 0 10px;
-}
-
-.wallcal-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 3px;
-  table-layout: fixed;
-}
-
-.wallcal-table th,
-.wallcal-table td {
-  background: #f0f2f5;
-  border: 1px solid #d8dde5;
-  border-radius: 4px;
-  padding: 4px;
-  vertical-align: top;
-}
-
-.wallcal-week-head {
-  text-align: center;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #3d4350;
-  background: #dfe3e8 !important;
-}
-
-.wallcal-week-label {
-  width: 72px;
-  text-align: center;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  color: #2a2f38;
-  background: #e4e8ed !important;
-}
-
-.wallcal-day-cell {
-  min-height: 76px;
-  background: #f7f8fa !important;
-}
-
-.wallcal-day-number {
-  display: block;
-  font-size: 1.85rem;
-  font-weight: 900;
-  line-height: 1;
-  margin-bottom: 4px;
-  color: #222733;
-}
-
-.wallcal-day-number.is-accent {
-  color: color-mix(in srgb, var(--interactive-accent) 88%, #179f58);
-}
-
-.wallcal-day-notes {
-  font-size: 0.74rem;
-  line-height: 1.24;
-  display: grid;
-  gap: 2px;
-}
-
-.wallcal-day-link {
-  color: #2e3541;
-  text-decoration: none;
-  border-radius: 5px;
-  padding: 1px 3px;
-}
-
-.wallcal-day-link:hover,
-.wallcal-day-link:focus-visible {
-  text-decoration: none;
-  background: #e3e8ef;
-}
-
-.wallcal-empty {
-  opacity: 1;
-  background: #e3e7ed !important;
-  min-height: 74px;
-}
-
-@media (max-width: 880px) {
-  .wallcal-week-label {
-    width: 56px;
-    font-size: 0.83rem;
-  }
-
-  .wallcal-day-number {
-    font-size: 1.25rem;
-  }
-}
-</style>
+<center><div style="margin-bottom: 14px; font-weight: 700; letter-spacing: 0.03em;">Don’t break the chain!</div></center>
 
 <div class="months-anchor"></div>
 
 ```dataviewjs
-const styleId = "months-wallcal-runtime-style-v1";
+const styleId = "months-single-calendar-style-v1";
 if (!document.getElementById(styleId)) {
   const style = document.createElement("style");
   style.id = styleId;
   style.textContent = `
-    .markdown-reading-view:has(.months-anchor) {
-      background:
-        radial-gradient(760px 420px at 10% 10%, color-mix(in srgb, var(--interactive-accent) 16%, transparent), transparent 72%),
-        radial-gradient(640px 360px at 90% 88%, color-mix(in srgb, var(--interactive-accent) 10%, transparent), transparent 74%),
-        linear-gradient(160deg, #0f1318, #151b22) !important;
-    }
-    .wallcal-board {
-      width: min(980px, 96%);
-      margin: 10px auto;
-      padding: 14px 14px 10px;
+    .months-cal-wrap {
+      width: min(860px, 96%);
+      margin: 8px auto;
+      border: 1px solid #3b4655;
       border-radius: 16px;
-      border: 1px solid color-mix(in srgb, var(--interactive-accent) 26%, #2a3340);
+      padding: 12px;
       background:
-        radial-gradient(82% 62% at 8% 8%, color-mix(in srgb, var(--interactive-accent) 16%, transparent) 0%, transparent 74%),
-        radial-gradient(72% 58% at 94% 94%, color-mix(in srgb, var(--interactive-accent) 10%, transparent) 0%, transparent 76%),
-        linear-gradient(150deg, #151b22, #1b232c);
-      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.34);
+        radial-gradient(75% 55% at 8% 8%, color-mix(in srgb, var(--interactive-accent) 18%, transparent) 0%, transparent 72%),
+        linear-gradient(160deg, #151b22, #1c2430);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+      color: #d7dfea;
     }
-    .wallcal-stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 0 0 12px;
-    }
-    .wallcal-chip {
-      border-radius: 999px;
-      border: 1px solid #334050;
-      background: #1c2530;
-      color: #d9e1ea;
-      font-size: 12px;
-      line-height: 1;
-      padding: 7px 10px;
-      font-weight: 700;
-    }
-    .wallcal-grid {
+    .months-cal-toolbar {
       display: grid;
-      gap: 14px;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 10px;
     }
-    .wallcal-card {
-      border: 1px solid #364455;
-      border-radius: 12px;
-      padding: 10px;
-      background: #1b232d;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+    .months-nav {
+      display: inline-flex;
+      gap: 6px;
     }
-    .wallcal-title {
+    .months-btn,
+    .months-select {
+      border: 1px solid #455364;
+      background: #212a37;
+      color: #dbe3ed;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 7px 10px;
+    }
+    .months-btn {
+      cursor: pointer;
+      min-width: 34px;
+    }
+    .months-btn:hover {
+      filter: brightness(1.08);
+    }
+    .months-title {
       text-align: center;
+      margin: 6px 0 10px;
+      font-size: 2rem;
+      line-height: 1;
       font-weight: 900;
-      letter-spacing: 0.05em;
-      font-size: 1.45rem;
-      color: color-mix(in srgb, var(--interactive-accent) 88%, #2bd06c);
-      margin: 4px 0 10px;
+      letter-spacing: 0.04em;
+      color: color-mix(in srgb, var(--interactive-accent) 88%, #2ad46d);
     }
-    .wallcal-table {
+    .months-grid {
       width: 100%;
       border-collapse: separate;
-      border-spacing: 3px;
+      border-spacing: 4px;
       table-layout: fixed;
     }
-    .wallcal-table th,
-    .wallcal-table td {
-      background: #222b35;
-      border: 1px solid #354252;
+    .months-grid th,
+    .months-grid td {
+      border: 1px solid #4a5666;
       border-radius: 4px;
-      padding: 4px;
-      vertical-align: top;
-    }
-    .wallcal-week-head {
+      background: #232c38;
       text-align: center;
+      padding: 0;
+    }
+    .months-grid thead th {
+      height: 28px;
       font-size: 0.82rem;
-      font-weight: 700;
-      color: #c8d3df;
-      background: #27313d !important;
-    }
-    .wallcal-week-label {
-      width: 72px;
-      text-align: center;
+      color: #cfd8e3;
+      background: #2b3644;
       font-weight: 800;
-      letter-spacing: 0.02em;
-      color: #d5dde8;
-      background: #293340 !important;
     }
-    .wallcal-day-cell {
-      min-height: 76px;
-      background: #1f2832 !important;
-    }
-    .wallcal-day-number {
-      display: block;
-      font-size: 1.85rem;
+    .months-row-label {
+      width: 92px;
+      font-size: 2rem;
       font-weight: 900;
+      letter-spacing: 0.01em;
+      color: #d9e2ed;
+      background: #2a3441 !important;
+    }
+    .months-day-cell {
+      height: 82px;
+      width: 82px;
+      background: #252f3b !important;
+      position: relative;
+    }
+    .months-day {
+      display: inline-block;
+      font-size: 3.1rem;
       line-height: 1;
-      margin-bottom: 4px;
-      color: #d9e1ea;
+      font-weight: 900;
+      margin-top: 10px;
+      color: #d7dee8;
     }
-    .wallcal-day-number.is-accent {
-      color: color-mix(in srgb, var(--interactive-accent) 88%, #179f58);
+    .months-day-worked .months-day,
+    .months-row-sun .months-day {
+      color: color-mix(in srgb, var(--interactive-accent) 90%, #20c060);
     }
-    .wallcal-day-notes {
-      font-size: 0.74rem;
-      line-height: 1.24;
-      display: grid;
-      gap: 2px;
+    .months-day-worked {
+      background: color-mix(in srgb, var(--interactive-accent) 22%, #273340) !important;
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--interactive-accent) 55%, transparent);
     }
-    .wallcal-day-link {
-      color: #d8e0ea;
-      text-decoration: none;
-      border-radius: 5px;
-      padding: 1px 3px;
+    .months-empty {
+      background: #202936 !important;
+      opacity: 0.45;
     }
-    .wallcal-day-link:hover,
-    .wallcal-day-link:focus-visible {
-      text-decoration: none;
-      background: #2d3947;
+    .months-tip {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 12px;
+      color: #9ca9b8;
     }
-    .wallcal-empty {
+    .months-tooltip {
+      position: fixed;
+      z-index: 9999;
+      max-width: 280px;
+      border: 1px solid #4b5a6c;
+      border-radius: 10px;
+      background: rgba(16, 20, 26, 0.97);
+      color: #e6edf5;
+      padding: 8px 10px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+      font-size: 12px;
+      line-height: 1.35;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity 0.12s ease, transform 0.12s ease;
+      white-space: pre-line;
+    }
+    .months-tooltip.show {
       opacity: 1;
-      background: #2a3440 !important;
-      min-height: 74px;
+      transform: translateY(0);
     }
-    @media (max-width: 880px) {
-      .wallcal-week-label {
-        width: 56px;
-        font-size: 0.83rem;
+    @media (max-width: 860px) {
+      .months-row-label {
+        width: 58px;
+        font-size: 1.5rem;
       }
-      .wallcal-day-number {
-        font-size: 1.25rem;
+      .months-day-cell {
+        height: 58px;
+        width: 58px;
+      }
+      .months-day {
+        font-size: 2rem;
+        margin-top: 7px;
       }
     }
   `;
   document.head.appendChild(style);
 }
 
-const monthNameMap = {
-  JAN: 1,
-  JANUARY: 1,
-  FEB: 2,
-  FEBRUARY: 2,
-  MAR: 3,
-  MARCH: 3,
-  APR: 4,
-  APRIL: 4,
-  MAY: 5,
-  JUN: 6,
-  JUNE: 6,
-  JUL: 7,
-  JULY: 7,
-  AUG: 8,
-  AUGUST: 8,
-  SEP: 9,
-  SEPT: 9,
-  SEPTEMBER: 9,
-  OCT: 10,
-  OCTOBER: 10,
-  NOV: 11,
-  NOVEMBER: 11,
-  DEC: 12,
-  DECEMBER: 12,
+const tooltipId = "months-cal-tooltip-v1";
+let tooltip = document.getElementById(tooltipId);
+if (!tooltip) {
+  tooltip = document.createElement("div");
+  tooltip.id = tooltipId;
+  tooltip.className = "months-tooltip";
+  document.body.appendChild(tooltip);
+}
+
+const folderLeaf = (p) => {
+  const parts = String(p || "").split("/").filter(Boolean);
+  return parts.length ? parts[parts.length - 1] : String(p || "");
 };
 
-const escapeHtml = (s) => String(s)
-  .replaceAll("&", "&amp;")
-  .replaceAll("<", "&lt;")
-  .replaceAll(">", "&gt;")
-  .replaceAll('"', "&quot;")
-  .replaceAll("'", "&#39;");
+const monthNameMap = {
+  JAN: 1, JANUARY: 1,
+  FEB: 2, FEBRUARY: 2,
+  MAR: 3, MARCH: 3,
+  APR: 4, APRIL: 4,
+  MAY: 5,
+  JUN: 6, JUNE: 6,
+  JUL: 7, JULY: 7,
+  AUG: 8, AUGUST: 8,
+  SEP: 9, SEPT: 9, SEPTEMBER: 9,
+  OCT: 10, OCTOBER: 10,
+  NOV: 11, NOVEMBER: 11,
+  DEC: 12, DECEMBER: 12,
+};
 
-function monthFromFolder(folder) {
-  const upper = String(folder || "").toUpperCase();
-  for (const [name, num] of Object.entries(monthNameMap)) {
-    if (upper.includes(name)) return num;
+const monthFromName = (folderName) => {
+  const u = String(folderName || "").toUpperCase();
+  for (const [k, v] of Object.entries(monthNameMap)) {
+    if (u.includes(k)) return v;
   }
   return null;
-}
+};
 
-function folderLeaf(folderPath) {
-  const p = String(folderPath || "");
-  const parts = p.split("/").filter(Boolean);
-  return parts.length ? parts[parts.length - 1] : p;
-}
-
-const weekdayRows = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-
-const monthFiles = app.vault.getMarkdownFiles().filter((f) => {
-  const folder = f.parent?.path || "";
-  const leaf = folderLeaf(folder);
+const files = app.vault.getMarkdownFiles().filter((f) => {
+  const leaf = folderLeaf(f.parent?.path || "");
   return /^\d+\.\s/.test(leaf);
 });
 
-const grouped = {};
-for (const file of monthFiles) {
-  const folder = file.parent?.path || "";
-  if (!grouped[folder]) grouped[folder] = [];
-  grouped[folder].push(file);
+const byFolder = new Map();
+for (const f of files) {
+  const folderPath = f.parent?.path || "";
+  if (!byFolder.has(folderPath)) byFolder.set(folderPath, []);
+  byFolder.get(folderPath).push(f);
 }
 
-const host = dv.el("div", "", { cls: "wallcal-board" });
-const stats = host.createEl("div", { cls: "wallcal-stats" });
-const folderNames = Object.keys(grouped).sort();
-const totalFiles = Object.values(grouped).reduce((sum, arr) => sum + arr.length, 0);
-stats.createEl("span", { cls: "wallcal-chip", text: `${folderNames.length} month folders` });
-stats.createEl("span", { cls: "wallcal-chip", text: `${totalFiles} files` });
-if (!folderNames.length) {
-  stats.createEl("span", {
-    cls: "wallcal-chip",
-    text: "No month folders detected. Expected names like: 3. FEB",
-  });
+const months = [...byFolder.entries()].map(([folderPath, list]) => {
+  const leaf = folderLeaf(folderPath);
+  const numPrefix = Number((leaf.match(/^\s*(\d{1,2})/) || [])[1] || 999);
+  const detectedMonth = monthFromName(leaf);
+  const first = list
+    .map((f) => Number(f.stat?.ctime || Date.now()))
+    .sort((a, b) => a - b)[0] || Date.now();
+  const firstDt = dv.luxon.DateTime.fromMillis(first);
+  const month = detectedMonth || firstDt.month;
+  const year = firstDt.year;
+
+  const workedByDay = new Map();
+  for (const f of list) {
+    const stamps = [f.stat?.ctime, f.stat?.mtime]
+      .map((x) => Number(x || 0))
+      .filter((x) => x > 0);
+    for (const ts of stamps) {
+      const d = dv.luxon.DateTime.fromMillis(ts);
+      if (d.year !== year || d.month !== month) continue;
+      if (!workedByDay.has(d.day)) workedByDay.set(d.day, []);
+      workedByDay.get(d.day).push(f.basename);
+    }
+  }
+
+  for (const [day, names] of workedByDay.entries()) {
+    workedByDay.set(day, [...new Set(names)].sort());
+  }
+
+  return {
+    folderPath,
+    leaf,
+    numPrefix,
+    month,
+    year,
+    workedByDay,
+  };
+}).sort((a, b) => (a.numPrefix - b.numPrefix) || a.leaf.localeCompare(b.leaf));
+
+const root = dv.el("div", "", { cls: "months-cal-wrap" });
+if (!months.length) {
+  root.createEl("div", { text: "No month folders found. Use names like 3. FEB, 4. MARCH." });
+  return;
 }
 
-const grid = host.createEl("div", { cls: "wallcal-grid" });
+let currentIndex = 0;
 
-for (const folder of folderNames) {
-  const notes = grouped[folder]
-    .slice()
-    .sort((a, b) => (a.stat?.ctime || 0) - (b.stat?.ctime || 0));
+const toolbar = root.createEl("div", { cls: "months-cal-toolbar" });
+const nav = toolbar.createEl("div", { cls: "months-nav" });
+const prevBtn = nav.createEl("button", { cls: "months-btn", text: "<" });
+const nextBtn = nav.createEl("button", { cls: "months-btn", text: ">" });
+const picker = toolbar.createEl("select", { cls: "months-select" });
+const stat = toolbar.createEl("div", { cls: "months-tip" });
 
-  const detectedMonth = monthFromFolder(folderLeaf(folder));
-  const firstWithDate = notes.find((n) => n.stat?.ctime);
-  const firstDate = firstWithDate
-    ? dv.luxon.DateTime.fromMillis(firstWithDate.stat.ctime)
-    : dv.date("today");
-  const year = firstDate.year;
-  const month = detectedMonth || firstDate.month;
+for (let i = 0; i < months.length; i++) {
+  const m = months[i];
+  const title = dv.luxon.DateTime.fromObject({ year: m.year, month: m.month, day: 1 }).toFormat("LLLL yyyy");
+  const opt = picker.createEl("option", { text: `${m.leaf} • ${title}` });
+  opt.value = String(i);
+}
 
-  const firstDay = dv.luxon.DateTime.fromObject({ year, month, day: 1 });
-  const daysInMonth = firstDay.daysInMonth;
-  const startOffset = firstDay.weekday % 7;
+const titleEl = root.createEl("div", { cls: "months-title" });
+const tableWrap = root.createEl("div");
+
+const moveTip = (ev) => {
+  tooltip.style.left = `${ev.clientX + 12}px`;
+  tooltip.style.top = `${ev.clientY + 12}px`;
+};
+const hideTip = () => tooltip.classList.remove("show");
+
+function renderMonth(idx) {
+  currentIndex = Math.max(0, Math.min(idx, months.length - 1));
+  picker.value = String(currentIndex);
+
+  const m = months[currentIndex];
+  const first = dv.luxon.DateTime.fromObject({ year: m.year, month: m.month, day: 1 });
+  const monthName = first.toFormat("LLLL yyyy").toUpperCase();
+  titleEl.textContent = monthName;
+
+  const daysInMonth = first.daysInMonth;
+  const startOffset = first.weekday % 7; // Sun=0
   const weekCols = Math.ceil((startOffset + daysInMonth) / 7);
 
-  const notesByDay = {};
-  for (const note of notes) {
-    const d = note.stat?.ctime
-      ? dv.luxon.DateTime.fromMillis(note.stat.ctime)
-      : null;
-    if (!d || d.year !== year || d.month !== month) continue;
-    if (!notesByDay[d.day]) notesByDay[d.day] = [];
-    notesByDay[d.day].push({
-      name: note.basename,
-      path: note.path,
-    });
-  }
-
   const matrix = Array.from({ length: 7 }, () => Array(weekCols).fill(null));
-  for (let day = 1; day <= daysInMonth; day++) {
-    const absolute = startOffset + (day - 1);
+  for (let d = 1; d <= daysInMonth; d++) {
+    const absolute = startOffset + (d - 1);
     const col = Math.floor(absolute / 7);
     const row = absolute % 7;
-    matrix[row][col] = day;
+    matrix[row][col] = d;
   }
 
-  let html = "";
-  html += `<div class="wallcal-card">`;
-  html += `<div class="wallcal-title">${firstDay.toFormat("LLLL yyyy").toUpperCase()}</div>`;
-  html += `<table class="wallcal-table">`;
-  html += `<thead><tr><th class="wallcal-week-head">WEEK</th>`;
-  for (let i = 1; i <= weekCols; i++) html += `<th class="wallcal-week-head">${i}</th>`;
-  html += `</tr></thead><tbody>`;
+  const weekdayRows = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  let html = "<table class='months-grid'><thead><tr><th>WEEK</th>";
+  for (let w = 1; w <= weekCols; w++) html += `<th>${w}</th>`;
+  html += "</tr></thead><tbody>";
 
   for (let r = 0; r < 7; r++) {
-    html += `<tr>`;
-    html += `<th class="wallcal-week-label">${weekdayRows[r]}</th>`;
-
+    const rowCls = r === 0 ? "months-row-sun" : "";
+    html += `<tr class='${rowCls}'><th class='months-row-label'>${weekdayRows[r]}</th>`;
     for (let c = 0; c < weekCols; c++) {
       const day = matrix[r][c];
       if (!day) {
-        html += `<td class="wallcal-empty"></td>`;
+        html += "<td class='months-empty'></td>";
         continue;
       }
 
-      const links = notesByDay[day] || [];
-      const notesHtml = links.length
-        ? `<div class="wallcal-day-notes">${links
-            .map((l) => `<a class="wallcal-day-link" href="#" data-path="${escapeHtml(l.path)}">${escapeHtml(l.name)}</a>`)
-            .join("")}</div>`
+      const worked = m.workedByDay.has(day);
+      const names = worked ? m.workedByDay.get(day) : [];
+      const tooltipText = worked
+        ? `${first.set({ day }).toFormat("ccc, dd LLL yyyy")}\n${names.map((n) => `- ${n}`).join("\n")}`
         : "";
-      const accentClass = (r === 0 || links.length > 0) ? " is-accent" : "";
 
-      html += `<td class="wallcal-day-cell"><span class="wallcal-day-number${accentClass}">${day}</span>${notesHtml}</td>`;
+      const cls = `months-day-cell${worked ? " months-day-worked" : ""}`;
+      const safeTip = tooltipText
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;");
+
+      html += `<td class='${cls}' data-tip="${safeTip}"><span class='months-day'>${day}</span></td>`;
     }
-
-    html += `</tr>`;
+    html += "</tr>";
   }
 
-  html += `</tbody></table></div>`;
+  html += "</tbody></table>";
+  tableWrap.innerHTML = html;
 
-  const card = grid.createEl("div");
-  card.innerHTML = html;
+  const workedDays = [...m.workedByDay.keys()].length;
+  stat.textContent = `${workedDays} worked day${workedDays === 1 ? "" : "s"} in ${monthName}`;
+
+  const cells = tableWrap.querySelectorAll(".months-day-cell.months-day-worked");
+  for (const cell of cells) {
+    cell.addEventListener("mouseenter", (ev) => {
+      const txt = cell.getAttribute("data-tip") || "";
+      if (!txt) return;
+      tooltip.innerHTML = txt;
+      moveTip(ev);
+      tooltip.classList.add("show");
+    });
+    cell.addEventListener("mousemove", moveTip);
+    cell.addEventListener("mouseleave", hideTip);
+  }
 }
 
-host.addEventListener("click", (event) => {
-  const a = event.target.closest(".wallcal-day-link");
-  if (!a) return;
-  event.preventDefault();
-  const path = a.getAttribute("data-path");
-  if (path) app.workspace.openLinkText(path, "", false);
-});
+picker.addEventListener("change", () => renderMonth(Number(picker.value || 0)));
+prevBtn.addEventListener("click", () => renderMonth((currentIndex - 1 + months.length) % months.length));
+nextBtn.addEventListener("click", () => renderMonth((currentIndex + 1) % months.length));
+
+document.addEventListener("scroll", hideTip, true);
+window.addEventListener("blur", hideTip);
+
+renderMonth(0);
 ```
