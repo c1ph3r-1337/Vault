@@ -151,18 +151,6 @@
 
 <div class="months-anchor"></div>
 
-```dataview
-TABLE WITHOUT ID
-  file.folder AS "Month Folder",
-  length(rows) AS "Files",
-  dateformat(min(rows.file.cday), "dd LLL yyyy") AS "First Note",
-  dateformat(max(rows.file.cday), "dd LLL yyyy") AS "Latest Note"
-FROM ""
-WHERE regexmatch("(^|/)\\d+\\.\\s", file.folder)
-GROUP BY file.folder
-SORT file.folder ASC
-```
-
 ```dataviewjs
 const monthNameMap = {
   JAN: 1,
@@ -213,14 +201,18 @@ function folderLeaf(folderPath) {
 }
 
 const weekdayRows = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-const monthPages = dv.pages("")
-  .where((p) => /^\d+\.\s/.test(folderLeaf(p.file.folder)));
+
+const monthFiles = app.vault.getMarkdownFiles().filter((f) => {
+  const folder = f.parent?.path || "";
+  const leaf = folderLeaf(folder);
+  return /^\d+\.\s/.test(leaf);
+});
 
 const grouped = {};
-for (const page of monthPages) {
-  const folder = page.file.folder;
+for (const file of monthFiles) {
+  const folder = file.parent?.path || "";
   if (!grouped[folder]) grouped[folder] = [];
-  grouped[folder].push(page);
+  grouped[folder].push(file);
 }
 
 const host = dv.el("div", "", { cls: "wallcal-board" });
@@ -229,18 +221,27 @@ const folderNames = Object.keys(grouped).sort();
 const totalFiles = Object.values(grouped).reduce((sum, arr) => sum + arr.length, 0);
 stats.createEl("span", { cls: "wallcal-chip", text: `${folderNames.length} month folders` });
 stats.createEl("span", { cls: "wallcal-chip", text: `${totalFiles} files` });
+if (!folderNames.length) {
+  stats.createEl("span", {
+    cls: "wallcal-chip",
+    text: "No month folders detected. Expected names like: 3. FEB",
+  });
+}
 
 const grid = host.createEl("div", { cls: "wallcal-grid" });
 
 for (const folder of folderNames) {
   const notes = grouped[folder]
     .slice()
-    .sort((a, b) => a.file.cday.ts - b.file.cday.ts);
+    .sort((a, b) => (a.stat?.ctime || 0) - (b.stat?.ctime || 0));
 
   const detectedMonth = monthFromFolder(folderLeaf(folder));
-  const firstWithDate = notes.find((n) => n.file.cday);
-  const year = firstWithDate ? firstWithDate.file.cday.year : dv.date("today").year;
-  const month = detectedMonth || (firstWithDate ? firstWithDate.file.cday.month : dv.date("today").month);
+  const firstWithDate = notes.find((n) => n.stat?.ctime);
+  const firstDate = firstWithDate
+    ? dv.luxon.DateTime.fromMillis(firstWithDate.stat.ctime)
+    : dv.date("today");
+  const year = firstDate.year;
+  const month = detectedMonth || firstDate.month;
 
   const firstDay = dv.luxon.DateTime.fromObject({ year, month, day: 1 });
   const daysInMonth = firstDay.daysInMonth;
@@ -249,12 +250,14 @@ for (const folder of folderNames) {
 
   const notesByDay = {};
   for (const note of notes) {
-    const d = note.file.cday;
+    const d = note.stat?.ctime
+      ? dv.luxon.DateTime.fromMillis(note.stat.ctime)
+      : null;
     if (!d || d.year !== year || d.month !== month) continue;
     if (!notesByDay[d.day]) notesByDay[d.day] = [];
     notesByDay[d.day].push({
-      name: note.file.name,
-      path: note.file.path,
+      name: note.basename,
+      path: note.path,
     });
   }
 
