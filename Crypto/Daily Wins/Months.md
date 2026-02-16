@@ -46,9 +46,9 @@ if (!document.getElementById(styleId)) {
       transform: translateY(-50%);
       border: none;
       background: transparent;
-      color: #ffffff;
+      color: color-mix(in srgb, #ffffff 78%, var(--interactive-accent) 22%);
       font-size: 30px;
-      font-weight: 700;
+      font-weight: 900;
       padding: 0;
       height: 34px;
       width: 34px;
@@ -59,7 +59,8 @@ if (!document.getElementById(styleId)) {
       justify-content: center;
       pointer-events: auto;
       line-height: 1;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+      transition: transform 0.14s ease, color 0.14s ease, filter 0.14s ease;
     }
     .months-btn-left {
       left: 4px;
@@ -68,12 +69,17 @@ if (!document.getElementById(styleId)) {
       right: 4px;
     }
     .months-btn:hover {
-      color: color-mix(in srgb, #ffffff 82%, var(--interactive-accent) 18%);
-      transform: translateY(-50%) scale(1.08);
+      color: color-mix(in srgb, #ffffff 52%, var(--interactive-accent) 48%);
+      transform: translateY(-50%) scale(1.14);
+      filter: drop-shadow(0 0 8px color-mix(in srgb, var(--interactive-accent) 55%, transparent));
+    }
+    .months-btn:active {
+      transform: translateY(-50%) scale(1.02);
     }
     .months-btn:focus-visible {
       outline: none;
-      color: color-mix(in srgb, #ffffff 78%, var(--interactive-accent) 22%);
+      color: color-mix(in srgb, #ffffff 40%, var(--interactive-accent) 60%);
+      filter: drop-shadow(0 0 10px color-mix(in srgb, var(--interactive-accent) 60%, transparent));
     }
     .months-title {
       text-align: center;
