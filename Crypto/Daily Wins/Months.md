@@ -37,18 +37,17 @@ if (!document.getElementById(styleId)) {
     }
     .months-title-nav {
       position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      display: inline-flex;
-      gap: 8px;
+      inset: 0;
+      pointer-events: none;
     }
     .months-btn {
-      border: 1px solid #455364;
-      background: linear-gradient(180deg, #2a3544, #202a36);
-      color: #dbe3ed;
-      border-radius: 10px;
-      font-size: 16px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: transparent;
+      color: #ffffff;
+      font-size: 30px;
       font-weight: 700;
       padding: 0;
       height: 34px;
@@ -58,15 +57,23 @@ if (!document.getElementById(styleId)) {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      pointer-events: auto;
+      line-height: 1;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    }
+    .months-btn-left {
+      left: 4px;
+    }
+    .months-btn-right {
+      right: 4px;
     }
     .months-btn:hover {
-      filter: brightness(1.08);
-      border-color: color-mix(in srgb, var(--interactive-accent) 45%, #455364);
+      color: color-mix(in srgb, #ffffff 82%, var(--interactive-accent) 18%);
+      transform: translateY(-50%) scale(1.08);
     }
     .months-btn:focus-visible {
       outline: none;
-      border-color: color-mix(in srgb, var(--interactive-accent) 55%, #455364);
-      box-shadow: 0 0 0 2px color-mix(in srgb, var(--interactive-accent) 24%, transparent);
+      color: color-mix(in srgb, #ffffff 78%, var(--interactive-accent) 22%);
     }
     .months-title {
       text-align: center;
@@ -195,12 +202,12 @@ if (!document.getElementById(styleId)) {
         font-size: 1.6rem;
       }
       .months-title-nav {
-        gap: 6px;
+        inset: 0;
       }
       .months-btn {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
+        width: 28px;
+        height: 28px;
+        font-size: 24px;
       }
       .months-row-label {
         width: 58px;
@@ -335,8 +342,8 @@ let currentIndex = 0;
 const header = root.createEl("div", { cls: "months-header" });
 const titleEl = header.createEl("div", { cls: "months-title" });
 const titleNav = header.createEl("div", { cls: "months-title-nav" });
-const prevBtn = titleNav.createEl("button", { cls: "months-btn", text: "‹" });
-const nextBtn = titleNav.createEl("button", { cls: "months-btn", text: "›" });
+const prevBtn = titleNav.createEl("button", { cls: "months-btn months-btn-left", text: "‹" });
+const nextBtn = titleNav.createEl("button", { cls: "months-btn months-btn-right", text: "›" });
 
 const tableWrap = root.createEl("div");
 const stat = root.createEl("div", { cls: "months-tip" });
