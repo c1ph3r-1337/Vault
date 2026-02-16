@@ -27,28 +27,34 @@ if (!document.getElementById(styleId)) {
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
       color: #d7dfea;
     }
-    .months-cal-toolbar {
-      display: none;
+    .months-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      margin: -8px 0 6px;
     }
-    .months-nav {
+    .months-title-nav {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
       display: inline-flex;
-      gap: 6px;
+      gap: 8px;
     }
-    .months-btn,
-    .months-select {
+    .months-btn {
       border: 1px solid #455364;
       background: linear-gradient(180deg, #2a3544, #202a36);
       color: #dbe3ed;
       border-radius: 10px;
-      font-size: 12px;
+      font-size: 16px;
       font-weight: 700;
-      padding: 7px 10px;
+      padding: 0;
       height: 34px;
+      width: 34px;
       box-sizing: border-box;
-    }
-    .months-btn {
       cursor: pointer;
-      min-width: 36px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -57,15 +63,14 @@ if (!document.getElementById(styleId)) {
       filter: brightness(1.08);
       border-color: color-mix(in srgb, var(--interactive-accent) 45%, #455364);
     }
-    .months-btn:focus-visible,
-    .months-select:focus-visible {
+    .months-btn:focus-visible {
       outline: none;
       border-color: color-mix(in srgb, var(--interactive-accent) 55%, #455364);
       box-shadow: 0 0 0 2px color-mix(in srgb, var(--interactive-accent) 24%, transparent);
     }
     .months-title {
       text-align: center;
-      margin: -10px auto 8px;
+      margin: 0 auto;
       font-size: 2rem;
       line-height: 1.1;
       font-weight: 900;
@@ -74,7 +79,7 @@ if (!document.getElementById(styleId)) {
       display: flex;
       align-items: center;
       justify-content: center;
-      transform: translateY(-8px);
+      transform: none;
     }
     .months-grid {
       width: 100%;
@@ -136,7 +141,7 @@ if (!document.getElementById(styleId)) {
       opacity: 0.45;
     }
     .months-tip {
-      margin-top: 10px;
+      margin-top: 8px;
       text-align: center;
       font-size: 12px;
       color: #9ca9b8;
@@ -164,6 +169,20 @@ if (!document.getElementById(styleId)) {
       transform: translateY(0);
     }
     @media (max-width: 860px) {
+      .months-header {
+        margin-top: -4px;
+      }
+      .months-title {
+        font-size: 1.6rem;
+      }
+      .months-title-nav {
+        gap: 6px;
+      }
+      .months-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+      }
       .months-row-label {
         width: 58px;
         height: 58px;
@@ -277,22 +296,14 @@ if (!months.length) {
 
 let currentIndex = 0;
 
-const toolbar = root.createEl("div", { cls: "months-cal-toolbar" });
-const nav = toolbar.createEl("div", { cls: "months-nav" });
-const prevBtn = nav.createEl("button", { cls: "months-btn", text: "<" });
-const nextBtn = nav.createEl("button", { cls: "months-btn", text: ">" });
-const picker = toolbar.createEl("select", { cls: "months-select" });
-const stat = toolbar.createEl("div", { cls: "months-tip" });
+const header = root.createEl("div", { cls: "months-header" });
+const titleEl = header.createEl("div", { cls: "months-title" });
+const titleNav = header.createEl("div", { cls: "months-title-nav" });
+const prevBtn = titleNav.createEl("button", { cls: "months-btn", text: "‹" });
+const nextBtn = titleNav.createEl("button", { cls: "months-btn", text: "›" });
 
-for (let i = 0; i < months.length; i++) {
-  const m = months[i];
-  const title = dv.luxon.DateTime.fromObject({ year: m.year, month: m.month, day: 1 }).toFormat("LLLL yyyy");
-  const opt = picker.createEl("option", { text: `${m.leaf} • ${title}` });
-  opt.value = String(i);
-}
-
-const titleEl = root.createEl("div", { cls: "months-title" });
 const tableWrap = root.createEl("div");
+const stat = root.createEl("div", { cls: "months-tip" });
 
 const moveTip = (ev) => {
   tooltip.style.left = `${ev.clientX + 12}px`;
@@ -302,7 +313,6 @@ const hideTip = () => tooltip.classList.remove("show");
 
 function renderMonth(idx) {
   currentIndex = Math.max(0, Math.min(idx, months.length - 1));
-  picker.value = String(currentIndex);
 
   const m = months[currentIndex];
   const first = dv.luxon.DateTime.fromObject({ year: m.year, month: m.month, day: 1 });
@@ -374,7 +384,6 @@ function renderMonth(idx) {
   }
 }
 
-picker.addEventListener("change", () => renderMonth(Number(picker.value || 0)));
 prevBtn.addEventListener("click", () => renderMonth((currentIndex - 1 + months.length) % months.length));
 nextBtn.addEventListener("click", () => renderMonth((currentIndex + 1) % months.length));
 
