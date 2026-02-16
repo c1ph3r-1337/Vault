@@ -164,6 +164,24 @@ if (!document.getElementById(styleId)) {
       transition: opacity 0.12s ease, transform 0.12s ease;
       white-space: pre-line;
     }
+    .months-tooltip-title {
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .months-tooltip-link {
+      display: block;
+      color: #e6edf5;
+      text-decoration: none;
+      border-radius: 6px;
+      padding: 2px 4px;
+      white-space: normal;
+    }
+    .months-tooltip-link:hover,
+    .months-tooltip-link:focus-visible {
+      background: #2c3744;
+      text-decoration: none;
+      outline: none;
+    }
     .months-tooltip.show {
       opacity: 1;
       transform: translateY(0);
@@ -215,6 +233,12 @@ const folderLeaf = (p) => {
   const parts = String(p || "").split("/").filter(Boolean);
   return parts.length ? parts[parts.length - 1] : String(p || "");
 };
+const escapeHtml = (s) => String(s)
+  .replaceAll("&", "&amp;")
+  .replaceAll("<", "&lt;")
+  .replaceAll(">", "&gt;")
+  .replaceAll('"', "&quot;")
+  .replaceAll("'", "&#39;");
 
 const monthNameMap = {
   JAN: 1, JANUARY: 1,
@@ -272,12 +296,22 @@ const months = [...byFolder.entries()].map(([folderPath, list]) => {
       const d = dv.luxon.DateTime.fromMillis(ts, { zone: IST_ZONE });
       if (d.year !== year || d.month !== month) continue;
       if (!workedByDay.has(d.day)) workedByDay.set(d.day, []);
-      workedByDay.get(d.day).push(f.basename);
+      workedByDay.get(d.day).push({ name: f.basename, path: f.path });
     }
   }
 
-  for (const [day, names] of workedByDay.entries()) {
-    workedByDay.set(day, [...new Set(names)].sort());
+  for (const [day, items] of workedByDay.entries()) {
+    const byPath = new Map();
+    for (const item of items) {
+      if (!item?.path) continue;
+      if (!byPath.has(item.path)) byPath.set(item.path, item.name);
+    }
+    workedByDay.set(
+      day,
+      [...byPath.entries()]
+        .map(([path, name]) => ({ path, name }))
+        .sort((a, b) => a.name.localeCompare(b.name))
+    );
   }
 
   return {
@@ -310,9 +344,30 @@ const moveTip = (ev) => {
   tooltip.style.left = `${ev.clientX + 12}px`;
   tooltip.style.top = `${ev.clientY + 12}px`;
 };
-const hideTip = () => tooltip.classList.remove("show");
+let pinnedCell = null;
+const hideTip = () => {
+  tooltip.classList.remove("show");
+  tooltip.style.pointerEvents = "none";
+  tooltip.innerHTML = "";
+};
+const showHoverTip = (dateLabel, items, ev) => {
+  tooltip.textContent = `${dateLabel}\n${items.map((i) => `- ${i.name}`).join("\n")}`;
+  tooltip.style.pointerEvents = "none";
+  moveTip(ev);
+  tooltip.classList.add("show");
+};
+const showPinnedTip = (dateLabel, items, ev) => {
+  tooltip.innerHTML = `<div class="months-tooltip-title">${escapeHtml(dateLabel)}</div>${items
+    .map((i) => `<a href="#" class="months-tooltip-link" data-path="${escapeHtml(i.path)}">${escapeHtml(i.name)}</a>`)
+    .join("")}`;
+  tooltip.style.pointerEvents = "auto";
+  moveTip(ev);
+  tooltip.classList.add("show");
+};
 
 function renderMonth(idx) {
+  pinnedCell = null;
+  hideTip();
   currentIndex = Math.max(0, Math.min(idx, months.length - 1));
 
   const m = months[currentIndex];
@@ -348,9 +403,9 @@ function renderMonth(idx) {
       }
 
       const worked = m.workedByDay.has(day);
-      const names = worked ? m.workedByDay.get(day) : [];
+      const items = worked ? m.workedByDay.get(day) : [];
       const tooltipText = worked
-        ? `${first.set({ day }).toFormat("ccc, dd LLL yyyy")}\n${names.map((n) => `- ${n}`).join("\n")}`
+        ? `${first.set({ day }).toFormat("ccc, dd LLL yyyy")}\n${items.map((i) => `- ${i.name}`).join("\n")}`
         : "";
 
       const cls = `months-day-cell${worked ? " months-day-worked" : ""}`;
@@ -373,15 +428,33 @@ function renderMonth(idx) {
 
   const cells = tableWrap.querySelectorAll(".months-day-cell.months-day-worked");
   for (const cell of cells) {
+    const day = Number(cell.querySelector(".months-day")?.textContent || 0);
+    const items = m.workedByDay.get(day) || [];
+    const dateLabel = first.set({ day }).toFormat("ccc, dd LLL yyyy");
     cell.addEventListener("mouseenter", (ev) => {
-      const txt = cell.getAttribute("data-tip") || "";
-      if (!txt) return;
-      tooltip.innerHTML = txt;
-      moveTip(ev);
-      tooltip.classList.add("show");
+      if (pinnedCell) return;
+      if (!items.length) return;
+      showHoverTip(dateLabel, items, ev);
     });
-    cell.addEventListener("mousemove", moveTip);
-    cell.addEventListener("mouseleave", hideTip);
+    cell.addEventListener("mousemove", (ev) => {
+      if (pinnedCell) return;
+      moveTip(ev);
+    });
+    cell.addEventListener("mouseleave", () => {
+      if (pinnedCell) return;
+      hideTip();
+    });
+    cell.addEventListener("dblclick", (ev) => {
+      ev.preventDefault();
+      ev.stopPropagation();
+      if (pinnedCell === cell) {
+        pinnedCell = null;
+        hideTip();
+        return;
+      }
+      pinnedCell = cell;
+      showPinnedTip(dateLabel, items, ev);
+    });
   }
 }
 
@@ -390,6 +463,21 @@ nextBtn.addEventListener("click", () => renderMonth((currentIndex + 1) % months.
 
 document.addEventListener("scroll", hideTip, true);
 window.addEventListener("blur", hideTip);
+tooltip.addEventListener("click", (ev) => {
+  const a = ev.target.closest(".months-tooltip-link");
+  if (!a) return;
+  ev.preventDefault();
+  const path = a.getAttribute("data-path");
+  if (path) app.workspace.openLinkText(path, "", false);
+});
+document.addEventListener("click", (ev) => {
+  if (!pinnedCell) return;
+  const clickedCell = ev.target.closest(".months-day-cell");
+  const inTip = ev.target.closest(`#${tooltipId}`);
+  if (clickedCell || inTip) return;
+  pinnedCell = null;
+  hideTip();
+});
 
 renderMonth(0);
 }
