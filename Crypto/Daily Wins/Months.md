@@ -158,7 +158,7 @@ TABLE WITHOUT ID
   dateformat(min(rows.file.cday), "dd LLL yyyy") AS "First Note",
   dateformat(max(rows.file.cday), "dd LLL yyyy") AS "Latest Note"
 FROM ""
-WHERE regexmatch("^\\d+\\.\\s", file.folder)
+WHERE regexmatch("(^|/)\\d+\\.\\s", file.folder)
 GROUP BY file.folder
 SORT file.folder ASC
 ```
@@ -206,9 +206,15 @@ function monthFromFolder(folder) {
   return null;
 }
 
+function folderLeaf(folderPath) {
+  const p = String(folderPath || "");
+  const parts = p.split("/").filter(Boolean);
+  return parts.length ? parts[parts.length - 1] : p;
+}
+
 const weekdayRows = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 const monthPages = dv.pages("")
-  .where((p) => /^\d+\.\s/.test(p.file.folder));
+  .where((p) => /^\d+\.\s/.test(folderLeaf(p.file.folder)));
 
 const grouped = {};
 for (const page of monthPages) {
@@ -231,7 +237,7 @@ for (const folder of folderNames) {
     .slice()
     .sort((a, b) => a.file.cday.ts - b.file.cday.ts);
 
-  const detectedMonth = monthFromFolder(folder);
+  const detectedMonth = monthFromFolder(folderLeaf(folder));
   const firstWithDate = notes.find((n) => n.file.cday);
   const year = firstWithDate ? firstWithDate.file.cday.year : dv.date("today").year;
   const month = detectedMonth || (firstWithDate ? firstWithDate.file.cday.month : dv.date("today").month);
