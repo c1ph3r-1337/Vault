@@ -159,6 +159,134 @@
 <div class="months-anchor"></div>
 
 ```dataviewjs
+const styleId = "months-wallcal-runtime-style-v1";
+if (!document.getElementById(styleId)) {
+  const style = document.createElement("style");
+  style.id = styleId;
+  style.textContent = `
+    .wallcal-board {
+      width: min(980px, 96%);
+      margin: 10px auto;
+      padding: 14px 14px 10px;
+      border-radius: 16px;
+      border: 1px solid #c8ced7;
+      background: linear-gradient(180deg, #f4f5f7 0%, #eceff3 100%);
+      box-shadow: 0 10px 20px rgba(24, 32, 44, 0.14);
+    }
+    .wallcal-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 12px;
+    }
+    .wallcal-chip {
+      border-radius: 999px;
+      border: 1px solid #cdd3dc;
+      background: #f7f8fa;
+      color: #2f3540;
+      font-size: 12px;
+      line-height: 1;
+      padding: 7px 10px;
+      font-weight: 700;
+    }
+    .wallcal-grid {
+      display: grid;
+      gap: 14px;
+    }
+    .wallcal-card {
+      border: 1px solid #cfd4dc;
+      border-radius: 12px;
+      padding: 10px;
+      background: #e9ecf1;
+      box-shadow: 0 6px 14px rgba(16, 25, 36, 0.1);
+    }
+    .wallcal-title {
+      text-align: center;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      font-size: 1.45rem;
+      color: color-mix(in srgb, var(--interactive-accent) 86%, #1d8f54);
+      margin: 4px 0 10px;
+    }
+    .wallcal-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 3px;
+      table-layout: fixed;
+    }
+    .wallcal-table th,
+    .wallcal-table td {
+      background: #f0f2f5;
+      border: 1px solid #d8dde5;
+      border-radius: 4px;
+      padding: 4px;
+      vertical-align: top;
+    }
+    .wallcal-week-head {
+      text-align: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #3d4350;
+      background: #dfe3e8 !important;
+    }
+    .wallcal-week-label {
+      width: 72px;
+      text-align: center;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: #2a2f38;
+      background: #e4e8ed !important;
+    }
+    .wallcal-day-cell {
+      min-height: 76px;
+      background: #f7f8fa !important;
+    }
+    .wallcal-day-number {
+      display: block;
+      font-size: 1.85rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 4px;
+      color: #222733;
+    }
+    .wallcal-day-number.is-accent {
+      color: color-mix(in srgb, var(--interactive-accent) 88%, #179f58);
+    }
+    .wallcal-day-notes {
+      font-size: 0.74rem;
+      line-height: 1.24;
+      display: grid;
+      gap: 2px;
+    }
+    .wallcal-day-link {
+      color: #2e3541;
+      text-decoration: none;
+      border-radius: 5px;
+      padding: 1px 3px;
+    }
+    .wallcal-day-link:hover,
+    .wallcal-day-link:focus-visible {
+      text-decoration: none;
+      background: #e3e8ef;
+    }
+    .wallcal-empty {
+      opacity: 1;
+      background: #e3e7ed !important;
+      min-height: 74px;
+    }
+    @media (max-width: 880px) {
+      .wallcal-week-label {
+        width: 56px;
+        font-size: 0.83rem;
+      }
+      .wallcal-day-number {
+        font-size: 1.25rem;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
 const monthNameMap = {
   JAN: 1,
   JANUARY: 1,
