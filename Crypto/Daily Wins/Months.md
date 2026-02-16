@@ -28,11 +28,7 @@ if (!document.getElementById(styleId)) {
       color: #d7dfea;
     }
     .months-cal-toolbar {
-      display: grid;
-      grid-template-columns: auto minmax(0, 1fr) auto;
-      gap: 8px;
-      align-items: center;
-      margin-bottom: 10px;
+      display: none;
     }
     .months-nav {
       display: inline-flex;
@@ -69,7 +65,7 @@ if (!document.getElementById(styleId)) {
     }
     .months-title {
       text-align: center;
-      margin: -2px auto 8px;
+      margin: -10px auto 8px;
       font-size: 2rem;
       line-height: 1.1;
       font-weight: 900;
@@ -78,7 +74,7 @@ if (!document.getElementById(styleId)) {
       display: flex;
       align-items: center;
       justify-content: center;
-      transform: translateY(-4px);
+      transform: translateY(-8px);
     }
     .months-grid {
       width: 100%;
