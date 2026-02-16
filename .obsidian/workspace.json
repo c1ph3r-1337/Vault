@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/3. FEB/Blockchain and Crypto Facts.md",
-                "mode": "preview",
+                "file": "Crypto/Daily Wins/Months.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Blockchain and Crypto Facts"
+              "title": "Months"
             }
           }
         ]
@@ -194,8 +194,7 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 7
+        ]
       }
     ],
     "direction": "horizontal",
@@ -216,8 +215,9 @@
   },
   "active": "e1950195dd07c2ab",
   "lastOpenFiles": [
-    "Crypto/Daily Wins.md",
+    "Crypto/Daily Wins/Months.md",
     "Crypto/Daily Wins/3. FEB/Blockchain and Crypto Facts.md",
+    "Crypto/Daily Wins.md",
     "Crypto/Daily Wins/3. FEB/But how does bitcoin actually work.md",
     "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
     "Crypto/Daily Wins/3. FEB/Rust Setup.md",
@@ -247,7 +247,6 @@
     "Crypto/Roadmap/PHASE 5.md",
     "Crypto/Roadmap/PHASE 4.md",
     "Crypto/Roadmap/PHASE 2.md",
-    "Crypto/Roadmap/PHASE 1.md",
     "Vault/Crypto/Daily Wins/3. FEB",
     "Vault/Crypto/Daily Wins",
     "Vault/Crypto",
