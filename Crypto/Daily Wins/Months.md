@@ -1,5 +1,4 @@
 # Months Calendar Database
-<center><div style="margin-bottom: 24px;">Don’t break the chain!</div></center>
 
 <center><div style="margin-bottom: 18px; font-weight: 700; letter-spacing: 0.03em;">Don’t break the chain!</div></center>
 
