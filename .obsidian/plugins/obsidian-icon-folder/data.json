@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiMonitorCheck",
       "LiSearch",
       "LiNewspaper",
       "LiWaypoints",
-      "LiCrown",
-      "LiCheck"
+      "LiCrown"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -43,5 +43,6 @@
   "Crypto/Whitepapers": "LiNewspaper",
   "Crypto/Daily Wins.md": "LiCrown",
   "Crypto/Roadmap.md": "LiWaypoints",
-  "Crypto/RESEARCH LIST.md": "LiSearch"
+  "Crypto/RESEARCH LIST.md": "LiSearch",
+  "Crypto/Daily Wins/Months.md": "LiMonitorCheck"
 }
