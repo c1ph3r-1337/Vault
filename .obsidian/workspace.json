@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/Month List.md",
+                "file": "Crypto/Daily Wins.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Month List"
+              "title": "Daily Wins"
             }
           }
         ]
@@ -215,10 +215,10 @@
   },
   "active": "e1950195dd07c2ab",
   "lastOpenFiles": [
+    "Crypto/Daily Wins/Month List.md",
     "Crypto/Daily Wins/Months.md",
     "Crypto/Daily Wins.md",
     "Crypto/RESEARCH LIST.md",
-    "Crypto/Daily Wins/Month List.md",
     "Crypto/Daily Wins/2. FEB/Blockchain and Crypto Facts.md",
     "Crypto/Roadmap.md",
     "Crypto/Daily Wins/2. FEB/But how does bitcoin actually work.md",
