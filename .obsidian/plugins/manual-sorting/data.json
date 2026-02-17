@@ -28,6 +28,7 @@
     "Crypto/Daily Wins": {
       "children": [
         "Crypto/Daily Wins/Months.md",
+        "Crypto/Daily Wins/Month List.md",
         "Crypto/Daily Wins/3. FEB",
         "Crypto/Daily Wins/4. MARCH",
         "Crypto/Daily Wins/5. APRIL"
