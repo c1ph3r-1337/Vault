@@ -59,6 +59,13 @@
         "type": "FILES",
         "pattern": "Crypto/Daily Wins/Months.md",
         "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Crypto/Daily Wins/Untitled.md",
+        "patternType": "STRICT"
       }
     ],
     "frontMatter": [
