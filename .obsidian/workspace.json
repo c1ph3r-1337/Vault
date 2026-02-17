@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins.md",
+                "file": "Crypto/Daily Wins/Month List.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Daily Wins"
+              "title": "Month List"
             }
           }
         ]
@@ -213,19 +213,21 @@
       "custom-sort:Toggle custom sorting": false
     }
   },
-  "active": "e1950195dd07c2ab",
+  "active": "9483dbce746bc604",
   "lastOpenFiles": [
+    "Crypto/Daily Wins/2. FEB/Blockchain and Crypto Facts.md",
+    "Crypto/Daily Wins/2. FEB/7 Cryptography Concepts EVERY Developer Should Know.md",
+    "Crypto/Daily Wins/2. FEB/Rust Setup.md",
+    "Crypto/Daily Wins/2. FEB/Getting Started with Rust  Rust Book.md",
+    "Crypto/Daily Wins/2. FEB/But how does bitcoin actually work.md",
+    "Crypto/Daily Wins.md",
+    "Crypto/Daily Wins/2. FEB/Unconfirmed 364002.crdownload",
     "Crypto/Daily Wins/Month List.md",
     "Crypto/Daily Wins/Months.md",
-    "Crypto/Daily Wins.md",
     "Crypto/RESEARCH LIST.md",
-    "Crypto/Daily Wins/2. FEB/Blockchain and Crypto Facts.md",
     "Crypto/Roadmap.md",
-    "Crypto/Daily Wins/2. FEB/But how does bitcoin actually work.md",
-    "Crypto/Daily Wins/2. FEB/Rust Setup.md",
     "Crazy Stuff/Crazy Stuff.md",
     "Crypto/Daily Wins/4. MARCH/Untitled.md",
-    "Crypto/Daily Wins/2. FEB/Getting Started with Rust  Rust Book.md",
     "Crypto/Daily Wins/3. FEB/Unconfirmed 240916.crdownload",
     "Crypto/Daily Wins/3. FEB/ChatGPT - ChatGPT.md",
     "Crypto/Daily Wins/3. FEB/Unconfirmed 758698.crdownload",
@@ -246,11 +248,9 @@
     "Crypto/Roadmap/PHASE 7.md",
     "Crypto/Roadmap/PHASE 6.md",
     "Crypto/Roadmap/PHASE 5.md",
-    "Crypto/Roadmap/PHASE 4.md",
     "Vault/Crypto/Daily Wins/3. FEB",
     "Vault/Crypto/Daily Wins",
     "Vault/Crypto",
-    "Vault",
-    "Crypto/Daily Wins/FEB"
+    "Vault"
   ]
 }
