@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/Months.md",
-                "mode": "preview",
+                "file": "Crypto/Daily Wins.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Months"
+              "title": "Daily Wins"
             }
           }
         ]
@@ -213,13 +213,14 @@
       "custom-sort:Toggle custom sorting": false
     }
   },
-  "active": "e1950195dd07c2ab",
+  "active": "9d8bec7930bf3a42",
   "lastOpenFiles": [
+    "Crypto/Daily Wins.md",
+    "Crypto/Whitepapers/Whitepapers.md",
+    "Crypto/Daily Wins/Months.md",
     "Crypto/Daily Wins/2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md",
     "Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md",
-    "Crypto/Daily Wins/Months.md",
     "Crypto/Daily Wins/Month List.md",
-    "Crypto/Daily Wins.md",
     "Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md",
     "Crypto/Daily Wins/2. FEB/Blockchain and Crypto Facts.md",
     "Crypto/Daily Wins/2. FEB/Rust Setup.md",
@@ -241,7 +242,6 @@
     "README.md",
     "cvc",
     "Crypto/Daily Wins/4. MARCH/Untitled 1.md",
-    "Crypto/Whitepapers/Whitepapers.md",
     "Crypto/Roadmap/PHASE 0.md",
     "Crypto/Daily Wins/3. FEB/Unconfirmed 608740.crdownload",
     "Crypto/Roadmap/PHASE 9.md",
