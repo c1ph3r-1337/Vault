@@ -1,4 +1,6 @@
-# Click To Open
+#FEB
+# 
 [[But how does bitcoin actually work]]
 [[Getting Started with Rust  Rust Book]]
-[[R]]
+[[Rust Setup]]
+[[Blockchain and Crypto Facts]]
