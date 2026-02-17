@@ -37,11 +37,17 @@
     },
     "Crypto/Daily Wins/2. FEB": {
       "children": [
-        "Crypto/Daily Wins/2. FEB/But how does bitcoin actually work.md",
-        "Crypto/Daily Wins/2. FEB/Getting Started with Rust  Rust Book.md",
-        "Crypto/Daily Wins/2. FEB/Rust Setup.md",
+        "Crypto/Daily Wins/2. FEB/Videos",
         "Crypto/Daily Wins/2. FEB/Blockchain and Crypto Facts.md",
-        "Crypto/Daily Wins/2. FEB/7 Cryptography Concepts EVERY Developer Should Know.md"
+        "Crypto/Daily Wins/2. FEB/Rust Setup.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Daily Wins/2. FEB/Videos": {
+      "children": [
+        "Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md",
+        "Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md",
+        "Crypto/Daily Wins/2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md"
       ],
       "sortOrder": "custom"
     },
