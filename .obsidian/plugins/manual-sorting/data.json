@@ -29,27 +29,10 @@
       "children": [
         "Crypto/Daily Wins/Months.md",
         "Crypto/Daily Wins/Month List.md",
-        "Crypto/Daily Wins/3. FEB",
-        "Crypto/Daily Wins/4. MARCH",
-        "Crypto/Daily Wins/5. APRIL"
+        "Crypto/Daily Wins/2. FEB",
+        "Crypto/Daily Wins/3. MARCH",
+        "Crypto/Daily Wins/4. APRIL"
       ],
-      "sortOrder": "custom"
-    },
-    "Crypto/Daily Wins/3. FEB": {
-      "children": [
-        "Crypto/Daily Wins/3. FEB/But how does bitcoin actually work.md",
-        "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
-        "Crypto/Daily Wins/3. FEB/Rust Setup.md",
-        "Crypto/Daily Wins/3. FEB/Blockchain and Crypto Facts.md"
-      ],
-      "sortOrder": "custom"
-    },
-    "Crypto/Daily Wins/4. MARCH": {
-      "children": [],
-      "sortOrder": "custom"
-    },
-    "Crypto/Daily Wins/5. APRIL": {
-      "children": [],
       "sortOrder": "custom"
     },
     "Crypto/Roadmap": {
@@ -73,6 +56,23 @@
         "Crypto/Whitepapers/bitcoin.pdf",
         "Crypto/Whitepapers/Ethereum_2014.pdf"
       ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Daily Wins/2. FEB": {
+      "children": [
+        "Crypto/Daily Wins/2. FEB/But how does bitcoin actually work.md",
+        "Crypto/Daily Wins/2. FEB/Getting Started with Rust  Rust Book.md",
+        "Crypto/Daily Wins/2. FEB/Rust Setup.md",
+        "Crypto/Daily Wins/2. FEB/Blockchain and Crypto Facts.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Daily Wins/3. MARCH": {
+      "children": [],
+      "sortOrder": "custom"
+    },
+    "Crypto/Daily Wins/4. APRIL": {
+      "children": [],
       "sortOrder": "custom"
     }
   },
