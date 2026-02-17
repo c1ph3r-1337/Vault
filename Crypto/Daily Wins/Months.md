@@ -288,16 +288,26 @@ const monthFromName = (folderName) => {
   return null;
 };
 
-const files = app.vault.getMarkdownFiles().filter((f) => {
-  const leaf = folderLeaf(f.parent?.path || "");
-  return /^\d+\.\s/.test(leaf);
-});
+const monthFolderPathFor = (folderPath) => {
+  const parts = String(folderPath || "").split("/").filter(Boolean);
+  let built = [];
+  for (const part of parts) {
+    built.push(part);
+    if (/^\d+\.\s/.test(part)) return built.join("/");
+  }
+  return null;
+};
+
+const files = app.vault.getMarkdownFiles().map((f) => {
+  const monthFolderPath = monthFolderPathFor(f.parent?.path || "");
+  return monthFolderPath ? { f, monthFolderPath } : null;
+}).filter(Boolean);
 
 const byFolder = new Map();
-for (const f of files) {
-  const folderPath = f.parent?.path || "";
+for (const item of files) {
+  const folderPath = item.monthFolderPath;
   if (!byFolder.has(folderPath)) byFolder.set(folderPath, []);
-  byFolder.get(folderPath).push(f);
+  byFolder.get(folderPath).push(item.f);
 }
 
 const months = [...byFolder.entries()].map(([folderPath, list]) => {
