@@ -1,5 +1,6 @@
 > [[Roadmap]]
 > [[Whitepapers]]
+> [[Videos]]
 
 
 
