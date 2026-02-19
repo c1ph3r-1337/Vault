@@ -118,7 +118,8 @@
   ],
   "Crypto/RESEARCH LIST.md": [
     "2026-02-10",
-    "2026-02-11"
+    "2026-02-11",
+    "2026-02-19"
   ],
   "Crypto/Roadmap/PHASE 0.md": [
     "2026-02-10",
@@ -204,7 +205,8 @@
     "2026-02-17"
   ],
   "Crypto/Daily Wins/Month List.md": [
-    "2026-02-17"
+    "2026-02-17",
+    "2026-02-19"
   ],
   "Crypto/Daily Wins/2. FEB/Blockchain and Crypto Facts.md": [
     "2026-02-16",
@@ -240,5 +242,8 @@
   ],
   "Crypto/Daily Wins/2. FEB/Miners and Mining Software.md": [
     "2026-02-17"
+  ],
+  "Crypto/Daily Wins/2. FEB/Nonce Mining and Coin Creation.md": [
+    "2026-02-19"
   ]
 }
