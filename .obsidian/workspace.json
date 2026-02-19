@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/RESEARCH LIST.md",
+                "file": "Crypto/Daily Wins/2. FEB/Blockchain and Crypto Facts.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RESEARCH LIST"
+              "title": "Blockchain and Crypto Facts"
             }
           }
         ]
@@ -213,7 +213,7 @@
       "custom-sort:Toggle custom sorting": false
     }
   },
-  "active": "9d8bec7930bf3a42",
+  "active": "e1950195dd07c2ab",
   "lastOpenFiles": [
     "Crypto/RESEARCH LIST.md",
     "Crypto/Daily Wins.md",
