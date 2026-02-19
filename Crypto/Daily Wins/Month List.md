@@ -5,4 +5,5 @@
 [[Rust Setup]]
 [[Blockchain and Crypto Facts]]
 [[Miners and Mining Software]]
+[[Nonce Mining and Coin Creation]]
 
