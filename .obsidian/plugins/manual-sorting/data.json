@@ -37,6 +37,7 @@
     },
     "Crypto/Daily Wins/2. FEB": {
       "children": [
+        "Crypto/Daily Wins/2. FEB/Nonce Mining and Coin Creation.md",
         "Crypto/Daily Wins/2. FEB/Videos",
         "Crypto/Daily Wins/2. FEB/Blockchain and Crypto Facts.md",
         "Crypto/Daily Wins/2. FEB/Rust Setup.md",
