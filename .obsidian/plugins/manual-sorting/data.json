@@ -52,6 +52,10 @@
       ],
       "sortOrder": "custom"
     },
+    "Crypto/Daily Wins/2. FEB/Rust": {
+      "children": [],
+      "sortOrder": "custom"
+    },
     "Crypto/Daily Wins/2. FEB/Videos": {
       "children": [
         "Crypto/Daily Wins/2. FEB/Videos/Videos.md",
@@ -71,8 +75,9 @@
     },
     "Crypto/Roadmap": {
       "children": [
-        "Crypto/Roadmap/PHASE 0.md",
-        "Crypto/Roadmap/PHASE 1.md",
+        "Crypto/Roadmap/PHASE 2",
+        "Crypto/Roadmap/PHASE 0",
+        "Crypto/Roadmap/PHASE 1",
         "Crypto/Roadmap/PHASE 2.md",
         "Crypto/Roadmap/PHASE 3.md",
         "Crypto/Roadmap/PHASE 4.md",
@@ -84,6 +89,18 @@
       ],
       "sortOrder": "custom"
     },
+    "Crypto/Roadmap/PHASE 0": {
+      "children": [
+        "Crypto/Roadmap/PHASE 0/PHASE 0.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 1": {
+      "children": [
+        "Crypto/Roadmap/PHASE 1/PHASE 1.md"
+      ],
+      "sortOrder": "custom"
+    },
     "Crypto/Whitepapers": {
       "children": [
         "Crypto/Whitepapers/Whitepapers.md",
@@ -92,7 +109,7 @@
       ],
       "sortOrder": "custom"
     },
-    "Crypto/Daily Wins/2. FEB/Rust": {
+    "Crypto/Roadmap/PHASE 2": {
       "children": [],
       "sortOrder": "custom"
     }

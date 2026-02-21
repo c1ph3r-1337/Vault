@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Roadmap/PHASE 6.md",
+                "file": "Crypto/Roadmap/PHASE 1/PHASE 1.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PHASE 6"
+              "title": "PHASE 1"
             }
           }
         ]
@@ -215,7 +215,10 @@
   },
   "active": "9483dbce746bc604",
   "lastOpenFiles": [
-    "Crypto/Roadmap/Untitled",
+    "Crypto/Roadmap/PHASE 2",
+    "Crypto/Roadmap/PHASE 1",
+    "Crypto/Roadmap/PHASE 6.md",
+    "Crypto/Roadmap/PHASE 0",
     "Crazy Stuff/Crazy Stuff.md",
     "Crypto/Daily Wins/2. FEB/Rust",
     "Crypto/Daily Wins/2. FEB/Miscellaneous",
@@ -248,9 +251,6 @@
     "Crypto/Daily Wins/3. FEB/Crypto - Blockchain and Crypto Facts.md",
     "Crypto/Daily Wins/3. FEB/ChatGPT Web Clipper JSON.md",
     "Untitled.canvas",
-    "README.md",
-    "cvc",
-    "Crypto/Daily Wins/4. MARCH/Untitled 1.md",
-    "Crypto/Daily Wins/3. FEB/Unconfirmed 608740.crdownload"
+    "README.md"
   ]
 }
