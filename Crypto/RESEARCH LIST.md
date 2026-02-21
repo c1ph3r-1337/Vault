@@ -1,6 +1,7 @@
 > [[Roadmap]]
 > [[Whitepapers]]
 > [[Videos]]
+> ![[Rust]]
 
 
 
