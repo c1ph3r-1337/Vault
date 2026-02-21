@@ -926,7 +926,7 @@ if (pages.length === 0) {
   }
 
   const notes = app.vault
-    .getMarkdownFiles()
+    .getFiles()
     .filter((f) => isInDailyWinsFolder(f.path))
     .filter((f) => {
       const base = String(f.basename || "").toLowerCase();
@@ -935,7 +935,7 @@ if (pages.length === 0) {
     .sort((a, b) => a.path.localeCompare(b.path));
 
   if (!notes.length) {
-    dv.paragraph(`No .md files found in any "${targetFolderName}" folder.`);
+    dv.paragraph(`No files found in any "${targetFolderName}" folder.`);
     return;
   }
 
