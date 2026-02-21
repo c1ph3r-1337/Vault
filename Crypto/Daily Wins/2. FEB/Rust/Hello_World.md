@@ -2,8 +2,9 @@ Next, make a new source file and call it main.rs. Rust files always end with the
 
 Now open the main.rs file you just created and enter the code in Listing 1-1.
 
-```
 Filename: main.rs
+
+```
 fn main() {
     println!("Hello, world!");
 }
