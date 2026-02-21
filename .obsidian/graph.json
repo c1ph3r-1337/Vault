@@ -64,10 +64,17 @@
       }
     },
     {
-      "query": "file:Progess",
+      "query": "file:Progress",
       "color": {
         "a": 1,
         "rgb": 14701233
+      }
+    },
+    {
+      "query": "file:RESEARCH LIST",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
       }
     }
   ],
@@ -82,5 +89,5 @@
   "linkStrength": 1,
   "linkDistance": 275,
   "scale": 0.5847859324098212,
-  "close": false
+  "close": true
 }
