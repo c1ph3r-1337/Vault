@@ -1,4 +1,3 @@
-
 fn test(){
     println!("hello");
 }

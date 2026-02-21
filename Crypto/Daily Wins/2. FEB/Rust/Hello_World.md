@@ -26,5 +26,5 @@ If Hello, world! did print, congratulations! You’ve officially written a Rust 
 Take a look in the code 
 
 ```preview
-path: hello_w
+path: hello_world.rs
 ```
