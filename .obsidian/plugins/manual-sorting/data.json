@@ -53,7 +53,9 @@
       "sortOrder": "custom"
     },
     "Crypto/Daily Wins/2. FEB/Rust": {
-      "children": [],
+      "children": [
+        "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md"
+      ],
       "sortOrder": "custom"
     },
     "Crypto/Daily Wins/2. FEB/Videos": {
