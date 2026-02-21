@@ -928,7 +928,10 @@ if (pages.length === 0) {
   const notes = app.vault
     .getMarkdownFiles()
     .filter((f) => isInDailyWinsFolder(f.path))
-    .filter((f) => String(f.basename || "").toLowerCase() !== "months")
+    .filter((f) => {
+      const base = String(f.basename || "").toLowerCase();
+      return base !== "months" && base !== "month list";
+    })
     .sort((a, b) => a.path.localeCompare(b.path));
 
   if (!notes.length) {
