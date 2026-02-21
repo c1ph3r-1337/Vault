@@ -2,12 +2,16 @@ Next, make a new source file and call it main.rs. Rust files always end with the
 
 Now open the main.rs file you just created and enter the code in Listing 1-1.
 
+```
 Filename: main.rs
 fn main() {
     println!("Hello, world!");
 }
+```
+
 Listing 1-1: A program that prints Hello, world!
 Save the file and go back to your terminal window in the ~/projects/hello_world directory. On Linux or macOS, enter the following commands to compile and run the file:
+
 ```
 $ rustc main.rs
 $ ./main
