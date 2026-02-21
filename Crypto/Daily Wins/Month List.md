@@ -1,5 +1,3 @@
-# Month List
-
 ## 2. FEB
 - [[Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md|Getting Started with Rust  Rust Book]]
 - [[Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md|But how does bitcoin actually work]]
