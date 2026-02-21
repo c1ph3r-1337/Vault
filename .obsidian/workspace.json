@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins.md",
-                "mode": "preview",
+                "file": "Crypto/Daily Wins/Month List.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Daily Wins"
+              "title": "Month List"
             }
           }
         ],
@@ -227,19 +227,20 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "9d8bec7930bf3a42",
+  "active": "724d784d35a165c7",
   "lastOpenFiles": [
-    "Crypto/Daily Wins.md",
+    "Crypto/Daily Wins/3. MARCH/Untitled.md",
+    "Crypto/Daily Wins/Month List.md",
+    "Crypto/Daily Wins/3. MARCH/Untitled 1.md",
+    "Crypto/Daily Wins/3. MARCH/Untitled 2.md",
+    "Crypto/Daily Wins/3. MARCH/Untitled 3.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
     "Crypto/Progress.md",
+    "Crypto/Daily Wins.md",
     "Crypto/RESEARCH LIST.md",
     "Crypto/Roadmap.md",
     "Crypto/Daily Wins/Months.md",
-    "Crypto/Daily Wins/Month List.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
-    "Crypto/Daily Wins/3. MARCH/Untitled 2.md",
     "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md",
-    "Crypto/Daily Wins/3. MARCH/Untitled 1.md",
-    "Crypto/Daily Wins/3. MARCH/Untitled.md",
     "Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md",
     "Crypto/Daily Wins/2. FEB/Videos/Videos.md",
     "Crypto/Roadmap/PHASE 6/PHASE 6.md",
@@ -265,7 +266,6 @@
     "Crypto/Daily Wins/2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md",
     "Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md",
     "Crypto/Daily Wins/2. FEB/Miscellaneous/Rust Setup.md",
-    "Crypto/Daily Wins/4. MARCH/Untitled.md",
     "Untitled.canvas"
   ]
 }
