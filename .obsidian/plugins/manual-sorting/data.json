@@ -75,7 +75,9 @@
       "sortOrder": "custom"
     },
     "Crypto/Daily Wins/3. MARCH": {
-      "children": [],
+      "children": [
+        "Crypto/Daily Wins/3. MARCH/Untitled.md"
+      ],
       "sortOrder": "custom"
     },
     "Crypto/Daily Wins/4. APRIL": {
