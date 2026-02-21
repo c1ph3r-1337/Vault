@@ -418,6 +418,41 @@ const syncMonthList = async () => {
 
 syncMonthList().catch((err) => console.error("Month List sync failed:", err));
 
+// Keep Month List synced when files are created/renamed/deleted in month folders.
+if (!window.__monthsAutoSyncWatcherInstalled) {
+  const relevantPath = (path) =>
+    String(path || "").startsWith(`${targetRoot}/`) &&
+    /^\d+\.\s/.test(String(path || "").split("/")[1] || "");
+
+  const debounce = (fn, wait = 250) => {
+    let t = null;
+    return (...args) => {
+      if (t) clearTimeout(t);
+      t = setTimeout(() => fn(...args), wait);
+    };
+  };
+
+  const triggerSync = debounce(() => {
+    syncMonthList().catch((err) => console.error("Month List sync failed:", err));
+  }, 300);
+
+  app.vault.on("create", (file) => {
+    if (relevantPath(file?.path)) triggerSync();
+  });
+  app.vault.on("delete", (file) => {
+    if (relevantPath(file?.path)) triggerSync();
+  });
+  app.vault.on("rename", (file, oldPath) => {
+    if (relevantPath(file?.path) || relevantPath(oldPath)) triggerSync();
+  });
+  app.vault.on("modify", (file) => {
+    if (String(file?.path || "") === monthListPath) return;
+    if (relevantPath(file?.path)) triggerSync();
+  });
+
+  window.__monthsAutoSyncWatcherInstalled = true;
+}
+
 const root = dv.el("div", "", { cls: "months-cal-wrap" });
 if (!months.length) {
   root.createEl("div", { text: "No month folders found. Use names like 3. FEB, 4. MARCH." });

@@ -15,6 +15,7 @@
 ## 3. MARCH
 - [[Daily Wins/3. MARCH/Untitled.md|Untitled]]
 - [[Daily Wins/3. MARCH/Untitled 1.md|Untitled 1]]
+- [[Daily Wins/3. MARCH/Untitled 2.md|Untitled 2]]
 
 ## 4. APRIL
 - No files found.

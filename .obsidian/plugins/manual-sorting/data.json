@@ -16,6 +16,7 @@
     },
     "Crypto": {
       "children": [
+        "Crypto/Progress.md",
         "Crypto/Daily Wins.md",
         "Crypto/RESEARCH LIST.md",
         "Crypto/Roadmap.md",
