@@ -417,9 +417,38 @@ const syncMonthList = async () => {
   await app.vault.adapter.write(monthListPath, body);
 };
 
-syncMonthList().catch((err) => console.error("Month List sync failed:", err));
-
 const root = dv.el("div", "", { cls: "months-cal-wrap" });
+const syncRow = root.createEl("div", {
+  attr: {
+    style: "display:flex;justify-content:flex-end;margin-bottom:8px;",
+  },
+});
+const syncBtn = syncRow.createEl("button", {
+  cls: "months-btn",
+  text: "Sync Month List",
+});
+syncBtn.style.position = "static";
+syncBtn.style.transform = "none";
+syncBtn.style.width = "auto";
+syncBtn.style.height = "auto";
+syncBtn.style.padding = "6px 10px";
+syncBtn.style.fontSize = "12px";
+syncBtn.addEventListener("click", async () => {
+  try {
+    await syncMonthList();
+    syncBtn.textContent = "Synced";
+    setTimeout(() => {
+      syncBtn.textContent = "Sync Month List";
+    }, 1200);
+  } catch (err) {
+    console.error("Month List sync failed:", err);
+    syncBtn.textContent = "Sync Failed";
+    setTimeout(() => {
+      syncBtn.textContent = "Sync Month List";
+    }, 1400);
+  }
+});
+
 if (!months.length) {
   root.createEl("div", { text: "No month folders found. Use names like 3. FEB, 4. MARCH." });
 } else {
