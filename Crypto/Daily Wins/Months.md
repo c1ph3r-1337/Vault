@@ -298,7 +298,13 @@ const monthFolderPathFor = (folderPath) => {
   return null;
 };
 
-const files = app.vault.getMarkdownFiles().map((f) => {
+const targetRoot = "Daily Wins";
+const monthListPath = `${targetRoot}/Month List.md`;
+const excludedBasenames = new Set(["months", "month list"]);
+
+const files = app.vault.getFiles().map((f) => {
+  const base = String(f.basename || "").toLowerCase();
+  if (excludedBasenames.has(base)) return null;
   const monthFolderPath = monthFolderPathFor(f.parent?.path || "");
   return monthFolderPath ? { f, monthFolderPath } : null;
 }).filter(Boolean);
@@ -348,6 +354,29 @@ const months = [...byFolder.entries()].map(([folderPath, list]) => {
     );
   }
 
+  const createdFiles = list
+    .map((f) => {
+      const createdAt = Number(f.stat?.ctime || 0);
+      if (!createdAt) return null;
+      const d = dv.luxon.DateTime.fromMillis(createdAt, { zone: IST_ZONE });
+      if (d.year !== year || d.month !== month) return null;
+      return {
+        path: f.path,
+        name: f.name || f.basename,
+        createdAt,
+      };
+    })
+    .filter(Boolean)
+    .sort((a, b) => (a.createdAt - b.createdAt) || a.name.localeCompare(b.name));
+
+  const dedupedCreatedFiles = [];
+  const seen = new Set();
+  for (const file of createdFiles) {
+    if (seen.has(file.path)) continue;
+    seen.add(file.path);
+    dedupedCreatedFiles.push(file);
+  }
+
   return {
     folderPath,
     leaf,
@@ -355,8 +384,40 @@ const months = [...byFolder.entries()].map(([folderPath, list]) => {
     month,
     year,
     workedByDay,
+    createdFiles: dedupedCreatedFiles,
   };
 }).sort((a, b) => (a.numPrefix - b.numPrefix) || a.leaf.localeCompare(b.leaf));
+
+const generateMonthListBody = () => {
+  const lines = ["# Month List", ""];
+  for (const m of months) {
+    lines.push(`## ${m.leaf}`);
+    if (!m.createdFiles.length) {
+      lines.push("- No files created in this month.");
+      lines.push("");
+      continue;
+    }
+    for (const file of m.createdFiles) {
+      lines.push(`- [[${file.path}|${file.name}]]`);
+    }
+    lines.push("");
+  }
+  return lines.join("\n").trimEnd() + "\n";
+};
+
+const syncMonthList = async () => {
+  const body = generateMonthListBody();
+  const exists = await app.vault.adapter.exists(monthListPath);
+  if (!exists) {
+    await app.vault.adapter.write(monthListPath, body);
+    return;
+  }
+  const current = await app.vault.adapter.read(monthListPath);
+  if (current === body) return;
+  await app.vault.adapter.write(monthListPath, body);
+};
+
+syncMonthList().catch((err) => console.error("Month List sync failed:", err));
 
 const root = dv.el("div", "", { cls: "months-cal-wrap" });
 if (!months.length) {
