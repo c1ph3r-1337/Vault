@@ -22,3 +22,5 @@ Hello, world!
 Regardless of your operating system, the string Hello, world! should print to the terminal. If you don’t see this output, refer back to the “Troubleshooting” part of the Installation section for ways to get help.
 
 If Hello, world! did print, congratulations! You’ve officially written a Rust program. That makes you a Rust programmer—welcome!
+
+Take a look in the 
