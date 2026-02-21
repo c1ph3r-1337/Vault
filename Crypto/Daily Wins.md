@@ -1196,10 +1196,11 @@ if (pages.length === 0) {
             : `Best streak ${visibleStreak}/${folder.bestStreak}d`,
       });
 
-      for (const [, files] of byDay(orderedFiles)) {
-        const dayWhen = files[0]?.when || Date.now();
-        details.createEl("div", { cls: "dw-day", text: formatDayHeading(dayWhen) });
-        const list = details.createEl("ul", { cls: "dw-list" });
+      for (const [folderRel, files] of byFolderRel(orderedFiles)) {
+        const folderBlock = details.createEl("div", { cls: "dw-folder" });
+        const folderLabel = folderRel === "(root)" ? "Root" : folderRel;
+        folderBlock.createEl("div", { cls: "dw-folder-title", text: folderLabel });
+        const list = folderBlock.createEl("ul", { cls: "dw-list" });
         for (const file of files) {
           const li = list.createEl("li", {
             cls: `dw-list-item${file.dayKey === todayKey ? " dw-today" : ""}`,
