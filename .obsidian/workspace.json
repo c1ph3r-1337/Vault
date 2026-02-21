@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "1f482da1628149f4",
+        "id": "667155620748cb61",
         "type": "tabs",
         "children": [
           {
-            "id": "e1950195dd07c2ab",
+            "id": "dd48b3b6a7d37c80",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Crypto/Roadmap/PHASE 1/PHASE 1.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "PHASE 1"
+              "title": "New tab"
             }
           }
         ]
@@ -215,13 +211,20 @@
   },
   "active": "9483dbce746bc604",
   "lastOpenFiles": [
+    "Crypto/Roadmap/Untitled.canvas",
+    "Crypto/Roadmap/PHASE 9",
+    "Crypto/Roadmap/PHASE 8",
+    "Crypto/Roadmap/PHASE 7",
+    "Crypto/Roadmap/PHASE 6",
+    "Crypto/Roadmap/PHASE 5",
+    "Crypto/Roadmap/PHASE 4",
+    "Crypto/Roadmap/PHASE 1/PHASE 1.md",
+    "Crypto/Roadmap/PHASE 3",
     "Crypto/Roadmap/PHASE 2",
     "Crypto/Roadmap/PHASE 1",
     "Crypto/Roadmap/PHASE 6.md",
     "Crypto/Roadmap/PHASE 0",
     "Crazy Stuff/Crazy Stuff.md",
-    "Crypto/Daily Wins/2. FEB/Rust",
-    "Crypto/Daily Wins/2. FEB/Miscellaneous",
     "Crazy Stuff/Welcome.md",
     "Crypto/Daily Wins/Months.md",
     "Crypto/Daily Wins/3. MARCH/Untitled.md",
@@ -235,22 +238,15 @@
     "Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md",
     "Crypto/Daily Wins/2. FEB/Videos/Videos.md",
     "Crypto/Daily Wins/2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md",
-    "Crypto/Daily Wins/2. FEB/Unconfirmed 155115.crdownload",
     "Crypto/Whitepapers/Whitepapers.md",
     "Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md",
     "Crypto/Daily Wins/2. FEB/Miscellaneous/Rust Setup.md",
-    "Crypto/Daily Wins/2. FEB/Videos",
-    "Crypto/Daily Wins/2. FEB/Unconfirmed 364002.crdownload",
     "Crypto/Daily Wins/4. MARCH/Untitled.md",
-    "Crypto/Daily Wins/3. FEB/Unconfirmed 240916.crdownload",
     "Crypto/Daily Wins/3. FEB/ChatGPT - ChatGPT.md",
-    "Crypto/Daily Wins/3. FEB/Unconfirmed 758698.crdownload",
     "Crypto/Daily Wins/3. FEB/Programming a Guessing Game  Rust Book.md",
     "Crypto/Daily Wins/3. FEB/ChatGPT.md",
-    "Crypto/Daily Wins/3. FEB/Unconfirmed 674553.crdownload",
     "Crypto/Daily Wins/3. FEB/Crypto - Blockchain and Crypto Facts.md",
     "Crypto/Daily Wins/3. FEB/ChatGPT Web Clipper JSON.md",
-    "Untitled.canvas",
-    "README.md"
+    "Untitled.canvas"
   ]
 }

@@ -75,10 +75,16 @@
     },
     "Crypto/Roadmap": {
       "children": [
-        "Crypto/Roadmap/PHASE 2",
+        "Crypto/Roadmap/PHASE 9",
+        "Crypto/Roadmap/PHASE 8",
+        "Crypto/Roadmap/PHASE 7",
+        "Crypto/Roadmap/PHASE 6",
+        "Crypto/Roadmap/PHASE 5",
+        "Crypto/Roadmap/PHASE 4",
+        "Crypto/Roadmap/PHASE 3",
         "Crypto/Roadmap/PHASE 0",
         "Crypto/Roadmap/PHASE 1",
-        "Crypto/Roadmap/PHASE 2.md",
+        "Crypto/Roadmap/PHASE 2",
         "Crypto/Roadmap/PHASE 3.md",
         "Crypto/Roadmap/PHASE 4.md",
         "Crypto/Roadmap/PHASE 5.md",
@@ -101,16 +107,46 @@
       ],
       "sortOrder": "custom"
     },
+    "Crypto/Roadmap/PHASE 2": {
+      "children": [
+        "Crypto/Roadmap/PHASE 2/PHASE 2.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 3": {
+      "children": [],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 4": {
+      "children": [],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 5": {
+      "children": [],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 6": {
+      "children": [],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 7": {
+      "children": [],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 8": {
+      "children": [],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 9": {
+      "children": [],
+      "sortOrder": "custom"
+    },
     "Crypto/Whitepapers": {
       "children": [
         "Crypto/Whitepapers/Whitepapers.md",
         "Crypto/Whitepapers/bitcoin.pdf",
         "Crypto/Whitepapers/Ethereum_2014.pdf"
       ],
-      "sortOrder": "custom"
-    },
-    "Crypto/Roadmap/PHASE 2": {
-      "children": [],
       "sortOrder": "custom"
     }
   },
