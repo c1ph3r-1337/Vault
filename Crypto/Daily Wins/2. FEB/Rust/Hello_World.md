@@ -24,3 +24,8 @@ Regardless of your operating system, the string Hello, world! should print to th
 If Hello, world! did print, congratulations! You’ve officially written a Rust program. That makes you a Rust programmer—welcome!
 
 Take a look in the code 
+
+```preview
+phello
+
+```
