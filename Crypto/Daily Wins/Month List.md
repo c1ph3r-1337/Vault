@@ -1,22 +1,67 @@
 # Month List
 
-## 2. FEB
-- [[Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md|Getting Started with Rust  Rust Book]]
-- [[Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md|But how does bitcoin actually work]]
-- [[Daily Wins/2. FEB/Miscellaneous/Rust Setup.md|Rust Setup]]
-- [[Daily Wins/2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md|7 Cryptography Concepts EVERY Developer Should Know]]
-- [[Daily Wins/2. FEB/Miscellaneous/Miners and Mining Software.md|Miners and Mining Software]]
-- [[Daily Wins/2. FEB/Videos/Videos.md|Videos]]
-- [[Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md|Blockchain and Crypto Facts]]
-- [[Daily Wins/2. FEB/Miscellaneous/Nonce Mining and Coin Creation.md|Nonce Mining and Coin Creation]]
-- [[Daily Wins/2. FEB/Rust/Codes/hello_world.rs|hello_world]]
-- [[Daily Wins/2. FEB/Rust/Hello_World.md|Hello_World]]
+```dataviewjs
+(() => {
+  const targetRoot = "Daily Wins";
+  const excludedBasenames = new Set(["months", "month list"]);
 
-## 3. MARCH
-- [[Daily Wins/3. MARCH/Untitled.md|Untitled]]
-- [[Daily Wins/3. MARCH/Untitled 1.md|Untitled 1]]
-- [[Daily Wins/3. MARCH/Untitled 2.md|Untitled 2]]
+  const monthFolderPathFor = (folderPath) => {
+    const parts = String(folderPath || "").split("/").filter(Boolean);
+    let built = [];
+    for (const part of parts) {
+      built.push(part);
+      if (/^\d+\.\s/.test(part)) return built.join("/");
+    }
+    return null;
+  };
 
-## 4. APRIL
-- No files found.
+  const files = app.vault.getFiles()
+    .filter((f) => {
+      const base = String(f.basename || "").toLowerCase();
+      if (excludedBasenames.has(base)) return false;
+      if (!String(f.path || "").startsWith(`${targetRoot}/`)) return false;
+      if (String(f.path || "").split("/").some((segment) => segment.startsWith("."))) return false;
+      return true;
+    })
+    .map((f) => {
+      const monthFolderPath = monthFolderPathFor(f.parent?.path || "");
+      return monthFolderPath ? { file: f, monthFolderPath } : null;
+    })
+    .filter(Boolean);
 
+  const byMonth = new Map();
+  for (const item of files) {
+    if (!byMonth.has(item.monthFolderPath)) byMonth.set(item.monthFolderPath, []);
+    byMonth.get(item.monthFolderPath).push(item.file);
+  }
+
+  const months = [...byMonth.entries()]
+    .map(([monthPath, list]) => {
+      const leaf = monthPath.split("/").filter(Boolean).pop() || monthPath;
+      const order = Number((leaf.match(/^\s*(\d{1,2})/) || [])[1] || 999);
+      const sorted = list
+        .map((f) => ({
+          path: f.path,
+          name: f.basename,
+          ts: Number(f.stat?.ctime || f.stat?.mtime || 0),
+        }))
+        .sort((a, b) => (a.ts - b.ts) || a.name.localeCompare(b.name));
+      return { leaf, order, files: sorted };
+    })
+    .sort((a, b) => (a.order - b.order) || a.leaf.localeCompare(b.leaf));
+
+  if (!months.length) {
+    dv.paragraph("No month folders found.");
+    return;
+  }
+
+  for (const month of months) {
+    dv.header(2, month.leaf);
+    if (!month.files.length) {
+      dv.paragraph("- No files found.");
+      continue;
+    }
+    dv.list(month.files.map((f) => `[[${f.path}|${f.name}]]`));
+  }
+})();
+```

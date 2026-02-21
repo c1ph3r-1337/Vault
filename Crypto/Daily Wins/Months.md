@@ -298,8 +298,6 @@ const monthFolderPathFor = (folderPath) => {
   return null;
 };
 
-const targetRoot = "Daily Wins";
-const monthListPath = `${targetRoot}/Month List.md`;
 const excludedBasenames = new Set(["months", "month list"]);
 
 const collectMonths = () => {
@@ -390,73 +388,6 @@ const collectMonths = () => {
 };
 
 let months = collectMonths();
-
-const generateMonthListBody = (monthsData) => {
-  const lines = ["# Month List", ""];
-  for (const m of monthsData) {
-    lines.push(`## ${m.leaf}`);
-    if (!m.createdFiles.length) {
-      lines.push("- No files created in this month.");
-      lines.push("");
-      continue;
-    }
-    for (const file of m.createdFiles) {
-      lines.push(`- [[${file.path}|${file.name}]]`);
-    }
-    lines.push("");
-  }
-  return lines.join("\n").trimEnd() + "\n";
-};
-
-const syncMonthList = async () => {
-  months = collectMonths();
-  const body = generateMonthListBody(months);
-  const exists = await app.vault.adapter.exists(monthListPath);
-  if (!exists) {
-    await app.vault.adapter.write(monthListPath, body);
-    return;
-  }
-  const current = await app.vault.adapter.read(monthListPath);
-  if (current === body) return;
-  await app.vault.adapter.write(monthListPath, body);
-};
-
-syncMonthList().catch((err) => console.error("Month List sync failed:", err));
-
-// Keep Month List synced when files are created/renamed/deleted in month folders.
-if (!window.__monthsAutoSyncWatcherInstalled) {
-  const relevantPath = (path) =>
-    String(path || "").startsWith(`${targetRoot}/`) &&
-    /^\d+\.\s/.test(String(path || "").split("/")[1] || "");
-
-  const debounce = (fn, wait = 250) => {
-    let t = null;
-    return (...args) => {
-      if (t) clearTimeout(t);
-      t = setTimeout(() => fn(...args), wait);
-    };
-  };
-
-  const triggerSync = debounce(() => {
-    syncMonthList().catch((err) => console.error("Month List sync failed:", err));
-  }, 300);
-
-  app.vault.on("create", (file) => {
-    if (relevantPath(file?.path)) triggerSync();
-  });
-  app.vault.on("delete", (file) => {
-    if (relevantPath(file?.path)) triggerSync();
-  });
-  app.vault.on("rename", (file, oldPath) => {
-    if (relevantPath(file?.path) || relevantPath(oldPath)) triggerSync();
-  });
-  app.vault.on("modify", (file) => {
-    if (String(file?.path || "") === monthListPath) return;
-    if (relevantPath(file?.path)) triggerSync();
-  });
-
-  window.__monthsAutoSyncWatcherInstalled = true;
-}
 
 const root = dv.el("div", "", { cls: "months-cal-wrap" });
 if (!months.length) {
