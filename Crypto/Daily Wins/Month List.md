@@ -1,3 +1,5 @@
+# Month List
+
 ## 2. FEB
 - [[Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md|Getting Started with Rust  Rust Book]]
 - [[Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md|But how does bitcoin actually work]]
@@ -12,6 +14,7 @@
 
 ## 3. MARCH
 - [[Daily Wins/3. MARCH/Untitled.md|Untitled]]
+- [[Daily Wins/3. MARCH/Untitled 1.md|Untitled 1]]
 
 ## 4. APRIL
 - No files found.

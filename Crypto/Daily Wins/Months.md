@@ -305,6 +305,7 @@ const excludedBasenames = new Set(["months", "month list"]);
 const files = app.vault.getFiles().map((f) => {
   const base = String(f.basename || "").toLowerCase();
   if (excludedBasenames.has(base)) return null;
+  if (String(f.path || "").split("/").some((segment) => segment.startsWith("."))) return null;
   const monthFolderPath = monthFolderPathFor(f.parent?.path || "");
   return monthFolderPath ? { f, monthFolderPath } : null;
 }).filter(Boolean);
@@ -356,13 +357,11 @@ const months = [...byFolder.entries()].map(([folderPath, list]) => {
 
   const createdFiles = list
     .map((f) => {
-      const createdAt = Number(f.stat?.ctime || 0);
+      const createdAt = Number(f.stat?.ctime || f.stat?.mtime || 0);
       if (!createdAt) return null;
-      const d = dv.luxon.DateTime.fromMillis(createdAt, { zone: IST_ZONE });
-      if (d.year !== year || d.month !== month) return null;
       return {
         path: f.path,
-        name: f.name || f.basename,
+        name: f.basename,
         createdAt,
       };
     })
