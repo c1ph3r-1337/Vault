@@ -75,23 +75,16 @@
     },
     "Crypto/Roadmap": {
       "children": [
-        "Crypto/Roadmap/PHASE 9",
-        "Crypto/Roadmap/PHASE 8",
-        "Crypto/Roadmap/PHASE 7",
-        "Crypto/Roadmap/PHASE 6",
-        "Crypto/Roadmap/PHASE 5",
-        "Crypto/Roadmap/PHASE 4",
-        "Crypto/Roadmap/PHASE 3",
         "Crypto/Roadmap/PHASE 0",
         "Crypto/Roadmap/PHASE 1",
         "Crypto/Roadmap/PHASE 2",
-        "Crypto/Roadmap/PHASE 3.md",
-        "Crypto/Roadmap/PHASE 4.md",
-        "Crypto/Roadmap/PHASE 5.md",
-        "Crypto/Roadmap/PHASE 6.md",
-        "Crypto/Roadmap/PHASE 7.md",
-        "Crypto/Roadmap/PHASE 8.md",
-        "Crypto/Roadmap/PHASE 9.md"
+        "Crypto/Roadmap/PHASE 3",
+        "Crypto/Roadmap/PHASE 4",
+        "Crypto/Roadmap/PHASE 5",
+        "Crypto/Roadmap/PHASE 6",
+        "Crypto/Roadmap/PHASE 7",
+        "Crypto/Roadmap/PHASE 8",
+        "Crypto/Roadmap/PHASE 9"
       ],
       "sortOrder": "custom"
     },
@@ -114,31 +107,45 @@
       "sortOrder": "custom"
     },
     "Crypto/Roadmap/PHASE 3": {
-      "children": [],
+      "children": [
+        "Crypto/Roadmap/PHASE 3/PHASE 3.md"
+      ],
       "sortOrder": "custom"
     },
     "Crypto/Roadmap/PHASE 4": {
-      "children": [],
+      "children": [
+        "Crypto/Roadmap/PHASE 4/PHASE 4.md"
+      ],
       "sortOrder": "custom"
     },
     "Crypto/Roadmap/PHASE 5": {
-      "children": [],
+      "children": [
+        "Crypto/Roadmap/PHASE 5/PHASE 5.md"
+      ],
       "sortOrder": "custom"
     },
     "Crypto/Roadmap/PHASE 6": {
-      "children": [],
+      "children": [
+        "Crypto/Roadmap/PHASE 6/PHASE 6.md"
+      ],
       "sortOrder": "custom"
     },
     "Crypto/Roadmap/PHASE 7": {
-      "children": [],
+      "children": [
+        "Crypto/Roadmap/PHASE 7/PHASE 7.md"
+      ],
       "sortOrder": "custom"
     },
     "Crypto/Roadmap/PHASE 8": {
-      "children": [],
+      "children": [
+        "Crypto/Roadmap/PHASE 8/PHASE 8.md"
+      ],
       "sortOrder": "custom"
     },
     "Crypto/Roadmap/PHASE 9": {
-      "children": [],
+      "children": [
+        "Crypto/Roadmap/PHASE 9/PHASE 9.md"
+      ],
       "sortOrder": "custom"
     },
     "Crypto/Whitepapers": {
