@@ -224,7 +224,6 @@
       "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
       "custom-sort:Toggle custom sorting": false,
-      "code-files:Create Code File": false,
       "vscode-editor:Create Code File": false
     }
   },

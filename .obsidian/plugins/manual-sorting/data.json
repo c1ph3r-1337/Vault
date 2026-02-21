@@ -54,14 +54,15 @@
     },
     "Crypto/Daily Wins/2. FEB/Rust": {
       "children": [
-        "Crypto/Daily Wins/2. FEB/Rust/hello_world.rs",
         "Crypto/Daily Wins/2. FEB/Rust/Codes",
         "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md"
       ],
       "sortOrder": "custom"
     },
     "Crypto/Daily Wins/2. FEB/Rust/Codes": {
-      "children": [],
+      "children": [
+        "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs"
+      ],
       "sortOrder": "custom"
     },
     "Crypto/Daily Wins/2. FEB/Videos": {
