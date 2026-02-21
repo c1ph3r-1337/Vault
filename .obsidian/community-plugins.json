@@ -9,5 +9,6 @@
   "custom-sort",
   "manual-sorting",
   "vscode-editor",
-  "code-link"
+  "code-link",
+  "obsidian-code-preview"
 ]

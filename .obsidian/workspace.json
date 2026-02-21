@@ -18,8 +18,23 @@
               "icon": "lucide-file",
               "title": "hello_world"
             }
+          },
+          {
+            "id": "724d784d35a165c7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Hello_World"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -213,10 +228,11 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "9483dbce746bc604",
+  "active": "724d784d35a165c7",
   "lastOpenFiles": [
-    "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md",
     "Crypto/Daily Wins/2. FEB/Rust/hello_world.rs",
+    "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md",
+    "Crypto/Daily Wins/2. FEB/Rust/My code file.rs",
     "Crypto/Whitepapers/Whitepapers.md",
     "Crypto/Whitepapers/bitcoin.pdf",
     "Crypto/Daily Wins/2. FEB/Rust/My Code File.ts",
@@ -229,7 +245,6 @@
     "Crypto/Roadmap/PHASE 5",
     "Crypto/Roadmap/PHASE 4",
     "Crypto/Roadmap/PHASE 1/PHASE 1.md",
-    "Crypto/Roadmap/PHASE 3",
     "Crazy Stuff/Crazy Stuff.md",
     "Crazy Stuff/Welcome.md",
     "Crypto/Daily Wins/Months.md",
