@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md",
+                "file": "Crypto/Daily Wins.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hello_World"
+              "title": "Daily Wins"
             }
           }
         ],
@@ -230,11 +230,11 @@
   "active": "724d784d35a165c7",
   "lastOpenFiles": [
     "Crypto/Daily Wins/Months.md",
+    "Crypto/Daily Wins/Month List.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md",
     "Crypto/Daily Wins.md",
     "Crypto/RESEARCH LIST.md",
-    "Crypto/Daily Wins/Month List.md",
     "Crypto/Daily Wins/3. MARCH/Untitled.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md",
     "Crypto/Roadmap/PHASE 6/PHASE 6.md",
     "Crypto/Roadmap/PHASE 0/PHASE 0.md",
     "Crypto/Roadmap.md",
