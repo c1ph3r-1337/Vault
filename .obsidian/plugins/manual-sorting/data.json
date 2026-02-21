@@ -54,6 +54,7 @@
     },
     "Crypto/Daily Wins/2. FEB/Rust": {
       "children": [
+        "Crypto/Daily Wins/2. FEB/Rust/hello_world.rs",
         "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md"
       ],
       "sortOrder": "custom"
