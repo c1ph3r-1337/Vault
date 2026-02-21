@@ -302,94 +302,98 @@ const targetRoot = "Daily Wins";
 const monthListPath = `${targetRoot}/Month List.md`;
 const excludedBasenames = new Set(["months", "month list"]);
 
-const files = app.vault.getFiles().map((f) => {
-  const base = String(f.basename || "").toLowerCase();
-  if (excludedBasenames.has(base)) return null;
-  if (String(f.path || "").split("/").some((segment) => segment.startsWith("."))) return null;
-  const monthFolderPath = monthFolderPathFor(f.parent?.path || "");
-  return monthFolderPath ? { f, monthFolderPath } : null;
-}).filter(Boolean);
+const collectMonths = () => {
+  const files = app.vault.getFiles().map((f) => {
+    const base = String(f.basename || "").toLowerCase();
+    if (excludedBasenames.has(base)) return null;
+    if (String(f.path || "").split("/").some((segment) => segment.startsWith("."))) return null;
+    const monthFolderPath = monthFolderPathFor(f.parent?.path || "");
+    return monthFolderPath ? { f, monthFolderPath } : null;
+  }).filter(Boolean);
 
-const byFolder = new Map();
-for (const item of files) {
-  const folderPath = item.monthFolderPath;
-  if (!byFolder.has(folderPath)) byFolder.set(folderPath, []);
-  byFolder.get(folderPath).push(item.f);
-}
+  const byFolder = new Map();
+  for (const item of files) {
+    const folderPath = item.monthFolderPath;
+    if (!byFolder.has(folderPath)) byFolder.set(folderPath, []);
+    byFolder.get(folderPath).push(item.f);
+  }
 
-const months = [...byFolder.entries()].map(([folderPath, list]) => {
-  const leaf = folderLeaf(folderPath);
-  const numPrefix = Number((leaf.match(/^\s*(\d{1,2})/) || [])[1] || 999);
-  const detectedMonth = monthFromName(leaf);
-  const first = list
-    .map((f) => Number(f.stat?.ctime || Date.now()))
-    .sort((a, b) => a - b)[0] || Date.now();
-  const firstDt = dv.luxon.DateTime.fromMillis(first, { zone: IST_ZONE });
-  const month = detectedMonth || firstDt.month;
-  const year = firstDt.year;
+  return [...byFolder.entries()].map(([folderPath, list]) => {
+    const leaf = folderLeaf(folderPath);
+    const numPrefix = Number((leaf.match(/^\s*(\d{1,2})/) || [])[1] || 999);
+    const detectedMonth = monthFromName(leaf);
+    const first = list
+      .map((f) => Number(f.stat?.ctime || Date.now()))
+      .sort((a, b) => a - b)[0] || Date.now();
+    const firstDt = dv.luxon.DateTime.fromMillis(first, { zone: IST_ZONE });
+    const month = detectedMonth || firstDt.month;
+    const year = firstDt.year;
 
-  const workedByDay = new Map();
-  for (const f of list) {
-    const stamps = [f.stat?.ctime, f.stat?.mtime]
-      .map((x) => Number(x || 0))
-      .filter((x) => x > 0);
-    for (const ts of stamps) {
-      const d = dv.luxon.DateTime.fromMillis(ts, { zone: IST_ZONE });
-      if (d.year !== year || d.month !== month) continue;
-      if (!workedByDay.has(d.day)) workedByDay.set(d.day, []);
-      workedByDay.get(d.day).push({ name: f.basename, path: f.path });
+    const workedByDay = new Map();
+    for (const f of list) {
+      const stamps = [f.stat?.ctime, f.stat?.mtime]
+        .map((x) => Number(x || 0))
+        .filter((x) => x > 0);
+      for (const ts of stamps) {
+        const d = dv.luxon.DateTime.fromMillis(ts, { zone: IST_ZONE });
+        if (d.year !== year || d.month !== month) continue;
+        if (!workedByDay.has(d.day)) workedByDay.set(d.day, []);
+        workedByDay.get(d.day).push({ name: f.basename, path: f.path });
+      }
     }
-  }
 
-  for (const [day, items] of workedByDay.entries()) {
-    const byPath = new Map();
-    for (const item of items) {
-      if (!item?.path) continue;
-      if (!byPath.has(item.path)) byPath.set(item.path, item.name);
+    for (const [day, items] of workedByDay.entries()) {
+      const byPath = new Map();
+      for (const item of items) {
+        if (!item?.path) continue;
+        if (!byPath.has(item.path)) byPath.set(item.path, item.name);
+      }
+      workedByDay.set(
+        day,
+        [...byPath.entries()]
+          .map(([path, name]) => ({ path, name }))
+          .sort((a, b) => a.name.localeCompare(b.name))
+      );
     }
-    workedByDay.set(
-      day,
-      [...byPath.entries()]
-        .map(([path, name]) => ({ path, name }))
-        .sort((a, b) => a.name.localeCompare(b.name))
-    );
-  }
 
-  const createdFiles = list
-    .map((f) => {
-      const createdAt = Number(f.stat?.ctime || f.stat?.mtime || 0);
-      if (!createdAt) return null;
-      return {
-        path: f.path,
-        name: f.basename,
-        createdAt,
-      };
-    })
-    .filter(Boolean)
-    .sort((a, b) => (a.createdAt - b.createdAt) || a.name.localeCompare(b.name));
+    const createdFiles = list
+      .map((f) => {
+        const createdAt = Number(f.stat?.ctime || f.stat?.mtime || 0);
+        if (!createdAt) return null;
+        return {
+          path: f.path,
+          name: f.basename,
+          createdAt,
+        };
+      })
+      .filter(Boolean)
+      .sort((a, b) => (a.createdAt - b.createdAt) || a.name.localeCompare(b.name));
 
-  const dedupedCreatedFiles = [];
-  const seen = new Set();
-  for (const file of createdFiles) {
-    if (seen.has(file.path)) continue;
-    seen.add(file.path);
-    dedupedCreatedFiles.push(file);
-  }
+    const dedupedCreatedFiles = [];
+    const seen = new Set();
+    for (const file of createdFiles) {
+      if (seen.has(file.path)) continue;
+      seen.add(file.path);
+      dedupedCreatedFiles.push(file);
+    }
 
-  return {
-    folderPath,
-    leaf,
-    numPrefix,
-    month,
-    year,
-    workedByDay,
-    createdFiles: dedupedCreatedFiles,
-  };
-}).sort((a, b) => (a.numPrefix - b.numPrefix) || a.leaf.localeCompare(b.leaf));
+    return {
+      folderPath,
+      leaf,
+      numPrefix,
+      month,
+      year,
+      workedByDay,
+      createdFiles: dedupedCreatedFiles,
+    };
+  }).sort((a, b) => (a.numPrefix - b.numPrefix) || a.leaf.localeCompare(b.leaf));
+};
 
-const generateMonthListBody = () => {
+let months = collectMonths();
+
+const generateMonthListBody = (monthsData) => {
   const lines = ["# Month List", ""];
-  for (const m of months) {
+  for (const m of monthsData) {
     lines.push(`## ${m.leaf}`);
     if (!m.createdFiles.length) {
       lines.push("- No files created in this month.");
@@ -405,7 +409,8 @@ const generateMonthListBody = () => {
 };
 
 const syncMonthList = async () => {
-  const body = generateMonthListBody();
+  months = collectMonths();
+  const body = generateMonthListBody(months);
   const exists = await app.vault.adapter.exists(monthListPath);
   if (!exists) {
     await app.vault.adapter.write(monthListPath, body);
