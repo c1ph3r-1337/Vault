@@ -55,6 +55,7 @@
     },
     "Crypto/Daily Wins/2. FEB/Rust": {
       "children": [
+        "Crypto/Daily Wins/2. FEB/Rust/Facts",
         "Crypto/Daily Wins/2. FEB/Rust/Codes",
         "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md"
       ],
@@ -164,6 +165,10 @@
         "Crypto/Whitepapers/bitcoin.pdf",
         "Crypto/Whitepapers/Ethereum_2014.pdf"
       ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Daily Wins/2. FEB/Rust/Facts": {
+      "children": [],
       "sortOrder": "custom"
     }
   },
