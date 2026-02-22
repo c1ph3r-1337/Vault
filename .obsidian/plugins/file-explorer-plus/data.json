@@ -52,6 +52,34 @@
         "type": "FILES",
         "pattern": "Crypto/Whitepapers/Whitepapers.md",
         "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Crypto/Daily Wins/Months.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Crypto/Daily Wins/Month List.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Crypto/Daily Wins/2. FEB/Videos/Videos.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Crypto/Progress.md",
+        "patternType": "STRICT"
       }
     ],
     "frontMatter": [

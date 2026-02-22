@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiChartNoAxesCombined",
+      "LiMonitorCheck",
       "LiSearch",
       "LiNewspaper",
-      "LiWaypoints",
-      "LiCrown",
-      "LiCheck"
+      "LiWaypoints"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -43,5 +43,8 @@
   "Crypto/Whitepapers": "LiNewspaper",
   "Crypto/Daily Wins.md": "LiCrown",
   "Crypto/Roadmap.md": "LiWaypoints",
-  "Crypto/RESEARCH LIST.md": "LiSearch"
+  "Crypto/RESEARCH LIST.md": "LiSearch",
+  "Crypto/Daily Wins/Months.md": "LiMonitorCheck",
+  "Crypto/Daily Wins/Month List.md": "LiNewspaper",
+  "Crypto/Progress.md": "LiChartNoAxesCombined"
 }

@@ -856,6 +856,22 @@ if (pages.length === 0) {
       .dw-list li {
         margin: 3px 0;
       }
+      .dw-folder {
+        margin: 10px 12px 2px;
+        padding: 6px 0 0;
+        border-top: 1px dashed var(--background-modifier-border);
+      }
+      .dw-folder:first-of-type {
+        border-top: none;
+        padding-top: 0;
+      }
+      .dw-folder-title {
+        margin: 0 0 4px;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-faint);
+      }
       .dw-list-item {
         display: grid;
         grid-template-columns: 64px 76px minmax(0, 1fr);
@@ -910,21 +926,43 @@ if (pages.length === 0) {
   }
 
   const notes = app.vault
-    .getMarkdownFiles()
+    .getFiles()
     .filter((f) => isInDailyWinsFolder(f.path))
+    .filter((f) => {
+      const base = String(f.basename || "").toLowerCase();
+      return base !== "months" && base !== "month list";
+    })
     .sort((a, b) => a.path.localeCompare(b.path));
 
   if (!notes.length) {
-    dv.paragraph(`No .md files found in any "${targetFolderName}" folder.`);
+    dv.paragraph(`No files found in any "${targetFolderName}" folder.`);
     return;
   }
 
-  const byFolder = new Map();
+  const normalizePath = (path) => String(path || "").replace(/^\/+|\/+$/g, "");
+  const relativeToTarget = (path) => {
+    const target = normalizePath(targetFolderName);
+    const normalized = normalizePath(path);
+    if (normalized === target) return "";
+    if (normalized.startsWith(`${target}/`)) return normalized.slice(target.length + 1);
+    const marker = `/${target}/`;
+    if (normalized.includes(marker)) return normalized.split(marker)[1] || "";
+    return normalized;
+  };
+
+  const byMonth = new Map();
   for (const note of notes) {
-    const folderPath = note.parent?.path || "(root)";
-    const folderName = note.parent?.name || folderPath;
-    if (!byFolder.has(folderPath)) byFolder.set(folderPath, { folderName, files: [] });
-    byFolder.get(folderPath).files.push(note);
+    const rel = relativeToTarget(note.path);
+    const segments = rel.split("/").filter(Boolean);
+    const monthName = segments[0] || "(root)";
+    const monthPath = monthName === "(root)" ? targetFolderName : `${targetFolderName}/${monthName}`;
+    const folderRel =
+      segments.length > 2 ? segments.slice(1, -1).join("/") : "(root)";
+
+    if (!byMonth.has(monthPath)) {
+      byMonth.set(monthPath, { monthName, monthPath, files: [] });
+    }
+    byMonth.get(monthPath).files.push({ note, folderRel });
   }
 
   const parseMonthIndex = (name) => {
@@ -1007,28 +1045,29 @@ if (pages.length === 0) {
     return Math.max(best, run);
   };
 
-  const folders = [...byFolder.entries()]
-    .map(([folderPath, { folderName, files }]) => {
+  const folders = [...byMonth.entries()]
+    .map(([, { monthName, monthPath, files }]) => {
       const displayName =
-        String(folderName || "")
+        String(monthName || "")
           .replace(/^\s*\d+\s*[\.\-_:)]\s*/u, "")
-          .trim() || folderName;
-      const enrichedFiles = files.map((f) => {
-        const when = Number(f.stat?.ctime || f.stat?.mtime || Date.now());
+          .trim() || monthName;
+      const enrichedFiles = files.map(({ note, folderRel }) => {
+        const when = Number(note.stat?.ctime || note.stat?.mtime || Date.now());
         return {
-          name: f.basename,
-          path: f.path,
+          name: note.basename,
+          path: note.path,
           when,
           dayKey: formatDayKey(when),
+          folderRel,
         };
       });
       const uniqueDays = new Set(enrichedFiles.map((f) => f.dayKey));
       const whenValues = enrichedFiles.map((f) => f.when);
       return {
-        folderPath,
-        folderName,
+        folderPath: monthPath,
+        folderName: monthName,
         displayName,
-        monthIndex: parseMonthIndex(folderName),
+        monthIndex: parseMonthIndex(monthName),
         files: enrichedFiles,
         fileCount: enrichedFiles.length,
         dayCount: uniqueDays.size,
@@ -1065,13 +1104,18 @@ if (pages.length === 0) {
   const openState = new Map();
 
   const addChip = (text) => statsRow.createEl("span", { cls: "dw-chip", text });
-  const byDay = (files) => {
+  const byFolderRel = (files) => {
     const groups = new Map();
     for (const file of files) {
-      if (!groups.has(file.dayKey)) groups.set(file.dayKey, []);
-      groups.get(file.dayKey).push(file);
+      const key = file.folderRel || "(root)";
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(file);
     }
-    return [...groups.entries()];
+    return [...groups.entries()].sort(([a], [b]) => {
+      if (a === "(root)" && b !== "(root)") return -1;
+      if (b === "(root)" && a !== "(root)") return 1;
+      return a.localeCompare(b);
+    });
   };
 
   const render = () => {
@@ -1092,7 +1136,8 @@ if (pages.length === 0) {
             !query ||
             folderMatchesQuery ||
             f.name.toLowerCase().includes(query) ||
-            f.path.toLowerCase().includes(query);
+            f.path.toLowerCase().includes(query) ||
+            String(f.folderRel || "").toLowerCase().includes(query);
           if (!matchQuery) return false;
           if (!thisWeekOnly) return true;
           return keyToSerial(f.dayKey) >= keyToSerial(startOfWeekKey);
@@ -1154,10 +1199,11 @@ if (pages.length === 0) {
             : `Best streak ${visibleStreak}/${folder.bestStreak}d`,
       });
 
-      for (const [, files] of byDay(orderedFiles)) {
-        const dayWhen = files[0]?.when || Date.now();
-        details.createEl("div", { cls: "dw-day", text: formatDayHeading(dayWhen) });
-        const list = details.createEl("ul", { cls: "dw-list" });
+      for (const [folderRel, files] of byFolderRel(orderedFiles)) {
+        const folderBlock = details.createEl("div", { cls: "dw-folder" });
+        const folderLabel = folderRel === "(root)" ? "Root" : folderRel;
+        folderBlock.createEl("div", { cls: "dw-folder-title", text: folderLabel });
+        const list = folderBlock.createEl("ul", { cls: "dw-list" });
         for (const file of files) {
           const li = list.createEl("li", {
             cls: `dw-list-item${file.dayKey === todayKey ? " dw-today" : ""}`,

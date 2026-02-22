@@ -18,6 +18,7 @@
       "children": [
         "Crypto/Daily Wins.md",
         "Crypto/RESEARCH LIST.md",
+        "Crypto/Progress.md",
         "Crypto/Roadmap.md",
         "Crypto/Daily Wins",
         "Crypto/Roadmap",
@@ -27,42 +28,133 @@
     },
     "Crypto/Daily Wins": {
       "children": [
-        "Crypto/Daily Wins/3. FEB",
-        "Crypto/Daily Wins/4. MARCH",
-        "Crypto/Daily Wins/5. APRIL"
+        "Crypto/Daily Wins/Months.md",
+        "Crypto/Daily Wins/Month List.md",
+        "Crypto/Daily Wins/2. FEB",
+        "Crypto/Daily Wins/3. MARCH",
+        "Crypto/Daily Wins/4. APRIL"
       ],
       "sortOrder": "custom"
     },
-    "Crypto/Daily Wins/3. FEB": {
+    "Crypto/Daily Wins/2. FEB": {
       "children": [
-        "Crypto/Daily Wins/3. FEB/Getting Started with Rust  Rust Book.md",
-        "Crypto/Daily Wins/3. FEB/But how does bitcoin actually work.md"
+        "Crypto/Daily Wins/2. FEB/Rust",
+        "Crypto/Daily Wins/2. FEB/Miscellaneous",
+        "Crypto/Daily Wins/2. FEB/Videos"
       ],
       "sortOrder": "custom"
     },
-    "Crypto/Daily Wins/4. MARCH": {
+    "Crypto/Daily Wins/2. FEB/Miscellaneous": {
       "children": [
-        "Crypto/Daily Wins/4. MARCH/Untitled 1.md",
-        "Crypto/Daily Wins/4. MARCH/Untitled.md"
+        "Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md",
+        "Crypto/Daily Wins/2. FEB/Miscellaneous/Miners and Mining Software.md",
+        "Crypto/Daily Wins/2. FEB/Miscellaneous/Rust Setup.md",
+        "Crypto/Daily Wins/2. FEB/Miscellaneous/Nonce Mining and Coin Creation.md"
       ],
       "sortOrder": "custom"
     },
-    "Crypto/Daily Wins/5. APRIL": {
+    "Crypto/Daily Wins/2. FEB/Rust": {
+      "children": [
+        "Crypto/Daily Wins/2. FEB/Rust/Codes",
+        "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Daily Wins/2. FEB/Rust/Codes": {
+      "children": [
+        "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Daily Wins/2. FEB/Videos": {
+      "children": [
+        "Crypto/Daily Wins/2. FEB/Videos/Videos.md",
+        "Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md",
+        "Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md",
+        "Crypto/Daily Wins/2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Daily Wins/3. MARCH": {
+      "children": [],
+      "sortOrder": "custom"
+    },
+    "Crypto/Daily Wins/4. APRIL": {
       "children": [],
       "sortOrder": "custom"
     },
     "Crypto/Roadmap": {
       "children": [
-        "Crypto/Roadmap/PHASE 0.md",
-        "Crypto/Roadmap/PHASE 1.md",
-        "Crypto/Roadmap/PHASE 2.md",
-        "Crypto/Roadmap/PHASE 3.md",
-        "Crypto/Roadmap/PHASE 4.md",
-        "Crypto/Roadmap/PHASE 5.md",
-        "Crypto/Roadmap/PHASE 6.md",
-        "Crypto/Roadmap/PHASE 7.md",
-        "Crypto/Roadmap/PHASE 8.md",
-        "Crypto/Roadmap/PHASE 9.md"
+        "Crypto/Roadmap/PHASE 0",
+        "Crypto/Roadmap/PHASE 1",
+        "Crypto/Roadmap/PHASE 2",
+        "Crypto/Roadmap/PHASE 3",
+        "Crypto/Roadmap/PHASE 4",
+        "Crypto/Roadmap/PHASE 5",
+        "Crypto/Roadmap/PHASE 6",
+        "Crypto/Roadmap/PHASE 7",
+        "Crypto/Roadmap/PHASE 8",
+        "Crypto/Roadmap/PHASE 9"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 0": {
+      "children": [
+        "Crypto/Roadmap/PHASE 0/PHASE 0.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 1": {
+      "children": [
+        "Crypto/Roadmap/PHASE 1/PHASE 1.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 2": {
+      "children": [
+        "Crypto/Roadmap/PHASE 2/PHASE 2.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 3": {
+      "children": [
+        "Crypto/Roadmap/PHASE 3/PHASE 3.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 4": {
+      "children": [
+        "Crypto/Roadmap/PHASE 4/PHASE 4.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 5": {
+      "children": [
+        "Crypto/Roadmap/PHASE 5/PHASE 5.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 6": {
+      "children": [
+        "Crypto/Roadmap/PHASE 6/PHASE 6.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 7": {
+      "children": [
+        "Crypto/Roadmap/PHASE 7/PHASE 7.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 8": {
+      "children": [
+        "Crypto/Roadmap/PHASE 8/PHASE 8.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Roadmap/PHASE 9": {
+      "children": [
+        "Crypto/Roadmap/PHASE 9/PHASE 9.md"
       ],
       "sortOrder": "custom"
     },
