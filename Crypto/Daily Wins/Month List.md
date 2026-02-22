@@ -13,10 +13,12 @@ graph_links:
 ---
 
 <style>
-  body:has(.hide-monthlist-properties) .metadata-container,
-  body:has(.hide-monthlist-properties) .metadata-properties,
-  .hide-monthlist-properties .metadata-container,
-  .hide-monthlist-properties .metadata-properties {
+  .markdown-preview-view.hide-monthlist-properties .metadata-container,
+  .markdown-preview-view.hide-monthlist-properties .metadata-properties,
+  .markdown-source-view.mod-cm6.hide-monthlist-properties .metadata-container,
+  .markdown-source-view.mod-cm6.hide-monthlist-properties .metadata-properties,
+  .markdown-source-view.hide-monthlist-properties .metadata-container,
+  .markdown-source-view.hide-monthlist-properties .metadata-properties {
     display: none !important;
   }
 </style>
