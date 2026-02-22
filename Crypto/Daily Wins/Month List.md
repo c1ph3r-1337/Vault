@@ -14,11 +14,18 @@ graph_links:
 
 <style>
   .markdown-preview-view.hide-monthlist-properties .metadata-container,
-  .markdown-preview-view.hide-monthlist-properties .metadata-properties,
   .markdown-source-view.mod-cm6.hide-monthlist-properties .metadata-container,
+  .markdown-source-view.hide-monthlist-properties .metadata-container {
+    max-height: 30px !important;
+    overflow: hidden !important;
+    padding-bottom: 0 !important;
+  }
+  .markdown-preview-view.hide-monthlist-properties .metadata-properties,
   .markdown-source-view.mod-cm6.hide-monthlist-properties .metadata-properties,
-  .markdown-source-view.hide-monthlist-properties .metadata-container,
-  .markdown-source-view.hide-monthlist-properties .metadata-properties {
+  .markdown-source-view.hide-monthlist-properties .metadata-properties,
+  .markdown-preview-view.hide-monthlist-properties .metadata-add-property,
+  .markdown-source-view.mod-cm6.hide-monthlist-properties .metadata-add-property,
+  .markdown-source-view.hide-monthlist-properties .metadata-add-property {
     display: none !important;
   }
 </style>
