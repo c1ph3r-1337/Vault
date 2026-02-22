@@ -87,9 +87,7 @@ graph_links:
 </style>
 
 ```dataviewjs
-(async () => {
-  const currentFile = dv.current()?.file?.path;
-  const currentFileObj = currentFile ? app.vault.getAbstractFileByPath(currentFile) : null;
+(() => {
   const currentFolder = String(dv.current()?.file?.folder || "").trim();
   const targetRoot = currentFolder;
   const targetPrefix = targetRoot ? `${targetRoot}/` : "";
@@ -169,41 +167,6 @@ graph_links:
   if (!months.length) {
     dv.paragraph("No month folders found.");
     return;
-  }
-
-  const graphLinks = months
-    .flatMap((m) => m.files.map((f) => `[[${f.path}]]`))
-    .sort((a, b) => a.localeCompare(b));
-
-  if (currentFileObj && graphLinks.length) {
-    try {
-      if (!window.__monthListGraphLinksUpdating) {
-        window.__monthListGraphLinksUpdating = true;
-        const content = await app.vault.read(currentFileObj);
-        const fmMatch = content.match(/^---\n([\s\S]*?)\n---\n/);
-        const newBlock = `graph_links:\n${graphLinks.map((l) => `  - \"${l}\"`).join("\n")}`;
-        let newContent = content;
-        if (fmMatch) {
-          let fm = fmMatch[1];
-          if (fm.includes("graph_links:")) {
-            fm = fm.replace(/graph_links:\n(?:[ \t-].*\n)*/g, `${newBlock}\n`);
-          } else {
-            fm = `${fm.trimEnd()}\n${newBlock}\n`;
-          }
-          newContent = content.replace(fmMatch[0], `---\n${fm}---\n`);
-        } else {
-          newContent = `---\n${newBlock}\n---\n\n${content}`;
-        }
-        if (newContent !== content) {
-          await app.vault.modify(currentFileObj, newContent);
-          window.__monthListGraphLinksUpdating = false;
-          return;
-        }
-        window.__monthListGraphLinksUpdating = false;
-      }
-    } catch (err) {
-      window.__monthListGraphLinksUpdating = false;
-    }
   }
 
   for (const month of months) {
