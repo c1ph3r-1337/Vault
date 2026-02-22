@@ -95,6 +95,9 @@
 
 <style>
   .graph-links { display: none; }
+  .markdown-source-view .graph-links { display: none; }
+  .markdown-source-view.mod-cm6 .graph-links { display: none; }
+  .markdown-reading-view .graph-links { display: none; }
 </style>
 <!-- GRAPH-LINKS:START -->
 <div class="graph-links">
