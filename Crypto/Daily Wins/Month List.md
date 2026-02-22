@@ -2,16 +2,24 @@
 
 ```dataviewjs
 (() => {
-  const targetRoot = "Daily Wins";
+  const currentFolder = String(dv.current()?.file?.folder || "").trim();
+  const targetRoot = currentFolder;
+  const targetPrefix = targetRoot ? `${targetRoot}/` : "";
   const excludedBasenames = new Set(["months", "month list"]);
   const monthFolderPattern = /^\d+\.\s/;
 
   const monthFolderPathFor = (folderPath) => {
-    const parts = String(folderPath || "").split("/").filter(Boolean);
+    const raw = String(folderPath || "");
+    if (targetRoot && !raw.startsWith(targetPrefix)) return null;
+    const rel = targetRoot ? raw.slice(targetPrefix.length) : raw;
+    const parts = rel.split("/").filter(Boolean);
     let built = [];
     for (const part of parts) {
       built.push(part);
-      if (/^\d+\.\s/.test(part)) return built.join("/");
+      if (/^\d+\.\s/.test(part)) {
+        const relPath = built.join("/");
+        return targetRoot ? `${targetRoot}/${relPath}` : relPath;
+      }
     }
     return null;
   };
@@ -20,9 +28,12 @@
   const monthFolders = allEntries
     .filter((entry) => {
       const path = String(entry?.path || "");
-      if (!path.startsWith(`${targetRoot}/`)) return false;
-      const parts = path.split("/").filter(Boolean);
-      return parts.length === 2 && monthFolderPattern.test(parts[1]);
+      if (targetRoot) {
+        if (!path.startsWith(targetPrefix)) return false;
+      }
+      const rel = targetRoot ? path.slice(targetPrefix.length) : path;
+      const parts = rel.split("/").filter(Boolean);
+      return parts.length === 1 && monthFolderPattern.test(parts[0]);
     })
     .map((entry) => {
       const path = String(entry.path || "");
@@ -36,7 +47,9 @@
     .filter((f) => {
       const base = String(f.basename || "").toLowerCase();
       if (excludedBasenames.has(base)) return false;
-      if (!String(f.path || "").startsWith(`${targetRoot}/`)) return false;
+      if (targetRoot) {
+        if (!String(f.path || "").startsWith(targetPrefix)) return false;
+      }
       if (String(f.path || "").split("/").some((segment) => segment.startsWith("."))) return false;
       return true;
     })
