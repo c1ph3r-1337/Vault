@@ -58,17 +58,17 @@ The difference between **macros** and **functions** depends on the language, but
 ```
 
 Usage:
-
-\ ChatGPT:C
-
+```
 int a \= SQUARE(5);      // expands to 5\*5  
 int b \= SQUARE(1+2);    // expands to 1+2\*1+2  ❌ wrong
+```
 
 Compiler sees:
 
-\ ChatGPT:C
+```
 
 int b \= 1+2\*1+2;
+```
 
 ---
 
