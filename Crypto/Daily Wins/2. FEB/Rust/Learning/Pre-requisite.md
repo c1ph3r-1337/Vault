@@ -8,7 +8,7 @@
 - concurrency and parallelism
 - Basics of OOPS and Functional Programming
 
-(https://youtu.be/EYCBm0xAWow?si=mmataK5j4eLi0hhc)
+![](https://youtu.be/EYCBm0xAWow?si=mmataK5j4eLi0hhc)
 
 This video discusses **five key insights** the creator wishes they had known before learning Rust. These insights cover prerequisite knowledge, finding learning resources, understanding productivity changes, how Rust improves development skills, and the language's long-term viability.
 
