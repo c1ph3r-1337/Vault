@@ -8,7 +8,6 @@ graph_links:
   - "[[2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md]]"
   - "[[2. FEB/Videos/But how does bitcoin actually work.md]]"
   - "[[2. FEB/Videos/Getting Started with Rust  Rust Book.md]]"
-  - "[[2. FEB/Videos/Videos.md]]"
 ---
 
 ```dataviewjs
