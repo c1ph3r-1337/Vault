@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md",
+                "file": "Crypto/Daily Wins/Months.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hello_World"
+              "title": "Months"
             }
           }
         ],
@@ -203,8 +203,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ]
@@ -227,10 +227,10 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "724d784d35a165c7",
+  "active": "9483dbce746bc604",
   "lastOpenFiles": [
-    "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md",
     "Crypto/Daily Wins/Month List.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md",
     "Crypto/Daily Wins/Months.md",
     "Crypto/Progress.md",
     "Crypto/Roadmap.md",
