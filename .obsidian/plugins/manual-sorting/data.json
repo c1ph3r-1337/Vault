@@ -55,9 +55,9 @@
     },
     "Crypto/Daily Wins/2. FEB/Rust": {
       "children": [
+        "Crypto/Daily Wins/2. FEB/Rust/Learning",
         "Crypto/Daily Wins/2. FEB/Rust/Facts",
-        "Crypto/Daily Wins/2. FEB/Rust/Codes",
-        "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md"
+        "Crypto/Daily Wins/2. FEB/Rust/Codes"
       ],
       "sortOrder": "custom"
     },
@@ -70,6 +70,12 @@
     "Crypto/Daily Wins/2. FEB/Rust/Facts": {
       "children": [
         "Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Crypto/Daily Wins/2. FEB/Rust/Learning": {
+      "children": [
+        "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md"
       ],
       "sortOrder": "custom"
     },

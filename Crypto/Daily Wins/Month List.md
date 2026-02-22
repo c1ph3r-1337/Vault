@@ -6,7 +6,7 @@ graph_links:
   - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Rust Setup.md]]"
   - "[[Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs]]"
   - "[[Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md]]"
-  - "[[Crypto/Daily Wins/2. FEB/Rust/Hello_World.md]]"
+  - "[[Hello_World]]"
   - "[[Crypto/Daily Wins/2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md]]"
   - "[[Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md]]"
   - "[[Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md]]"
