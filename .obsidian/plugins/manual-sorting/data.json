@@ -67,6 +67,12 @@
       ],
       "sortOrder": "custom"
     },
+    "Crypto/Daily Wins/2. FEB/Rust/Facts": {
+      "children": [
+        "Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md"
+      ],
+      "sortOrder": "custom"
+    },
     "Crypto/Daily Wins/2. FEB/Videos": {
       "children": [
         "Crypto/Daily Wins/2. FEB/Videos/Videos.md",
@@ -165,10 +171,6 @@
         "Crypto/Whitepapers/bitcoin.pdf",
         "Crypto/Whitepapers/Ethereum_2014.pdf"
       ],
-      "sortOrder": "custom"
-    },
-    "Crypto/Daily Wins/2. FEB/Rust/Facts": {
-      "children": [],
       "sortOrder": "custom"
     }
   },

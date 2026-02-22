@@ -1,16 +1,72 @@
 ---
+graph_links:
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Miners and Mining Software.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Nonce Mining and Coin Creation.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Rust Setup.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs]]"
+  - "[[Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Rust/Hello_World.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/Videos.md]]"
+---
+
+---
+graph_links:
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Miners and Mining Software.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Nonce Mining and Coin Creation.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Rust Setup.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs]]"
+  - "[[Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Rust/Hello_World.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/Videos.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/Videos.md]]"---
+graph_links:
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Miners and Mining Software.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Nonce Mining and Coin Creation.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Rust Setup.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs]]"
+  - "[[Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Rust/Hello_World.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/Videos.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/Videos.md]]"---
+graph_links:
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Miners and Mining Software.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Nonce Mining and Coin Creation.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Rust Setup.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs]]"
+  - "[[Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Rust/Hello_World.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/Videos.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/Videos.md]]"---
 cssclass: hide-monthlist-properties
 graph_links:
-  - "[[2. FEB/Miscellaneous/Blockchain and Crypto Facts.md]]"
-  - "[[2. FEB/Miscellaneous/Miners and Mining Software.md]]"
-  - "[[2. FEB/Miscellaneous/Nonce Mining and Coin Creation.md]]"
-  - "[[2. FEB/Miscellaneous/Rust Setup.md]]"
-  - "[[2. FEB/Rust/Hello_World.md]]"
-  - "[[2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md]]"
-  - "[[2. FEB/Videos/But how does bitcoin actually work.md]]"
-  - "[[2. FEB/Videos/Getting Started with Rust  Rust Book.md]]"
-  - "[[2. FEB/Videos/Videos.md]]"
----
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Miners and Mining Software.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Nonce Mining and Coin Creation.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Rust Setup.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs]]"
+  - "[[Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Rust/Hello_World.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md]]"
+  - "[[Crypto/Daily Wins/2. FEB/Videos/Videos.md]]"
+  - "[[2. FEB/Videos/Videos.md]]"---
 
 <style>
   .markdown-preview-view.hide-monthlist-properties .metadata-container,
@@ -31,7 +87,9 @@ graph_links:
 </style>
 
 ```dataviewjs
-(() => {
+(async () => {
+  const currentFile = dv.current()?.file?.path;
+  const currentFileObj = currentFile ? app.vault.getAbstractFileByPath(currentFile) : null;
   const currentFolder = String(dv.current()?.file?.folder || "").trim();
   const targetRoot = currentFolder;
   const targetPrefix = targetRoot ? `${targetRoot}/` : "";
@@ -111,6 +169,41 @@ graph_links:
   if (!months.length) {
     dv.paragraph("No month folders found.");
     return;
+  }
+
+  const graphLinks = months
+    .flatMap((m) => m.files.map((f) => `[[${f.path}]]`))
+    .sort((a, b) => a.localeCompare(b));
+
+  if (currentFileObj && graphLinks.length) {
+    try {
+      if (!window.__monthListGraphLinksUpdating) {
+        window.__monthListGraphLinksUpdating = true;
+        const content = await app.vault.read(currentFileObj);
+        const fmMatch = content.match(/^---\n([\s\S]*?)\n---\n/);
+        const newBlock = `graph_links:\n${graphLinks.map((l) => `  - \"${l}\"`).join("\n")}`;
+        let newContent = content;
+        if (fmMatch) {
+          let fm = fmMatch[1];
+          if (fm.includes("graph_links:")) {
+            fm = fm.replace(/graph_links:\n(?:[ \t-].*\n)*/g, `${newBlock}\n`);
+          } else {
+            fm = `${fm.trimEnd()}\n${newBlock}\n`;
+          }
+          newContent = content.replace(fmMatch[0], `---\n${fm}---\n`);
+        } else {
+          newContent = `---\n${newBlock}\n---\n\n${content}`;
+        }
+        if (newContent !== content) {
+          await app.vault.modify(currentFileObj, newContent);
+          window.__monthListGraphLinksUpdating = false;
+          return;
+        }
+        window.__monthListGraphLinksUpdating = false;
+      }
+    } catch (err) {
+      window.__monthListGraphLinksUpdating = false;
+    }
   }
 
   for (const month of months) {
