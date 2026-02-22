@@ -5,4 +5,5 @@
 
 - Memory Allocation and De-allocation
 - Manual Memory Management  VS Garbage Collection
-- concurrency a
+- concurrency and parallelism
+- Basics of OOPS and Functional Programming
