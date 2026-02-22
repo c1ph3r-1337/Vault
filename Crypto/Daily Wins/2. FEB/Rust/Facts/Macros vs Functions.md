@@ -52,9 +52,10 @@ The difference between **macros** and **functions** depends on the language, but
 
  🔹 Macro version
 
-\ ChatGPT:C
 
+```
 #define SQUARE(x) x\*x
+```
 
 Usage:
 
