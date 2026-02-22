@@ -1,6 +1,21 @@
 ---
-graph_links: false
+cssclass: hide-monthlist-properties
+graph_links:
+  - "[[2. FEB/Miscellaneous/Blockchain and Crypto Facts.md]]"
+  - "[[2. FEB/Miscellaneous/Miners and Mining Software.md]]"
+  - "[[2. FEB/Miscellaneous/Nonce Mining and Coin Creation.md]]"
+  - "[[2. FEB/Miscellaneous/Rust Setup.md]]"
+  - "[[2. FEB/Rust/Hello_World.md]]"
+  - "[[2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md]]"
+  - "[[2. FEB/Videos/But how does bitcoin actually work.md]]"
+  - "[[2. FEB/Videos/Getting Started with Rust  Rust Book.md]]"
+  - "[[2. FEB/Videos/Videos.md]]"
 ---
+
+<style>
+  .hide-monthlist-properties .metadata-container { display: none; }
+  .hide-monthlist-properties .metadata-properties { display: none; }
+</style>
 
 ```dataviewjs
 (() => {
