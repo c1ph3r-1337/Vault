@@ -66,25 +66,21 @@ int b \= SQUARE(1+2);    // expands to 1+2\*1+2  ❌ wrong
 Compiler sees:
 
 ```
-
 int b \= 1+2\*1+2;
 ```
 
 ---
 
  🔹 Function version
-
-\ ChatGPT:C
-
+```
 int square(int x) {  
     return x\*x;  
 }
-
+```
 Usage:
-
-\ ChatGPT:C
-
+```
 int b \= square(1+2);   // correct → 9
+```
 
 ---
 
@@ -129,7 +125,6 @@ Macros still exist for **very specific low-level reasons**:
 
  ✔️ Conditional compilation
 
-\ ChatGPT:C
 
 #ifdef DEBUG  
 printf("debug info");  
@@ -137,20 +132,16 @@ printf("debug info");
 
  ✔️ Compile-time constants
 
-\ ChatGPT:C
 
 #define BUFFER\_SIZE 1024
 
  ✔️ Generic tricks in C (before templates existed)
 
-\ ChatGPT:C
 
 #define MAX(a,b) ((a)>(b)?(a):(b))
 
  ✔️ Header guards
-
-\ ChatGPT:C
-
+`````
 #ifndef FILE\_H  
 #define FILE\_H  
 #endif
