@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/Month List.md",
+                "file": "Crypto/Daily Wins/2. FEB/Rust/Hello_World.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Month List"
+              "title": "Hello_World"
             }
           }
         ],
@@ -229,8 +229,8 @@
   },
   "active": "724d784d35a165c7",
   "lastOpenFiles": [
-    "Crypto/Daily Wins/Months.md",
     "Crypto/Daily Wins/Month List.md",
+    "Crypto/Daily Wins/Months.md",
     "Crypto/Progress.md",
     "Crypto/Roadmap.md",
     "Crypto/Daily Wins.md",
