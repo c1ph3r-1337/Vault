@@ -125,26 +125,31 @@ Macros still exist for **very specific low-level reasons**:
 
  ✔️ Conditional compilation
 
-
+```
 #ifdef DEBUG  
 printf("debug info");  
 #endif
+```
 
  ✔️ Compile-time constants
 
-
+```
 #define BUFFER\_SIZE 1024
+```
 
  ✔️ Generic tricks in C (before templates existed)
 
-
+```
 #define MAX(a,b) ((a)>(b)?(a):(b))
+```
 
  ✔️ Header guards
-`````
+ 
+```
 #ifndef FILE\_H  
 #define FILE\_H  
 #endif
+```
 
 ---
 
