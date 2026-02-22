@@ -13,8 +13,12 @@ graph_links:
 ---
 
 <style>
-  .hide-monthlist-properties .metadata-container { display: none; }
-  .hide-monthlist-properties .metadata-properties { display: none; }
+  body:has(.hide-monthlist-properties) .metadata-container,
+  body:has(.hide-monthlist-properties) .metadata-properties,
+  .hide-monthlist-properties .metadata-container,
+  .hide-monthlist-properties .metadata-properties {
+    display: none !important;
+  }
 </style>
 
 ```dataviewjs
@@ -110,4 +114,3 @@ graph_links:
   }
 })();
 ```
-
