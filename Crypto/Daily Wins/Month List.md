@@ -1,4 +1,3 @@
-# Month List
 
 ```dataviewjs
 (() => {
