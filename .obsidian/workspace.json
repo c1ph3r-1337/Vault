@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md",
+                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "But how does bitcoin actually work"
+              "title": "Pre-requisite"
             }
           }
         ],
@@ -229,9 +229,10 @@
   },
   "active": "724d784d35a165c7",
   "lastOpenFiles": [
-    "().md",
-    "Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md",
     "Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md",
+    "Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md",
+    "Crypto/Daily Wins/2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md",
+    "().md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
     "Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md",
     "Crypto/Daily Wins/2. FEB/Rust/Untitled.md",
@@ -265,7 +266,6 @@
     "Crypto/Whitepapers/bitcoin.pdf",
     "Crypto/Roadmap/Untitled.canvas",
     "Crypto/Roadmap/PHASE 1/PHASE 1.md",
-    "Crazy Stuff/Crazy Stuff.md",
     "Untitled.canvas"
   ]
 }
