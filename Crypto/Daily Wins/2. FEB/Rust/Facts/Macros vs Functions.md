@@ -1,13 +1,12 @@
 ---
-title: "ChatGPT"
-source: "https://chatgpt.com/g/g-p-699af622e4248191a5649cb20f5352a7/c/699abe23-ea88-8320-a54f-022960e92f22"
+title: Macros vs Functions
+source: https://chatgpt.com/g/g-p-699af622e4248191a5649cb20f5352a7/c/699abe23-ea88-8320-a54f-022960e92f22
 author:
-  - "[[ChatGPT]]"
 published:
 created: 2026-02-23
-description: "ChatGPT is your AI chatbot for everyday use. Chat with the most advanced AI to explore ideas, solve problems, and learn faster."
+description: ChatGPT is your AI chatbot for everyday use. Chat with the most advanced AI to explore ideas, solve problems, and learn faster.
 tags:
-  - "chatgpt/conversation"
+  - chatgpt/conversation
 ---
 ## You said:
 
