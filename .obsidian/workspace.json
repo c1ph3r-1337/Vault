@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
-                "mode": "source",
+                "file": "Crypto/Roadmap.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Getting started with Rust"
+              "title": "Roadmap"
             }
           }
         ],
@@ -229,8 +229,8 @@
   },
   "active": "724d784d35a165c7",
   "lastOpenFiles": [
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
     "Crypto/Progress.md",
     "Crypto/Daily Wins/Months.md",
     "Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md",
