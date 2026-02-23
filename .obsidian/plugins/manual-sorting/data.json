@@ -76,7 +76,7 @@
     "Crypto/Daily Wins/2. FEB/Rust/Learning": {
       "children": [
         "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
-        "Crypto/Daily Wins/2. FEB/Rust/Learning/Get started with Rust.md",
+        "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
         "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md"
       ],
       "sortOrder": "custom"
