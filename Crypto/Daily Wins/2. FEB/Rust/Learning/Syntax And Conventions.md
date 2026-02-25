@@ -1,1 +1,2 @@
-- rustfmt "file_name.rs" - Used to Format teh 
+- rustfmt "file_name.rs" - Used to Format the code the according to the standard style .
+- rustc is used to 
