@@ -7,4 +7,4 @@
 ![[Pasted image 20260225140204.png]]
 ![[Pasted image 20260225140311.png]]
 
-- Lets talk about the cargo.toml -  toml means toms obvious minimal langauge 
+- Lets talk about the cargo.toml -  "toml" means tom's obvious minimal language 
