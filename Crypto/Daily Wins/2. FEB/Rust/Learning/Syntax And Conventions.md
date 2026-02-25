@@ -1,0 +1,1 @@
+- rustfmt "file_name.rs" - Used to Format teh 
