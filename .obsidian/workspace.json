@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md",
+                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Untitled.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Blockchain and Crypto Facts"
+              "title": "Untitled"
             }
           }
         ],
@@ -229,11 +229,13 @@
   },
   "active": "724d784d35a165c7",
   "lastOpenFiles": [
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Untitled.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
+    "Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md",
     "Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md",
     "Crypto/Roadmap/PHASE 6/PHASE 6.md",
     "Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
     "Crypto/Daily Wins/Months.md",
     "Crypto/Daily Wins/Month List.md",
@@ -246,7 +248,6 @@
     "Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md",
     "Crypto/Daily Wins/2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md",
     "().md",
-    "Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md",
     "Crypto/Daily Wins/2. FEB/Rust/Untitled.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning",
     "Crypto/Daily Wins/2. FEB/Rust/Facts/Unconfirmed 384305.crdownload",
@@ -262,7 +263,6 @@
     "Rust.md",
     "Crypto/Roadmap/PHASE 0/PHASE 0.md",
     "Crypto/Daily Wins/2. FEB/Rust/Codes",
-    "Crypto/Whitepapers/Whitepapers.md",
     "Crypto/Whitepapers/Ethereum_2014.pdf",
     "Crypto/Daily Wins/2. FEB/Rust/My code file.rs",
     "Crypto/Roadmap/Untitled.canvas",
