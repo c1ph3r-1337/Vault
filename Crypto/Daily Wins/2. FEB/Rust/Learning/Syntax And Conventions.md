@@ -1,2 +1,2 @@
-- " rustfmt 'file_name.rs " - Used to Format the code the according to the standard style .
-- " rustc 'file_name.rs' " is used to compile the
+- " rustfmt file_name.rs " - Used to Format the code the according to the standard style .
+- " rustc file_name.rs " is used to compile the rust code. 
