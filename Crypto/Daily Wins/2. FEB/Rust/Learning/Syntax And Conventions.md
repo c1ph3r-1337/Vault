@@ -6,3 +6,5 @@
 - for example "cargo new hello_rust" then it makes a the some files like main.rs , .gitingore , cargo.toml just like packages.json 
 ![[Pasted image 20260225140204.png]]
 ![[Pasted image 20260225140311.png]]
+
+- Lets talk about the cargo.toml -  toml means toms obvious minimal langauge 
