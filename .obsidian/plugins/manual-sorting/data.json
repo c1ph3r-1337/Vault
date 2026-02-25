@@ -55,7 +55,6 @@
     },
     "Crypto/Daily Wins/2. FEB/Rust": {
       "children": [
-        "Crypto/Daily Wins/2. FEB/Rust/Pasted image 20260225140204.png",
         "Crypto/Daily Wins/2. FEB/Rust/Images",
         "Crypto/Daily Wins/2. FEB/Rust/Learning",
         "Crypto/Daily Wins/2. FEB/Rust/Facts",
@@ -76,7 +75,10 @@
       "sortOrder": "custom"
     },
     "Crypto/Daily Wins/2. FEB/Rust/Images": {
-      "children": [],
+      "children": [
+        "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225140311.png",
+        "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225140204.png"
+      ],
       "sortOrder": "custom"
     },
     "Crypto/Daily Wins/2. FEB/Rust/Learning": {
