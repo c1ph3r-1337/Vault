@@ -45,3 +45,4 @@
 ### "cargo build --release"
 
 - it makes the release folder in the target folder for publication of the project 
+![[Pasted image 20260226192258.png]]
