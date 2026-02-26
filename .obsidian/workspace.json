@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
+                "file": "Crypto/Roadmap/PHASE 6/PHASE 6.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Conventions"
+              "title": "PHASE 6"
             }
           }
         ],
@@ -227,11 +227,12 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "724d784d35a165c7",
+  "active": "9d8bec7930bf3a42",
   "lastOpenFiles": [
+    "Crypto/Roadmap/PHASE 6/PHASE 6.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
     "Pasted image 20260226185711.png",
     "Crypto/Daily Wins.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226180105.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225230429.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225140311.png",
@@ -242,7 +243,6 @@
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
     "Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md",
     "Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md",
-    "Crypto/Roadmap/PHASE 6/PHASE 6.md",
     "Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md",
     "Crypto/Daily Wins/Months.md",
     "Crypto/Daily Wins/Month List.md",
