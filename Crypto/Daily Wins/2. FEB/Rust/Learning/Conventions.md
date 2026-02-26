@@ -44,4 +44,4 @@
 
 ### "cargo build --release"
 
-- it makes the release fodl
+- it makes the release folder in the target folder for publication of the project 
