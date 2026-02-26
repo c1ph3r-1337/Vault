@@ -11,4 +11,5 @@
 ![[Pasted image 20260225230429.png]]
 
 - Packages are referred to as crates
-- 
+![[Pasted image 20260226180105.png]]
+- cargo build makes a 
