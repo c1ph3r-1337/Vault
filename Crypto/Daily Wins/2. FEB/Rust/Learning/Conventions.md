@@ -8,6 +8,8 @@
 ### "cargo"
 
 - rustc is fine for simple projects but for the bigger projects it get difficult to manage and  share the code , for that we need the "cargo" - a package manager just like "npm" . 
+### "cargo new"
+
 - for example "cargo new hello_rust" then it makes a the some files like main.rs , .gitingore , cargo.toml just like packages.json 
 
 
