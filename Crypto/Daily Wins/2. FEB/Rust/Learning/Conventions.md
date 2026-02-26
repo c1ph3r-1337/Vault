@@ -36,4 +36,4 @@
 ### "cargo check"
 
 - cargo check - it checks if there is any error in the code or syntax and informs .
-- if everything is correct then 
+- if everything is correct then it just compile
