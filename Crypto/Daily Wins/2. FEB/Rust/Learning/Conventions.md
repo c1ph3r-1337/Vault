@@ -32,3 +32,7 @@
 
 ![[Pasted image 20260226185711.png]]
 - cargo run does two jobs it compile and run it .
+
+### "cargo check"
+
+- cargo check - it checks if there is any error in the code or 
