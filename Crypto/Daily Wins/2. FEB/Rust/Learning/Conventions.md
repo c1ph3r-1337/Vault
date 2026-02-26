@@ -36,4 +36,4 @@
 ### "cargo check"
 
 - cargo check - it checks if there is any error in the code or syntax and informs .
-- if everything is correct then it just compiles but doesn't make any binary or executable . as in production 
+- if everything is correct then it just compiles but doesn't make any binary or executable . as in production project it would be faster than cargo build and to check if the code is right.
