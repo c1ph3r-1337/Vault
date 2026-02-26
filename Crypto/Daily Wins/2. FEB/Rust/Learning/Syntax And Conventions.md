@@ -12,4 +12,4 @@
 
 - Packages are referred to as crates
 ![[Pasted image 20260226180105.png]]
-- cargo build compiles the code automatically and make a target folder and in the target folder it makes the debug folder and in that it it stores the 
+- cargo build compiles the code automatically and make a target folder and in the target folder it makes the debug folder and in that it it stores the binary of the code.
