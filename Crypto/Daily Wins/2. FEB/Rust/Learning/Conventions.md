@@ -15,3 +15,5 @@
 - cargo build compiles the code automatically and make a target folder and in the target folder it makes the debug folder and in that it it stores the binary of the code.
 - a new file is also made named cargo.lock and it keep the record of the versions of the dependencies in the project. Don't ever change it manually .
 - or simple run the debug binary using cargo run
+![[Pasted image 20260226185711.png]]
+- 
