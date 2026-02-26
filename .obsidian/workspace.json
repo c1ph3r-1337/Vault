@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Syntax And Conventions.md",
+                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Syntax And Conventions"
+              "title": "Conventions"
             }
           }
         ],
@@ -230,7 +230,7 @@
   "active": "724d784d35a165c7",
   "lastOpenFiles": [
     "Crypto/Daily Wins.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Syntax And Conventions.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226180105.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225230429.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225140311.png",
