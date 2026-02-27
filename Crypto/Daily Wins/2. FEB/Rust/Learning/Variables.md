@@ -1,1 +1,1 @@
-- In Rust by deafu
+- In Rust by default all variables are immutable.
