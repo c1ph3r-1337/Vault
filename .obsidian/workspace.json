@@ -23,12 +23,14 @@
             "id": "724d784d35a165c7",
             "type": "leaf",
             "state": {
-              "type": "vscode-editor",
+              "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs"
+                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
+                "mode": "preview",
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "main"
+              "title": "Guessing Game"
             }
           }
         ],
@@ -227,13 +229,13 @@
   },
   "active": "724d784d35a165c7",
   "lastOpenFiles": [
-    "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
-    "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
     "Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md",
     "Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md",
     "Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md",
