@@ -39,12 +39,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
+                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Variables"
+              "title": "Guessing Game"
             }
           }
         ],
@@ -243,13 +243,16 @@
   },
   "active": "b16ed23eccf38623",
   "lastOpenFiles": [
-    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227160000.png",
-    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155745.png",
-    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155722.png",
-    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155719.png",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225230429.png",
+    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155745.png",
+    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155719.png",
+    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226191124.png",
+    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226192258.png",
+    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227160000.png",
+    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155722.png",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
@@ -260,16 +263,12 @@
     "Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md",
     "Crypto/Daily Wins/Months.md",
     "Crypto/Daily Wins/Month List.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226192258.png",
     "Crypto/Daily Wins.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226191124.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226185711.png",
     "Crypto/Roadmap/PHASE 6/PHASE 6.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226180105.png",
-    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225230429.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225140311.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images",
-    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225140204.png",
     "Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md",
     "Crypto/Progress.md",
     "Crypto/RESEARCH LIST.md",
