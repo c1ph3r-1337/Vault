@@ -64,6 +64,7 @@
     },
     "Crypto/Daily Wins/2. FEB/Rust/Codes": {
       "children": [
+        "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
         "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs"
       ],
       "sortOrder": "custom"
@@ -92,6 +93,7 @@
         "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
         "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
         "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
+        "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
         "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md"
       ],
       "sortOrder": "custom"
