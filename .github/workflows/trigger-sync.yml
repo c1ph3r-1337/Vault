@@ -16,3 +16,27 @@ jobs:
           token: ${{ secrets.FORK_TRIGGER_TOKEN }}
           repository: MannatBehal1608/Vault
           event-type: upstream-sync
+name: Trigger Fork Sync
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        repo:
+          - MannatBehal1608/Vault
+          - XYR05/Vault
+
+    steps:
+      - name: Dispatch fork sync event
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.FORK_TRIGGER_TOKEN }}
+          repository: ${{ matrix.repo }}
+          event-type: upstream-sync
