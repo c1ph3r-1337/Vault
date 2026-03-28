@@ -2,6 +2,7 @@
   "customOrder": {
     "/": {
       "children": [
+        "README.md",
         "Crazy Stuff",
         "Crypto"
       ],
