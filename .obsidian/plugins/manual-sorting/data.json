@@ -4,13 +4,13 @@
       "children": [
         "README.md",
         "Crazy Stuff",
+        "Medium",
         "Crypto"
       ],
       "sortOrder": "custom"
     },
     "Crazy Stuff": {
       "children": [
-        "Crazy Stuff/Medium",
         "Crazy Stuff/Crazy Stuff.md",
         "Crazy Stuff/Welcome.md"
       ],
@@ -199,7 +199,7 @@
       ],
       "sortOrder": "custom"
     },
-    "Crazy Stuff/Medium": {
+    "Medium": {
       "children": [],
       "sortOrder": "custom"
     }

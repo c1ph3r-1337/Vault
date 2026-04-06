@@ -39,12 +39,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crazy Stuff/Crazy Stuff.md",
-                "mode": "preview",
+                "file": "Medium/Untitled.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Crazy Stuff"
+              "title": "Untitled"
             }
           }
         ],
@@ -241,11 +241,12 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "9483dbce746bc604",
+  "active": "b16ed23eccf38623",
   "lastOpenFiles": [
     "Crazy Stuff/Welcome.md",
-    "Crazy Stuff/Medium",
+    "Medium/Untitled.md",
     "Crazy Stuff/Crazy Stuff.md",
+    "Medium",
     "Crypto/Daily Wins/4. APRIL/Untitled.md",
     "Crypto/Progress.md",
     "Crypto/Roadmap.md",
