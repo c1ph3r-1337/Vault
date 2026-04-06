@@ -16,7 +16,11 @@
 - Demand ↑inc When: 
 	- More people want to buy Bitcoin 
 	- Institutions invest 
-	- Countries  
+	- Countries adopt Crypto 
+	- People see it as a state of value 
+- Demand ↓dec When:
+	- Investors lose Trust
+	- 
  
 
 
