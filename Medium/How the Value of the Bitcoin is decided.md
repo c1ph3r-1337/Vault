@@ -3,7 +3,7 @@
 > Core Principle - Supply vs Demand  
 
 - Price ↑ inc : When Demand > Supply 
-- Price ↓ dec : 
+- Price ↓ dec : when 
  
 
 
