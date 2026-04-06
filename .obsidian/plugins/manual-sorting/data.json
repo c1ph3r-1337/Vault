@@ -201,6 +201,7 @@
     },
     "Medium": {
       "children": [
+        "Medium/Papers.md",
         "Medium/Whale Activity.md",
         "Medium/How the Value of the Bitcoin is decided.md"
       ],

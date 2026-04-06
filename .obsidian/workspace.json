@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Medium/Untitled.md",
+                "file": "Medium/Whale Activity.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "Whale Activity"
             }
           }
         ]
@@ -217,7 +217,7 @@
   "active": "36c2b1355e189a6d",
   "lastOpenFiles": [
     "Medium/How the Value of the Bitcoin is decided.md",
-    "Medium/Untitled.md",
+    "Medium/Papers.md",
     "Medium/Whale Activity.md",
     "Crypto/Daily Wins.md",
     "Crypto/Roadmap.md",

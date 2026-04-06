@@ -1,0 +1,3 @@
+- [[How the Value of the Bitcoin is decided]]
+- [[Whale Activity]]
+- 

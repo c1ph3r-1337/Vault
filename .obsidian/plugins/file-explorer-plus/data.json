@@ -92,7 +92,7 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "Medium/Untitled.md",
+        "pattern": "Medium/Papers.md",
         "patternType": "STRICT"
       }
     ],
