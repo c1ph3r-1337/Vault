@@ -10,6 +10,7 @@
     },
     "Crazy Stuff": {
       "children": [
+        "Crazy Stuff/Medium",
         "Crazy Stuff/Crazy Stuff.md",
         "Crazy Stuff/Welcome.md"
       ],
@@ -32,7 +33,6 @@
         "Crypto/Daily Wins/Months.md",
         "Crypto/Daily Wins/Month List.md",
         "Crypto/Daily Wins/2. FEB",
-        "Crypto/Daily Wins/3. MARCH",
         "Crypto/Daily Wins/4. APRIL"
       ],
       "sortOrder": "custom"
@@ -110,10 +110,6 @@
         "Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md",
         "Crypto/Daily Wins/2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md"
       ],
-      "sortOrder": "custom"
-    },
-    "Crypto/Daily Wins/3. MARCH": {
-      "children": [],
       "sortOrder": "custom"
     },
     "Crypto/Daily Wins/4. APRIL": {
@@ -201,6 +197,10 @@
         "Crypto/Whitepapers/bitcoin.pdf",
         "Crypto/Whitepapers/Ethereum_2014.pdf"
       ],
+      "sortOrder": "custom"
+    },
+    "Crazy Stuff/Medium": {
+      "children": [],
       "sortOrder": "custom"
     }
   },
