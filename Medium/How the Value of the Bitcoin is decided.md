@@ -6,7 +6,9 @@
 - Price ↓ dec : when Supply >  Demand 
 > Supply (Bitcoin Side)
 - Bitcoin has hard-coded scarcity
-	- Max. Supply → ≠ ≠
+	- Max. Supply → 21 Million BTC
+	- New coins are created via Mining 
+	- Mining rewa
  
 
 
