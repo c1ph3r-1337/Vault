@@ -36,7 +36,7 @@
 	- Mining rewards are cut in half 
 	- New Bitcoin creation rate drops
 
-> Whale Activity 
+>[[ Whale Activity ]]
 - Large holders ("Whales") Selling huge amounts can:
 	- Flood Supply 
 	- Trigger Panic Selling 

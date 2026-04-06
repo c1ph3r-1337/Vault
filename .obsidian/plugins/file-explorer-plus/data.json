@@ -87,6 +87,13 @@
         "type": "FILES",
         "pattern": "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
         "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Medium/Untitled.md",
+        "patternType": "STRICT"
       }
     ],
     "frontMatter": [
