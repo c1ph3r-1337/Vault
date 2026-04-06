@@ -11,5 +11,6 @@
   "vscode-editor",
   "code-link",
   "obsidian-code-preview",
-  "editing-toolbar"
+  "editing-toolbar",
+  "symbols-prettifier"
 ]
