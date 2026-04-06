@@ -8,7 +8,8 @@
 - Bitcoin has hard-coded scarcity
 	- Max. Supply → 21 Million BTC
 	- New coins are created via Mining 
-	- Mining rewa
+	- Mining reward reduces every ~ 4 years (Halfing)
+- Less new supply entering 
  
 
 
