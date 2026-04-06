@@ -41,5 +41,6 @@
 	- Flood Supply 
 	- Trigger Panic Selling 
 
- 
+> Market Sentiment 
+- Crypto is extermely 
  
