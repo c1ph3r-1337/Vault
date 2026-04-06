@@ -24,8 +24,11 @@
 	- Panic Selling Happens 
 
 > Mining Cost & Difficulty 
-> 
- 
+- Bitcoin protection requires :
+	- Electricity
+	- Hardware 
+	- Time 
+- If miner sell 
 
 
  
