@@ -13,7 +13,10 @@
 - Less new supply entering market over time = upward price pressure long-term.
 
 > Demand (Market Side)
-- Demand ↑inc Wh 
+- Demand ↑inc When: 
+	- More people want to buy Bitcoin 
+	- Institutions invest 
+	- Countries  
  
 
 
