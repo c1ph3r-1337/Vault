@@ -39,12 +39,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins.md",
+                "file": "Crypto/Daily Wins/2. FEB/Miscellaneous/Miners and Mining Software.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Daily Wins"
+              "title": "Miners and Mining Software"
             }
           }
         ],
@@ -243,6 +243,9 @@
   },
   "active": "b16ed23eccf38623",
   "lastOpenFiles": [
+    "Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md",
+    "Crypto/Daily Wins/Months.md",
+    "Crypto/Daily Wins/4. APRIL/Untitled",
     "Crypto/Daily Wins.md",
     "Crypto/Daily Wins/3. MARCH/Untitled.md",
     "Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md",
@@ -264,8 +267,6 @@
     "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
     "Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md",
-    "Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md",
-    "Crypto/Daily Wins/Months.md",
     "Crypto/Daily Wins/Month List.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226185711.png",
     "Crypto/Roadmap/PHASE 6/PHASE 6.md",
@@ -287,7 +288,6 @@
     "Daily Wins/3. MARCH",
     "Daily Wins",
     "Crypto/Daily Wins/3. MARCH/Untitled 2.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Codes",
     "Crypto/Roadmap/Untitled.canvas",
     "Untitled.canvas"
   ]
