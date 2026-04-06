@@ -37,6 +37,7 @@
 	- New Bitcoin creation rate drops
 
 > Whale Activity 
+- Large holders ("Whales") Selling huge
 
  
  
