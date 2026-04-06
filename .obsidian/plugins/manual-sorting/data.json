@@ -200,7 +200,9 @@
       "sortOrder": "custom"
     },
     "Medium": {
-      "children": [],
+      "children": [
+        "Medium/How the Value of the Bitcoin is decided.md"
+      ],
       "sortOrder": "custom"
     }
   },
