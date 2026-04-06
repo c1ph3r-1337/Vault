@@ -1,1 +1,1 @@
-> #Whales - Whales are the 
+> #Whales - Whales are the Large holders of an assest - Commonly in crypto or small small-cap q

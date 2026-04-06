@@ -5,7 +5,7 @@
   "showAttachments": true,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
       "query": "path:\"Crazy Stuff\"  ",
@@ -78,7 +78,7 @@
       }
     },
     {
-      "query": "",
+      "query": "path:Medium  ",
       "color": {
         "a": 1,
         "rgb": 14725458
@@ -95,6 +95,6 @@
   "repelStrength": 12.734917177448,
   "linkStrength": 0.885416666666667,
   "linkDistance": 263,
-  "scale": 0.9703925304518727,
-  "close": false
+  "scale": 0.19168247515098716,
+  "close": true
 }
