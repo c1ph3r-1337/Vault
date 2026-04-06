@@ -5,8 +5,8 @@
 - Price ↑ inc : When Demand > Supply 
 - Price ↓ dec : when Supply >  Demand 
 > Supply (Bitcoin Side)
-- Bitcoion has hard-coded scarcity
-	- 
+- Bitcoin has hard-coded scarcity
+	- Max. Supply → ≠ ≠
  
 
 
