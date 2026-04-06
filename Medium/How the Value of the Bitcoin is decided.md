@@ -34,7 +34,9 @@
 > Supply Reduction Events (Halving)
 - Every ~ 4 years
 	- Mining rewards are cut in half 
-	- /n
+	- New Bitcoin creation rate drops
+
+> Whale Activity 
 
  
  
