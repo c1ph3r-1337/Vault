@@ -28,7 +28,10 @@
 	- Electricity
 	- Hardware 
 	- Time 
-- If miner sell 
+- If miner sell Bitcoin at higher prices to stay profitable.
+- This pushes Price floor upward
+
+> Supply Reduction Events 
 
 
  
