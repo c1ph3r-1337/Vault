@@ -42,5 +42,7 @@
 	- Trigger Panic Selling 
 
 > Market Sentiment 
-- Crypto is extermely 
+- Crypto is extremely Sentiment-driven 
+- News , Social Media Hype or fear can move price drastically.
+
  
