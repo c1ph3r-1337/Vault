@@ -1,1 +1,1 @@
-> #Whales - Whales are the Large holders of an assest - Commonly in crypto or small small-cap q
+> #Whales - Whales are the Large holders of an asset - (Commonly in crypto or small small-cap equities) can materially move markets due to liquidity asymm
