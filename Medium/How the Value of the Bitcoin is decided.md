@@ -12,6 +12,8 @@
 	- Mining reward reduces every ~ 4 years (Halfing)
 - Less new supply entering market over time = upward price pressure long-term.
 
+> Demand (Market Side)
+- Demand inc ↑ 
  
 
 
