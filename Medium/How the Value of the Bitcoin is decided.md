@@ -20,7 +20,11 @@
 	- People see it as a state of value 
 - Demand ↓dec When:
 	- Investors lose Trust
-	- 
+	- Regulations restrict usage 
+	- Panic Selling Happens 
+
+> Mining Cost & Difficulty 
+> 
  
 
 
