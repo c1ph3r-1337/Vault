@@ -3,7 +3,10 @@
 > Core Principle - Supply vs Demand  
 
 - Price ↑ inc : When Demand > Supply 
-- Price ↓ dec : when 
+- Price ↓ dec : when Supply >  Demand 
+> Supply (Bitcoin Side)
+- Bitcoion has hard-coded scarcity
+	- 
  
 
 
