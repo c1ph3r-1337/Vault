@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Medium/How the Value of the Bitcoin is decided.md",
+                "file": "Crypto/Roadmap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "How the Value of the Bitcoin is decided"
+              "title": "Roadmap"
             }
           }
         ]
@@ -216,8 +216,8 @@
   },
   "active": "36c2b1355e189a6d",
   "lastOpenFiles": [
-    "Crypto/Roadmap.md",
     "Medium/How the Value of the Bitcoin is decided.md",
+    "Crypto/Roadmap.md",
     "Crazy Stuff/Welcome.md",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
