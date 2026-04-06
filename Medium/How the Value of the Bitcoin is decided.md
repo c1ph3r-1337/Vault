@@ -2,8 +2,8 @@
 
 > Core Principle - Supply vs Demand  
 
-- Price 
-
+- Price ↑inc : When Demand > Supply 
+ 
 
 
  
