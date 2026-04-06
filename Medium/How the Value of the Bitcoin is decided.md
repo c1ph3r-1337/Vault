@@ -2,8 +2,8 @@
 
 > Core Principle - Supply vs Demand  
 
-- Price ↑ inc : When Demand > Supply 
-- Price ↓ dec : when Supply >  Demand 
+- Price ↑inc : When Demand > Supply 
+- Price ↓dec : when Supply >  Demand 
 
 > Supply (Bitcoin Side)
 - Bitcoin has hard-coded scarcity
@@ -13,7 +13,7 @@
 - Less new supply entering market over time = upward price pressure long-term.
 
 > Demand (Market Side)
-- Demand inc ↑ 
+- Demand ↑inc Wh 
  
 
 
