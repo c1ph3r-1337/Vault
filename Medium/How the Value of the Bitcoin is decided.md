@@ -31,8 +31,10 @@
 - If miner sell Bitcoin at higher prices to stay profitable.
 - This pushes Price floor upward
 
-> Supply Reduction Events 
-
+> Supply Reduction Events (Halving)
+- Every ~ 4 years
+	- Mining rewards are cut in half 
+	- /n
 
  
  
