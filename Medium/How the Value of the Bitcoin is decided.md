@@ -54,6 +54,15 @@ Seller places order → willing to sell BTC at ₹40 lakh
 Trade executes → That becomes current market price
 ```
 
+> Example Market Scenario
+
+```
+Trader A thinks BTC will rise → Buys
+Miner B needs cash → Sells
+Whale C predicts crash → Sells large amount
+Institution D entering market → Buys heavily
+Bot E arbitrages price difference → Trades rapidly
+```
 # <font color="#7e56df">Why Bitcoin Is Volatile ?</font>
 
 > Volatile = Price changes quickly and unpredictably
