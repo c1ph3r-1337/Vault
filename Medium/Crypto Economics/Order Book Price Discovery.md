@@ -1,5 +1,6 @@
 ```
 Every buyer can choose:
+
 >> “I am only willing to buy BTC at ₹40 lakh.”
 
 That does NOT immediately change the market price.
@@ -39,3 +40,13 @@ Buyer price ≥ Seller price
 	- Trade executes  
 	- ₹40 lakh becomes current market price
 
+# Real Life Analogy (Simple Property Market)
+
+> Imagine selling a house.
+
+- You want ₹1 crore
+- Buyer offers ₹90 lakh
+- Another buyer offers ₹95 lakh
+- Finally someone agrees ₹1 crore
+
+House value becomes ₹1 crore
