@@ -54,3 +54,4 @@ Seller places order → willing to sell BTC at ₹40 lakh
 Trade executes → That becomes current market price
 ```
 
+# Why Bitcoin Is Volatile
