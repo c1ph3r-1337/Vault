@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Medium/How the Value of the Bitcoin is decided.md",
+                "file": "Medium/order book price discovery.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "How the Value of the Bitcoin is decided"
+              "title": "order book price discovery"
             }
           }
         ]
@@ -214,10 +214,13 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "9d8bec7930bf3a42",
+  "active": "9483dbce746bc604",
   "lastOpenFiles": [
     "Medium/How the Value of the Bitcoin is decided.md",
+    "Medium/order book price discovery.md",
+    "Crazy Stuff/Crazy Stuff.md",
     "Medium/Whale Activity.md",
+    "**order book price discovery**.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225140204.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226180105.png",
     "Medium/Papers.md",
@@ -227,7 +230,6 @@
     "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
     "README.md",
-    "Crazy Stuff/Crazy Stuff.md",
     "Medium",
     "Crypto/Daily Wins/4. APRIL/Untitled.md",
     "Crypto/Progress.md",
@@ -255,7 +257,6 @@
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226185711.png",
     "Crypto/Roadmap/PHASE 6/PHASE 6.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images",
-    "Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Facts/Unconfirmed 589080.crdownload",
     "Crypto/Daily Wins/2. FEB/Rust/Learning",
     "Crypto/Daily Wins/2. FEB/Rust/Facts/Unconfirmed 384305.crdownload",
