@@ -70,4 +70,8 @@ More sellers are ready to accept lower prices.
 	- They consume many sell orders
 	- This pushes price upward
 
-# Final 
+# Final Concept 
+
+```
+Millions of individual decisions → Combined → Market price appears
+```
