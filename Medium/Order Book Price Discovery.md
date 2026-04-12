@@ -11,4 +11,26 @@ It just means:
 # Order Book Concept explains everything
 
 > Exchanges maintain two lists:
-> 
+
+```
+Buy Orders (Bids) → People wanting to buy
+Sell Orders (Asks) → People wanting to sell
+```
+
+Example:
+### Buyers
+- Buyer A → ₹39 lakh
+- Buyer B → ₹40 lakh
+- Buyer C → ₹41 lakh
+### Sellers
+- Seller X → ₹42 lakh
+- Seller Y → ₹41 lakh
+- Seller Z → ₹40 lakh
+
+# When Does Price Change?
+
+> Trade happens only when:
+
+```
+Buyer price ≥ Seller price
+```
