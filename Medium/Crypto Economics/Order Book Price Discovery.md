@@ -1,6 +1,5 @@
 ```
 Every buyer can choose:
-
 >> “I am only willing to buy BTC at ₹40 lakh.”
 
 That does NOT immediately change the market price.

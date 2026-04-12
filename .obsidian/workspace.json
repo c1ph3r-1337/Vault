@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Medium/Order Book Price Discovery.md",
+                "file": "Medium/Crypto Economics/Order Book Price Discovery.md",
                 "mode": "source",
                 "source": false
               },
@@ -216,9 +216,10 @@
   },
   "active": "d8244b48bf8feb7d",
   "lastOpenFiles": [
-    "Medium/How the Value of the Bitcoin is decided.md",
-    "Medium/Whale Activity.md",
-    "Medium/Order Book Price Discovery.md",
+    "Medium/Crypto Economics",
+    "Medium/Crypto Economics/How the Value of the Bitcoin is decided.md",
+    "Medium/Crypto Economics/Whale Activity.md",
+    "Medium/Crypto Economics/Order Book Price Discovery.md",
     "Crazy Stuff/Crazy Stuff.md",
     "**order book price discovery**.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225140204.png",
@@ -255,7 +256,6 @@
     "Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md",
     "Crypto/Daily Wins/Month List.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226185711.png",
-    "Crypto/Roadmap/PHASE 6/PHASE 6.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images",
     "Crypto/Daily Wins/2. FEB/Rust/Facts/Unconfirmed 589080.crdownload",
     "Crypto/Daily Wins/2. FEB/Rust/Learning",
