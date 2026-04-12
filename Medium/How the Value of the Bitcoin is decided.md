@@ -45,4 +45,8 @@
 - Crypto is extremely Sentiment-driven 
 - News , Social Media Hype or fear can move price drastically.
 
+# How Price Is Actually Calculated ?
+
+'''
+'''
  
