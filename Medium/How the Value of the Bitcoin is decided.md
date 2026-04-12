@@ -75,3 +75,4 @@ Low volatility → price stays stable
 Scarcity + Trust + Adoption + Utility + Speculation = Bitcoin Price
 ```
 
+
