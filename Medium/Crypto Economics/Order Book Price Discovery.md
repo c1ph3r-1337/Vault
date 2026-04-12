@@ -62,3 +62,10 @@ More buyers are ready to pay higher prices.
 More sellers are ready to accept lower prices.
 
 > The "current price" is simply: Last successfully completed trade
+
+# Exception — Large Traders
+
+> If a [[Whale]]!
+>  buys massive BTC:
+- They consume many sell orders
+- This pushes price upward
