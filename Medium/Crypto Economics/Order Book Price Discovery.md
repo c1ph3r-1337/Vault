@@ -53,12 +53,12 @@ House value becomes ₹1 crore
 
 # What Moves Price Up or Down
 
-> ### Price Goes Up When:
+> Price Goes Up When:
 
 More buyers are ready to pay higher prices.
 
-> ### Price Goes Down When:
+> Price Goes Down When:
 
 More sellers are ready to accept lower prices.
 
-> ### The "current price" is simply: Last successfully completed trade
+> The "current price" is simply: Last successfully completed trade
