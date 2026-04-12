@@ -35,8 +35,8 @@ Example:
 Buyer price ≥ Seller price
 ```
 
-Buyer B wants ₹40 lakh  
-Seller Z willing ₹40 lakh
+- Buyer B wants ₹40 lakh  
+- Seller Z willing ₹40 lakh
+	- Trade executes  
+	- ₹40 lakh becomes current market price
 
-Trade executes  
-₹40 lakh becomes current market price
