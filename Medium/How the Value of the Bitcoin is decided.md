@@ -63,6 +63,8 @@ Whale C predicts crash → Sells large amount
 Institution D entering market → Buys heavily
 Bot E arbitrages price difference → Trades rapidly
 ```
+
+- This is called **order book price discovery**.
 # <font color="#7e56df">Why Bitcoin Is Volatile ?</font>
 
 > Volatile = Price changes quickly and unpredictably
