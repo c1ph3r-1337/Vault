@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -214,7 +215,7 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "d8244b48bf8feb7d",
+  "active": "fee9eead9e50505e",
   "lastOpenFiles": [
     "Medium/How the Value of the Bitcoin is decided.md",
     "Medium/Order Book Price Discovery.md",
