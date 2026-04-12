@@ -58,3 +58,8 @@ Trade executes → That becomes current market price
 
 > Volatile = Price changes quickly and unpredictably
 
+```
+High volatility → price goes up/down fast
+Low volatility → price stays stable
+```
+
