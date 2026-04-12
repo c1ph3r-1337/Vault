@@ -63,3 +63,8 @@ High volatility → price goes up/down fast
 Low volatility → price stays stable
 ```
 
+>  Unlike fiat currencies:
+- No central bank stabilizing it
+- Relatively smaller market compared to stocks or forex
+- Heavy speculation
+- News-driven trading
