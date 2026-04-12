@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -215,12 +214,12 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "fee9eead9e50505e",
+  "active": "d8244b48bf8feb7d",
   "lastOpenFiles": [
     "Medium/How the Value of the Bitcoin is decided.md",
+    "Medium/Whale Activity.md",
     "Medium/Order Book Price Discovery.md",
     "Crazy Stuff/Crazy Stuff.md",
-    "Medium/Whale Activity.md",
     "**order book price discovery**.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225140204.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226180105.png",

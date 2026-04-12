@@ -8,4 +8,7 @@ It just means:
 	Their order waits in the order book.
 ```
 
-Order Book Concept (This Explains Everything
+# Order Book Concept explains everything
+
+> Exchanges maintain two lists:
+> 
