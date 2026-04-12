@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Medium/order book price discovery.md",
+                "file": "Medium/Order Book Price Discovery.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "order book price discovery"
+              "title": "Order Book Price Discovery"
             }
           }
         ]
@@ -214,10 +214,10 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "9483dbce746bc604",
+  "active": "d8244b48bf8feb7d",
   "lastOpenFiles": [
     "Medium/How the Value of the Bitcoin is decided.md",
-    "Medium/order book price discovery.md",
+    "Medium/Order Book Price Discovery.md",
     "Crazy Stuff/Crazy Stuff.md",
     "Medium/Whale Activity.md",
     "**order book price discovery**.md",
