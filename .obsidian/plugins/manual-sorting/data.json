@@ -2,7 +2,6 @@
   "customOrder": {
     "/": {
       "children": [
-        "README.md",
         "Crazy Stuff",
         "Medium",
         "Crypto"
