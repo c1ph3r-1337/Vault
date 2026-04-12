@@ -60,3 +60,5 @@ More buyers are ready to pay higher prices.
 > ### Price Goes Down When:
 
 More sellers are ready to accept lower prices.
+
+> ### The "current price" is simply: Last successfully completed trade
