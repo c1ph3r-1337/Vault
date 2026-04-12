@@ -47,6 +47,10 @@
 
 # How Price Is Actually Calculated ?
 
-'''
-'''
- 
+```
+Buyer places order → wants BTC at ₹40 lakh
+Seller places order → willing to sell BTC at ₹40 lakh
+
+Trade executes → That becomes current market price
+```
+
