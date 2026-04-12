@@ -68,3 +68,10 @@ Low volatility → price stays stable
 - Relatively smaller market compared to stocks or forex
 - Heavy speculation
 - News-driven trading
+
+# Long-Term Price Drivers
+
+```
+Scarcity + Trust + Adoption + Utility + Speculation = Bitcoin Price
+```
+
