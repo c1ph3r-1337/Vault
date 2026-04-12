@@ -45,7 +45,7 @@
 - Crypto is extremely Sentiment-driven 
 - News , Social Media Hype or fear can move price drastically.
 
-# How Price Is Actually Calculated ?
+# <font color="#7e56df">How Price Is Actually Calculated ?</font>
 
 ```
 Buyer places order → wants BTC at ₹40 lakh
@@ -54,7 +54,7 @@ Seller places order → willing to sell BTC at ₹40 lakh
 Trade executes → That becomes current market price
 ```
 
-# Why Bitcoin Is Volatile ?
+# <font color="#7e56df">Why Bitcoin Is Volatile ?</font>
 
 > Volatile = Price changes quickly and unpredictably
 
@@ -69,7 +69,7 @@ Low volatility → price stays stable
 - Heavy speculation
 - News-driven trading
 
-# Long-Term Price Drivers
+# <font color="#7e56df">Long-Term Price Drivers</font>
 
 ```
 Scarcity + Trust + Adoption + Utility + Speculation = Bitcoin Price
