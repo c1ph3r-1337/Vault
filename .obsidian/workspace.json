@@ -198,7 +198,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 511.5
+    "width": 419.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -214,10 +214,10 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "d8244b48bf8feb7d",
+  "active": "9d8bec7930bf3a42",
   "lastOpenFiles": [
-    "Medium/Whale Activity.md",
     "Medium/How the Value of the Bitcoin is decided.md",
+    "Medium/Whale Activity.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225140204.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226180105.png",
     "Medium/Papers.md",
