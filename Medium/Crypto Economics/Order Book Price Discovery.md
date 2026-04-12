@@ -65,7 +65,7 @@ More sellers are ready to accept lower prices.
 
 # Exception — Large Traders
 
-> If a [[Whale]]!
->  buys massive BTC:
+> If a Whale buys massive BTC:
+	(Explained in Whale Activity )
 - They consume many sell orders
 - This pushes price upward
