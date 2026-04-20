@@ -6,4 +6,4 @@ also the use of smart contracts
 
 and the coins can be used as cryptocurrency and the valuation may vary according to market 
 
-but the question is what would be the 
+but the question is what would be the reason that would be inc↑ the value of the coin as th
