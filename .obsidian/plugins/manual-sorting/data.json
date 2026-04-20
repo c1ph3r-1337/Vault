@@ -2,6 +2,8 @@
   "customOrder": {
     "/": {
       "children": [
+        "Random Idea",
+        "blockchain.md",
         "Crazy Stuff",
         "Medium",
         "Crypto"
@@ -211,6 +213,10 @@
         "Medium/Crypto Economics/Order Book Price Discovery.md",
         "Medium/Crypto Economics/Whale Activity.md"
       ],
+      "sortOrder": "custom"
+    },
+    "Random Idea": {
+      "children": [],
       "sortOrder": "custom"
     }
   },
