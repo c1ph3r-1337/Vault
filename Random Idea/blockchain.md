@@ -4,4 +4,4 @@ find the contidion to oslcve and ai decide what vaule should be given to the per
 
 also the use of smart contracts 
 
-and the coins 
+and the coins can be used 
