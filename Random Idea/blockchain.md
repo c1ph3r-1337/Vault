@@ -12,4 +12,5 @@ submittion of gigs should be asymmetrically encrypted
 
 use of the smart contract like firstly the worker should complete the gig and then after gettign the reward token value asker should but tokens then pay for gig but the gig will only be submitted to the asker after the payment is done 
 
-also for the flexibility of the askers the , the value of the gig should be decided in dollar as the tokens value may increase or decrease so the token payment might sometimes become biased (expensive or cheap sometimes) 
+also for the flexibility of the askers the , the value of the gig should be decided in dollar as the tokens value may increase or decrease so the token payment might sometimes become biased (expensive or cheap sometimes) but the payment should be done in coins only
+
