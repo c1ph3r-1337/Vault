@@ -3,7 +3,6 @@
     "/": {
       "children": [
         "Random Idea",
-        "blockchain.md",
         "Crazy Stuff",
         "Medium",
         "Crypto"
@@ -216,7 +215,9 @@
       "sortOrder": "custom"
     },
     "Random Idea": {
-      "children": [],
+      "children": [
+        "Random Idea/blockchain.md"
+      ],
       "sortOrder": "custom"
     }
   },

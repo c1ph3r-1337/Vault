@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blockchain.md",
+                "file": "Random Idea/blockchain.md",
                 "mode": "source",
                 "source": false
               },
@@ -229,10 +229,10 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "e1f47d7df1a0923f",
+  "active": "9483dbce746bc604",
   "lastOpenFiles": [
     "Medium/Crypto Economics/Order Book Price Discovery.md",
-    "blockchain.md",
+    "Random Idea/blockchain.md",
     "Random Idea",
     "Medium/Crypto Economics/Whale Activity.md",
     "Medium/Crypto Economics/How the Value of the Bitcoin is decided.md",
