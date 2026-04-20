@@ -9,3 +9,5 @@ and the coins can be used as cryptocurrency and the valuation may vary according
 but the question is what would be the reason that would be inc↑ the value of the coin as the coins need investment to vary the price like the buying of the private keys at specfic price to set new max price right but how would people invest as the gig's payment is done by coinbase to miner , and the asker is getting it for free , how to solve this problem
 
 submittion of gigs should be asymmetrically encrypted 
+
+use of the smart contract like firstly the worker should complete the g
