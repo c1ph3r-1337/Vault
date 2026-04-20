@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Random Idea/blockchain.md",
+                "file": "Random Idea/Code Base.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "blockchain"
+              "title": "Code Base"
             }
           }
         ],
@@ -229,10 +229,11 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "9483dbce746bc604",
+  "active": "e1f47d7df1a0923f",
   "lastOpenFiles": [
-    "Medium/Crypto Economics/Order Book Price Discovery.md",
     "Random Idea/blockchain.md",
+    "Random Idea/Code Base.md",
+    "Medium/Crypto Economics/Order Book Price Discovery.md",
     "Random Idea",
     "Medium/Crypto Economics/Whale Activity.md",
     "Medium/Crypto Economics/How the Value of the Bitcoin is decided.md",
@@ -271,7 +272,6 @@
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
-    "Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226185711.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images",
     "Crypto/Daily Wins/2. FEB/Rust/Facts/Unconfirmed 589080.crdownload",
