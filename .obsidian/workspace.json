@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Random Idea/Code Base.md",
+                "file": "Random Idea/Roadmap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Code Base"
+              "title": "Roadmap"
             }
           }
         ],
@@ -231,8 +231,9 @@
   },
   "active": "e1f47d7df1a0923f",
   "lastOpenFiles": [
-    "Random Idea/blockchain.md",
     "Random Idea/Code Base.md",
+    "Random Idea/Roadmap.md",
+    "Random Idea/blockchain.md",
     "Medium/Crypto Economics/Order Book Price Discovery.md",
     "Random Idea",
     "Medium/Crypto Economics/Whale Activity.md",
@@ -271,7 +272,6 @@
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226185711.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images",
     "Crypto/Daily Wins/2. FEB/Rust/Facts/Unconfirmed 589080.crdownload",
