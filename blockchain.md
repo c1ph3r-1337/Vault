@@ -1,0 +1,1 @@
+i have a idea that where some people on the decentralized network , havea  
