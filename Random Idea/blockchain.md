@@ -10,4 +10,6 @@ but the question is what would be the reason that would be inc↑ the value of t
 
 submittion of gigs should be asymmetrically encrypted 
 
-use of the smart contract like firstly the worker should complete the gig and then after gettign the reward token value asker should but tokens then pay for gig 
+use of the smart contract like firstly the worker should complete the gig and then after gettign the reward token value asker should but tokens then pay for gig but the gig will only be submitted to the asker after the payment is done 
+
+also for the flexibility of the askers the , the value fo
