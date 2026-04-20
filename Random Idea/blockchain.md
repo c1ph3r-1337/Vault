@@ -4,4 +4,6 @@ find the contidion to oslcve and ai decide what vaule should be given to the per
 
 also the use of smart contracts 
 
-and the coins can be used 
+and the coins can be used as cryptocurrency and the valuation may vary according to market 
+
+but the question is what would be the 
