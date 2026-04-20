@@ -1,1 +1,1 @@
-i have a idea that where some people on the decentralized network , havea  
+i have a idea that where some people on the decentralized network , have a thing to computationly , after the computation the person would be rewarded a coin 
