@@ -14,3 +14,20 @@ use of the smart contract like firstly the worker should complete the gig and th
 
 also for the flexibility of the askers the , the value of the gig should be decided in dollar as the tokens value may increase or decrease so the token payment might sometimes become biased (expensive or cheap sometimes) but the payment should be done in coins only
 
+  - token approval for worker stake
+  - acceptJob
+  - token approval for validator stake
+  - stakeAsValidator
+  - vote
+  - finalizeValidation
+  - finalize
+    
+      Use flow on the worker tab:
+
+  1. Approve stake
+  2. Accept funded job
+  3. Approve validator stake
+  4. Stake as validator
+  5. Vote on validating jobs
+  6. Finalize validation
+  7. Finalize payout
