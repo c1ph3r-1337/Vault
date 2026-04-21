@@ -14,3 +14,6 @@ use of the smart contract like firstly the worker should complete the gig and th
 
 also for the flexibility of the askers the , the value of the gig should be decided in dollar as the tokens value may increase or decrease so the token payment might sometimes become biased (expensive or cheap sometimes) but the payment should be done in coins only
 
+
+  Verification is done: npm install completed, npm run build passed, and npm run dev -- --host 127.0.0.1 is ser
+  ving at http://127.0.0.1:5173/.
