@@ -42,3 +42,15 @@ also for the flexibility of the askers the , the value of the gig should be deci
   5. Validation finalizes
   6. Job finalizes
   7. Worker balance refreshes with escrow payout plus GigCoin reward
+     
+     
+     
+  - Live escrow jobs is the place where the worker selects a gig
+  - each job has an Open worker actions button
+  - clicking that opens a popup modal with all on-chain worker actions for that selected job:
+      - accept job
+      - stake as validator
+      - submit completed work
+      - vote
+      - finalize validation
+      - finalize payout
