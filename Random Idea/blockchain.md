@@ -31,3 +31,14 @@ also for the flexibility of the askers the , the value of the gig should be deci
   5. Vote on validating jobs
   6. Finalize validation
   7. Finalize payout
+     
+    
+  Working lifecycle now:
+
+  1. Asker creates and funds a request
+  2. Worker accepts job
+  3. Worker submits completed work CID
+  4. Validator votes
+  5. Validation finalizes
+  6. Job finalizes
+  7. Worker balance refreshes with escrow payout plus GigCoin reward
