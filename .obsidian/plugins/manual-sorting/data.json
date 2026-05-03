@@ -202,7 +202,8 @@
     "Medium": {
       "children": [
         "Medium/Papers.md",
-        "Medium/Crypto Economics"
+        "Medium/Crypto Economics",
+        "Medium/Cyber Security"
       ],
       "sortOrder": "custom"
     },
@@ -212,6 +213,10 @@
         "Medium/Crypto Economics/Order Book Price Discovery.md",
         "Medium/Crypto Economics/Whale Activity.md"
       ],
+      "sortOrder": "custom"
+    },
+    "Medium/Cyber Security": {
+      "children": [],
       "sortOrder": "custom"
     },
     "Random Idea": {
