@@ -121,7 +121,8 @@
     "2026-02-10",
     "2026-02-11",
     "2026-02-19",
-    "2026-02-21"
+    "2026-02-21",
+    "2026-04-20"
   ],
   "Crypto/Roadmap/PHASE 0.md": [
     "2026-02-10",
@@ -346,5 +347,31 @@
   ],
   "Crypto/Daily Wins/4. APRIL/Untitled.md": [
     "2026-04-06"
+  ],
+  "Medium/Crypto Economics/How the Value of the Bitcoin is decided.md": [
+    "2026-04-06",
+    "2026-04-12"
+  ],
+  "Medium/Crypto Economics/Order Book Price Discovery.md": [
+    "2026-04-12"
+  ],
+  "Medium/Crypto Economics/Whale Activity.md": [
+    "2026-04-06"
+  ],
+  "Medium/Cyber Security/Untitled.md": [
+    "2026-05-03"
+  ],
+  "Medium/Papers.md": [
+    "2026-04-06"
+  ],
+  "Random Idea/Code Base.md": [
+    "2026-04-20"
+  ],
+  "Random Idea/Roadmap.md": [
+    "2026-04-20"
+  ],
+  "Random Idea/blockchain.md": [
+    "2026-04-20",
+    "2026-04-22"
   ]
 }
