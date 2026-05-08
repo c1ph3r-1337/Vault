@@ -216,7 +216,9 @@
       "sortOrder": "custom"
     },
     "Medium/Cyber Security": {
-      "children": [],
+      "children": [
+        "Medium/Cyber Security/Untitled.md"
+      ],
       "sortOrder": "custom"
     },
     "Random Idea": {
