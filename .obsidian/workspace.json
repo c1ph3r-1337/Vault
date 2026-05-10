@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "To-Do/Exams.md",
-                "mode": "preview",
+                "file": "Random Idea/Roadmap.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Exams"
+              "title": "Roadmap"
             }
           }
         ]
@@ -218,8 +218,8 @@
   },
   "active": "e1f47d7df1a0923f",
   "lastOpenFiles": [
-    "Random Idea/Roadmap.md",
     "To-Do/Exams.md",
+    "Random Idea/Roadmap.md",
     "Medium/Papers.md",
     "Medium/Cyber Security/Untitled.md",
     "Random Idea/Gigcoin.md",
