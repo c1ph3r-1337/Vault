@@ -35,7 +35,8 @@
               "title": "Exams"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -230,10 +231,10 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "e1f47d7df1a0923f",
+  "active": "df9efbb64f3ada83",
   "lastOpenFiles": [
-    "To-Do/Exams.md",
     "Random Idea/Gigcoin.md",
+    "To-Do/Exams.md",
     "Random Idea/Roadmap.md",
     "Medium/Papers.md",
     "Medium/Cyber Security/Untitled.md",
