@@ -1,3 +1,45 @@
+# IDEA BEHIND IT 
+  
+  • The idea behind this project is to turn freelance or compute-style work into
+  an on-chain escrow marketplace.
+
+  At a high level:
+
+  - An asker posts a job and locks payment in escrow.
+  - A worker accepts the job and locks some stake, so there is a penalty for bad
+    work.
+  - The result is submitted off-chain, with a reference stored on-chain.
+  - Validators can vote on whether the work is valid.
+  - If the work is accepted, the worker gets paid and also receives GigCoin
+    rewards.
+  - If the work is rejected, the worker can lose their stake.
+
+  So the core goals are:
+
+  - Remove trust from payment settlement by putting funds in a smart contract.
+  - Incentivize honest workers with escrowed payment plus token rewards.
+  - Incentivize validators to review work by rewarding successful validation.
+  - Keep large/private result data off-chain using IPFS, while storing proof/
+    reference on-chain.
+  - Create a small token economy around work, validation, and settlement.
+
+  Conceptually, it mixes 3 ideas:
+
+  1. Freelance marketplace
+     Like Upwork or Fiverr, but job state and payout rules are enforced by a
+     contract.
+  2. Decentralized compute / task network
+     A worker can perform some external task, then submit the output.
+  3. Tokenized incentive system
+     GigCoin is used both as the payment asset and as the reward mechanism for
+     workers and validators.
+
+  In short: the project is trying to build a Web3 gig-work platform where trust
+  is replaced by escrow, staking, and validation. Right now, the repo is more of
+  an MVP/demo of that concept than a complete production system. 
+
+# TECHNICAL
+
  This project is a local demo of a decentralized gig marketplace built around a
   smart-contract escrow. The main pieces are:
 
@@ -101,42 +143,4 @@
   using the actual functions and files step by step.
   
   
-  # IDEA BEHIND IT 
   
-  • The idea behind this project is to turn freelance or compute-style work into
-  an on-chain escrow marketplace.
-
-  At a high level:
-
-  - An asker posts a job and locks payment in escrow.
-  - A worker accepts the job and locks some stake, so there is a penalty for bad
-    work.
-  - The result is submitted off-chain, with a reference stored on-chain.
-  - Validators can vote on whether the work is valid.
-  - If the work is accepted, the worker gets paid and also receives GigCoin
-    rewards.
-  - If the work is rejected, the worker can lose their stake.
-
-  So the core goals are:
-
-  - Remove trust from payment settlement by putting funds in a smart contract.
-  - Incentivize honest workers with escrowed payment plus token rewards.
-  - Incentivize validators to review work by rewarding successful validation.
-  - Keep large/private result data off-chain using IPFS, while storing proof/
-    reference on-chain.
-  - Create a small token economy around work, validation, and settlement.
-
-  Conceptually, it mixes 3 ideas:
-
-  1. Freelance marketplace
-     Like Upwork or Fiverr, but job state and payout rules are enforced by a
-     contract.
-  2. Decentralized compute / task network
-     A worker can perform some external task, then submit the output.
-  3. Tokenized incentive system
-     GigCoin is used both as the payment asset and as the reward mechanism for
-     workers and validators.
-
-  In short: the project is trying to build a Web3 gig-work platform where trust
-  is replaced by escrow, staking, and validation. Right now, the repo is more of
-  an MVP/demo of that concept than a complete production system.
