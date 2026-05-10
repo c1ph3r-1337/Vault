@@ -2,6 +2,7 @@
   "customOrder": {
     "/": {
       "children": [
+        "splunk.md",
         "Random Idea",
         "Crazy Stuff",
         "Medium",
