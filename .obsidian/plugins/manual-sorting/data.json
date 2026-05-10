@@ -224,6 +224,7 @@
     },
     "Random Idea": {
       "children": [
+        "Random Idea/Gigcoin.md",
         "Random Idea/Roadmap.md",
         "Random Idea/Code Base.md",
         "Random Idea/blockchain.md"
