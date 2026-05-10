@@ -8,12 +8,12 @@
 > | 5 | `CN-5` | `WN-5` | `OS-5` | `BIGDATA-5` | `COA-5` | `ADA-5` | `YOGA-5` | `AS-5` |
 > | 6 | `CN-6` | `WN-6` | `OS-6` | `BIGDATA-6` | `COA-6` | `ADA-6` | `YOGA-6` | `AS-6` |
 >
-> - [ ] CN-1
+> - [x] CN-1
 > - [ ] WN-1
 > - [ ] OS-1
 > - [ ] BIGDATA-1
-> - [ ] COA-1
-> - [ ] ADA-1
+> - [x] COA-1
+> - [x] ADA-1
 > - [ ] YOGA-1
 > - [ ] AS-1
 > - [ ] CN-2
