@@ -5,7 +5,8 @@
         "Random Idea",
         "Crazy Stuff",
         "Medium",
-        "Crypto"
+        "Crypto",
+        "To-Do"
       ],
       "sortOrder": "custom"
     },
@@ -226,6 +227,12 @@
         "Random Idea/Roadmap.md",
         "Random Idea/Code Base.md",
         "Random Idea/blockchain.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "To-Do": {
+      "children": [
+        "To-Do/Exams.md"
       ],
       "sortOrder": "custom"
     }

@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiListCheck",
       "LiLightbulb",
       "LiChartNoAxesCombined",
       "LiMonitorCheck",
-      "LiSearch",
-      "LiNewspaper"
+      "LiSearch"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -48,5 +48,6 @@
   "Crypto/Daily Wins/Month List.md": "LiNewspaper",
   "Crypto/Progress.md": "LiChartNoAxesCombined",
   "Medium": "LiNewspaper",
-  "Random Idea": "LiLightbulb"
+  "Random Idea": "LiLightbulb",
+  "To-Do": "LiListCheck"
 }
