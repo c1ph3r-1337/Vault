@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Random Idea/Gigcoin.md",
+                "file": "To-Do/Exams.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Gigcoin"
+              "title": "Exams"
             }
           }
         ]
@@ -216,7 +216,7 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "e1f47d7df1a0923f",
+  "active": "9483dbce746bc604",
   "lastOpenFiles": [
     "Random Idea/Gigcoin.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155722.png",
