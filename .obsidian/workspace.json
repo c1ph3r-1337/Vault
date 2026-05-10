@@ -196,8 +196,7 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "horizontal",
@@ -217,8 +216,9 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "949c6b4a25e7dbf9",
+  "active": "9d8bec7930bf3a42",
   "lastOpenFiles": [
+    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155722.png",
     "To-Do/Exams.md",
     "Medium/Crypto Economics/Order Book Price Discovery.md",
     "To-Do",
@@ -254,14 +254,12 @@
     "Crypto/Daily Wins/4. APRIL/Untitled",
     "Crypto/Daily Wins/3. MARCH/Untitled.md",
     "Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225230429.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155745.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155719.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226191124.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226192258.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227160000.png",
-    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155722.png",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226185711.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images",
