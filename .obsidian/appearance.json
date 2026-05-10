@@ -1,7 +1,8 @@
 {
   "enabledCssSnippets": [
     "title-center",
-    "purple-glass-bg"
+    "purple-glass-bg",
+    "center-tables"
   ],
   "showRibbon": false
 }
