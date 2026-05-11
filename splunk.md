@@ -5,3 +5,7 @@ source="brute.log" STATUS=failed
 source="brute.log" STATUS=failed 
 | timechart span=1d count 
 | sort by count
+
+source="brute.log" STATUS=failed 
+| stats count by host 
+| sort - count
