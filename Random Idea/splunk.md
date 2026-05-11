@@ -9,3 +9,7 @@ source="brute.log" STATUS=failed
 source="brute.log" STATUS=failed 
 | stats count by host 
 | sort - count
+
+source="brute.log" STATUS=failed REASON=bad_password
+| stats count by SRC
+| sort - count
