@@ -1,3 +1,7 @@
+index=main
+
+error
+
 source="brute.log" STATUS=success
 
 source="brute.log" STATUS=failed
