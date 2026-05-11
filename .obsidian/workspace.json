@@ -28,7 +28,7 @@
               "type": "markdown",
               "state": {
                 "file": "Random Idea/splunk.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -231,7 +231,7 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "9483dbce746bc604",
+  "active": "df9efbb64f3ada83",
   "lastOpenFiles": [
     "To-Do/Exams.md",
     "Random Idea/Gigcoin.md",
