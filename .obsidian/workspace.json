@@ -35,8 +35,7 @@
               "title": "splunk"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -231,11 +230,11 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "df9efbb64f3ada83",
+  "active": "e1f47d7df1a0923f",
   "lastOpenFiles": [
+    "Random Idea/splunk.md",
     "To-Do/Exams.md",
     "Random Idea/Gigcoin.md",
-    "Random Idea/splunk.md",
     "Random Idea/Roadmap.md",
     "Medium/Papers.md",
     "Medium/Cyber Security/Untitled.md",
