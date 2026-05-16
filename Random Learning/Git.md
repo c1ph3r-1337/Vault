@@ -712,3 +712,9 @@ This single command:
 - connects remote
 - pushes code
 - sets upstream tracking
+
+## Delete Repo Command
+
+```
+gh repo delete REPO_NAME
+```
