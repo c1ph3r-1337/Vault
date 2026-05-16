@@ -2,8 +2,8 @@
   "customOrder": {
     "/": {
       "children": [
-        "Random Learning",
         "Random Idea",
+        "Random Learning",
         "Crazy Stuff",
         "Medium",
         "Crypto",
@@ -233,14 +233,16 @@
       ],
       "sortOrder": "custom"
     },
+    "Random Learning": {
+      "children": [
+        "Random Learning/Git.md"
+      ],
+      "sortOrder": "custom"
+    },
     "To-Do": {
       "children": [
         "To-Do/Exams.md"
       ],
-      "sortOrder": "custom"
-    },
-    "Random Learning": {
-      "children": [],
       "sortOrder": "custom"
     }
   },

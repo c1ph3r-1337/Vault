@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "0a997c96aff9af7e",
+        "id": "62ac3c814279432c",
         "type": "tabs",
         "children": [
           {
-            "id": "e1f47d7df1a0923f",
+            "id": "5129fcec1a8e7174",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Random Idea/Gigcoin.md",
-                "mode": "preview",
+                "file": "Random Learning/Git.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Gigcoin"
-            }
-          },
-          {
-            "id": "df9efbb64f3ada83",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "To-Do/Exams.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Exams"
+              "title": "Git"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -231,15 +216,17 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "9483dbce746bc604",
+  "active": "5129fcec1a8e7174",
   "lastOpenFiles": [
+    "README.md",
+    "Random Learning/Git.md",
+    "To-Do/Exams.md",
     "Random Learning",
     "Crypto/Roadmap.md",
     "Crypto/Daily Wins.md",
     "Random Idea/Roadmap.md",
     "Random Idea/Gigcoin.md",
     "Random Idea/splunk.md",
-    "To-Do/Exams.md",
     "Medium/Papers.md",
     "Medium/Cyber Security/Untitled.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155722.png",
@@ -263,7 +250,6 @@
     "Crazy Stuff/Welcome.md",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
-    "README.md",
     "Medium",
     "Crypto/Daily Wins/4. APRIL/Untitled.md",
     "Crypto/Daily Wins/Months.md",
@@ -278,7 +264,6 @@
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227160000.png",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226185711.png",
-    "Crypto/Daily Wins/2. FEB/Rust/Images",
     "Crypto/Roadmap/Untitled.canvas",
     "Untitled.canvas"
   ]
