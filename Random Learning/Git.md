@@ -698,6 +698,18 @@ A---B---C------F main     \        /      D------E
 
 # Bonus 
 
+## Rename Current Branch
+
+```
+git branch -M main
+```
+
+This changes:
+
+```
+master → main
+```
+
 ## Create GitHub Repo + Push Automatically
 
 ```
