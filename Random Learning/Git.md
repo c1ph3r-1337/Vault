@@ -662,7 +662,7 @@ git initgit clonegit statusgit add .git commit -m ""git pullgit pushgit branchgi
 
 ---
 
-# Professional Git Workflow
+## Professional Git Workflow
 
 ```
 git clonegit switch -c feature# workgit add .git commit -m "implemented feature"git pull origin maingit rebase maingit push origin feature
