@@ -698,7 +698,7 @@ A---B---C------F main     \        /      D------E
 
 # Bonus 
 
-# STEP 4 — Create GitHub Repo + Push Automatically
+## Create GitHub Repo + Push Automatically
 
 ```
 gh repo create myproject --public --source=. --remote=origin --push
