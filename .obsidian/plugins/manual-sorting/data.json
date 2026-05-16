@@ -2,6 +2,7 @@
   "customOrder": {
     "/": {
       "children": [
+        "Random Learning",
         "Random Idea",
         "Crazy Stuff",
         "Medium",
@@ -236,6 +237,10 @@
       "children": [
         "To-Do/Exams.md"
       ],
+      "sortOrder": "custom"
+    },
+    "Random Learning": {
+      "children": [],
       "sortOrder": "custom"
     }
   },
