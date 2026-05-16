@@ -218,3 +218,212 @@ git diff --staged
 ```
 
 
+# 5. Branching Commands
+
+Branches allow isolated development.
+
+---
+
+## Create Branch
+
+```
+git branch feature
+```
+
+---
+
+## List Branches
+
+```
+git branch
+```
+
+---
+
+## Switch Branch
+
+```
+git checkout feature
+```
+
+Modern way:
+
+```
+git switch feature
+```
+
+---
+
+## Create + Switch Together
+
+```
+git checkout -b feature
+```
+
+Modern:
+
+```
+git switch -c feature
+```
+
+---
+
+## Delete Branch
+
+```
+git branch -d feature
+```
+
+Force delete:
+
+```
+git branch -D feature
+```
+
+# 6. Merge Commands
+
+---
+
+## Merge Branch
+
+```
+git merge feature
+```
+
+Merges `feature` into current branch.
+
+---
+
+## Abort Merge
+
+```
+git merge --abort
+```
+
+# 7. Remote Repository Commands
+
+---
+
+## Add Remote
+
+```
+git remote add origin <url>
+```
+
+---
+
+## View Remotes
+
+```
+git remote -v
+```
+
+---
+
+## Push to Remote
+
+```
+git push origin main
+```
+
+---
+
+## Pull Changes
+
+```
+git pull
+```
+
+Equivalent to:
+
+```
+git fetch + git merge
+```
+
+---
+
+## Fetch Changes Only
+
+```
+git fetch
+```
+
+Downloads remote changes without merging.
+
+---
+
+## Clone with Specific Branch
+
+```
+git clone -b dev <url>
+```
+
+# 8. Undo & Recovery Commands
+
+---
+
+# Restore File
+
+```
+git restore file.txt
+```
+
+Discard local changes.
+
+---
+
+# Reset Commit
+
+## Soft Reset
+
+```
+git reset --soft HEAD~1
+```
+
+Removes commit but keeps changes staged.
+
+---
+
+## Mixed Reset
+
+```
+git reset HEAD~1
+```
+
+Keeps file changes but unstages.
+
+---
+
+## Hard Reset
+
+```
+git reset --hard HEAD~1
+```
+
+Deletes commit + changes permanently.
+
+---
+
+## Revert Commit
+
+```
+git revert <commit-id>
+```
+
+Creates new commit undoing old commit.
+
+Safer than reset in shared repositories.
+
+---
+
+# Recover Deleted Commits
+
+```
+git reflog
+```
+
+Shows hidden history.
+
+Extremely powerful recovery tool.
+
+---
