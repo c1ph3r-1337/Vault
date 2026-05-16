@@ -24,7 +24,9 @@ Creates a `.git/` directory in current folder.
 Example:
 
 ```
-mkdir projectcd projectgit init
+mkdir project
+cd project
+git init
 ```
 
 ---
