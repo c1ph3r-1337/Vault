@@ -362,7 +362,7 @@ git clone -b dev <url>
 
 ---
 
-# Restore File
+## Restore File
 
 ```
 git restore file.txt
@@ -372,7 +372,7 @@ Discard local changes.
 
 ---
 
-# Reset Commit
+## Reset Commit
 
 ## Soft Reset
 
@@ -416,7 +416,7 @@ Safer than reset in shared repositories.
 
 ---
 
-# Recover Deleted Commits
+## Recover Deleted Commits
 
 ```
 git reflog
@@ -425,3 +425,271 @@ git reflog
 Shows hidden history.
 
 Extremely powerful recovery tool.
+
+# 9. Stashing Commands
+
+Temporarily save unfinished work.
+
+---
+
+## Save Stash
+
+```
+git stash
+```
+
+---
+
+## List Stashes
+
+```
+git stash list
+```
+
+---
+
+## Apply Stash
+
+```
+git stash apply
+```
+
+---
+
+## Pop Stash
+
+```
+git stash pop
+```
+
+Apply + remove stash.
+
+---
+
+## Delete Stash
+
+```
+git stash drop
+```
+
+---
+
+# 10. Tagging Commands
+
+Used for releases.
+
+---
+
+## Create Tag
+
+```
+git tag v1.0
+```
+
+---
+
+## Annotated Tag
+
+```
+git tag -a v1.0 -m "Version 1.0"
+```
+
+---
+
+## Push Tags
+
+```
+git push --tags
+```
+
+---
+
+# 11. Advanced Commands
+
+---
+
+# Rebase
+
+```
+git rebase main
+```
+
+Moves branch commits onto another base.
+
+Cleaner history than merge.
+
+---
+
+# Interactive Rebase
+
+```
+git rebase -i HEAD~5
+```
+
+Can:
+
+- squash commits
+- reorder commits
+- edit commits
+
+---
+
+# Cherry Pick
+
+```
+git cherry-pick <commit-id>
+```
+
+Copy one commit into another branch.
+
+---
+
+# Blame
+
+```
+git blame file.txt
+```
+
+Shows who changed each line.
+
+---
+
+# Bisect
+
+```
+git bisect
+```
+
+Binary search for bug-causing commit.
+
+---
+
+# Clean Untracked Files
+
+```
+git clean -fd
+```
+
+Deletes untracked files/directories.
+
+---
+
+# 12. GitHub Workflow Commands
+
+---
+
+## First Push
+
+```
+git push -u origin main
+```
+
+Sets upstream tracking.
+
+---
+
+## Pull Request Workflow
+
+```
+git checkout -b featuregit add .git commit -m "feature added"git push origin feature
+```
+
+Then create PR on GitHub.
+
+---
+
+# 13. SSH Authentication Commands
+
+---
+
+## Generate SSH Key
+
+```
+ssh-keygen -t ed25519 -C "email@example.com"
+```
+
+---
+
+## Start SSH Agent
+
+```
+eval "$(ssh-agent -s)"
+```
+
+---
+
+## Add SSH Key
+
+```
+ssh-add ~/.ssh/id_ed25519
+```
+
+---
+
+# 14. .gitignore
+
+Ignore files/folders.
+
+Example:
+
+```
+node_modules/.env*.logdist/
+```
+
+---
+
+# 15. Internal Git Concepts
+
+Git objects:
+
+- Blob → file data
+- Tree → directories
+- Commit → snapshot metadata
+- Tag → named reference
+
+Git uses:
+
+- SHA-1/SHA-256 hashes
+- Directed acyclic graph (DAG)
+
+---
+
+# Most Important Commands You’ll Use Daily
+
+```
+git initgit clonegit statusgit add .git commit -m ""git pullgit pushgit branchgit switchgit mergegit log --oneline --graphgit stashgit resetgit revert
+```
+
+---
+
+# Professional Git Workflow
+
+```
+git clonegit switch -c feature# workgit add .git commit -m "implemented feature"git pull origin maingit rebase maingit push origin feature
+```
+
+---
+
+# Dangerous Commands
+
+Be careful with:
+
+```
+git reset --hardgit clean -fdgit push --force
+```
+
+These can destroy history/data.
+
+---
+
+# Visual Understanding of Git
+
+```
+A---B---C main     \      D---E feature
+```
+
+After merge:
+
+```
+A---B---C------F main     \        /      D------E
+```
