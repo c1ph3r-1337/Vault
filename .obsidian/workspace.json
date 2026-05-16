@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Random Idea/splunk.md",
-                "mode": "source",
+                "file": "Crypto/Roadmap.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "splunk"
+              "title": "Roadmap"
             }
           }
         ],
@@ -233,10 +233,11 @@
   },
   "active": "df9efbb64f3ada83",
   "lastOpenFiles": [
+    "Crypto/Daily Wins.md",
+    "Random Idea/Roadmap.md",
     "Random Idea/Gigcoin.md",
     "Random Idea/splunk.md",
     "To-Do/Exams.md",
-    "Random Idea/Roadmap.md",
     "Medium/Papers.md",
     "Medium/Cyber Security/Untitled.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155722.png",
@@ -246,7 +247,6 @@
     "Crypto/Roadmap.md",
     "Crypto/Progress.md",
     "Crypto/RESEARCH LIST.md",
-    "Crypto/Daily Wins.md",
     "Medium/Cyber Security",
     "Medium/Crypto Economics/How the Value of the Bitcoin is decided.md",
     "Medium/Crypto Economics/Whale Activity.md",

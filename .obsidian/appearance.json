@@ -4,5 +4,6 @@
     "purple-glass-bg",
     "center-tables"
   ],
-  "showRibbon": false
+  "showRibbon": false,
+  "accentColor": "#000000"
 }
