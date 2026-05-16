@@ -358,72 +358,7 @@ Downloads remote changes without merging.
 git clone -b dev <url>
 ```
 
+
 # 8. Undo & Recovery Commands
 
----
 
-# Restore File
-
-```
-git restore file.txt
-```
-
-Discard local changes.
-
----
-
-# Reset Commit
-
-## Soft Reset
-
-```
-git reset --soft HEAD~1
-```
-
-Removes commit but keeps changes staged.
-
----
-
-## Mixed Reset
-
-```
-git reset HEAD~1
-```
-
-Keeps file changes but unstages.
-
----
-
-## Hard Reset
-
-```
-git reset --hard HEAD~1
-```
-
-Deletes commit + changes permanently.
-
----
-
-## Revert Commit
-
-```
-git revert <commit-id>
-```
-
-Creates new commit undoing old commit.
-
-Safer than reset in shared repositories.
-
----
-
-# Recover Deleted Commits
-
-```
-git reflog
-```
-
-Shows hidden history.
-
-Extremely powerful recovery tool.
-
----
