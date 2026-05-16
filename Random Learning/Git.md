@@ -508,7 +508,7 @@ git push --tags
 
 ---
 
-# Rebase
+## Rebase
 
 ```
 git rebase main
@@ -520,7 +520,7 @@ Cleaner history than merge.
 
 ---
 
-# Interactive Rebase
+## Interactive Rebase
 
 ```
 git rebase -i HEAD~5
@@ -534,7 +534,7 @@ Can:
 
 ---
 
-# Cherry Pick
+## Cherry Pick
 
 ```
 git cherry-pick <commit-id>
@@ -544,7 +544,7 @@ Copy one commit into another branch.
 
 ---
 
-# Blame
+## Blame
 
 ```
 git blame file.txt
@@ -554,7 +554,7 @@ Shows who changed each line.
 
 ---
 
-# Bisect
+## Bisect
 
 ```
 git bisect
@@ -564,7 +564,7 @@ Binary search for bug-causing commit.
 
 ---
 
-# Clean Untracked Files
+## Clean Untracked Files
 
 ```
 git clean -fd
@@ -654,7 +654,7 @@ Git uses:
 
 ---
 
-# Most Important Commands You’ll Use Daily
+## Most Important Commands You’ll Use Daily
 
 ```
 git initgit clonegit statusgit add .git commit -m ""git pullgit pushgit branchgit switchgit mergegit log --oneline --graphgit stashgit resetgit revert
@@ -670,7 +670,7 @@ git clonegit switch -c feature# workgit add .git commit -m "implemented feature"
 
 ---
 
-# Dangerous Commands
+## Dangerous Commands
 
 Be careful with:
 
@@ -682,7 +682,7 @@ These can destroy history/data.
 
 ---
 
-# Visual Understanding of Git
+## Visual Understanding of Git
 
 ```
 A---B---C main     \      D---E feature
