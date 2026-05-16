@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crazy Stuff/Crazy Stuff.md",
-                "mode": "source",
+                "file": "Crypto/Roadmap.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Crazy Stuff"
+              "title": "Roadmap"
             }
           }
         ]
@@ -218,6 +218,10 @@
   },
   "active": "5129fcec1a8e7174",
   "lastOpenFiles": [
+    "Crypto/Daily Wins/Month List.md",
+    "Crypto/Daily Wins/Months.md",
+    "Crypto/Progress.md",
+    "Crazy Stuff/Crazy Stuff.md",
     "Random Learning/Git.md",
     "README.md",
     "To-Do/Exams.md",
@@ -233,7 +237,6 @@
     "Medium/Crypto Economics/Order Book Price Discovery.md",
     "To-Do",
     "Checks",
-    "Crypto/Progress.md",
     "Crypto/RESEARCH LIST.md",
     "Medium/Cyber Security",
     "Medium/Crypto Economics/How the Value of the Bitcoin is decided.md",
@@ -243,7 +246,6 @@
     "Random Idea",
     "Whale.md",
     "Medium/Crypto Economics",
-    "Crazy Stuff/Crazy Stuff.md",
     "**order book price discovery**.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225140204.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226180105.png",
@@ -252,9 +254,7 @@
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
     "Medium",
     "Crypto/Daily Wins/4. APRIL/Untitled.md",
-    "Crypto/Daily Wins/Months.md",
     "Crypto/Daily Wins/2. FEB/Miscellaneous/Miners and Mining Software.md",
-    "Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md",
     "Crypto/Daily Wins/4. APRIL/Untitled",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225230429.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155745.png",
