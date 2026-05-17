@@ -4,9 +4,9 @@ Memory Management
 ├── Contiguous Allocation
 │   ├── Single Partition
 │   ├── Fixed Partitioning
-	│	└── Fragmentation
-│   │     ├── Internal
-│   │   └── External
+│	│	└── Fragmentation
+│   │       ├── Internal
+│   │       └── External
 │   └── Dynamic Partitioning
 │
 │
