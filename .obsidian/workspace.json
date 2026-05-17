@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Random Idea/splunk.md",
+                "file": "To-Do/Exams.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "splunk"
+              "title": "Exams"
             }
           }
         ]
@@ -218,6 +218,7 @@
   },
   "active": "5129fcec1a8e7174",
   "lastOpenFiles": [
+    "Random Idea/splunk.md",
     "Random Idea/Gigcoin.md",
     "Random Idea/Roadmap.md",
     "Random Idea/Code Base.md",
@@ -232,7 +233,6 @@
     "To-Do/Exams.md",
     "Random Learning",
     "Crypto/Daily Wins.md",
-    "Random Idea/splunk.md",
     "Medium/Papers.md",
     "Medium/Cyber Security/Untitled.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155722.png",
