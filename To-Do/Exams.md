@@ -23,7 +23,7 @@
 - [x] Chapter 3
 - [ ] Chapter 4
 - [x] Chapter 5
-- [x] Chapter 6
+- [ ] Chapter 6
 
 ## BIGDATA
 

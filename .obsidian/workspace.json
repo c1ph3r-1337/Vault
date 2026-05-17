@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "To-Do/Exams.md",
-                "mode": "source",
+                "file": "To-Do/Unit 5.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Exams"
+              "title": "Unit 5"
             }
           }
         ]
@@ -216,8 +216,11 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "5129fcec1a8e7174",
+  "active": "9483dbce746bc604",
   "lastOpenFiles": [
+    "To-Do/OS",
+    "To-Do/Exams.md",
+    "To-Do/Unit 5.md",
     "Random Idea/splunk.md",
     "Random Idea/Gigcoin.md",
     "Random Idea/Roadmap.md",
@@ -230,7 +233,6 @@
     "Crypto/Progress.md",
     "Crazy Stuff/Crazy Stuff.md",
     "README.md",
-    "To-Do/Exams.md",
     "Random Learning",
     "Crypto/Daily Wins.md",
     "Medium/Papers.md",
@@ -253,8 +255,6 @@
     "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
     "Medium",
-    "Crypto/Daily Wins/4. APRIL/Untitled.md",
-    "Crypto/Daily Wins/2. FEB/Miscellaneous/Miners and Mining Software.md",
     "Crypto/Daily Wins/4. APRIL/Untitled",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225230429.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155745.png",

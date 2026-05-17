@@ -1,0 +1,27 @@
+```
+Memory Management
+│
+├── Contiguous Allocation
+│   ├── Single Partition
+│   ├── Fixed Partitioning
+│   └── Dynamic Partitioning
+│
+├── Fragmentation
+│   ├── Internal
+│   └── External
+│
+├── Non-Contiguous Allocation
+│   ├── Paging
+│   │   ├── Pages
+│   │   ├── Frames
+│   │   └── MMU
+│   │
+│   └── Segmentation
+│       ├── Segment Table
+│       └── Address Translation
+│
+└── Virtual Memory
+    ├── Demand Paging
+    ├── Disk as RAM
+    └── Memory Protection
+```
