@@ -4,11 +4,12 @@ Memory Management
 ├── Contiguous Allocation
 │   ├── Single Partition
 │   └── Multiple Partitioning
-	    ├── Fixed Partitioning
-	 	│	└── Fragmentation
-	    │       └── Internal
-
-	│   └── Dynamic Partitioning
+│	    ├── Fixed Partitioning
+│	 	│	└── Fragmentation
+│	    │       └── Internal
+│	    └── Dynamic Partitioning
+│			└── Fragmentation
+│				└── External
 │
 │
 ├── Non-Contiguous Allocation
