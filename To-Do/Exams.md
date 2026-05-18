@@ -16,7 +16,7 @@
 - [ ] Chapter 5
 - [ ] Chapter 6
 
-## OS
+## ~~OS~~
 
 - [ ] Chapter 1
 - [ ] Chapter 2
@@ -61,12 +61,11 @@
 - [ ] Chapter 5
 - [ ] Chapter 6
 
-## AS
+## ~~AS~~
 
-- [ ] Chapter 1
-- [ ] Chapter 2
-- [ ] Chapter 3
-- [ ] Chapter 4
-- [ ] Chapter 5
-- [ ] Chapter 6
-![[Pasted image 20260518150538.png]]
+- [x] Chapter 1
+- [x] Chapter 2
+- [x] Chapter 3
+- [x] Chapter 4
+- [x] Chapter 5
+- [x] Chapter 6
