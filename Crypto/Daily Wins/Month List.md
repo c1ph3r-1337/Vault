@@ -1,16 +1,16 @@
 ---
 graph_links:
-  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Blockchain and Crypto Facts.md]]"
-  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Miners and Mining Software.md]]"
-  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Nonce Mining and Coin Creation.md]]"
-  - "[[Crypto/Daily Wins/2. FEB/Miscellaneous/Rust Setup.md]]"
-  - "[[Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs]]"
-  - "[[Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md]]"
+  - "[[Blockchain and Crypto Facts]]"
+  - "[[Miners and Mining Software]]"
+  - "[[Nonce Mining and Coin Creation]]"
+  - "[[Rust Setup]]"
+  - "[[hello_world.rs]]"
+  - "[[Macros vs Functions]]"
   - "[[Hello_World]]"
-  - "[[Crypto/Daily Wins/2. FEB/Videos/7 Cryptography Concepts EVERY Developer Should Know.md]]"
-  - "[[Crypto/Daily Wins/2. FEB/Videos/But how does bitcoin actually work.md]]"
-  - "[[Crypto/Daily Wins/2. FEB/Videos/Getting Started with Rust  Rust Book.md]]"
-  - "[[Crypto/Daily Wins/2. FEB/Videos/Videos.md]]"
+  - "[[7 Cryptography Concepts EVERY Developer Should Know]]"
+  - "[[But how does bitcoin actually work]]"
+  - "[[Getting Started with Rust  Rust Book]]"
+  - "[[Videos]]"
 ---
 
 
