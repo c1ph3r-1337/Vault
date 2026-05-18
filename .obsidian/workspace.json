@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "To-Do/Exams.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -216,7 +216,7 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "9483dbce746bc604",
+  "active": "5129fcec1a8e7174",
   "lastOpenFiles": [
     "To-Do/Pasted image 20260518150538.png",
     "To-Do/Exams.md",
