@@ -11,14 +11,17 @@
             "id": "5129fcec1a8e7174",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "To-Do/Exams.md",
-                "mode": "preview",
-                "source": false
+                "file": "Untitled.canvas",
+                "viewState": {
+                  "x": 77.37358952243068,
+                  "y": 213.03527178549436,
+                  "zoom": -0.9999999701976781
+                }
               },
-              "icon": "lucide-file",
-              "title": "Exams"
+              "icon": "lucide-layout-dashboard",
+              "title": "Untitled"
             }
           }
         ]
@@ -166,12 +169,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Untitled.canvas",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Untitled"
             }
           },
           {
@@ -216,10 +220,11 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "9d8bec7930bf3a42",
+  "active": "5129fcec1a8e7174",
   "lastOpenFiles": [
-    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155722.png",
     "To-Do/Exams.md",
+    "Untitled.canvas",
+    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155722.png",
     "To-Do/Pasted image 20260518150538.png",
     "To-Do/OS/Unit 5.md",
     "To-Do/OS",
@@ -263,7 +268,6 @@
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226191124.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226192258.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227160000.png",
-    "Crypto/Roadmap/Untitled.canvas",
-    "Untitled.canvas"
+    "Crypto/Roadmap/Untitled.canvas"
   ]
 }
