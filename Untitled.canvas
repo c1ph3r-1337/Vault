@@ -1,9 +1,12 @@
 {
 	"nodes":[
 		{"id":"aab4c52d1cc5381e","x":80,"y":-280,"width":250,"height":60,"type":"text","text":"sfcsc\n"},
-		{"id":"b9593ab5f848fc63","x":-400,"y":-20,"width":400,"height":400,"type":"file","file":"Random Idea/Code Base.md"}
+		{"id":"b9593ab5f848fc63","x":-600,"y":-40,"width":400,"height":400,"type":"file","file":"Random Idea/Code Base.md"},
+		{"id":"79c52863e9c62021","x":-139,"y":-35,"width":400,"height":400,"type":"file","file":"Random Idea/Code Base.md"},
+		{"id":"b6911d0f66493ddf","x":640,"y":40,"width":400,"height":325,"type":"link","url":"https://obsidian.md/canvas"}
 	],
 	"edges":[
-		{"id":"62cc87fa2e717f6a","fromNode":"aab4c52d1cc5381e","fromSide":"left","toNode":"b9593ab5f848fc63","toSide":"top"}
+		{"id":"62cc87fa2e717f6a","fromNode":"aab4c52d1cc5381e","fromSide":"left","toNode":"b9593ab5f848fc63","toSide":"top"},
+		{"id":"64bf626898965ac8","fromNode":"b9593ab5f848fc63","fromSide":"right","toNode":"79c52863e9c62021","toSide":"left"}
 	]
 }
