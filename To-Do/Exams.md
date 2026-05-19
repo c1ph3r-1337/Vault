@@ -52,11 +52,11 @@
 - [ ] Chapter 5
 - [ ] Chapter 6
 ```
-unit 3 and 4 are most imp
-and unit 6 only definitions 
+unit 1 master method and seraching and sorting and complexities  
 unit 2 red-black tree and b trees are more imp
-unit 1 master method and seraching and sorting and complexities 
-
+unit 3 and 4 are most imp (full chapter)
+unit 5 n-queen and hamiltonian cylce 
+and unit 6 only definitions
 ```
 
 ## YOGA
