@@ -52,7 +52,9 @@
 - [ ] Chapter 5
 - [ ] Chapter 6
 ```
-
+unit 3 and 4 are most imp
+and unit 6 only definitions 
+unit 2 red-black tree and b trees a
 ```
 
 ## YOGA
