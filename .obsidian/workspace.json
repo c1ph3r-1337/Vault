@@ -11,17 +11,14 @@
             "id": "5129fcec1a8e7174",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Untitled.canvas",
-                "viewState": {
-                  "x": 899.1021909498197,
-                  "y": 204.92525308716847,
-                  "zoom": -0.5999999761581427
-                }
+                "file": "To-Do/Exams.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Untitled"
+              "icon": "lucide-file",
+              "title": "Exams"
             }
           }
         ]
@@ -220,7 +217,7 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "5129fcec1a8e7174",
+  "active": "9483dbce746bc604",
   "lastOpenFiles": [
     "To-Do/Exams.md",
     "Untitled.canvas",
