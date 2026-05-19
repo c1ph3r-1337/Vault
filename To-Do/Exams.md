@@ -54,7 +54,9 @@
 ```
 unit 3 and 4 are most imp
 and unit 6 only definitions 
-unit 2 red-black tree and b trees a
+unit 2 red-black tree and b trees are more imp
+unit 1 master method and seraching and sorting and complexities 
+
 ```
 
 ## YOGA
