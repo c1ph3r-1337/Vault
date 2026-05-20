@@ -48,13 +48,13 @@
 - [ ] Chapter 1
 - [ ] Chapter 2
 - [ ] Chapter 3
-- huffman , knapsack , mst , prims , kruskals , dijkstra , bellman , dfs , bfs
+- huffman , knapsack  ✅ , mst , prims , kruskals , dijkstra , bellman , dfs , bfs
 - [ ] Chapter 4
 - [ ] Chapter 5
 - [ ] Chapter 6
 ```
 unit 1 master method and seraching and sorting and complexities  
-unit 2 red-black tree and b trees are more imp
+unit 2 red-black tree and b trees are ore imp
 unit 3 and 4 are most imp (full chapter)
 unit 5 n-queen and hamiltonian cylce 
 and unit 6 only definitions
