@@ -27,12 +27,12 @@
 
 ## BIGDATA
 
-- [ ] Chapter 1
-- [ ] Chapter 2
+- [x] Chapter 1
+- [x] Chapter 2
 - [ ] Chapter 3
-- [ ] Chapter 4
+- [x] Chapter 4
 - [ ] Chapter 5
-- [ ] Chapter 6
+- [x] Chapter 6
 
 ## COA
 
