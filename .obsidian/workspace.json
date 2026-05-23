@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Shell/Probelms.md",
+                "file": "Random Learning/Git.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Probelms"
+              "title": "Git"
             }
           }
         ],
@@ -234,8 +234,8 @@
   },
   "active": "24ea17b23f1c1fdb",
   "lastOpenFiles": [
-    "Shell/Goal.md",
     "Shell/Probelms.md",
+    "Shell/Goal.md",
     "Shell/INFO.md",
     "Shell/shell.md",
     "Shell",
