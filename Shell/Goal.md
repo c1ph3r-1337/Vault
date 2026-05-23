@@ -1,1 +1,1 @@
-To acheive the we can shift the shells to hyde to qucikshell 
+To acheive the we can shift the shells to hyde to qucikshell shells 
