@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiShell",
       "⁉",
       "LiListCheck",
       "LiLightbulb",
-      "LiChartNoAxesCombined",
-      "LiMonitorCheck"
+      "LiChartNoAxesCombined"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -50,5 +50,6 @@
   "Crypto/Roadmap.md": "LiWaypoints",
   "Crypto/Whitepapers": "LiNewspaper",
   "Crypto/Daily Wins/Month List.md": "LiNewspaper",
-  "Crypto/Daily Wins/Months.md": "LiMonitorCheck"
+  "Crypto/Daily Wins/Months.md": "LiMonitorCheck",
+  "Shell": "LiShell"
 }

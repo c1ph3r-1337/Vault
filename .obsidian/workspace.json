@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Random Idea/shell.md",
+                "file": "Shell/INFO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "shell"
+              "title": "INFO"
             }
           }
         ],
@@ -232,10 +232,12 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "9483dbce746bc604",
+  "active": "24ea17b23f1c1fdb",
   "lastOpenFiles": [
+    "Shell/shell.md",
+    "Shell/INFO.md",
+    "Shell",
     "To-Do/Exams.md",
-    "Random Idea/shell.md",
     "Untitled.canvas",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155722.png",
     "To-Do/Pasted image 20260518150538.png",
@@ -272,9 +274,7 @@
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226180105.png",
     "Crazy Stuff/Welcome.md",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
     "Medium",
-    "Crypto/Daily Wins/4. APRIL/Untitled",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225230429.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155745.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155719.png",
