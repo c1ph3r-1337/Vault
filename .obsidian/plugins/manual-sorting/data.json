@@ -242,6 +242,7 @@
     },
     "Shell": {
       "children": [
+        "Shell/agent prompt.md",
         "Shell/Switching.md",
         "Shell/Probelms.md",
         "Shell/Goal.md",

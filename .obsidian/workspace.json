@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Shell/Switching.md",
+                "file": "Shell/agent prompt.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Switching"
+              "title": "agent prompt"
             }
           }
         ],
@@ -234,8 +234,9 @@
   },
   "active": "24ea17b23f1c1fdb",
   "lastOpenFiles": [
-    "Shell/Probelms.md",
     "Shell/Switching.md",
+    "Shell/agent prompt.md",
+    "Shell/Probelms.md",
     "Random Learning/Git.md",
     "Shell/Goal.md",
     "Shell/INFO.md",
@@ -268,7 +269,6 @@
     "Crypto/RESEARCH LIST.md",
     "Medium/Cyber Security",
     "Medium/Crypto Economics/How the Value of the Bitcoin is decided.md",
-    "Medium/Crypto Economics/Whale Activity.md",
     "Random Idea",
     "Medium/Crypto Economics",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225140204.png",
