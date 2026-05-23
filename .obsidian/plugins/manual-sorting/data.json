@@ -242,6 +242,7 @@
     },
     "Shell": {
       "children": [
+        "Shell/Goal.md",
         "Shell/INFO.md",
         "Shell/shell.md"
       ],

@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Shell/INFO.md",
+                "file": "Shell/Goal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "INFO"
+              "title": "Goal"
             }
           }
         ],
@@ -234,8 +234,9 @@
   },
   "active": "24ea17b23f1c1fdb",
   "lastOpenFiles": [
-    "Shell/shell.md",
     "Shell/INFO.md",
+    "Shell/Goal.md",
+    "Shell/shell.md",
     "Shell",
     "To-Do/Exams.md",
     "Untitled.canvas",
@@ -272,7 +273,6 @@
     "**order book price discovery**.md",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225140204.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226180105.png",
-    "Crazy Stuff/Welcome.md",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
     "Medium",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225230429.png",
