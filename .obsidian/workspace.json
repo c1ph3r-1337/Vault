@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Shell/Things want to add.md",
+                "file": "To-Do/Exams.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Things want to add"
+              "title": "Exams"
             }
           }
         ],
@@ -234,8 +234,8 @@
   },
   "active": "24ea17b23f1c1fdb",
   "lastOpenFiles": [
-    "Untitled.md",
     "Shell/Things want to add.md",
+    "Untitled.md",
     "Shell/agent prompt.md",
     "Shell/Switching.md",
     "Shell/Probelms.md",

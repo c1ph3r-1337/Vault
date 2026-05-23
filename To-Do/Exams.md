@@ -16,7 +16,7 @@
 - [ ] Chapter 5
 - [ ] Chapter 6
 
-## ~~OS~~
+## OS
 
 - [ ] Chapter 1
 - [ ] Chapter 2
@@ -25,7 +25,7 @@
 - [x] Chapter 5
 - [ ] Chapter 6
 
-## BIGDATA
+## ~~BIGDATA~~
 
 - [x] Chapter 1
 - [x] Chapter 2
