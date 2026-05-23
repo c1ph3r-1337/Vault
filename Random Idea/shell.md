@@ -1,0 +1,1 @@
+how is end4 implimeting eww and quickshell together for theme changing 
