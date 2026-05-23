@@ -242,6 +242,7 @@
     },
     "Shell": {
       "children": [
+        "Shell/Switching.md",
         "Shell/Probelms.md",
         "Shell/Goal.md",
         "Shell/INFO.md",
