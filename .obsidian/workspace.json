@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "To-Do/Exams.md",
+                "file": "Crypto/Daily Wins.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Exams"
+              "title": "Daily Wins"
             }
           }
         ],
@@ -216,7 +216,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419.5
+    "width": 385.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -234,14 +234,16 @@
   },
   "active": "24ea17b23f1c1fdb",
   "lastOpenFiles": [
-    "To-Do/OS/Unit 5.md",
-    "To-Do/Exams.md",
-    "Shell/Things want to add.md",
-    "Crypto/Daily Wins/Months.md",
-    "Crypto/Daily Wins.md",
-    "Crypto/Roadmap.md",
     "Crypto/RESEARCH LIST.md",
+    "Crypto/Progress.md",
+    "Crypto/Roadmap.md",
+    "Crypto/Daily Wins/Months.md",
+    "Crypto/Daily Wins/Month List.md",
     "Random Learning/Git.md",
+    "To-Do/Exams.md",
+    "To-Do/OS/Unit 5.md",
+    "Shell/Things want to add.md",
+    "Crypto/Daily Wins.md",
     "Untitled.md",
     "Shell/agent prompt.md",
     "Shell/Switching.md",
@@ -259,8 +261,6 @@
     "Random Idea/Roadmap.md",
     "Random Idea/Code Base.md",
     "Random Idea/blockchain.md",
-    "Crypto/Daily Wins/Month List.md",
-    "Crypto/Progress.md",
     "Crazy Stuff/Crazy Stuff.md",
     "README.md",
     "Random Learning",
