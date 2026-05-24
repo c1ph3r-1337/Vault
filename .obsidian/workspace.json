@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled.md",
+                "file": "To-Do/Exams.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "Exams"
             }
           }
         ],
@@ -234,9 +234,14 @@
   },
   "active": "24ea17b23f1c1fdb",
   "lastOpenFiles": [
-    "Random Learning/Git.md",
+    "To-Do/OS/Unit 5.md",
     "To-Do/Exams.md",
     "Shell/Things want to add.md",
+    "Crypto/Daily Wins/Months.md",
+    "Crypto/Daily Wins.md",
+    "Crypto/Roadmap.md",
+    "Crypto/RESEARCH LIST.md",
+    "Random Learning/Git.md",
     "Untitled.md",
     "Shell/agent prompt.md",
     "Shell/Switching.md",
@@ -248,24 +253,19 @@
     "Untitled.canvas",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155722.png",
     "To-Do/Pasted image 20260518150538.png",
-    "To-Do/OS/Unit 5.md",
     "To-Do/OS",
     "Random Idea/splunk.md",
     "Random Idea/Gigcoin.md",
     "Random Idea/Roadmap.md",
     "Random Idea/Code Base.md",
     "Random Idea/blockchain.md",
-    "Crypto/Roadmap.md",
     "Crypto/Daily Wins/Month List.md",
-    "Crypto/Daily Wins/Months.md",
     "Crypto/Progress.md",
     "Crazy Stuff/Crazy Stuff.md",
     "README.md",
     "Random Learning",
-    "Crypto/Daily Wins.md",
     "Medium/Papers.md",
     "Medium/Cyber Security/Untitled.md",
-    "Medium/Crypto Economics/Order Book Price Discovery.md",
     "To-Do",
     "Checks",
     "Medium/Cyber Security",
