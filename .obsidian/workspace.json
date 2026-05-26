@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "To-Do/Exams.md",
+                "file": "Random Learning/Git.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Exams"
+              "title": "Git"
             }
           }
         ],
@@ -234,6 +234,7 @@
   },
   "active": "24ea17b23f1c1fdb",
   "lastOpenFiles": [
+    "To-Do/Exams.md",
     "Crypto/Daily Wins.md",
     "Crypto/RESEARCH LIST.md",
     "Crypto/Progress.md",
@@ -241,7 +242,6 @@
     "Crypto/Daily Wins/Months.md",
     "Crypto/Daily Wins/Month List.md",
     "Random Learning/Git.md",
-    "To-Do/Exams.md",
     "To-Do/OS/Unit 5.md",
     "Shell/Things want to add.md",
     "Untitled.md",
