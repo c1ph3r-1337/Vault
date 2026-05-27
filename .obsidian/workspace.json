@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Random Learning/Git.md",
-                "mode": "preview",
+                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git"
+              "title": "Variables"
             }
           }
         ],
@@ -234,6 +234,15 @@
   },
   "active": "24ea17b23f1c1fdb",
   "lastOpenFiles": [
+    "Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
+    "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
+    "Random Learning/Git.md",
     "To-Do/Exams.md",
     "Crypto/Daily Wins.md",
     "Crypto/RESEARCH LIST.md",
@@ -241,7 +250,6 @@
     "Crypto/Roadmap.md",
     "Crypto/Daily Wins/Months.md",
     "Crypto/Daily Wins/Month List.md",
-    "Random Learning/Git.md",
     "To-Do/OS/Unit 5.md",
     "Shell/Things want to add.md",
     "Untitled.md",
@@ -259,13 +267,7 @@
     "Random Idea/splunk.md",
     "Random Idea/Gigcoin.md",
     "Random Idea/Roadmap.md",
-    "Random Idea/Code Base.md",
-    "Random Idea/blockchain.md",
-    "Crazy Stuff/Crazy Stuff.md",
-    "README.md",
     "Random Learning",
-    "Medium/Papers.md",
-    "Medium/Cyber Security/Untitled.md",
     "To-Do",
     "Checks",
     "Medium/Cyber Security",
@@ -273,8 +275,6 @@
     "Medium/Crypto Economics",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225140204.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226180105.png",
-    "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
-    "Medium",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225230429.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155745.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155719.png",
