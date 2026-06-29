@@ -93,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 329.5
   },
   "right": {
     "id": "b2e40daf833402dc",
@@ -232,7 +232,7 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "24ea17b23f1c1fdb",
+  "active": "9483dbce746bc604",
   "lastOpenFiles": [
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
