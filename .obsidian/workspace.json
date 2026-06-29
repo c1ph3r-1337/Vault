@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
+                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Conventions"
+              "title": "Pre-requisite"
             }
           }
         ],
@@ -232,8 +232,9 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "9483dbce746bc604",
+  "active": "24ea17b23f1c1fdb",
   "lastOpenFiles": [
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
@@ -243,7 +244,6 @@
     "Random Learning/Git.md",
     "Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
     "To-Do/Exams.md",
     "Crypto/Daily Wins.md",
     "Crypto/RESEARCH LIST.md",
