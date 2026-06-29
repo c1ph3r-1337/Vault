@@ -1,4 +1,4 @@
- - Different Memory Regions 
+ j- Different Memory Regions 
   - stack
   - heap
   - static memory
