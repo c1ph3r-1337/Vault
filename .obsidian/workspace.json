@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
+                "file": "Random Learning/Git.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Variables"
+              "title": "Git"
             }
           }
         ],
@@ -234,11 +234,11 @@
   },
   "active": "24ea17b23f1c1fdb",
   "lastOpenFiles": [
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
     "Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
