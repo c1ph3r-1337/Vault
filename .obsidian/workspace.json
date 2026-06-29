@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Random Learning/Git.md",
+                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git"
+              "title": "Conventions"
             }
           }
         ],
@@ -234,15 +234,16 @@
   },
   "active": "24ea17b23f1c1fdb",
   "lastOpenFiles": [
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
-    "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
     "Random Learning/Git.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
     "To-Do/Exams.md",
     "Crypto/Daily Wins.md",
     "Crypto/RESEARCH LIST.md",
@@ -265,8 +266,6 @@
     "To-Do/Pasted image 20260518150538.png",
     "To-Do/OS",
     "Random Idea/splunk.md",
-    "Random Idea/Gigcoin.md",
-    "Random Idea/Roadmap.md",
     "Random Learning",
     "To-Do",
     "Checks",
