@@ -11,32 +11,13 @@
             "id": "5129fcec1a8e7174",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "To-Do/Exams.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Exams"
-            }
-          },
-          {
-            "id": "24ea17b23f1c1fdb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Pre-requisite"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -234,9 +215,16 @@
   },
   "active": "9483dbce746bc604",
   "lastOpenFiles": [
+    "To-Do/OS/Unit 5.md",
+    "Shell/Things want to add.md",
+    "Shell/agent prompt.md",
+    "Shell/Switching.md",
+    "Shell/Probelms.md",
+    "Shell/Goal.md",
+    "Shell/shell.md",
+    "Untitled.md",
     "THM",
     "Untitled 1.md",
-    "Untitled.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
     "Crazy Stuff/thUntitled",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
@@ -255,14 +243,7 @@
     "Crypto/Roadmap.md",
     "Crypto/Daily Wins/Months.md",
     "Crypto/Daily Wins/Month List.md",
-    "To-Do/OS/Unit 5.md",
-    "Shell/Things want to add.md",
-    "Shell/agent prompt.md",
-    "Shell/Switching.md",
-    "Shell/Probelms.md",
-    "Shell/Goal.md",
     "Shell/INFO.md",
-    "Shell/shell.md",
     "Shell",
     "Untitled.canvas",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155722.png",
@@ -272,7 +253,6 @@
     "To-Do",
     "Checks",
     "Medium/Cyber Security",
-    "Random Idea",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225140204.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226180105.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225230429.png",
