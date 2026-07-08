@@ -11,10 +11,14 @@
             "id": "5129fcec1a8e7174",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "THM/webpages.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "webpages"
             }
           }
         ]
@@ -213,8 +217,10 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "9483dbce746bc604",
+  "active": "5129fcec1a8e7174",
   "lastOpenFiles": [
+    "To-Do/Exams.md",
+    "THM/webpages.md",
     "To-Do/OS/Unit 5.md",
     "Shell/Things want to add.md",
     "Shell/agent prompt.md",
@@ -236,7 +242,6 @@
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
     "Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
-    "To-Do/Exams.md",
     "Crypto/Daily Wins.md",
     "Crypto/RESEARCH LIST.md",
     "Crypto/Progress.md",
