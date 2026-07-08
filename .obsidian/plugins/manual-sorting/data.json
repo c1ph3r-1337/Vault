@@ -5,6 +5,7 @@
         "Random Idea",
         "Random Learning",
         "Crazy Stuff",
+        "THM",
         "Crypto",
         "Medium",
         "Shell",
@@ -14,9 +15,14 @@
     },
     "Crazy Stuff": {
       "children": [
+        "Crazy Stuff/thUntitled",
         "Crazy Stuff/Crazy Stuff.md",
         "Crazy Stuff/Welcome.md"
       ],
+      "sortOrder": "custom"
+    },
+    "Crazy Stuff/thUntitled": {
+      "children": [],
       "sortOrder": "custom"
     },
     "Crypto": {
@@ -250,6 +256,10 @@
         "Shell/INFO.md",
         "Shell/shell.md"
       ],
+      "sortOrder": "custom"
+    },
+    "THM": {
+      "children": [],
       "sortOrder": "custom"
     },
     "To-Do": {
