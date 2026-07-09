@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "THM/webpages.md",
+                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "webpages"
+              "title": "Pre-requisite"
             }
           }
         ]
@@ -219,8 +219,9 @@
   },
   "active": "5129fcec1a8e7174",
   "lastOpenFiles": [
-    "To-Do/Exams.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
     "THM/webpages.md",
+    "To-Do/Exams.md",
     "To-Do/OS/Unit 5.md",
     "Shell/Things want to add.md",
     "Shell/agent prompt.md",
@@ -233,7 +234,6 @@
     "Untitled 1.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
     "Crazy Stuff/thUntitled",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
     "Random Learning/Git.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
