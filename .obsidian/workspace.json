@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
+                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Conventions"
+              "title": "Variables"
             }
           }
         ]
@@ -219,10 +219,12 @@
   },
   "active": "5129fcec1a8e7174",
   "lastOpenFiles": [
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md",
     "THM/webpages.md",
     "To-Do/Exams.md",
@@ -238,8 +240,6 @@
     "Untitled 1.md",
     "Crazy Stuff/thUntitled",
     "Random Learning/Git.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
     "Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
     "Crypto/Daily Wins.md",
