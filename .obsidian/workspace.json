@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
+                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Variables"
+              "title": "Guessing Game"
             }
           }
         ]
@@ -219,8 +219,8 @@
   },
   "active": "5129fcec1a8e7174",
   "lastOpenFiles": [
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
