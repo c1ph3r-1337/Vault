@@ -42,6 +42,9 @@
 
 ![[Pasted image 20260226191124.png]]
 
+### cargo update 
+
+When you _do_ want to update a crate, Cargo provides the command `update`, which will ignore the _Cargo.lock_ file and figure out all the latest versions that fit your specifications in _Cargo.toml_. Cargo will then write those versions to the _Cargo.lock_ file. Otherwise, by default, Cargo will only look for versions greater than 0.8.5 and less than 0.9.0. If the `rand` crate has released the two new versions 0.8.6 and 0.999.0, you would see the following if you ran `cargo update`:
 ### "cargo build --release"
 
 - it makes the release folder in the target folder for publication of the project 
