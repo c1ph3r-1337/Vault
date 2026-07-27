@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
-                "mode": "preview",
+                "file": "Crypto/Daily Wins/2. FEB/Rust/Learning/Rust Terminology and Hierarchies.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Conventions"
+              "title": "Rust Terminology and Hierarchies"
             }
           }
         ]
@@ -217,11 +217,12 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "5129fcec1a8e7174",
+  "active": "9483dbce746bc604",
   "lastOpenFiles": [
-    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260726104130.png",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Learning/Rust Terminology and Hierarchies.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
+    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260726104130.png",
     "Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
@@ -265,7 +266,6 @@
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227155719.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226191124.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226192258.png",
-    "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260227160000.png",
     "Crypto/Roadmap/Untitled.canvas"
   ]
 }
