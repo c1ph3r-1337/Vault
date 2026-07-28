@@ -1,11 +1,11 @@
 | Topic                                       | Strong | Average | Weak |
 | ------------------------------------------- | :----: | :-----: | :--: |
-| Computer Architecture                       |  [ ]   |   [ ]   | [ ]  |
-| Operating Systems                           |  [ ]   |   [ ]   | [ ]  |
-| Linux System Administration                 |  [ ]   |   [ ]   | [ ]  |
-| Linux System Customization & Desktop Ricing |  [ ]   |   [ ]   | [ ]  |
-| Assembly Language                           |  [ ]   |   [ ]   | [ ]  |
-| Rust                                        |  [ ]   |   [ ]   | [ ]  |
+| Computer Architecture                       |  [✅ ]  |   [ ]   | [ ]  |
+| Operating Systems                           |  [ ✅]  |   [ ]   | [ ]  |
+| Linux System Administration                 |  [ ]   |  [ ✅]   | [ ]  |
+| Linux System Customization & Desktop Ricing |  [ ]   |  [ ✅]   | [ ]  |
+| Assembly Language                           |  [ ]   |   [ ]   | [ ✅] |
+| Rust                                        |  [ ]   |   [ ]   | [ ✅] |
 | C++                                         |  [ ]   |   [ ]   | [ ]  |
 | Python                                      |  [ ]   |   [ ]   | [ ]  |
 | SQL                                         |  [ ]   |   [ ]   | [ ]  |
