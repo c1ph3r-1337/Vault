@@ -1,18 +1,18 @@
 | Topic                                       | Strong | Average | Weak |
 | ------------------------------------------- | :----: | :-----: | :--: |
-| Computer Architecture                       |  [✅ ]  |   [ ]   | [ ]  |
-| Operating Systems                           |  [ ✅]  |   [ ]   | [ ]  |
-| Linux System Administration                 |  [ ]   |  [ ✅]   | [ ]  |
-| Linux System Customization & Desktop Ricing |  [ ]   |  [ ✅]   | [ ]  |
-| Assembly Language                           |  [ ]   |   [ ]   | [ ✅] |
-| Rust                                        |  [ ]   |   [ ]   | [ ✅] |
-| C++                                         |  [ ]   |   [ ]   | [ ]  |
-| Python                                      |  [ ]   |   [ ]   | [ ]  |
-| SQL                                         |  [ ]   |   [ ]   | [ ]  |
-| Compiler Design                             |  [ ]   |   [ ]   | [ ]  |
-| Computer Networking                         |  [ ]   |   [ ]   | [ ]  |
-| Web Networking                              |  [ ]   |   [ ]   | [ ]  |
-| Linux Kernel & Operating System Internals   |  [ ]   |   [ ]   | [ ]  |
+| Computer Architecture                       |  [✅]   |   [ ]   | [ ]  |
+| Operating Systems                           |  [✅]   |   [ ]   | [ ]  |
+| Linux System Administration                 |  [ ]   |   [✅]   | [ ]  |
+| Linux System Customization & Desktop Ricing |  [ ]   |   [✅]   | [ ]  |
+| Assembly Language                           |  [ ]   |   [ ]   | [✅]  |
+| Rust                                        |  [ ]   |   [ ]   | [✅]  |
+| C++                                         |  [ ]   |   [✅]   | [ ]  |
+| Python                                      |  [ ]   |   [✅]   | [ ]  |
+| SQL                                         |  [ ]   |   [✅]   | [ ]  |
+| Compiler Design                             |  [ ]   |   [✅]   | [ ]  |
+| Computer Networking                         |  [✅]   |   [ ]   | [ ]  |
+| Web Networking                              |  [✅]   |   [ ]   | [ ]  |
+| Linux Kernel & Operating System Internals   |  [✅]   |   [ ]   | [ ]  |
 | Semiconductors & Semiconductor Physics      |  [ ]   |   [ ]   | [ ]  |
 | Cryptography                                |  [ ]   |   [ ]   | [ ]  |
 | Cryptocurrency                              |  [ ]   |   [ ]   | [ ]  |
