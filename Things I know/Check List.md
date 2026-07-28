@@ -28,3 +28,4 @@
 | State Management (JWT & Session Tokens)     |  [ ]   |   [✅]   | [ ]  |
 | Git (Version Control)                       |  [✅]   |   [ ]   | [ ]  |
 | Data Structures & Algorithms (DSA)          |  [ ]   |   [ ]   | [✅]  |
+| Quantum Computing                           |  [ ]   |   [✅]   | [ ]  |

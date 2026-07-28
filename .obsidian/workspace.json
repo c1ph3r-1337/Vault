@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Things I know/Things I know.md",
+                "file": "Things I know/Check List.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Things I know"
+              "title": "Check List"
             }
           }
         ],
@@ -248,8 +248,8 @@
   },
   "active": "e46b20512176a73e",
   "lastOpenFiles": [
-    "Things I know/Check List.md",
     "Things I know/Things I know.md",
+    "Things I know/Check List.md",
     "Shell/Things want to add.md",
     "Shell/agent prompt.md",
     "Shell/Switching.md",
