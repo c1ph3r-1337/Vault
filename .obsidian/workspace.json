@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "THM/webpages.md",
+                "file": "Things I know/Things I know.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "webpages"
+              "title": "Things I know"
             }
           }
         ],
@@ -234,6 +234,10 @@
   },
   "active": "37fca26b525d1dd7",
   "lastOpenFiles": [
+    "THM/webpages.md",
+    "Medium/Crypto Economics/How the Value of the Bitcoin is decided.md",
+    "Medium/Crypto Economics/Order Book Price Discovery.md",
+    "Medium/Crypto Economics/Whale Activity.md",
     "Crypto/Whitepapers/Ethereum_2014.pdf",
     "Crypto/Whitepapers/bitcoin.pdf",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
@@ -258,13 +262,10 @@
     "Crypto/Daily Wins/2. FEB/Rust/Facts/Macros vs Functions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/main.rs",
     "Crypto/Daily Wins/2. FEB/Rust/Codes/hello_world.rs",
-    "THM/webpages.md",
     "To-Do/Exams.md",
     "To-Do/OS/Unit 5.md",
     "Shell/Things want to add.md",
     "Shell/agent prompt.md",
-    "Shell/Switching.md",
-    "Shell/Probelms.md",
     "THM",
     "Crazy Stuff/thUntitled",
     "Shell",
@@ -273,7 +274,6 @@
     "To-Do/Pasted image 20260518150538.png",
     "To-Do/OS",
     "Random Learning",
-    "To-Do",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225140204.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260226180105.png",
     "Crypto/Daily Wins/2. FEB/Rust/Images/Pasted image 20260225230429.png",
