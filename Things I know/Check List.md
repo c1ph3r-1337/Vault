@@ -12,15 +12,15 @@
 | Compiler Design                             |  [ ]   |   [✅]   | [ ]  |
 | Computer Networking                         |  [✅]   |   [ ]   | [ ]  |
 | Web Networking                              |  [✅]   |   [ ]   | [ ]  |
-| Linux Kernel & Operating System Internals   |  [✅]   |   [ ]   | [ ]  |
-| Semiconductors & Semiconductor Physics      |  [ ]   |   [ ]   | [ ]  |
-| Cryptography                                |  [ ]   |   [ ]   | [ ]  |
-| Cryptocurrency                              |  [ ]   |   [ ]   | [ ]  |
-| Blockchain                                  |  [ ]   |   [ ]   | [ ]  |
-| C2 Payloads                                 |  [ ]   |   [ ]   | [ ]  |
-| AWS                                         |  [ ]   |   [ ]   | [ ]  |
-| Cloudflare                                  |  [ ]   |   [ ]   | [ ]  |
-| Embedded Hardware                           |  [ ]   |   [ ]   | [ ]  |
+| Linux Kernel & Operating System Internals   |  [ ]   |   [✅]   | [ ]  |
+| Semiconductors & Semiconductor Physics      |  [ ]   |   [✅]   | [ ]  |
+| Cryptography                                |  [✅]   |   [ ]   | [ ]  |
+| Cryptocurrency                              |  [ ]   |   [✅]   | [ ]  |
+| Blockchain                                  |  [ ]   |   [✅]   | [ ]  |
+| C2 Payloads                                 |  [ ]   |   [ ]   | [✅]  |
+| AWS                                         |  [ ]   |   [✅]   | [ ]  |
+| Cloudflare                                  |  [✅]   |   [ ]   | [ ]  |
+| Embedded Hardware                           |  [ ]   |   [✅]   | [ ]  |
 | System-on-Chip (SoC)                        |  [ ]   |   [ ]   | [ ]  |
 | Docker (Containers)                         |  [ ]   |   [ ]   | [ ]  |
 | Automation                                  |  [ ]   |   [ ]   | [ ]  |
