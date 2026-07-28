@@ -263,6 +263,7 @@
     },
     "Things I know": {
       "children": [
+        "Things I know/Check List.md",
         "Things I know/Things I know.md"
       ],
       "sortOrder": "custom"
