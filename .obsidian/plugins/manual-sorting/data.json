@@ -3,7 +3,6 @@
     "/": {
       "children": [
         "Things I know",
-        "Things I know.md",
         "Random Idea",
         "Random Learning",
         "Crazy Stuff",
@@ -263,7 +262,9 @@
       "sortOrder": "custom"
     },
     "Things I know": {
-      "children": [],
+      "children": [
+        "Things I know/Things I know.md"
+      ],
       "sortOrder": "custom"
     },
     "THM": {

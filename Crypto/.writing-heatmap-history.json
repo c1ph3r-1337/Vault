@@ -326,7 +326,8 @@
     "2026-02-21"
   ],
   "Crypto/Daily Wins/2. FEB/Rust/Learning/Pre-requisite.md": [
-    "2026-02-22"
+    "2026-02-22",
+    "2026-07-01"
   ],
   "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md": [
     "2026-02-23",
@@ -338,7 +339,8 @@
   ],
   "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md": [
     "2026-02-25",
-    "2026-02-26"
+    "2026-02-26",
+    "2026-07-26"
   ],
   "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md": [
     "2026-02-26",
@@ -414,5 +416,14 @@
   ],
   "To-Do/OS/Unit 5.md": [
     "2026-05-17"
+  ],
+  "Crypto/Daily Wins/2. FEB/Rust/Learning/Rust Terminology and Hierarchies.md": [
+    "2026-07-27"
+  ],
+  "THM/webpages.md": [
+    "2026-07-09"
+  ],
+  "Things I know/Things I know.md": [
+    "2026-07-28"
   ]
 }
