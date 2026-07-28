@@ -21,10 +21,10 @@
 | AWS                                         |  [ ]   |   [✅]   | [ ]  |
 | Cloudflare                                  |  [✅]   |   [ ]   | [ ]  |
 | Embedded Hardware                           |  [ ]   |   [✅]   | [ ]  |
-| System-on-Chip (SoC)                        |  [ ]   |   [ ]   | [ ]  |
-| Docker (Containers)                         |  [ ]   |   [ ]   | [ ]  |
-| Automation                                  |  [ ]   |   [ ]   | [ ]  |
-| Quantum Cryptography                        |  [ ]   |   [ ]   | [ ]  |
-| State Management (JWT & Session Tokens)     |  [ ]   |   [ ]   | [ ]  |
-| Git (Version Control)                       |  [ ]   |   [ ]   | [ ]  |
-| Data Structures & Algorithms (DSA)          |  [ ]   |   [ ]   | [ ]  |
+| System-on-Chip (SoC)                        |  [✅]   |   [ ]   | [ ]  |
+| Docker (Containers)                         |  [ ]   |   [✅]   | [ ]  |
+| Automation                                  |  [✅]   |   [ ]   | [ ]  |
+| Quantum Cryptography                        |  [ ]   |   [ ]   | [✅]  |
+| State Management (JWT & Session Tokens)     |  [ ]   |   [✅]   | [ ]  |
+| Git (Version Control)                       |  [✅]   |   [ ]   | [ ]  |
+| Data Structures & Algorithms (DSA)          |  [ ]   |   [ ]   | [✅]  |
