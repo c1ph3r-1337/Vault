@@ -1,107 +1,107 @@
-/* QuickIsland Live Theme for Obsidian: anime */
+/* QuickIsland Live Theme for Obsidian: Custom */
 body.theme-dark {
     /* Accent HSL values (eliminates Obsidian default 258 purple fallback) */
-    --accent-h: 343;
-    --accent-s: 62%;
-    --accent-l: 68%;
+    --accent-h: 267;
+    --accent-s: 84%;
+    --accent-l: 81%;
 
     /* Base Color Tokens */
-    --color-base-00: #23191b;
-    --color-base-10: #2a1d22;
-    --color-base-20: #1f191b;
-    --color-base-25: #1f191b;
-    --color-base-30: #322a2c;
-    --color-base-35: #322a2c;
-    --color-base-40: #322a2c;
-    --color-base-50: #786d70;
-    --color-base-60: #786d70;
-    --color-base-70: #b2a8ab;
-    --color-base-100: #e9e7e7;
+    --color-base-00: #1f1c2c;
+    --color-base-10: #282538;
+    --color-base-20: #1e1e2e;
+    --color-base-25: #1e1e2e;
+    --color-base-30: #313244;
+    --color-base-35: #313244;
+    --color-base-40: #313244;
+    --color-base-50: #6c7086;
+    --color-base-60: #6c7086;
+    --color-base-70: #a6adc8;
+    --color-base-100: #cdd6f4;
 
     /* Accent & Interactions */
-    --color-accent: #e07997;
-    --color-accent-1: #e07997;
-    --color-accent-2: #e18fa7;
-    --interactive-accent: #e07997;
-    --interactive-accent-hover: #e189a3;
+    --color-accent: #cba6f7;
+    --color-accent-1: #cba6f7;
+    --color-accent-2: #cbaff6;
+    --interactive-accent: #cba6f7;
+    --interactive-accent-hover: #cbadf6;
 
     /* Override purple color variables to theme accent so no purple leaks */
-    --color-purple: #e07997;
-    --color-purple-rgb: 224, 121, 151;
-    --color-violet: #e07997;
+    --color-purple: #cba6f7;
+    --color-purple-rgb: 203, 166, 247;
+    --color-violet: #cba6f7;
 
     /* Functional Colors */
-    --color-red: #8f5163;
-    --color-green: #d47490;
-    --color-orange: #dfaebc;
-    --color-yellow: #dfaebc;
-    --color-blue: #e07997;
-    --color-cyan: #e07997;
+    --color-red: #f38ba8;
+    --color-green: #a6e3a1;
+    --color-orange: #fab387;
+    --color-yellow: #fab387;
+    --color-blue: #89b4fa;
+    --color-cyan: #89b4fa;
 
     /* Icon and Accent tokens */
     --icon-color: var(--text-muted);
-    --icon-color-hover: #e07997;
-    --icon-color-active: #e07997;
-    --icon-color-focused: #e07997;
-    --nav-item-color-active: #e07997;
-    --nav-item-color-selected: #e07997;
-    --link-color: #e07997;
-    --link-color-hover: #e189a3;
-    --link-external-color: #e07997;
-    --link-external-color-hover: #e189a3;
-    --checkbox-color: #e07997;
-    --checkbox-color-hover: #e189a3;
-    --tag-color: #e07997;
-    --tag-color-hover: #e189a3;
-    --caret-color: #e07997;
-    --cursor: #e07997;
+    --icon-color-hover: #cba6f7;
+    --icon-color-active: #cba6f7;
+    --icon-color-focused: #cba6f7;
+    --nav-item-color-active: #cba6f7;
+    --nav-item-color-selected: #cba6f7;
+    --link-color: #cba6f7;
+    --link-color-hover: #cbadf6;
+    --link-external-color: #cba6f7;
+    --link-external-color-hover: #cbadf6;
+    --checkbox-color: #cba6f7;
+    --checkbox-color-hover: #cbadf6;
+    --tag-color: #cba6f7;
+    --tag-color-hover: #cbadf6;
+    --caret-color: #cba6f7;
+    --cursor: #cba6f7;
 
     /* Backgrounds & Surfaces */
-    --background-primary: #23191b;
-    --background-primary-alt: #23191b;
-    --background-secondary: #2a1d22;
-    --background-secondary-alt: #1f191b;
+    --background-primary: #1f1c2c;
+    --background-primary-alt: #1f1c2c;
+    --background-secondary: #282538;
+    --background-secondary-alt: #1e1e2e;
     --background-modifier-border: rgba(255, 255, 255, 0.05);
     --background-modifier-border-hover: rgba(255, 255, 255, 0.08);
     --background-modifier-border-focus: rgba(255, 255, 255, 0.10);
-    --background-modifier-form-field: #2a1d22;
+    --background-modifier-form-field: #282538;
     --blockquote-border-color: rgba(255, 255, 255, 0.15);
 
     /* Typography */
-    --text-normal: #e9e7e7;
-    --text-muted: #b2a8ab;
-    --text-faint: #786d70;
-    --text-accent: #e07997;
-    --text-accent-hover: #e189a3;
+    --text-normal: #cdd6f4;
+    --text-muted: #a6adc8;
+    --text-faint: #6c7086;
+    --text-accent: #cba6f7;
+    --text-accent-hover: #cbadf6;
 
     /* Header & Titlebar */
-    --titlebar-background: #2a1d22;
-    --titlebar-background-focused: #2a1d22;
-    --titlebar-text: #e9e7e7;
-    --titlebar-text-focused: #e9e7e7;
+    --titlebar-background: #282538;
+    --titlebar-background-focused: #282538;
+    --titlebar-text: #cdd6f4;
+    --titlebar-text-focused: #cdd6f4;
 
     /* Status Bar */
-    --status-bar-background: #2a1d22;
+    --status-bar-background: #282538;
     --status-bar-border-color: transparent;
-    --status-bar-text: #b2a8ab;
+    --status-bar-text: #a6adc8;
 
     /* Tabs & Dividers */
     --tab-background-active: rgba(255, 255, 255, 0.06);
     --tab-curve: 0px;
     --tab-radius: 8px;
     --tab-radius-active: 8px;
-    --tab-text-color-focused-active: #e9e7e7;
-    --tab-text-color-focused: #b2a8ab;
+    --tab-text-color-focused-active: #cdd6f4;
+    --tab-text-color-focused: #a6adc8;
     --tab-outline-color: transparent;
     --tab-outline-width: 0px;
     --divider-color: rgba(255, 255, 255, 0.05);
 
     /* Liquid Glass Effect Variables */
-    --qi-tint-1: rgba(224, 121, 151, 0.08);
-    --qi-tint-2: rgba(224, 121, 151, 0.05);
-    --qi-tint-3: rgba(50, 42, 44, 0.05);
-    --qi-surface: rgba(35, 25, 27, 0.42);
-    --qi-surface-2: rgba(31, 25, 27, 0.30);
+    --qi-tint-1: rgba(203, 166, 247, 0.08);
+    --qi-tint-2: rgba(203, 166, 247, 0.05);
+    --qi-tint-3: rgba(49, 50, 68, 0.05);
+    --qi-surface: rgba(31, 28, 44, 0.42);
+    --qi-surface-2: rgba(30, 30, 46, 0.30);
     --qi-border: transparent;
 
     /* Legacy Token Compatibility */
@@ -123,7 +123,7 @@ body.theme-dark .workspace-split.mod-root {
         radial-gradient(700px 420px at 6% 10%, var(--qi-tint-1), transparent 68%),
         radial-gradient(620px 360px at 92% 88%, var(--qi-tint-2), transparent 70%),
         radial-gradient(420px 240px at 50% 0%, var(--qi-tint-3), transparent 72%),
-        linear-gradient(160deg, #23191b, #1f191b) !important;
+        linear-gradient(160deg, #1f1c2c, #1e1e2e) !important;
 }
 
 /* Translucent Panes & Leaves (No border / highlight lines) */
@@ -239,7 +239,7 @@ body.theme-dark .workspace-ribbon :is(
 ) {
     background: rgba(255, 255, 255, 0.08) !important;
     border: none !important;
-    color: #e9e7e7 !important;
+    color: #cdd6f4 !important;
 }
 
 /* Markdown quotes & callouts (No harsh colored highlight bar) */
@@ -253,7 +253,7 @@ body.theme-dark .callout {
 
 /* Context Menus */
 body.theme-dark .menu {
-    background: linear-gradient(165deg, rgba(19, 17, 17, 0.96), rgba(31, 25, 27, 0.90)) !important;
+    background: linear-gradient(165deg, rgba(17, 17, 27, 0.96), rgba(30, 30, 46, 0.90)) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     border-radius: 12px !important;
     backdrop-filter: blur(12px);
@@ -262,7 +262,7 @@ body.theme-dark .menu {
 body.theme-dark .menu-item:hover,
 body.theme-dark .menu-item.is-selected {
     background: rgba(255, 255, 255, 0.08) !important;
-    color: #e9e7e7 !important;
+    color: #cdd6f4 !important;
 }
 
 /* Hide Window Control Buttons for Hyprland */
