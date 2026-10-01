@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Random Idea/splunk.md",
+                "file": "Medium/Papers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "splunk"
+              "title": "Papers"
             }
           }
         ]
@@ -221,6 +221,7 @@
   },
   "active": "7a1adda7bf92603a",
   "lastOpenFiles": [
+    "Random Idea/splunk.md",
     "Things I know/Check List.md",
     "Medium/Papers.md",
     "Medium/Crypto Economics/Whale Activity.md",
@@ -246,7 +247,6 @@
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Conventions.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Getting started with Rust.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Hello_World.md",
-    "Crypto/Daily Wins/Month List.md",
     "Crypto/Whitepapers/Ethereum_2014.pdf",
     "Crypto/Whitepapers/bitcoin.pdf",
     "Things I know",
