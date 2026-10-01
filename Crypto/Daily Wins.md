@@ -200,7 +200,7 @@ style.textContent = `
           rgba(255, 255, 255, 0.04) 42%,
           rgba(14, 20, 30, 0.26) 100%
         ) !important;
-      border: 1px solid color-mix(in srgb, #ffffff 24%, transparent) !important;
+      border: 1px solid color-mix(in srgb, var(--text-normal) 24%, transparent) !important;
       box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.22),
         inset 0 -8px 14px rgba(8, 12, 18, 0.18),
@@ -221,7 +221,7 @@ style.textContent = `
           rgba(255, 255, 255, 0.08) 45%,
           rgba(14, 20, 30, 0.24) 100%
         ) !important;
-      border-color: color-mix(in srgb, #ffffff 36%, transparent) !important;
+      border-color: color-mix(in srgb, var(--text-normal) 36%, transparent) !important;
       box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.28),
         inset 0 -8px 14px rgba(8, 12, 18, 0.12),
@@ -642,13 +642,13 @@ if (pages.length === 0) {
       }
       .markdown-reading-view:has(.dw-page-anchor) {
         background:
-          radial-gradient(700px 420px at 6% 10%, color-mix(in srgb, var(--pg-tint-1, rgba(110, 72, 196, 0.15)) 100%, transparent), transparent 68%),
-          radial-gradient(620px 360px at 92% 88%, color-mix(in srgb, var(--pg-tint-2, rgba(149, 119, 232, 0.10)) 100%, transparent), transparent 70%),
-          radial-gradient(420px 240px at 50% 0%, color-mix(in srgb, var(--pg-tint-3, rgba(95, 51, 182, 0.08)) 100%, transparent), transparent 72%),
+          radial-gradient(700px 420px at 6% 10%, var(--qi-tint-1, color-mix(in srgb, var(--interactive-accent) 15%, transparent)), transparent 68%),
+          radial-gradient(620px 360px at 92% 88%, var(--qi-tint-2, color-mix(in srgb, var(--interactive-accent) 10%, transparent)), transparent 70%),
+          radial-gradient(420px 240px at 50% 0%, var(--qi-tint-3, color-mix(in srgb, var(--interactive-accent) 8%, transparent)), transparent 72%),
           linear-gradient(
             160deg,
-            var(--pg-base-1, #11131a),
-            var(--pg-base-2, #161a24)
+            var(--background-primary),
+            var(--background-secondary)
           ) !important;
         overflow-x: hidden !important;
         scrollbar-width: none;
@@ -682,14 +682,14 @@ if (pages.length === 0) {
         overflow: visible !important;
         border-radius: 18px;
         background:
-          radial-gradient(82% 68% at 8% 8%, var(--pg-tint-1, rgba(110, 72, 196, 0.15)) 0%, transparent 72%),
-          radial-gradient(76% 62% at 92% 92%, var(--pg-tint-2, rgba(149, 119, 232, 0.10)) 0%, transparent 74%),
+          radial-gradient(82% 68% at 8% 8%, var(--qi-tint-1, color-mix(in srgb, var(--interactive-accent) 15%, transparent)) 0%, transparent 72%),
+          radial-gradient(76% 62% at 92% 92%, var(--qi-tint-2, color-mix(in srgb, var(--interactive-accent) 10%, transparent)) 0%, transparent 74%),
           linear-gradient(
             145deg,
-            color-mix(in srgb, var(--pg-base-1, #11131a) 90%, var(--background-primary) 10%),
-            color-mix(in srgb, var(--pg-base-2, #161a24) 88%, var(--background-secondary) 12%)
+            var(--background-primary),
+            var(--background-secondary)
           );
-        border: 1px solid var(--pg-border, rgba(149, 119, 232, 0.22));
+        border: 1px solid var(--background-modifier-border);
         box-shadow:
           0 12px 24px rgba(6, 10, 20, 0.24),
           inset 0 1px 0 rgba(255, 255, 255, 0.06);
@@ -709,14 +709,14 @@ if (pages.length === 0) {
         height: 190px;
         top: -50px;
         left: -40px;
-        background: color-mix(in srgb, var(--pg-tint-1, rgba(110, 72, 196, 0.15)) 80%, transparent);
+        background: color-mix(in srgb, var(--qi-tint-1, var(--interactive-accent)) 80%, transparent);
       }
       .dw-board::after {
         width: 170px;
         height: 170px;
         right: -30px;
         bottom: -45px;
-        background: color-mix(in srgb, var(--pg-tint-2, rgba(149, 119, 232, 0.10)) 90%, transparent);
+        background: color-mix(in srgb, var(--qi-tint-2, var(--interactive-accent)) 90%, transparent);
       }
       .dw-toolbar {
         display: grid;
@@ -740,8 +740,8 @@ if (pages.length === 0) {
         border-radius: 10px;
         background: linear-gradient(
           170deg,
-          var(--pg-surface, rgba(24, 27, 40, 0.34)),
-          var(--pg-surface-2, rgba(31, 35, 50, 0.28))
+          var(--qi-surface, var(--background-secondary)),
+          var(--qi-surface-2, var(--background-secondary-alt))
         );
         color: var(--text-normal);
         padding: 8px 10px;
@@ -781,8 +781,8 @@ if (pages.length === 0) {
         border-radius: 14px;
         background: linear-gradient(
           165deg,
-          var(--pg-surface, rgba(24, 27, 40, 0.34)),
-          color-mix(in srgb, var(--pg-surface-2, rgba(31, 35, 50, 0.28)) 88%, var(--background-secondary) 12%)
+          var(--qi-surface, var(--background-secondary)),
+          var(--qi-surface-2, var(--background-secondary-alt))
         );
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
         overflow: hidden;
@@ -837,10 +837,10 @@ if (pages.length === 0) {
         padding: 3px 8px;
         font-size: 11px;
         color: var(--text-muted);
-        background: color-mix(in srgb, var(--pg-surface-2, rgba(31, 35, 50, 0.28)) 94%, transparent);
+        background: color-mix(in srgb, var(--qi-surface-2, var(--background-secondary-alt)) 94%, transparent);
       }
       .dw-meta-streak {
-        color: color-mix(in srgb, var(--text-normal) 84%, #ff9f1a 16%);
+        color: color-mix(in srgb, var(--text-normal) 84%, var(--color-orange, #ff9f1a) 16%);
       }
       .dw-day {
         margin: 8px 12px 2px;
@@ -882,7 +882,7 @@ if (pages.length === 0) {
       .dw-list-item.dw-today {
         background: linear-gradient(
           90deg,
-          color-mix(in srgb, #17d953 70%, var(--interactive-accent) 30%) 0 2px,
+          color-mix(in srgb, var(--color-green, #17d953) 70%, var(--interactive-accent) 30%) 0 2px,
           transparent 2px
         );
         border-radius: 4px;

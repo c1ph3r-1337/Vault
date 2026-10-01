@@ -1,4 +1,4 @@
-## <font color="#7e56df">It's price is determined mainly by the market economics + network factors + human psychology.</font>
+## <span style="color: var(--color-accent);">It's price is determined mainly by the market economics + network factors + human psychology.</span>
 
 > Core Principle - Supply vs Demand  
 
@@ -45,7 +45,7 @@
 - Crypto is extremely Sentiment-driven 
 - News , Social Media Hype or fear can move price drastically.
 
-# <font color="#7e56df">How Price Is Actually Calculated ?</font>
+# <span style="color: var(--color-accent);">How Price Is Actually Calculated ?</span>
 
 ```
 Buyer places order → wants BTC at ₹40 lakh
@@ -65,7 +65,7 @@ Bot E arbitrages price difference → Trades rapidly
 ```
 
 - This is called **[[Order Book Price Discovery]]** .
-# <font color="#7e56df">Why Bitcoin Is Volatile ?</font>
+# <span style="color: var(--color-accent);">Why Bitcoin Is Volatile ?</span>
 
 > Volatile = Price changes quickly and unpredictably
 
@@ -80,7 +80,7 @@ Low volatility → price stays stable
 - Heavy speculation
 - News-driven trading
 
-# <font color="#7e56df">Long-Term Price Drivers</font>
+# <span style="color: var(--color-accent);">Long-Term Price Drivers</span>
 
 ```
 Scarcity + Trust + Adoption + Utility + Speculation = Bitcoin Price
