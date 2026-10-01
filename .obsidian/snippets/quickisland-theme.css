@@ -1,2 +1,310 @@
-/* Update: 1790871411.763232 */
-/* test */
+/* QuickIsland Live Theme for Obsidian: QuickIsland Custom (rev 1790871677038987976-656468)               */
+body.theme-dark {
+    /* Accent HSL values (eliminates Obsidian default 258 purple fallback) */
+    --accent-h: 74;
+    --accent-s: 8%;
+    --accent-l: 60%;
+
+    /* Base Color Tokens */
+    --color-base-00: #1a1a19;
+    --color-base-10: #20211f;
+    --color-base-20: #191919;
+    --color-base-25: #191919;
+    --color-base-30: #2e2e2d;
+    --color-base-35: #2e2e2d;
+    --color-base-40: #2e2e2d;
+    --color-base-50: #757674;
+    --color-base-60: #757674;
+    --color-base-70: #b8b8b6;
+    --color-base-100: #e0e0df;
+
+    /* Accent & Interactions */
+    --color-accent: #9da190;
+    --color-accent-1: #9da190;
+    --color-accent-2: #aaad9f;
+    --interactive-accent: #9da190;
+    --interactive-accent-hover: #a7aa9b;
+
+    /* Override purple color variables to theme accent so no purple leaks */
+    --color-purple: #9da190;
+    --color-purple-rgb: 157, 161, 144;
+    --color-violet: #9da190;
+
+    /* Functional Colors */
+    --color-red: #ee6c81;
+    --color-green: #78e28a;
+    --color-orange: #f0ae7e;
+    --color-yellow: #f0ae7e;
+    --color-blue: #82aeed;
+    --color-cyan: #82aeed;
+
+    /* Icon and Accent tokens */
+    --icon-color: var(--text-muted);
+    --icon-color-hover: #9da190;
+    --icon-color-active: #9da190;
+    --icon-color-focused: #9da190;
+    --nav-item-color-active: #9da190;
+    --nav-item-color-selected: #9da190;
+    --link-color: #9da190;
+    --link-color-hover: #a7aa9b;
+    --link-external-color: #9da190;
+    --link-external-color-hover: #a7aa9b;
+    --checkbox-color: #9da190;
+    --checkbox-color-hover: #a7aa9b;
+    --tag-color: #9da190;
+    --tag-color-hover: #a7aa9b;
+    --caret-color: #9da190;
+    --cursor: #9da190;
+
+    /* Backgrounds & Surfaces */
+    --background-primary: #1a1a19;
+    --background-primary-alt: #1a1a19;
+    --background-secondary: #20211f;
+    --background-secondary-alt: #191919;
+    --background-modifier-border: rgba(255, 255, 255, 0.05);
+    --background-modifier-border-hover: rgba(255, 255, 255, 0.08);
+    --background-modifier-border-focus: rgba(255, 255, 255, 0.10);
+    --background-modifier-form-field: #20211f;
+    --blockquote-border-color: rgba(255, 255, 255, 0.15);
+
+    /* Typography */
+    --text-normal: #e0e0df;
+    --text-muted: #b8b8b6;
+    --text-faint: #757674;
+    --text-accent: #9da190;
+    --text-accent-hover: #a7aa9b;
+
+    /* Header & Titlebar */
+    --titlebar-background: #20211f;
+    --titlebar-background-focused: #20211f;
+    --titlebar-text: #e0e0df;
+    --titlebar-text-focused: #e0e0df;
+
+    /* Status Bar */
+    --status-bar-background: #20211f;
+    --status-bar-border-color: transparent;
+    --status-bar-text: #b8b8b6;
+
+    /* Tabs & Dividers */
+    --tab-background-active: rgba(255, 255, 255, 0.06);
+    --tab-curve: 0px;
+    --tab-radius: 8px;
+    --tab-radius-active: 8px;
+    --tab-text-color-focused-active: #e0e0df;
+    --tab-text-color-focused: #b8b8b6;
+    --tab-outline-color: transparent;
+    --tab-outline-width: 0px;
+    --divider-color: rgba(255, 255, 255, 0.05);
+
+    /* Liquid Glass Effect Variables */
+    --qi-tint-1: rgba(157, 161, 144, 0.08);
+    --qi-tint-2: rgba(157, 161, 144, 0.05);
+    --qi-tint-3: rgba(46, 46, 45, 0.05);
+    --qi-surface: rgba(26, 26, 25, 0.42);
+    --qi-surface-2: rgba(25, 25, 25, 0.30);
+    --qi-border: transparent;
+
+    /* Legacy Token Compatibility */
+    --pg-tint-1: var(--qi-tint-1);
+    --pg-tint-2: var(--qi-tint-2);
+    --pg-tint-3: var(--qi-tint-3);
+    --pg-surface: var(--qi-surface);
+    --pg-surface-2: var(--qi-surface-2);
+    --pg-border: var(--background-modifier-border);
+    --pg-base-1: var(--background-primary);
+    --pg-base-2: var(--background-secondary);
+}
+
+/* Liquid Glass Backdrop */
+body.theme-dark .app-container,
+body.theme-dark .workspace,
+body.theme-dark .workspace-split.mod-root {
+    background:
+        radial-gradient(700px 420px at 6% 10%, var(--qi-tint-1), transparent 68%),
+        radial-gradient(620px 360px at 92% 88%, var(--qi-tint-2), transparent 70%),
+        radial-gradient(420px 240px at 50% 0%, var(--qi-tint-3), transparent 72%),
+        linear-gradient(160deg, #1a1a19, #191919) !important;
+}
+
+/* Translucent Panes & Leaves (No border / highlight lines) */
+body.theme-dark .workspace-leaf-content,
+body.theme-dark .workspace-tab-header-container,
+body.theme-dark .workspace-ribbon,
+body.theme-dark .status-bar,
+body.theme-dark .workspace-sidedock-vault-profile {
+    background: linear-gradient(165deg, var(--qi-surface), var(--qi-surface-2)) !important;
+    border: none !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03), 0 8px 20px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(10px) saturate(1.05);
+    -webkit-backdrop-filter: blur(10px) saturate(1.05);
+}
+
+/* Tab Headers (Clean Floating Pill Alignment & No Flare Artifacts) */
+body.theme-dark .workspace-tab-header-container {
+    display: flex !important;
+    align-items: center !important;
+}
+body.theme-dark .workspace-tab-header-container-inner {
+    margin: 0 !important;
+    padding: 0 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+body.theme-dark .workspace-tab-header {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 8px !important;
+    height: 30px !important;
+    max-height: 30px !important;
+    margin: auto 2px !important;
+    align-self: center !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 6px !important;
+}
+body.theme-dark .workspace-tab-header.is-active {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+body.theme-dark .workspace-tab-header-inner {
+    align-items: center !important;
+    display: flex !important;
+    height: 100% !important;
+    padding: 0 4px !important;
+}
+body.theme-dark .workspace-tab-header-new-tab {
+    display: flex !important;
+    align-items: center !important;
+    align-self: center !important;
+    height: 30px !important;
+    margin: auto 4px !important;
+    padding: 0 !important;
+}
+body.theme-dark .workspace-tab-header-new-tab .clickable-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Eliminate Obsidian tab flare pseudo-elements that create black box artifacts */
+body.theme-dark .workspace-tab-header::before,
+body.theme-dark .workspace-tab-header::after,
+body.theme-dark .workspace-tab-header-container .workspace-tab-header::before,
+body.theme-dark .workspace-tab-header-container .workspace-tab-header::after {
+    display: none !important;
+    content: none !important;
+    box-shadow: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* Inner Workspace Transparency & Seamless View Integration */
+body.theme-dark .workspace-split.mod-root .workspace-leaf,
+body.theme-dark .workspace-split.mod-root .workspace-leaf-content,
+body.theme-dark .workspace-split.mod-root .view-content,
+body.theme-dark .workspace-split.mod-root .markdown-preview-view,
+body.theme-dark .workspace-split.mod-root .markdown-source-view,
+body.theme-dark .workspace-split.mod-root .cm-scroller,
+body.theme-dark .workspace-split.mod-root .cm-editor,
+body.theme-dark .workspace-split.mod-root .cm-gutters {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+body.theme-dark .view-header,
+body.theme-dark .view-header-nav-buttons,
+body.theme-dark .view-header-title-container,
+body.theme-dark .view-actions,
+body.theme-dark .view-header-left,
+body.theme-dark .view-header-right {
+    background: transparent !important;
+    border-color: transparent !important;
+}
+body.theme-dark .view-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Active Ribbon Buttons (Clean hover/active, no highlight borders) */
+body.theme-dark .workspace-ribbon :is(
+    .workspace-ribbon-action.is-active,
+    .workspace-ribbon-action.mod-active,
+    .side-dock-ribbon-action.is-active,
+    .side-dock-ribbon-action.mod-active,
+    .clickable-icon.is-active,
+    .clickable-icon.mod-active,
+    [aria-pressed="true"]
+) {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: none !important;
+    color: #e0e0df !important;
+}
+
+/* Markdown quotes & callouts (No harsh colored highlight bar) */
+body.theme-dark .markdown-rendered blockquote,
+body.theme-dark .cm-quote {
+    border-left-color: rgba(255, 255, 255, 0.18) !important;
+}
+body.theme-dark .callout {
+    border: none !important;
+}
+
+/* Context Menus */
+body.theme-dark .menu {
+    background: linear-gradient(165deg, rgba(15, 15, 15, 0.96), rgba(25, 25, 25, 0.90)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+body.theme-dark .menu-item:hover,
+body.theme-dark .menu-item.is-selected {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #e0e0df !important;
+}
+
+/* Hide Window Control Buttons for Hyprland */
+body.theme-dark .titlebar-button-container.mod-right,
+body.theme-dark .titlebar-button-container.mod-left,
+body.theme-dark .titlebar-button,
+body.theme-dark .titlebar-button.mod-minimize,
+body.theme-dark .titlebar-button.mod-maximize,
+body.theme-dark .titlebar-button.mod-close {
+    display: none !important;
+}
+body.theme-dark .titlebar {
+    -webkit-app-region: drag;
+}
+
+/* Pinned icons (tabs, file explorer plus, view actions) */
+.workspace-tab-header-status-icon.mod-pinned,
+.view-action.mod-pinned,
+.clickable-icon.mod-pinned,
+.file-explorer-plus.pin-icon,
+.file-explorer-plus .pin-icon,
+.tree-item-pinned .tree-item-icon,
+svg.lucide-pin,
+[aria-label*="Pin"] svg,
+[aria-label*="pin"] svg {
+    color: var(--color-accent) !important;
+    stroke: var(--color-accent) !important;
+}
+
+/* Editing Toolbar plugin & cMenu theme override */
+.editing-toolbar,
+.cMenuToolbar {
+    background-color: var(--qi-surface) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+.editing-toolbar .toolbar-icon,
+.cMenuToolbar .cMenuCommandItem {
+    color: var(--text-normal) !important;
+}
+.editing-toolbar .toolbar-icon:hover,
+.cMenuToolbar .cMenuCommandItem:hover,
+.editing-toolbar .toolbar-icon.is-active,
+.cMenuToolbar .cMenuCommandItem.is-active {
+    color: var(--color-accent) !important;
+}
