@@ -26,10 +26,10 @@ style.textContent = `
       z-index: 9999;
       max-width: 300px;
       padding: 8px 10px;
-      border: none;
+      border: 1px solid var(--background-modifier-border);
       border-radius: 10px;
-      background: rgba(22, 24, 29, 0.96);
-      color: #e8edf2;
+      background: var(--background-secondary);
+      color: var(--text-normal);
       font-size: 12px;
       line-height: 1.35;
       white-space: pre-line;
@@ -81,8 +81,8 @@ style.textContent = `
       padding: 8px 12px;
       border-radius: 16px;
       border: 1px solid var(--background-modifier-border);
-      background: rgba(22, 24, 29, 0.96);
-      color: #e8edf2;
+      background: var(--background-secondary);
+      color: var(--text-normal);
       font-size: 12px;
       line-height: 1.3;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);

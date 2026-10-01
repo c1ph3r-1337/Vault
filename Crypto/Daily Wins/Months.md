@@ -27,14 +27,14 @@ if (!document.getElementById(styleId)) {
     .months-cal-wrap {
       width: min(860px, 96%);
       margin: 8px auto;
-      border: 1px solid #3b4655;
+      border: 1px solid var(--background-modifier-border);
       border-radius: 16px;
       padding: 12px;
       background:
         radial-gradient(75% 55% at 8% 8%, color-mix(in srgb, var(--interactive-accent) 18%, transparent) 0%, transparent 72%),
-        linear-gradient(160deg, #151b22, #1c2430);
+        linear-gradient(160deg, var(--background-primary), var(--background-secondary));
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-      color: #d7dfea;
+      color: var(--text-normal);
     }
     .months-header {
       position: relative;
@@ -55,7 +55,7 @@ if (!document.getElementById(styleId)) {
       transform: translateY(-50%);
       border: none;
       background: transparent;
-      color: color-mix(in srgb, #ffffff 78%, var(--interactive-accent) 22%);
+      color: color-mix(in srgb, var(--text-normal) 78%, var(--interactive-accent) 22%);
       font-size: 30px;
       font-weight: 900;
       padding: 0;
@@ -78,7 +78,7 @@ if (!document.getElementById(styleId)) {
       right: 4px;
     }
     .months-btn:hover {
-      color: color-mix(in srgb, #ffffff 52%, var(--interactive-accent) 48%);
+      color: color-mix(in srgb, var(--text-normal) 52%, var(--interactive-accent) 48%);
       transform: translateY(-50%) scale(1.14);
       filter: drop-shadow(0 0 8px color-mix(in srgb, var(--interactive-accent) 55%, transparent));
     }
@@ -87,7 +87,7 @@ if (!document.getElementById(styleId)) {
     }
     .months-btn:focus-visible {
       outline: none;
-      color: color-mix(in srgb, #ffffff 40%, var(--interactive-accent) 60%);
+      color: color-mix(in srgb, var(--text-normal) 40%, var(--interactive-accent) 60%);
       filter: drop-shadow(0 0 10px color-mix(in srgb, var(--interactive-accent) 60%, transparent));
     }
     .months-title {
@@ -97,7 +97,7 @@ if (!document.getElementById(styleId)) {
       line-height: 1;
       font-weight: 900;
       letter-spacing: 0.04em;
-      color: color-mix(in srgb, var(--interactive-accent) 88%, #2ad46d);
+      color: var(--color-accent);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -111,9 +111,9 @@ if (!document.getElementById(styleId)) {
     }
     .months-grid th,
     .months-grid td {
-      border: 1px solid #4a5666;
+      border: 1px solid var(--background-modifier-border);
       border-radius: 4px;
-      background: #232c38;
+      background: var(--background-secondary);
       text-align: center;
       padding: 0;
       vertical-align: middle;
@@ -121,8 +121,8 @@ if (!document.getElementById(styleId)) {
     .months-grid thead th {
       height: 28px;
       font-size: 0.82rem;
-      color: #cfd8e3;
-      background: #2b3644;
+      color: var(--text-muted);
+      background: var(--background-secondary-alt);
       font-weight: 800;
     }
     .months-row-label {
@@ -131,14 +131,14 @@ if (!document.getElementById(styleId)) {
       font-size: 2rem;
       font-weight: 900;
       letter-spacing: 0.01em;
-      color: #d9e2ed;
-      background: #2a3441 !important;
+      color: var(--text-normal);
+      background: var(--background-secondary-alt) !important;
       line-height: 82px;
     }
     .months-day-cell {
       height: 82px;
       width: 82px;
-      background: #252f3b !important;
+      background: var(--background-primary) !important;
       position: relative;
     }
     .months-day {
@@ -148,34 +148,34 @@ if (!document.getElementById(styleId)) {
       font-weight: 900;
       margin: 0;
       line-height: 82px;
-      color: #d7dee8;
+      color: var(--text-normal);
     }
     .months-day-worked .months-day,
     .months-row-sun .months-day {
-      color: color-mix(in srgb, var(--interactive-accent) 90%, #20c060);
+      color: var(--color-accent);
     }
     .months-day-worked {
-      background: color-mix(in srgb, var(--interactive-accent) 22%, #273340) !important;
+      background: color-mix(in srgb, var(--interactive-accent) 22%, var(--background-secondary)) !important;
       box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--interactive-accent) 55%, transparent);
     }
     .months-empty {
-      background: #202936 !important;
+      background: var(--background-primary) !important;
       opacity: 0.45;
     }
     .months-tip {
       margin-top: 8px;
       text-align: center;
       font-size: 12px;
-      color: #9ca9b8;
+      color: var(--text-muted);
     }
     .months-tooltip {
       position: fixed;
       z-index: 9999;
       max-width: 280px;
-      border: 1px solid #4b5a6c;
+      border: 1px solid var(--background-modifier-border);
       border-radius: 10px;
-      background: rgba(16, 20, 26, 0.97);
-      color: #e6edf5;
+      background: var(--background-secondary);
+      color: var(--text-normal);
       padding: 8px 10px;
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
       font-size: 12px;
@@ -192,7 +192,7 @@ if (!document.getElementById(styleId)) {
     }
     .months-tooltip-link {
       display: block;
-      color: #ffffff;
+      color: var(--text-normal);
       text-decoration: none;
       border-radius: 6px;
       padding: 2px 4px;
@@ -200,10 +200,10 @@ if (!document.getElementById(styleId)) {
     }
     .months-tooltip-link:hover,
     .months-tooltip-link:focus-visible {
-      background: #2c3744;
+      background: var(--background-modifier-hover);
       text-decoration: none;
       outline: none;
-      color: #ffffff;
+      color: var(--color-accent);
     }
     .months-tooltip.show {
       opacity: 1;
