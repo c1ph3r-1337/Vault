@@ -1,80 +1,80 @@
-/* QuickIsland Live Theme for Obsidian: QuickIsland Custom */
+/* QuickIsland Live Theme for Obsidian: Wallpaper (b-1011.jpg) */
 body.theme-dark {
     /* Base Color Tokens */
-    --color-base-00: #12211f;
-    --color-base-10: #1a2c29;
-    --color-base-20: #1a2220;
-    --color-base-25: #1a2220;
-    --color-base-30: #2f3c3a;
-    --color-base-35: #2f3c3a;
-    --color-base-40: #2f3c3a;
-    --color-base-50: #6b7977;
-    --color-base-60: #6b7977;
-    --color-base-70: #9ba9a7;
-    --color-base-100: #dce4e3;
+    --color-base-00: #1a1a19;
+    --color-base-10: #20211f;
+    --color-base-20: #191919;
+    --color-base-25: #191919;
+    --color-base-30: #2e2e2d;
+    --color-base-35: #2e2e2d;
+    --color-base-40: #2e2e2d;
+    --color-base-50: #757674;
+    --color-base-60: #757674;
+    --color-base-70: #b8b8b6;
+    --color-base-100: #e0e0df;
 
     /* Accent & Interactions */
-    --color-accent: #49e8ce;
-    --color-accent-1: #49e8ce;
-    --color-accent-2: #66e7d2;
-    --interactive-accent: #49e8ce;
-    --interactive-accent-hover: #5fe7d1;
+    --color-accent: #9da190;
+    --color-accent-1: #9da190;
+    --color-accent-2: #aaad9f;
+    --interactive-accent: #9da190;
+    --interactive-accent-hover: #a7aa9b;
 
     /* Functional Colors */
-    --color-red: #225b52;
-    --color-green: #2e8678;
-    --color-orange: #3ab29e;
-    --color-yellow: #3ab29e;
-    --color-blue: #49e8ce;
-    --color-purple: #49e8ce;
-    --color-cyan: #49e8ce;
+    --color-red: #ee6c81;
+    --color-green: #78e28a;
+    --color-orange: #f0ae7e;
+    --color-yellow: #f0ae7e;
+    --color-blue: #82aeed;
+    --color-purple: #9da190;
+    --color-cyan: #82aeed;
 
     /* Backgrounds & Surfaces */
-    --background-primary: #12211f;
-    --background-primary-alt: #12211f;
-    --background-secondary: #1a2c29;
-    --background-secondary-alt: #1a2220;
+    --background-primary: #1a1a19;
+    --background-primary-alt: #1a1a19;
+    --background-secondary: #20211f;
+    --background-secondary-alt: #191919;
     --background-modifier-border: rgba(255, 255, 255, 0.05);
     --background-modifier-border-hover: rgba(255, 255, 255, 0.08);
     --background-modifier-border-focus: rgba(255, 255, 255, 0.10);
-    --background-modifier-form-field: #1a2c29;
+    --background-modifier-form-field: #20211f;
     --blockquote-border-color: rgba(255, 255, 255, 0.15);
 
     /* Typography */
-    --text-normal: #dce4e3;
-    --text-muted: #9ba9a7;
-    --text-faint: #6b7977;
-    --text-accent: #49e8ce;
-    --text-accent-hover: #5fe7d1;
+    --text-normal: #e0e0df;
+    --text-muted: #b8b8b6;
+    --text-faint: #757674;
+    --text-accent: #9da190;
+    --text-accent-hover: #a7aa9b;
 
     /* Header & Titlebar */
-    --titlebar-background: #1a2c29;
-    --titlebar-background-focused: #1a2c29;
-    --titlebar-text: #dce4e3;
-    --titlebar-text-focused: #dce4e3;
+    --titlebar-background: #20211f;
+    --titlebar-background-focused: #20211f;
+    --titlebar-text: #e0e0df;
+    --titlebar-text-focused: #e0e0df;
 
     /* Status Bar */
-    --status-bar-background: #1a2c29;
+    --status-bar-background: #20211f;
     --status-bar-border-color: transparent;
-    --status-bar-text: #9ba9a7;
+    --status-bar-text: #b8b8b6;
 
     /* Tabs & Dividers */
     --tab-background-active: rgba(255, 255, 255, 0.06);
     --tab-curve: 0px;
     --tab-radius: 8px;
     --tab-radius-active: 8px;
-    --tab-text-color-focused-active: #dce4e3;
-    --tab-text-color-focused: #9ba9a7;
+    --tab-text-color-focused-active: #e0e0df;
+    --tab-text-color-focused: #b8b8b6;
     --tab-outline-color: transparent;
     --tab-outline-width: 0px;
     --divider-color: rgba(255, 255, 255, 0.05);
 
     /* Liquid Glass Effect Variables */
-    --qi-tint-1: rgba(73, 232, 206, 0.08);
-    --qi-tint-2: rgba(73, 232, 206, 0.05);
-    --qi-tint-3: rgba(47, 60, 58, 0.05);
-    --qi-surface: rgba(18, 33, 31, 0.42);
-    --qi-surface-2: rgba(26, 34, 32, 0.30);
+    --qi-tint-1: rgba(157, 161, 144, 0.08);
+    --qi-tint-2: rgba(157, 161, 144, 0.05);
+    --qi-tint-3: rgba(46, 46, 45, 0.05);
+    --qi-surface: rgba(26, 26, 25, 0.42);
+    --qi-surface-2: rgba(25, 25, 25, 0.30);
     --qi-border: transparent;
 }
 
@@ -86,7 +86,7 @@ body.theme-dark .workspace-split.mod-root {
         radial-gradient(700px 420px at 6% 10%, var(--qi-tint-1), transparent 68%),
         radial-gradient(620px 360px at 92% 88%, var(--qi-tint-2), transparent 70%),
         radial-gradient(420px 240px at 50% 0%, var(--qi-tint-3), transparent 72%),
-        linear-gradient(160deg, #12211f, #1a2220) !important;
+        linear-gradient(160deg, #1a1a19, #191919) !important;
 }
 
 /* Translucent Panes & Leaves (No border / highlight lines) */
@@ -202,7 +202,7 @@ body.theme-dark .workspace-ribbon :is(
 ) {
     background: rgba(255, 255, 255, 0.08) !important;
     border: none !important;
-    color: #dce4e3 !important;
+    color: #e0e0df !important;
 }
 
 /* Markdown quotes & callouts (No harsh colored highlight bar) */
@@ -216,7 +216,7 @@ body.theme-dark .callout {
 
 /* Context Menus */
 body.theme-dark .menu {
-    background: linear-gradient(165deg, rgba(14, 16, 16, 0.96), rgba(26, 34, 32, 0.90)) !important;
+    background: linear-gradient(165deg, rgba(15, 15, 15, 0.96), rgba(25, 25, 25, 0.90)) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     border-radius: 12px !important;
     backdrop-filter: blur(12px);
@@ -225,7 +225,7 @@ body.theme-dark .menu {
 body.theme-dark .menu-item:hover,
 body.theme-dark .menu-item.is-selected {
     background: rgba(255, 255, 255, 0.08) !important;
-    color: #dce4e3 !important;
+    color: #e0e0df !important;
 }
 
 /* Hide Window Control Buttons for Hyprland */
