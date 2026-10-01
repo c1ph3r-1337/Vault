@@ -1,4 +1,4 @@
-> #Whales - Whales are the Large holders of an asset - (Commonly in crypto or small small-cap equities) can materially move markets due to liquidity asymmerty.
+ > #Whales - Whales are the Large holders of an asset - (Commonly in crypto or small small-cap equities) can materially move markets due to liquidity asymmerty.
 
 > Supply Shock (Order Book Impact)
 - When whales sell large positions:
