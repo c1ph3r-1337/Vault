@@ -2,7 +2,8 @@
   "enabledCssSnippets": [
     "title-center",
     "purple-glass-bg",
-    "center-tables"
+    "center-tables",
+    "quickisland-theme"
   ],
   "showRibbon": false,
   "accentColor": ""
