@@ -75,6 +75,16 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
+          },
+          {
+            "id": "15d79bcc25bf35e1",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ]
       }
@@ -219,11 +229,11 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "7a1adda7bf92603a",
+  "active": "9483dbce746bc604",
   "lastOpenFiles": [
+    "Crypto/Daily Wins.md",
     "Crypto/RESEARCH LIST.md",
     "Crypto/Progress.md",
-    "Crypto/Daily Wins.md",
     "Crypto/Roadmap.md",
     "Crazy Stuff/Crazy Stuff.md",
     "Medium/Papers.md",
