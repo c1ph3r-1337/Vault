@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crypto/Daily Wins.md",
+                "file": "Crypto/Daily Wins/Month List.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Daily Wins"
+              "title": "Month List"
             }
           }
         ]
@@ -229,11 +229,12 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "9483dbce746bc604",
+  "active": "7a1adda7bf92603a",
   "lastOpenFiles": [
-    "Crypto/Daily Wins.md",
-    "Crypto/RESEARCH LIST.md",
+    "Crypto/Daily Wins/Months.md",
     "Crypto/Progress.md",
+    "Crypto/RESEARCH LIST.md",
+    "Crypto/Daily Wins.md",
     "Crypto/Roadmap.md",
     "Crazy Stuff/Crazy Stuff.md",
     "Medium/Papers.md",
@@ -256,7 +257,6 @@
     "Shell/INFO.md",
     "Shell/shell.md",
     "Crypto/Daily Wins/2. FEB/Rust/Learning/Guessing Game.md",
-    "Crypto/Daily Wins/2. FEB/Rust/Learning/Variables.md",
     "Crypto/Whitepapers/Ethereum_2014.pdf",
     "Crypto/Whitepapers/bitcoin.pdf",
     "Things I know",
