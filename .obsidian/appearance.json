@@ -6,6 +6,5 @@
     "quickisland-theme"
   ],
   "showRibbon": false,
-  "accentColor": "#3df4d7",
-  "baseTheme": "obsidian"
+  "accentColor": "#3df4d7"
 }
